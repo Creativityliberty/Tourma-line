@@ -158,7 +158,7 @@ const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
     return (
         <header className="bg-brand-dark bg-opacity-50 text-white p-4 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-300">
             <div className="container mx-auto flex justify-between items-center px-4">
-                 <a href="#accueil" onClick={onNavClick} className="text-2xl md:text-3xl font-display font-bold">
+                 <a href="#accueil" onClick={onNavClick} className="text-xl sm:text-2xl md:text-3xl font-display font-bold flex-shrink-0">
                     TOURMA-LINE
                 </a>
                 {/* Desktop Navigation */}
@@ -171,21 +171,25 @@ const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                     <a href="#rendezvous" onClick={onNavClick} className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform active:scale-95 text-sm lg:text-base">RDV</a>
                 </nav>
                 {/* Mobile Menu Button */}
-                <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                <button 
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)} 
+                    className="md:hidden text-white p-2 hover:bg-brand-purple hover:bg-opacity-30 rounded-lg transition-colors"
+                    aria-label="Menu"
+                >
+                    <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
                     </svg>
                 </button>
             </div>
             {/* Mobile Navigation */}
             {mobileMenuOpen && (
-                <nav className="md:hidden bg-brand-dark bg-opacity-95 p-4 space-y-3 mt-2">
-                    <a href="#accueil" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block hover:text-brand-purple transition-colors">Accueil</a>
-                    <a href="#services" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block hover:text-brand-purple transition-colors">Services</a>
-                    <a href="#formules" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block hover:text-brand-purple transition-colors">Formules</a>
-                    <a href="#bienfaits" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block hover:text-brand-purple transition-colors">Bienfaits</a>
-                    <a href="#tarifs" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block hover:text-brand-purple transition-colors">Tarifs</a>
-                    <a href="#rendezvous" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full text-center transition-all duration-300">Prendre RDV</a>
+                <nav className="md:hidden bg-brand-dark bg-opacity-98 p-4 space-y-2 mt-2 rounded-lg border border-brand-purple border-opacity-30">
+                    <a href="#accueil" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors">Accueil</a>
+                    <a href="#services" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors">Services</a>
+                    <a href="#formules" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors">Formules</a>
+                    <a href="#bienfaits" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors">Bienfaits</a>
+                    <a href="#tarifs" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors">Tarifs</a>
+                    <a href="#rendezvous" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full text-center transition-all duration-300 mt-2">Prendre RDV</a>
                 </nav>
             )}
         </header>
@@ -328,26 +332,26 @@ const Services = ({ activeTab, setActiveTab }: { activeTab: string; setActiveTab
     return (
         <section id="services" className="py-20 bg-white">
             <AnimateOnScroll>
-                <div className="container mx-auto text-center px-6">
-                    <h2 className="text-4xl font-display text-brand-dark mb-12">Mes outils pour vous guider.</h2>
-                    <div className="flex justify-center mb-8 border-b-2 border-brand-lilas">
+                <div className="container mx-auto text-center px-4 sm:px-6">
+                    <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-8 sm:mb-12">Mes outils pour vous guider.</h2>
+                    <div className="flex flex-wrap justify-center gap-2 sm:gap-0 mb-8 border-b-2 border-brand-lilas overflow-x-auto">
                         {Object.entries(tabs).map(([tabKey, tabData]) => (
-                            <button key={tabKey} onClick={() => setActiveTab(tabKey)} className={`flex items-center space-x-2 px-6 py-3 font-display text-xl transition-colors duration-300 ${activeTab === tabKey ? 'border-b-4 border-brand-purple text-brand-purple' : 'text-gray-500 hover:text-brand-dark'}`}>
-                               {React.createElement(tabData.icon, { className: "w-6 h-6" })}
-                               <span>{tabData.title}</span>
+                            <button key={tabKey} onClick={() => setActiveTab(tabKey)} className={`flex flex-col sm:flex-row items-center justify-center space-x-0 sm:space-x-2 px-3 sm:px-6 py-2 sm:py-3 font-display text-xs sm:text-lg md:text-xl transition-colors duration-300 whitespace-nowrap ${activeTab === tabKey ? 'border-b-4 border-brand-purple text-brand-purple' : 'text-gray-500 hover:text-brand-dark'}`}>
+                               {React.createElement(tabData.icon, { className: "w-5 h-5 sm:w-6 sm:h-6" })}
+                               <span className="text-xs sm:text-base">{tabData.title}</span>
                             </button>
                         ))}
                     </div>
-                    <div className="max-w-4xl mx-auto text-left p-8 bg-brand-lilas rounded-2xl shadow-inner transition-all duration-500">
+                    <div className="max-w-4xl mx-auto text-left p-4 sm:p-8 bg-brand-lilas rounded-2xl shadow-inner transition-all duration-500">
                         <AnimateOnScroll key={activeTab}>
-                            <h3 className="text-3xl font-display text-brand-dark mb-4">{currentTab.contentTitle}</h3>
-                            <p className="text-gray-700 leading-relaxed">{currentTab.content}</p>
+                            <h3 className="text-2xl sm:text-3xl font-display text-brand-dark mb-4">{currentTab.contentTitle}</h3>
+                            <p className="text-sm sm:text-base text-gray-700 leading-relaxed">{currentTab.content}</p>
                              {currentTab.features && (
                                 <ul className="mt-6 space-y-4">
                                     {currentTab.features.map((feature, index) => (
                                         <li key={index} className="flex items-start space-x-3">
                                             <SparklesIcon className="w-5 h-5 text-brand-purple flex-shrink-0 mt-1" />
-                                            <p className="text-gray-700">
+                                            <p className="text-sm sm:text-base text-gray-700">
                                                 <strong className="font-semibold text-brand-dark">{feature.title}:</strong> {feature.description}
                                             </p>
                                         </li>

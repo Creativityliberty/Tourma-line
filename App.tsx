@@ -154,21 +154,40 @@ const ButterflyIcon = ({ className }: { className?: string }) => (
 type NavClickHandler = (e: React.MouseEvent<HTMLAnchorElement>) => void;
 
 const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     return (
         <header className="bg-brand-dark bg-opacity-50 text-white p-4 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-300">
-            <div className="container mx-auto flex justify-between items-center">
-                 <a href="#accueil" onClick={onNavClick} className="text-3xl font-display font-bold">
+            <div className="container mx-auto flex justify-between items-center px-4">
+                 <a href="#accueil" onClick={onNavClick} className="text-2xl md:text-3xl font-display font-bold">
                     TOURMA-LINE
                 </a>
-                <nav className="hidden md:flex space-x-6">
-                    <a href="#accueil" onClick={onNavClick} className="hover:text-brand-purple transition-colors">Accueil</a>
-                    <a href="#services" onClick={onNavClick} className="hover:text-brand-purple transition-colors">Mes Services</a>
-                    <a href="#formules" onClick={onNavClick} className="hover:text-brand-purple transition-colors">Formules</a>
-                    <a href="#bienfaits" onClick={onNavClick} className="hover:text-brand-purple transition-colors">Bienfaits</a>
-                    <a href="#tarifs" onClick={onNavClick} className="hover:text-brand-purple transition-colors">Tarifs</a>
-                    <a href="#rendezvous" onClick={onNavClick} className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform active:scale-95">Prendre RDV</a>
+                {/* Desktop Navigation */}
+                <nav className="hidden md:flex space-x-4 lg:space-x-6">
+                    <a href="#accueil" onClick={onNavClick} className="text-sm lg:text-base hover:text-brand-purple transition-colors">Accueil</a>
+                    <a href="#services" onClick={onNavClick} className="text-sm lg:text-base hover:text-brand-purple transition-colors">Services</a>
+                    <a href="#formules" onClick={onNavClick} className="text-sm lg:text-base hover:text-brand-purple transition-colors">Formules</a>
+                    <a href="#bienfaits" onClick={onNavClick} className="text-sm lg:text-base hover:text-brand-purple transition-colors">Bienfaits</a>
+                    <a href="#tarifs" onClick={onNavClick} className="text-sm lg:text-base hover:text-brand-purple transition-colors">Tarifs</a>
+                    <a href="#rendezvous" onClick={onNavClick} className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform active:scale-95 text-sm lg:text-base">RDV</a>
                 </nav>
+                {/* Mobile Menu Button */}
+                <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="md:hidden text-white">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
             </div>
+            {/* Mobile Navigation */}
+            {mobileMenuOpen && (
+                <nav className="md:hidden bg-brand-dark bg-opacity-95 p-4 space-y-3 mt-2">
+                    <a href="#accueil" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block hover:text-brand-purple transition-colors">Accueil</a>
+                    <a href="#services" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block hover:text-brand-purple transition-colors">Services</a>
+                    <a href="#formules" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block hover:text-brand-purple transition-colors">Formules</a>
+                    <a href="#bienfaits" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block hover:text-brand-purple transition-colors">Bienfaits</a>
+                    <a href="#tarifs" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block hover:text-brand-purple transition-colors">Tarifs</a>
+                    <a href="#rendezvous" onClick={(e) => { onNavClick(e); setMobileMenuOpen(false); }} className="block bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full text-center transition-all duration-300">Prendre RDV</a>
+                </nav>
+            )}
         </header>
     );
 };
@@ -673,13 +692,13 @@ const Chatbot = () => {
         <>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="fixed bottom-6 right-6 bg-brand-purple text-white p-4 rounded-full shadow-lg hover:bg-opacity-80 transition-transform transform hover:scale-110 active:scale-95 z-50 animate-bob"
+                className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 bg-brand-purple text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-opacity-80 transition-transform transform hover:scale-110 active:scale-95 z-50 animate-bob"
                 aria-label="Ouvrir le chat"
             >
-                {isOpen ? <CloseIcon className="w-8 h-8" /> : <ChatBubbleIcon className="w-8 h-8" />}
+                {isOpen ? <CloseIcon className="w-6 sm:w-8 h-6 sm:h-8" /> : <ChatBubbleIcon className="w-6 sm:w-8 h-6 sm:h-8" />}
             </button>
 
-            <div className={`fixed bottom-24 right-6 w-full max-w-md bg-white rounded-2xl shadow-2xl flex flex-col z-50 h-[70vh] transition-all duration-500 ease-in-out ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
+            <div className={`fixed bottom-24 right-4 sm:right-6 w-[calc(100%-2rem)] sm:max-w-md bg-white rounded-2xl shadow-2xl flex flex-col z-50 h-[60vh] sm:h-[70vh] transition-all duration-500 ease-in-out ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'}`}>
                 <header className="bg-brand-purple text-white p-4 rounded-t-2xl flex justify-between items-center">
                     <h3 className="font-display text-xl">Assistant Tourma-Line</h3>
                 </header>

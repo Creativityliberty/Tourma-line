@@ -1362,6 +1362,88 @@ const Chatbot = () => {
   );
 };
 
+
+// --- MENTIONS LÉGALES PAGE ---
+const MentionsLegales = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
+    return (
+        <div className="bg-brand-lilas text-brand-dark font-sans min-h-screen flex flex-col">
+            <Header onNavClick={onNavClick} />
+            <main className="flex-1 w-full px-4 sm:px-6 py-8 sm:py-12">
+                <div className="container mx-auto max-w-4xl">
+                    <h1 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4 sm:mb-6 break-words">Mentions légales</h1>
+                    <p className="text-xs sm:text-sm text-gray-600 mb-6 sm:mb-8">Conformément à la législation française en vigueur.</p>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">1. Éditeur du site</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Le présent site est édité par :<br />
+                            <strong>Tourma-Line - Line Simon</strong><br />
+                            Tourmaline, 76540 Gerponville, France<br />
+                            SIRET : 931 165 336 00013<br />
+                            Téléphone : <a href="tel:0649653186" className="text-brand-purple hover:underline break-all">06 49 65 31 86</a><br />
+                            Email : <a href="mailto:line.simon.ls@gmail.com" className="text-brand-purple hover:underline break-all">line.simon.ls@gmail.com</a>
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">2. Hébergement</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Le site est hébergé par :<br />
+                            <strong>Vercel Inc.</strong><br />
+                            440 N Barranca Avenue #4133, Covina, CA 91723, États-Unis<br />
+                            Site web : <a href="https://vercel.com" className="text-brand-purple hover:underline break-all" target="_blank" rel="noopener noreferrer">https://vercel.com</a>
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">3. Propriété intellectuelle</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            L'ensemble des contenus présents sur ce site (textes, images, graphismes, logo, mises en page, etc.) est, sauf mention contraire, la propriété exclusive de Tourma-Line.
+                            Toute reproduction, représentation, modification, diffusion ou exploitation, totale ou partielle, des contenus du site, par quelque procédé que ce soit, sans l'autorisation écrite préalable de Tourma-Line, est strictement interdite et est susceptible de constituer une contrefaçon au sens du Code de la propriété intellectuelle.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">4. Données personnelles</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 break-words">
+                            Les informations collectées par le biais des formulaires de contact ou de prise de rendez-vous sont utilisées uniquement pour répondre aux demandes des utilisateurs et pour la gestion des rendez-vous.
+                        </p>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi "Informatique et Libertés", vous disposez d'un droit d'accès, de rectification, d'opposition et de suppression des données vous concernant. Pour exercer ces droits, vous pouvez contacter Tourma-Line à l'adresse email suivante :
+                            <a href="mailto:line.simon.ls@gmail.com" className="text-brand-purple hover:underline break-all">line.simon.ls@gmail.com</a>.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">5. Responsabilité</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Les informations fournies sur ce site ont un caractère purement informatif et ne sauraient remplacer un avis médical, psychologique ou juridique.
+                            Tourma-Line ne pourra être tenue responsable des dommages directs ou indirects résultant de l'utilisation du site ou des informations qui y sont présentées.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">6. Liens externes</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Le site peut contenir des liens vers d'autres sites internet. Tourma-Line n'exerce aucun contrôle sur le contenu de ces sites tiers et ne saurait être tenue responsable de leur contenu ou de tout dommage pouvant résulter de leur consultation.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">7. Contact</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Pour toute question relative aux mentions légales du site, vous pouvez contacter Tourma-Line à l'adresse suivante :
+                            <a href="mailto:line.simon.ls@gmail.com" className="text-brand-purple hover:underline break-all">line.simon.ls@gmail.com</a>.
+                        </p>
+                    </section>
+                </div>
+            </main>
+            <Footer />
+            <Credits />
+        </div>
+    );
+};
+
 // --- MAIN APP COMPONENT ---
 const App = () => {
   const [activeTab, setActiveTab] = useState('numerology');

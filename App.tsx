@@ -587,18 +587,18 @@ const Footer = () => {
 const Credits = () => {
     return (
         <section className="bg-blue-900 text-white py-6 border-t border-blue-800">
-            <div className="container mx-auto text-center px-6">
+            <div className="container mx-auto px-6">
                 <a 
                     href="https://www.numtemaagency.com" 
                     target="_blank" 
                     rel="noopener noreferrer" 
-                    className="inline-flex flex-col items-center space-y-2 hover:opacity-80 transition-opacity"
+                    className="inline-flex items-center space-x-4 hover:opacity-80 transition-opacity"
                     aria-label="Visiter le site de Nümtema Agency"
                 >
                     <img 
-                        src="/numtema-logo.svg" 
+                        src="https://numtemaagency.com/wp-content/uploads/2024/01/numtema-logo.png" 
                         alt="Nümtema Agency" 
-                        className="h-10 w-auto"
+                        className="h-12 w-auto"
                     />
                     <p className="text-sm font-poppins italic">
                         "Chez Nümtema, on ne fait pas juste du digital. On le fait bien… et avec le sourire !"

@@ -215,8 +215,8 @@ const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
             
             {/* Content */}
             <div className="relative z-10 p-4 animate-fadeInUp max-w-4xl">
-                <h2 className="text-5xl md:text-7xl font-display font-bold leading-tight mb-4 drop-shadow-lg">Révélez votre potentiel et illuminez votre chemin de vie.</h2>
-                <p className="text-lg md:text-2xl mb-8 max-w-3xl mx-auto font-light drop-shadow-md">Guidance personnalisée par la numérologie, la cartomancie et les soins énergétiques Lahochi.</p>
+                <h2 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-4 drop-shadow-lg">Révélez votre potentiel et illuminez votre chemin de vie.</h2>
+                <p className="text-sm sm:text-base md:text-lg lg:text-2xl mb-8 max-w-3xl mx-auto font-light drop-shadow-md">Guidance personnalisée par la numérologie, la cartomancie et les soins énergétiques Lahochi.</p>
                 <a href="#formules" onClick={onNavClick} className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 animate-pulse inline-block shadow-lg">Découvrir mes accompagnements</a>
             </div>
         </section>
@@ -228,8 +228,8 @@ const Welcome = () => {
         <section id="bienvenue" className="py-20 bg-white">
             <AnimateOnScroll>
                 <div className="container mx-auto text-center px-6">
-                    <h2 className="text-4xl font-display text-brand-dark mb-4">Bonjour et bienvenue, je suis Tourma-Line.</h2>
-                    <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-display text-brand-dark mb-4">Bonjour et bienvenue, je suis Tourma-Line.</h2>
+                    <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-12">
                        Je suis numérologue, cartomancienne et praticienne en soins énergétiques Lahochi. Mon objectif est de vous accompagner sur votre chemin de vie en vous offrant des outils puissants et des soins adaptés à vos besoins spécifiques.
                     </p>
                     <div className="grid md:grid-cols-3 gap-10">

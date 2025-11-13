@@ -516,37 +516,13 @@ const Pricing = () => {
 };
 
 const Testimonials = () => {
-    const testimonialsList = [
-        {
-            quote: "J’ai eu la chance de croiser Touma-Line lors d’un salon... Avec ma simple date de naissance, elle a su me décrire avec une justesse...",
-            name: "PATRICIA FATRAS"
-        },
-        {
-            quote: "Expérience très enrichissante, qui m'a permis de confirmer des ressentis et m'aiguiller... Line prend vraiment le temps, beaucoup de bienveillance.",
-            name: "Jennifer R"
-        },
-        {
-            quote: "Line est l'une des personnes les plus bienveillantes que j'ai pu rencontrer. Son professionnalisme, sa bienveillance et sa gentillesse sont des qualités rares.",
-            name: "Virginie Dbsc"
-        }
-    ];
 
     return (
         <section id="temoignages" className="py-20 bg-white">
             <AnimateOnScroll>
                 <div className="container mx-auto text-center px-6">
                     <h2 className="text-4xl font-display text-brand-dark mb-12">Ce que mes clients disent</h2>
-                    <div className="grid md:grid-cols-3 gap-8">
-                        {testimonialsList.map((testimonial, index) => (
-                            <div key={index} className="bg-brand-lilas p-6 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                                <p className="text-gray-600 italic mb-4">"{testimonial.quote}"</p>
-                                <p className="font-bold text-brand-purple">- {testimonial.name}</p>
-                            </div>
-                        ))}
-                    </div>
-                     <a href="https://www.google.com/search?q=Tourma-Line%20Line%20Simon%20Num%C3%A9rologie%20Cartomancie%20et%20Soins%20%C3%A9nerg%C3%A9tiques%20LAHOCHI%20Avis&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxIxNDU2NTcyNTCyNDQwsbAwNzKzsNzAyPiKMSQkv7QoN1HXJzMvVQFMBGfm5ucp-JXmHl5ZlJ-Tn56ZquCcWFSSn5uYlwxkp5YoBOdn5hUrHF6Zl1qUfnhlSWZhaWqxgo-jh7-zh6eCY1lm8SJWmhgLAITx8bLJAAAA&rldimm=15357250291048872689&tbm=lcl&cs=1&hl=fr&sa=X&ved=0CAYQ5foLahcKEwiwsdzjoO2QAxUAAAAAHQAAAAAQCQ&biw=1014&bih=656&dpr=1#lkt=LocalPoiReviews&arid=ChdDSUhNMG9nS0VNTEV0NktUM19fQ2hnRRAB" target="_blank" rel="noopener noreferrer" className="mt-8 inline-block bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95">
-                        Lire plus d'avis sur Google
-                    </a>
+                    <div className="elfsight-app-d88ab70b-fe59-45e0-b959-2a1eaa59082f" data-elfsight-app-lazy></div>
                 </div>
             </AnimateOnScroll>
         </section>

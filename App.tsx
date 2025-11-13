@@ -199,12 +199,14 @@ const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
 const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
     return (
         <section id="accueil" className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
-            {/* Background Image */}
+            {/* Background Image - Optimized */}
             <div 
                 className="absolute inset-0 bg-cover bg-center bg-no-repeat"
                 style={{
-                    backgroundImage: "url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=1600&h=900&fit=crop')",
+                    backgroundImage: "url('/hero-optimized.webp')",
                 }}
+                role="img"
+                aria-label="Image représentant la guidance spirituelle et l'accompagnement personnalisé"
             ></div>
             
             {/* Overlay with gradient */}
@@ -547,11 +549,11 @@ const Booking = () => {
                             <a href="tel:0649653186" className="hover:underline">06 49 65 31 86</a> | <a href="mailto:line.simon.ls@gmail.com" className="hover:underline">line.simon.ls@gmail.com</a>
                         </p>
                         <div className="flex justify-center space-x-6 mt-4">
-                            <a href="https://www.facebook.com/tourma.line.534540" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-brand-purple transition-all duration-300 transform hover:scale-110 active:scale-95">
-                                <FacebookIcon className="w-8 h-8"/>
+                            <a href="https://www.facebook.com/tourma.line.534540" target="_blank" rel="noopener noreferrer" aria-label="Nous contacter sur Facebook" className="text-gray-500 hover:text-brand-purple transition-all duration-300 transform hover:scale-110 active:scale-95">
+                                <FacebookIcon className="w-8 h-8" aria-hidden="true"/>
                             </a>
-                            <a href="https://wa.me/qr/NZDHZRB3ZW52B1" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-brand-purple transition-all duration-300 transform hover:scale-110 active:scale-95">
-                                <WhatsAppIcon className="w-8 h-8" />
+                            <a href="https://wa.me/qr/NZDHZRB3ZW52B1" target="_blank" rel="noopener noreferrer" aria-label="Nous contacter sur WhatsApp" className="text-gray-500 hover:text-brand-purple transition-all duration-300 transform hover:scale-110 active:scale-95">
+                                <WhatsAppIcon className="w-8 h-8" aria-hidden="true"/>
                             </a>
                         </div>
                     </div>
@@ -568,12 +570,12 @@ const Footer = () => {
                  <h3 className="text-3xl font-display font-bold mb-4">TOURMA-LINE</h3>
                 <p className="text-brand-lilas mb-4">"Pour vous guider vers la clarté, la confiance et l'harmonie. ✨"</p>
                  <div className="flex justify-center space-x-4 mb-4">
-                      <a href="https://www.facebook.com/tourma.line.534540" target="_blank" rel="noopener noreferrer" className="hover:text-brand-purple transition-all duration-300 transform hover:scale-110 active:scale-95"><FacebookIcon className="w-6 h-6"/></a>
+                      <a href="https://www.facebook.com/tourma.line.534540" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Facebook" className="hover:text-brand-purple transition-all duration-300 transform hover:scale-110 active:scale-95"><FacebookIcon className="w-6 h-6" aria-hidden="true"/></a>
                  </div>
-                <p className="text-sm text-gray-400">Tourmaline, 76540 Gerponville | Siret : 93116533600013</p>
-                <p className="text-sm text-gray-400 mt-1">Intervention à domicile sur le secteur Gerponville, Valmont, Fécamp, Cany-Barville, Ourville-en-Caux.</p>
-                <p className="text-sm text-gray-400 mt-1">Merci de votre visite.</p>
-                 <a href="https://www.google.com/search?sca_esv=b1b93c191aaa47d3&sxsrf=AE3TifPYZY4KkqMWnY5gZGk3n-vOMMPhAg:1762975647931&q=Tourma-Line+Line+Simon+Num%C3%A9rologie+Cartomancie+et+Soins+%C3%A9nerg%C3%A9tiques+LAHOCHI&si=AMgyJEs9DArPE9xmb5yVYVjpG4jqWDEKSIpCRSjmm88XZWnGNboYSYaVnHI8Cn4IKluKbWRXYq-r0WYB-1748A7mqdXrZUulOMOySxFRN-q-rlVeZj6ypC5qIaStj2zXV6nogPxZwVFtXxigmA-dqJHtBVRMAectv_K5Xo0VYmewelH3do5M-dAjT6PwxvoziBwKDnAPsX9naiebeBv7x2A75ft3kXZHUg%3D%3D&sa=X&ved=2ahUKExiFifiJrO2QAxW0NvsDHRiNLegQ_coHegQIKRAB" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-brand-purple transition-colors mt-2 inline-block">
+                <p className="text-sm text-gray-300">Tourmaline, 76540 Gerponville | Siret : 93116533600013</p>
+                <p className="text-sm text-gray-300 mt-1">Intervention à domicile sur le secteur Gerponville, Valmont, Fécamp, Cany-Barville, Ourville-en-Caux.</p>
+                <p className="text-sm text-gray-300 mt-1">Merci de votre visite.</p>
+                 <a href="https://www.google.com/search?sca_esv=b1b93c191aaa47d3&sxsrf=AE3TifPYZY4KkqMWnY5gZGk3n-vOMMPhAg:1762975647931&q=Tourma-Line+Line+Simon+Num%C3%A9rologie+Cartomancie+et+Soins+%C3%A9nerg%C3%A9tiques+LAHOCHI&si=AMgyJEs9DArPE9xmb5yVYVjpG4jqWDEKSIpCRSjmm88XZWnGNboYSYaVnHI8Cn4IKluKbWRXYq-r0WYB-1748A7mqdXrZUulOMOySxFRN-q-rlVeZj6ypC5qIaStj2zXV6nogPxZwVFtXxigmA-dqJHtBVRMAectv_K5Xo0VYmewelH3do5M-dAjT6PwxvoziBwKDnAPsX9naiebeBv7x2A75ft3kXZHUg%3D%3D&sa=X&ved=2ahUKExiFifiJrO2QAxW0NvsDHRiNLegQ_coHegQIKRAB" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-brand-purple transition-colors mt-2 inline-block">
                     Voir sur Google Business
                 </a>
             </div>
@@ -720,7 +722,12 @@ const Chatbot = () => {
                             className="flex-1 p-3 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-brand-purple bg-white text-brand-dark placeholder-gray-500"
                             disabled={isLoading}
                         />
-                        <button type="submit" className="bg-brand-purple text-white p-3 rounded-full hover:bg-opacity-80 disabled:bg-gray-400" disabled={isLoading}>
+                        <button 
+                            type="submit" 
+                            aria-label="Envoyer le message"
+                            className="bg-brand-purple text-white p-3 rounded-full hover:bg-opacity-80 disabled:bg-gray-400" 
+                            disabled={isLoading}
+                        >
                             <SendIcon className="w-6 h-6" />
                         </button>
                     </form>

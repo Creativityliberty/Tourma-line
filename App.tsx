@@ -503,12 +503,12 @@ const Pricing = () => {
                     <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
                         <div className="bg-white p-8 rounded-2xl shadow-lg text-brand-dark transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                             <h3 className="text-2xl font-display mb-4">Consultation Numérologie & Cartomancie</h3>
-                            <p className="text-5xl font-bold mb-4">50€</p>
+                            <p className="text-5xl font-bold mb-4">70€</p>
                             <p className="text-gray-700">À distance, à domicile ou au cabinet</p>
                         </div>
                         <div className="bg-white p-8 rounded-2xl shadow-lg text-brand-dark transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                             <h3 className="text-2xl font-display mb-4">Soin énergétique LAHOCHI</h3>
-                            <p className="text-5xl font-bold mb-4">50€</p>
+                            <p className="text-5xl font-bold mb-4">60€</p>
                             <p className="text-gray-700">À distance ou en cabinet</p>
                         </div>
                     </div>

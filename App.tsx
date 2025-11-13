@@ -487,6 +487,7 @@ const SessionFlow = () => {
                             <h3 className="text-2xl font-display text-brand-dark mb-3">À domicile</h3>
                             <p className="text-gray-600">Je peux me déplacer à votre domicile dans les environs de Gerponville (Valmont, Fécamp, Cany-Barville, Ourville-en-Caux).</p>
                         </div>
+                    </div>
                 </div>
             </AnimateOnScroll>
         </section>

@@ -158,8 +158,8 @@ const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
     return (
         <header className="bg-brand-dark bg-opacity-50 text-white p-4 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-300">
             <div className="container mx-auto flex justify-between items-center px-4">
-                 <a href="#accueil" onClick={onNavClick} className="flex items-center gap-2 flex-shrink-0">
-                    <img src="/logo.svg" alt="Tourma-Line Logo" className="h-12 sm:h-14 md:h-16 w-auto"/>
+                 <a href="#accueil" onClick={onNavClick} className="text-xl sm:text-2xl md:text-3xl font-display font-bold flex-shrink-0">
+                    TOURMA-LINE
                 </a>
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex space-x-4 lg:space-x-6">

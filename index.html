@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-," />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Meta Tags -->
+    <title>TOURMA-LINE | Numérologue, Cartomancie & Soin Lahochi en Normandie (Gerponville, Fécamp)</title>
+    <meta name="description" content="Découvrez votre chemin de vie avec Tourma-Line, votre experte en numérologie, cartomancie et soins énergétiques Lahochi en Normandie. Accompagnement bienveillant à Gerponville, en cabinet à Saint-Riquier-ès-Plains, et à domicile (Fécamp, Valmont, Cany-Barville)." />
+    <meta name="keywords" content="numérologue 76, cartomancienne Normandie, soin énergétique Lahochi Fécamp, guidance spirituelle, développement personnel, voyance Seine-Maritime, bien-être Gerponville, consultation à distance, thérapie holistique Valmont, Cany-Barville, Ourville-en-Caux" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.tourma-line.fr/" />
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.tourma-line.fr/" />
+    <meta property="og:title" content="TOURMA-LINE | Numérologue, Cartomancie & Soin Lahochi en Normandie" />
+    <meta property="og:description" content="Guidance personnalisée et soins énergétiques pour votre bien-être en Normandie. Séances à Gerponville, à domicile (Fécamp, Valmont...) et à distance." />
+    <meta property="og:image" content="https://storage.googleapis.com/aai-web-samples/mediapipe/cosmic_galaxy.jpeg" />
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://www.tourma-line.fr/" />
+    <meta name="twitter:title" content="TOURMA-LINE | Numérologue, Cartomancie & Soin Lahochi en Normandie" />
+    <meta name="twitter:description" content="Guidance personnalisée et soins énergétiques pour votre bien-être en Normandie. Séances à Gerponville, à domicile (Fécamp, Valmont...) et à distance." />
+    <meta name="twitter:image" content="https://storage.googleapis.com/aai-web-samples/mediapipe/cosmic_galaxy.jpeg" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-padding-top: 80px; /* Adjust this to your fixed header's height */
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            backgroundImage: {
+              'hero-pattern': "url('https://storage.googleapis.com/aai-web-samples/mediapipe/cosmic_galaxy.jpeg')",
+            },
+            fontFamily: {
+              sans: ['Poppins', 'sans-serif'],
+              display: ['"Momo Trust Display"', 'sans-serif'],
+            },
+            colors: {
+              'brand-lilas': '#E6E0F8',
+              'brand-purple': '#A491D3',
+              'brand-dark': '#4A4063',
+              'brand-green': '#D1E7DD',
+              'brand-gold': '#F0E68C',
+            },
+            keyframes: {
+              fadeInUp: {
+                'from': { opacity: 0, transform: 'translateY(20px)' },
+                'to': { opacity: 1, transform: 'translateY(0)' },
+              },
+              pulse: {
+                 '50%': { transform: 'scale(1.02)' },
+              },
+              bob: {
+                '0%, 100%': { transform: 'translateY(-4px)' },
+                '50%': { transform: 'translateY(0)' },
+              }
+            },
+            animation: {
+              fadeInUp: 'fadeInUp 1s ease-out forwards',
+              pulse: 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              bob: 'bob 3s ease-in-out infinite',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

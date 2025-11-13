@@ -1444,10 +1444,202 @@ const MentionsLegales = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
     );
 };
 
+// --- POLITIQUE DE CONFIDENTIALITÉ PAGE ---
+const PolitiqueConfidentialite = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
+    return (
+        <div className="bg-brand-lilas text-brand-dark font-sans min-h-screen flex flex-col">
+            <Header onNavClick={onNavClick} />
+            <main className="flex-1 w-full px-4 sm:px-6 py-12 sm:py-16">
+                <div className="container mx-auto max-w-4xl">
+                    <h1 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4 sm:mb-6 break-words">Politique de confidentialité</h1>
+                    <p className="text-xs sm:text-sm text-gray-600 mb-6 sm:mb-8">Dernière mise à jour : novembre 2025</p>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">1. Responsable du traitement</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Tourma-Line - Line Simon<br />
+                            Tourmaline, 76540 Gerponville, France<br />
+                            Email : <a href="mailto:line.simon.ls@gmail.com" className="text-brand-purple hover:underline break-all">line.simon.ls@gmail.com</a>
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">2. Données collectées</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 break-words">
+                            Nous collectons les données suivantes lorsque vous utilisez notre site :
+                        </p>
+                        <ul className="text-gray-700 text-xs sm:text-sm leading-relaxed list-disc list-inside break-words">
+                            <li>Informations de contact (nom, email, téléphone) via les formulaires</li>
+                            <li>Données de navigation (adresse IP, pages visitées, durée de visite)</li>
+                            <li>Cookies et technologies similaires pour améliorer votre expérience</li>
+                        </ul>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">3. Finalités du traitement</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Vos données sont utilisées pour :
+                        </p>
+                        <ul className="text-gray-700 text-xs sm:text-sm leading-relaxed list-disc list-inside break-words">
+                            <li>Répondre à vos demandes de contact</li>
+                            <li>Gérer les rendez-vous et séances</li>
+                            <li>Améliorer notre site et nos services</li>
+                            <li>Respecter nos obligations légales</li>
+                        </ul>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">4. Base légale</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Le traitement de vos données est fondé sur votre consentement (article 6.1.a du RGPD) ou sur l'exécution d'un contrat (article 6.1.b du RGPD).
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">5. Durée de conservation</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Vos données de contact sont conservées pendant la durée nécessaire à la gestion de votre demande ou de votre rendez-vous, puis supprimées dans un délai de 3 ans.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">6. Vos droits</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Conformément au RGPD, vous disposez des droits suivants :
+                        </p>
+                        <ul className="text-gray-700 text-xs sm:text-sm leading-relaxed list-disc list-inside break-words">
+                            <li>Droit d'accès à vos données</li>
+                            <li>Droit de rectification</li>
+                            <li>Droit à l'oubli (suppression)</li>
+                            <li>Droit à la limitation du traitement</li>
+                            <li>Droit à la portabilité des données</li>
+                            <li>Droit d'opposition</li>
+                        </ul>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mt-3 break-words">
+                            Pour exercer ces droits, contactez-nous à : <a href="mailto:line.simon.ls@gmail.com" className="text-brand-purple hover:underline break-all">line.simon.ls@gmail.com</a>
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">7. Sécurité</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Nous mettons en place des mesures de sécurité appropriées pour protéger vos données contre l'accès non autorisé, la modification ou la destruction.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">8. Contact</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Pour toute question concernant cette politique de confidentialité, contactez-nous à : <a href="mailto:line.simon.ls@gmail.com" className="text-brand-purple hover:underline break-all">line.simon.ls@gmail.com</a>
+                        </p>
+                    </section>
+                </div>
+            </main>
+            <Footer />
+            <Credits />
+        </div>
+    );
+};
+
+// --- CONDITIONS GÉNÉRALES PAGE ---
+const ConditionsGenerales = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
+    return (
+        <div className="bg-brand-lilas text-brand-dark font-sans min-h-screen flex flex-col">
+            <Header onNavClick={onNavClick} />
+            <main className="flex-1 w-full px-4 sm:px-6 py-12 sm:py-16">
+                <div className="container mx-auto max-w-4xl">
+                    <h1 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4 sm:mb-6 break-words">Conditions générales</h1>
+                    <p className="text-xs sm:text-sm text-gray-600 mb-6 sm:mb-8">Dernière mise à jour : novembre 2025</p>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">1. Objet</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Les présentes conditions générales régissent l'utilisation du site Tourma-Line et l'accès aux services proposés par Line Simon (numérologie, cartomancie, soins énergétiques LAHOCHI).
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">2. Accès au site</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            L'accès au site est gratuit et accessible à tous. Tourma-Line se réserve le droit de refuser l'accès à toute personne qui ne respecterait pas les présentes conditions.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">3. Services proposés</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mb-3 break-words">
+                            Tourma-Line propose les services suivants :
+                        </p>
+                        <ul className="text-gray-700 text-xs sm:text-sm leading-relaxed list-disc list-inside break-words">
+                            <li>Consultations de numérologie et cartomancie</li>
+                            <li>Soins énergétiques LAHOCHI</li>
+                            <li>Formules d'accompagnement personnalisé</li>
+                        </ul>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed mt-3 break-words">
+                            Les services sont fournis à titre informatif et de bien-être. Ils ne remplacent pas un avis médical, psychologique ou juridique.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">4. Tarifs et paiement</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Les tarifs sont affichés sur le site et peuvent être modifiés à tout moment. Le paiement s'effectue selon les modalités convenues lors de la prise de rendez-vous.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">5. Annulation et remboursement</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Toute annulation doit être effectuée au moins 48 heures avant la séance. Les annulations effectuées moins de 48 heures avant la séance ne donnent pas droit à remboursement.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">6. Responsabilité</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Tourma-Line ne pourra être tenue responsable des dommages directs ou indirects résultant de l'utilisation du site ou des services proposés. Les informations fournies ont un caractère purement informatif.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">7. Propriété intellectuelle</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            L'ensemble des contenus du site (textes, images, graphismes, logos) est la propriété exclusive de Tourma-Line. Toute reproduction sans autorisation est interdite.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">8. Modification des conditions</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Tourma-Line se réserve le droit de modifier les présentes conditions à tout moment. Les modifications seront publiées sur le site.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">9. Droit applicable</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Les présentes conditions sont régies par la loi française. Tout litige sera soumis aux tribunaux compétents.
+                        </p>
+                    </section>
+
+                    <section className="mb-6 sm:mb-8">
+                        <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-3">10. Contact</h2>
+                        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed break-words">
+                            Pour toute question concernant ces conditions générales, contactez-nous à : <a href="mailto:line.simon.ls@gmail.com" className="text-brand-purple hover:underline break-all">line.simon.ls@gmail.com</a>
+                        </p>
+                    </section>
+                </div>
+            </main>
+            <Footer />
+            <Credits />
+        </div>
+    );
+};
+
 // --- MAIN APP COMPONENT ---
 const App = () => {
   const [activeTab, setActiveTab] = useState('numerology');
-  const [currentPage, setCurrentPage] = useState<"home" | "mentions-legales">(
+  const [currentPage, setCurrentPage] = useState<"home" | "mentions-legales" | "politique-de-confidentialite" | "conditions-generales">(
     "home"
   );
 
@@ -1466,8 +1658,8 @@ const App = () => {
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash.substring(1);
-      if (hash === "mentions-legales") {
-        setCurrentPage("mentions-legales");
+      if (hash === "mentions-legales" || hash === "politique-de-confidentialite" || hash === "conditions-generales") {
+        setCurrentPage(hash as any);
       } else {
         setCurrentPage("home");
       }
@@ -1480,6 +1672,14 @@ const App = () => {
 
   if (currentPage === "mentions-legales") {
     return <MentionsLegales onNavClick={handleNavClick} />;
+  }
+
+  if (currentPage === "politique-de-confidentialite") {
+    return <PolitiqueConfidentialite onNavClick={handleNavClick} />;
+  }
+
+  if (currentPage === "conditions-generales") {
+    return <ConditionsGenerales onNavClick={handleNavClick} />;
   }
 
   return (

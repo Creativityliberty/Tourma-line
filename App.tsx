@@ -380,8 +380,8 @@ const Formules = () => {
                 "Soin Lahochi ciblé pour réharmoniser les chakras et libérer les tensions.",
                 "Conseils d’ancrage ou message intuitif de fin de séance."
             ],
-            duration: "1h à 1h15",
-            price: "50€",
+            duration: "1h à 1h30",
+            price: "70€",
             priceNote: "Une bulle de réconfort"
         },
         {
@@ -395,8 +395,8 @@ const Formules = () => {
                 "Mini suivi par message entre les séances."
             ],
             duration: "environ 1 mois",
-            price: "135€",
-            priceNote: "(au lieu de 150€)"
+            price: "150€",
+            priceNote: "(au lieu de 180€)"
         },
         {
             icon: ButterflyIcon,

@@ -566,19 +566,73 @@ const Booking = () => {
 
 const Footer = () => {
     return (
-        <footer className="bg-brand-dark text-white py-8">
-            <div className="container mx-auto text-center">
-                 <h3 className="text-3xl font-display font-bold mb-4">TOURMA-LINE</h3>
-                <p className="text-brand-lilas mb-4">"Pour vous guider vers la clarté, la confiance et l'harmonie. ✨"</p>
-                 <div className="flex justify-center space-x-4 mb-4">
-                      <a href="https://www.facebook.com/tourma.line.534540" target="_blank" rel="noopener noreferrer" aria-label="Suivez-nous sur Facebook" className="hover:text-brand-purple transition-all duration-300 transform hover:scale-110 active:scale-95"><FacebookIcon className="w-6 h-6" aria-hidden="true"/></a>
-                 </div>
-                <p className="text-sm text-gray-300">Tourmaline, 76540 Gerponville | Siret : 93116533600013</p>
-                <p className="text-sm text-gray-300 mt-1">Intervention à domicile sur le secteur Gerponville, Valmont, Fécamp, Cany-Barville, Ourville-en-Caux.</p>
-                <p className="text-sm text-gray-300 mt-1">Merci de votre visite.</p>
-                 <a href="https://www.google.com/search?sca_esv=b1b93c191aaa47d3&sxsrf=AE3TifPYZY4KkqMWnY5gZGk3n-vOMMPhAg:1762975647931&q=Tourma-Line+Line+Simon+Num%C3%A9rologie+Cartomancie+et+Soins+%C3%A9nerg%C3%A9tiques+LAHOCHI&si=AMgyJEs9DArPE9xmb5yVYVjpG4jqWDEKSIpCRSjmm88XZWnGNboYSYaVnHI8Cn4IKluKbWRXYq-r0WYB-1748A7mqdXrZUulOMOySxFRN-q-rlVeZj6ypC5qIaStj2zXV6nogPxZwVFtXxigmA-dqJHtBVRMAectv_K5Xo0VYmewelH3do5M-dAjT6PwxvoziBwKDnAPsX9naiebeBv7x2A75ft3kXZHUg%3D%3D&sa=X&ved=2ahUKExiFifiJrO2QAxW0NvsDHRiNLegQ_coHegQIKRAB" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-300 hover:text-brand-purple transition-colors mt-2 inline-block">
-                    Voir sur Google Business
-                </a>
+        <footer className="bg-brand-dark text-white py-10 mt-0">
+            <div className="container mx-auto px-6">
+                <div className="grid gap-8 md:grid-cols-3">
+                    <div>
+                        <h3 className="text-3xl font-display font-bold mb-3">TOURMA-LINE</h3>
+                        <p className="text-brand-lilas mb-4">"Pour vous guider vers la clarté, la confiance et l'harmonie. ✨"</p>
+                        <p className="text-sm text-gray-300">Tourmaline, 76540 Gerponville</p>
+                        <p className="text-sm text-gray-300">Siret : 93116533600013</p>
+                    </div>
+
+                    <div>
+                        <h4 className="text-lg font-semibold mb-3">Contact</h4>
+                        <p className="text-sm text-gray-300">
+                            Tél : <a href="tel:0649653186" className="hover:text-brand-purple underline">06 49 65 31 86</a>
+                        </p>
+                        <p className="text-sm text-gray-300">
+                            Email : <a href="mailto:line.simon.ls@gmail.com" className="hover:text-brand-purple underline">line.simon.ls@gmail.com</a>
+                        </p>
+                        <div className="flex items-center space-x-4 mt-4">
+                            <a
+                                href="https://www.facebook.com/tourma.line.534540"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label="Suivez-nous sur Facebook"
+                                className="hover:text-brand-purple transition-all duration-300 transform hover:scale-110 active:scale-95"
+                            >
+                                <FacebookIcon className="w-6 h-6" aria-hidden="true" />
+                            </a>
+                        </div>
+                        <a
+                            href="https://www.google.com/search?sca_esv=b1b93c191aaa47d3&sxsrf=AE3TifPYZY4KkqMWnY5gZGk3n-vOMMPhAg:1762975647931&q=Tourma-Line+Line+Simon+Num%C3%A9rologie+Cartomancie+et+Soins+%C3%A9nerg%C3%A9tiques+LAHOCHI&si=AMgyJEs9DArPE9xmb5yVYVjpG4jqWDEKSIpCRSjmm88XZWnGNboYSYaVnHI8Cn4IKluKbWRXYq-r0WYB-1748A7mqdXrZUulOMOySxFRN-q-rlVeZj6ypC5qIaStj2zXV6nogPxZwVFtXxigmA-dqJHtBVRMAectv_K5Xo0VYmewelH3do5M-dAjT6PwxvoziBwKDnAPsX9naiebeBv7x2A75ft3kXZHUg%3D%3D&sa=X&ved=2ahUKExiFifiJrO2QAxW0NvsDHRiNLegQ_coHegQIKRAB"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="block text-sm text-gray-300 hover:text-brand-purple transition-colors mt-3"
+                        >
+                            Voir sur Google Business
+                        </a>
+                    </div>
+
+                    <div>
+                        <h4 className="text-lg font-semibold mb-3">Informations</h4>
+                        <ul className="space-y-2 text-sm text-gray-300">
+                            <li>
+                                <a href="/mentions-legales" className="hover:text-brand-purple">
+                                    Mentions légales
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/politique-de-confidentialite" className="hover:text-brand-purple">
+                                    Politique de confidentialité
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/conditions-generales" className="hover:text-brand-purple">
+                                    Conditions générales
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div className="border-t border-white/10 mt-8 pt-4 text-center">
+                    <p className="text-sm text-gray-300">
+                        Intervention à domicile sur le secteur Gerponville, Valmont, Fécamp, Cany-Barville, Ourville-en-Caux.
+                    </p>
+                    <p className="text-sm text-gray-300 mt-1">Merci de votre visite.</p>
+                </div>
             </div>
         </footer>
     );

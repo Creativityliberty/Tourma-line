@@ -586,7 +586,7 @@ const Footer = () => {
 
 const Credits = () => {
     return (
-        <section className="bg-blue-900 text-white py-6 border-t border-blue-800">
+        <section className="bg-white text-blue-900 py-6 border-t border-blue-200">
             <div className="container mx-auto px-6">
                 <a 
                     href="https://www.numtemaagency.com" 

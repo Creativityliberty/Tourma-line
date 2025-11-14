@@ -1283,13 +1283,23 @@ const Chatbot = () => {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 bg-brand-purple text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-opacity-80 transition-transform transform hover:scale-110 active:scale-95 z-50 animate-bob"
+        className="fixed bottom-4 sm:bottom-6 right-4 sm:right-6 bg-white text-white p-2 sm:p-3 rounded-full shadow-lg hover:shadow-xl transition-transform transform hover:scale-110 active:scale-95 z-50 animate-bob relative"
         aria-label="Ouvrir le chat"
       >
         {isOpen ? (
-          <CloseIcon className="w-6 sm:w-8 h-6 sm:h-8" />
+          <CloseIcon className="w-8 sm:w-10 h-8 sm:h-10 text-brand-purple" />
         ) : (
-          <ChatBubbleIcon className="w-6 sm:w-8 h-6 sm:h-8" />
+          <>
+            <img 
+              src="/favicon.svg" 
+              alt="Tourma-Line Chat" 
+              className="w-8 sm:w-10 h-8 sm:h-10"
+            />
+            {/* Badge de message */}
+            <span className="absolute top-0 right-0 bg-brand-purple text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center animate-pulse">
+              1
+            </span>
+          </>
         )}
       </button>
 

@@ -1190,7 +1190,7 @@ const Chatbot = () => {
   const [messages, setMessages] = useState([
     {
       role: "model",
-      text: "Bonjour ! Je suis ravie de vous éclairer sur les activités de Tourma-Line. ✨ Tourma-Line, Line Simon, vous propose deux services principaux pour votre bien-être et votre développement personnel :\n\n1. **Consultation Numérologie & Cartomancie** (50€) : C'est une exploration profonde de votre chemin de vie. Grâce à la numérologie et à la cartomancie, vous pourrez mieux comprendre vos talents, vos défis et obtenir des éclaircissements sur des questions personnelles, professionnelles ou sentimentales. Une belle manière de trouver clarté et direction ! 🙏\n\n2. **Soin énergétique LAHOCHI** (50€) : Le LAHOCHI est une méthode de guérison énergétique de haute fréquence, un véritable moment de ressourcement. Ce soin aide à rééquilibrer vos chakras, libérer les blocages, réduire le stress et favoriser un bien-être profond. 💜\n\nComment puis-je vous guider aujourd'hui ?",
+      text: "Bonjour ! Je suis ravie de vous éclairer sur les activités de Tourma-Line. ✨ Tourma-Line, Line Simon, vous propose deux services principaux pour votre bien-être et votre développement personnel :\n\n1. **Consultation Numérologie & Cartomancie** (70€) : C'est une exploration profonde de votre chemin de vie. Grâce à la numérologie et à la cartomancie, vous pourrez mieux comprendre vos talents, vos défis et obtenir des éclaircissements sur des questions personnelles, professionnelles ou sentimentales. Une belle manière de trouver clarté et direction ! 🙏\n\n2. **Soin énergétique LAHOCHI** (60€) : Le LAHOCHI est une méthode de guérison énergétique de haute fréquence, un véritable moment de ressourcement. Ce soin aide à rééquilibrer vos chakras, libérer les blocages, réduire le stress et favoriser un bien-être profond. 💜\n\nComment puis-je vous guider aujourd'hui ?",
     },
   ]);
   const [input, setInput] = useState("");
@@ -1203,8 +1203,8 @@ const Chatbot = () => {
 **Business Information:**
 - **Practitioner:** Tourma-Line (Line Simon)
 - **Services (Single Sessions):**
-  1.  **Consultation Numérologie & Cartomancie (50€):** An exploration of one's life path.
-  2.  **Soin énergétique LAHOCHI (50€):** A high-frequency energy healing method.
+  1.  **Consultation Numérologie & Cartomancie (70€):** An exploration of one's life path.
+  2.  **Soin énergétique LAHOCHI (60€):** A high-frequency energy healing method.
 - **Formules (Packages):**
   1.  **Séance de Confort (50€):** A 1-1.25h single session for immediate needs (stress, fatigue). Includes energy reading, Lahochi, and guidance. It's a great starting point.
   2.  **Formule "Harmonie Intérieure" (135€):** 3 sessions over 1 month for recurring blockages. Includes 1 numerology/cartomancy session, 1 Lahochi session, and message support between sessions.

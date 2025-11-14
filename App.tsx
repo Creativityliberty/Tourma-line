@@ -1733,6 +1733,86 @@ const App = () => {
         <Testimonials />
         <Booking />
       </main>
+
+      {/* SEO Keywords Section - Hidden */}
+      <div className="hidden">
+        <h2>Services de Numérologie, Cartomancie et Soins Énergétiques</h2>
+        <p>
+          Tourma-Line propose des services de numérologie, cartomancie, voyance
+          et soins énergétiques LAHOCHI à Valmont, Fécamp, Cany-Barville,
+          Ourville-en-Caux, Gerponville et environs en Normandie.
+        </p>
+
+        <section>
+          <h3>Services à Valmont</h3>
+          <p>
+            Numérologie Valmont, Cartomancie Valmont, Voyance Valmont,
+            Consultation Numérologie Valmont, Soin énergétique LAHOCHI Valmont,
+            Guidance spirituelle Valmont, Lecture de tarot Valmont
+          </p>
+        </section>
+
+        <section>
+          <h3>Services à Fécamp</h3>
+          <p>
+            Numérologie Fécamp, Cartomancie Fécamp, Voyance Fécamp, Consultation
+            Numérologie Fécamp, Soin énergétique LAHOCHI Fécamp, Guidance
+            spirituelle Fécamp, Lecture de tarot Fécamp
+          </p>
+        </section>
+
+        <section>
+          <h3>Services à Cany-Barville</h3>
+          <p>
+            Numérologie Cany-Barville, Cartomancie Cany-Barville, Voyance
+            Cany-Barville, Consultation Numérologie Cany-Barville, Soin
+            énergétique LAHOCHI Cany-Barville, Guidance spirituelle
+            Cany-Barville, Lecture de tarot Cany-Barville
+          </p>
+        </section>
+
+        <section>
+          <h3>Services à Ourville-en-Caux</h3>
+          <p>
+            Numérologie Ourville-en-Caux, Cartomancie Ourville-en-Caux, Voyance
+            Ourville-en-Caux, Consultation Numérologie Ourville-en-Caux, Soin
+            énergétique LAHOCHI Ourville-en-Caux, Guidance spirituelle
+            Ourville-en-Caux, Lecture de tarot Ourville-en-Caux
+          </p>
+        </section>
+
+        <section>
+          <h3>Services à Gerponville</h3>
+          <p>
+            Numérologie Gerponville, Cartomancie Gerponville, Voyance
+            Gerponville, Consultation Numérologie Gerponville, Soin énergétique
+            LAHOCHI Gerponville, Guidance spirituelle Gerponville, Lecture de
+            tarot Gerponville
+          </p>
+        </section>
+
+        <section>
+          <h3>Services à Saint-Riquier-ès-Plains</h3>
+          <p>
+            Numérologie Saint-Riquier-ès-Plains, Cartomancie
+            Saint-Riquier-ès-Plains, Voyance Saint-Riquier-ès-Plains,
+            Consultation Numérologie Saint-Riquier-ès-Plains, Soin énergétique
+            LAHOCHI Saint-Riquier-ès-Plains, Guidance spirituelle
+            Saint-Riquier-ès-Plains, Lecture de tarot Saint-Riquier-ès-Plains
+          </p>
+        </section>
+
+        <section>
+          <h3>Services Généraux</h3>
+          <p>
+            Numérologie en ligne, Cartomancie en ligne, Voyance à distance,
+            Consultation énergétique, Soins énergétiques LAHOCHI, Guidance
+            spirituelle, Lecture de tarot, Chakras, Bien-être énergétique,
+            Développement personnel, Accompagnement spirituel
+          </p>
+        </section>
+      </div>
+
       <Footer />
       <Credits />
       <Chatbot />

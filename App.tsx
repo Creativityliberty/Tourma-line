@@ -784,7 +784,7 @@ const Formules = () => {
       idealFor:
         "Les besoins ponctuels : stress, manque d’énergie, doute, surcharge émotionnelle ou besoin de retrouver confiance.",
       details: [
-        "Lecture énergétique et guidance par numérologie et cartomancie.",
+        "Lecture énergétique et guidance par numérologie.",
         "Soin Lahochi ciblé pour réharmoniser les chakras et libérer les tensions.",
         "Conseils d’ancrage ou message intuitif de fin de séance.",
       ],

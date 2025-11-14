@@ -997,6 +997,112 @@ const Testimonials = () => {
   );
 };
 
+const FAQ = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqs = [
+    {
+      question: "Comment puis-je comprendre la numérologie ?",
+      answer: "La numérologie est une discipline basée sur l'attribution de significations aux chiffres, en fonction du nom, de la date de naissance et d'autres données personnelles. Elle repose sur l'idée que les nombres dégagent une vibration et influencent notre personnalité, notre destin et nos événements de vie.",
+    },
+    {
+      question: "Comment calculer mon chemin de vie en numérologie ?",
+      answer: "Il suffit d'additionner les chiffres de votre date de naissance (jour + mois + année). Si vous obtenez un nombre à deux chiffres, additionnez-les à nouveau. Par exemple, pour une naissance le 20 janvier 1986 : 2+0+1+1+9+8+6 = 27, puis 2+7 = 9. Le chiffre 9 est votre chemin de vie.",
+    },
+    {
+      question: "Quel est le chiffre le plus puissant en numérologie ?",
+      answer: "Le chiffre 9 est considéré comme le plus puissant en numérologie. C'est un nombre de transformation et de sagesse universelle. Cependant, les maîtres nombres (11, 22 et 33) possèdent aussi une puissance exceptionnelle.",
+    },
+    {
+      question: "Quels sont les trois maîtres nombres en numérologie ?",
+      answer: "Les trois maîtres nombres sont le 11, le 22 et le 33. Ces nombres possèdent une puissance spécifique et exceptionnelle. Ils représentent l'intuition, la maîtrise et la sagesse universelle.",
+    },
+    {
+      question: "Quel chiffre attire l'argent et la prospérité ?",
+      answer: "En numérologie, le chiffre 8 est souvent considéré comme celui qui attire le plus l'argent et la prospérité. Avec sa forme symétrique et infinie, il est associé à la stabilité matérielle, à la réussite et au pouvoir.",
+    },
+    {
+      question: "Pourquoi le 7 est-il considéré comme un chiffre sacré ?",
+      answer: "Le chiffre 7 est supposé porter bonheur car c'est un chiffre sacré dans de nombreuses religions. Dans la Bible, Dieu a créé le monde en sept jours. Les pèlerins musulmans tournent sept fois autour de la Kaaba. Selon les hindous, le corps a sept sources d'énergie appelées les chakras.",
+    },
+    {
+      question: "Qu'est-ce qu'une consultation de numérologie chez Tourma-Line ?",
+      answer: "Une consultation de numérologie chez Tourma-Line est une exploration profonde de votre chemin de vie. Grâce à l'analyse de votre date de naissance et de votre nom, vous pourrez mieux comprendre vos talents, vos défis et obtenir des éclaircissements sur des questions personnelles, professionnelles ou sentimentales.",
+    },
+    {
+      question: "Comment fonctionne un soin énergétique LAHOCHI ?",
+      answer: "Le LAHOCHI est une méthode de guérison énergétique de haute fréquence. Ce soin aide à rééquilibrer vos chakras, libérer les blocages, réduire le stress et favoriser un bien-être profond. C'est un véritable moment de ressourcement et de transformation.",
+    },
+    {
+      question: "Puis-je avoir une consultation à distance ?",
+      answer: "Oui ! Tourma-Line propose des consultations à distance via téléphone, appel vidéo ou Messenger. Cela vous permet de bénéficier des services depuis le confort de votre domicile, peu importe où vous vous trouvez.",
+    },
+    {
+      question: "Quels sont les bénéfices d'une consultation de numérologie ?",
+      answer: "Une consultation de numérologie peut vous aider à : comprendre votre personnalité profonde, clarifier votre direction de vie, résoudre des blocages, améliorer vos relations, prendre de meilleures décisions et trouver plus de confiance et d'harmonie.",
+    },
+  ];
+
+  return (
+    <section className="py-20 bg-brand-lilas">
+      <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+        <h2 className="text-4xl sm:text-5xl font-display text-center mb-4 text-brand-dark">
+          Questions Fréquentes
+        </h2>
+        <p className="text-center text-gray-600 mb-12 text-sm sm:text-base">
+          Découvrez les réponses aux questions les plus posées sur la numérologie et nos services
+        </p>
+
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+            >
+              <button
+                onClick={() =>
+                  setOpenIndex(openIndex === index ? null : index)
+                }
+                className="w-full px-6 py-4 flex justify-between items-center hover:bg-brand-lilas hover:bg-opacity-30 transition-colors text-left"
+              >
+                <span className="font-semibold text-brand-dark pr-4">
+                  {faq.question}
+                </span>
+                <span
+                  className={`text-brand-purple text-xl flex-shrink-0 transition-transform ${
+                    openIndex === index ? "rotate-180" : ""
+                  }`}
+                >
+                  ▼
+                </span>
+              </button>
+              {openIndex === index && (
+                <div className="px-6 py-4 bg-brand-lilas bg-opacity-20 border-t border-gray-200">
+                  <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                    {faq.answer}
+                  </p>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 p-6 bg-brand-purple bg-opacity-10 rounded-lg border border-brand-purple border-opacity-30 text-center">
+          <p className="text-gray-700 mb-4">
+            Vous avez d'autres questions ? N'hésitez pas à nous contacter !
+          </p>
+          <a
+            href="tel:0649653186"
+            className="inline-block bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 transform active:scale-95"
+          >
+            Nous appeler
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 const Booking = () => {
   return (
     <section id="rendezvous" className="py-20 bg-brand-green">
@@ -1731,6 +1837,7 @@ const App = () => {
         <SessionFlow />
         <Pricing />
         <Testimonials />
+        <FAQ />
         <Booking />
       </main>
 

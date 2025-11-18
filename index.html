@@ -34,58 +34,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
     
-    <!-- Tailwind Config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            backgroundImage: {
-              'hero-pattern': "url('https://storage.googleapis.com/aai-web-samples/mediapipe/cosmic_galaxy.jpeg')",
-            },
-            fontFamily: {
-              sans: ['Poppins', 'sans-serif'],
-              display: ['"Momo Trust Display"', 'sans-serif'],
-            },
-            colors: {
-              'brand-lilas': '#E6E0F8',
-              'brand-purple': '#A491D3',
-              'brand-dark': '#4A4063',
-              'brand-green': '#D1E7DD',
-              'brand-gold': '#F0E68C',
-            },
-            keyframes: {
-              fadeInUp: {
-                'from': { opacity: 0, transform: 'translateY(20px)' },
-                'to': { opacity: 1, transform: 'translateY(0)' },
-              },
-              pulse: {
-                 '50%': { transform: 'scale(1.02)' },
-              },
-              bob: {
-                '0%, 100%': { transform: 'translateY(-4px)' },
-                '50%': { transform: 'translateY(0)' },
-              }
-            },
-            animation: {
-              fadeInUp: 'fadeInUp 1s ease-out forwards',
-              pulse: 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-              bob: 'bob 3s ease-in-out infinite',
-            }
-          }
-        }
-      }
-    </script>
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Custom Styles -->
-    <style>
-      html {
-        scroll-padding-top: 80px;
-      }
-    </style>
-    
     <!-- React Import Map -->
     <script type="importmap">
 {

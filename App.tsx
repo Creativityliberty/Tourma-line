@@ -4,6 +4,7 @@
 
 import { GoogleGenAI } from "@google/genai";
 import React, { useEffect, useRef, useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 // --- HELPER COMPONENT for Scroll Animations ---
 type AnimateOnScrollProps = {
@@ -1919,6 +1920,7 @@ const App = () => {
       <Footer />
       <Credits />
       <Chatbot />
+      <Analytics />
     </div>
   );
 };

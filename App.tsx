@@ -779,26 +779,11 @@ const Services = ({
 const Formules = () => {
   const formulesList = [
     {
-      icon: FeatherIcon,
-      title: "Séance de Confort",
-      subtitle: "Libération & Bien-être immédiat",
-      idealFor:
-        "Les besoins ponctuels : stress, manque d’énergie, doute, surcharge émotionnelle ou besoin de retrouver confiance.",
-      details: [
-        "Lecture énergétique et guidance par numérologie.",
-        "Soin Lahochi ciblé pour réharmoniser les chakras et libérer les tensions.",
-        "Conseils d’ancrage ou message intuitif de fin de séance.",
-      ],
-      duration: "1h à 1h30",
-      price: "70€",
-      priceNote: "Une bulle de réconfort",
-    },
-    {
       icon: BalanceIcon,
-      title: "Formule “Harmonie Intérieure”",
+      title: "Formule "Harmonie Intérieure"",
       subtitle: "3 Séances sur 1 mois",
       objective:
-        "Apaiser les émotions, comprendre les schémas répétitifs et rééquilibrer les énergies pour restaurer l’harmonie globale.",
+        "Apaiser les émotions, comprendre les schémas répétitifs et rééquilibrer les énergies pour restaurer l'harmonie globale.",
       details: [
         "1 séance combinée de numérologie et de cartomancie.",
         "1 soin Lahochi (à une autre date).",
@@ -810,7 +795,7 @@ const Formules = () => {
     },
     {
       icon: ButterflyIcon,
-      title: "Formule “Renaissance”",
+      title: "Formule "Renaissance"",
       subtitle: "Accompagnement sur 3 mois",
       objective:
         "Guérir en profondeur, libérer les mémoires émotionnelles et retrouver une stabilité intérieure durable (traumatismes, deuils, ruptures).",
@@ -838,7 +823,7 @@ const Formules = () => {
             par une lecture énergétique pour un accompagnement juste, ciblé et
             adapté à votre histoire.
           </p>
-          <div className="grid md:grid-cols-3 gap-8 items-start">
+          <div className="grid md:grid-cols-2 gap-8 items-start max-w-4xl mx-auto">
             {formulesList.map((formule, index) => (
               <div
                 key={index}
@@ -862,11 +847,7 @@ const Formules = () => {
                 </p>
 
                 <p className="font-semibold text-gray-800 mb-2">
-                  {formule.details.length > 0
-                    ? formule.title === "Séance de Confort"
-                      ? "Déroulé :"
-                      : "Contenu :"
-                    : ""}
+                  {formule.details.length > 0 ? "Contenu :" : ""}
                 </p>
                 <ul className="space-y-2 text-gray-700 mb-6 flex-grow">
                   {formule.details.map((item, i) => (

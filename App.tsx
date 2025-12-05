@@ -1832,8 +1832,8 @@ const App = () => {
         <Services activeTab={activeTab} setActiveTab={setActiveTab} />
         <Formules />
         <SessionFlow />
-        <Pricing />
         <Testimonials />
+        <Pricing />
         <FAQ />
         <Booking />
       </main>

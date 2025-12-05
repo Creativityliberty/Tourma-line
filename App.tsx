@@ -780,7 +780,7 @@ const Formules = () => {
   const formulesList = [
     {
       icon: BalanceIcon,
-      title: "Formule "Harmonie Intérieure"",
+      title: "Formule « Harmonie Intérieure »",
       subtitle: "3 Séances sur 1 mois",
       objective:
         "Apaiser les émotions, comprendre les schémas répétitifs et rééquilibrer les énergies pour restaurer l'harmonie globale.",
@@ -795,7 +795,7 @@ const Formules = () => {
     },
     {
       icon: ButterflyIcon,
-      title: "Formule "Renaissance"",
+      title: "Formule « Renaissance »",
       subtitle: "Accompagnement sur 3 mois",
       objective:
         "Guérir en profondeur, libérer les mémoires émotionnelles et retrouver une stabilité intérieure durable (traumatismes, deuils, ruptures).",

@@ -790,8 +790,8 @@ const Formules = () => {
         "Mini suivi par message entre les séances.",
       ],
       duration: "environ 1 mois",
-      price: "150€",
-      priceNote: "(au lieu de 180€)",
+      price: "100€",
+      priceNote: "Promo jusqu'au 31 décembre 2025 (au lieu de 150€)",
     },
     {
       icon: ButterflyIcon,
@@ -806,8 +806,8 @@ const Formules = () => {
         "1 séance de cartomancie de clôture.",
       ],
       duration: "3 mois",
-      price: "300€",
-      priceNote: "Un chemin de transformation",
+      price: "220€",
+      priceNote: "Promo jusqu'au 31 décembre 2025 (au lieu de 300€)",
     },
   ];
 

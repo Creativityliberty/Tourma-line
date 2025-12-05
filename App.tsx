@@ -374,46 +374,51 @@ const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
           TOURMA-LINE
         </a>
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-4 lg:space-x-6">
+        <nav className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white bg-opacity-10 rounded-full px-6 py-3 backdrop-blur-md border border-white border-opacity-20">
           <a
             href="#accueil"
             onClick={handleHeaderClick}
-            className="text-sm lg:text-base hover:text-brand-purple transition-colors"
+            className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
           >
             Accueil
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
           </a>
           <a
             href="#services"
             onClick={handleHeaderClick}
-            className="text-sm lg:text-base hover:text-brand-purple transition-colors"
+            className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
           >
             Services
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
           </a>
           <a
             href="#formules"
             onClick={handleHeaderClick}
-            className="text-sm lg:text-base hover:text-brand-purple transition-colors"
+            className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
           >
             Formules
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
           </a>
           <a
             href="#bienfaits"
             onClick={handleHeaderClick}
-            className="text-sm lg:text-base hover:text-brand-purple transition-colors"
+            className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
           >
             Bienfaits
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
           </a>
           <a
             href="#tarifs"
             onClick={handleHeaderClick}
-            className="text-sm lg:text-base hover:text-brand-purple transition-colors"
+            className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
           >
             Tarifs
+            <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
           </a>
           <a
             href="#rendezvous"
             onClick={handleHeaderClick}
-            className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform active:scale-95 text-sm lg:text-base"
+            className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform active:scale-95 text-sm lg:text-base ml-2"
           >
             RDV
           </a>
@@ -445,7 +450,7 @@ const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
       </div>
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <nav className="md:hidden bg-brand-dark bg-opacity-98 p-4 space-y-2 mt-2 rounded-lg border border-brand-purple border-opacity-30">
+        <nav className="md:hidden bg-white bg-opacity-10 backdrop-blur-md p-4 space-y-2 mt-2 rounded-2xl border border-white border-opacity-20">
           <a
             href="#accueil"
             onClick={(e) => {

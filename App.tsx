@@ -1811,10 +1811,10 @@ const App = () => {
         <Welcome />
         <Benefits />
         <Services activeTab={activeTab} setActiveTab={setActiveTab} />
+        <Pricing />
         <Formules />
         <SessionFlow />
         <Testimonials />
-        <Pricing />
         <FAQ />
         <Booking />
       </main>

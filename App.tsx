@@ -796,7 +796,7 @@ const Formules = () => {
       ],
       duration: "environ 1 mois",
       price: "100€",
-      priceNote: "Promo jusqu'au 31 décembre 2025 (au lieu de 150€)",
+      priceNote: "Promo jusqu'au 31 décembre 2025",
     },
     {
       icon: ButterflyIcon,
@@ -812,7 +812,7 @@ const Formules = () => {
       ],
       duration: "3 mois",
       price: "220€",
-      priceNote: "Promo jusqu'au 31 décembre 2025 (au lieu de 300€)",
+      priceNote: "Promo jusqu'au 31 décembre 2025",
     },
   ];
 

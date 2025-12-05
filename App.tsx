@@ -865,9 +865,17 @@ const Formules = () => {
 
                 <div className="text-center border-t border-brand-lilas pt-4 mt-auto">
                   <p className="text-gray-600 text-sm">{formule.duration}</p>
-                  <p className="text-4xl font-bold text-brand-dark my-1">
-                    {formule.price}
-                  </p>
+                  <div className="flex items-center justify-center gap-2 my-2">
+                    <p className="text-4xl font-bold text-brand-purple">
+                      {formule.price}
+                    </p>
+                    {formule.title.includes("Harmonie") && (
+                      <p className="text-2xl line-through text-gray-400">150€</p>
+                    )}
+                    {formule.title.includes("Renaissance") && (
+                      <p className="text-2xl line-through text-gray-400">300€</p>
+                    )}
+                  </div>
                   <p className="text-gray-600 text-sm">{formule.priceNote}</p>
                 </div>
               </div>

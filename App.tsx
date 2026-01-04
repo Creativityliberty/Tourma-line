@@ -559,8 +559,9 @@ const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
           énergétiques Lahochi.
         </p>
         <a
-          href="#formules"
-          onClick={onNavClick}
+          href="https://calendly.com/line-simon-ls"
+          target="_blank"
+          rel="noopener noreferrer"
           className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 animate-pulse inline-block shadow-lg"
         >
           Découvrir mes accompagnements

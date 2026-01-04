@@ -740,6 +740,9 @@ const Services = ({
           <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-8 sm:mb-12">
             Mes outils pour vous guider.
           </h2>
+          <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto mb-8">
+            La numérologie et la cartomancie sont proposées comme une seule et même prestation, combinées pour vous offrir une consultation complète et approfondie.
+          </p>
           <div className="flex flex-wrap justify-center gap-2 sm:gap-0 mb-8 border-b-2 border-brand-lilas overflow-x-auto">
             {Object.entries(tabs).map(([tabKey, tabData]) => (
               <button
@@ -816,7 +819,7 @@ const Formules = () => {
       ],
       duration: "environ 1 mois",
       price: "100€",
-      priceNote: "Promo jusqu'au 31 décembre 2025",
+      priceNote: "Promo jusqu'au 31 janvier 2026",
     },
     {
       icon: ButterflyIcon,
@@ -832,7 +835,7 @@ const Formules = () => {
       ],
       duration: "3 mois",
       price: "220€",
-      priceNote: "Promo jusqu'au 31 décembre 2025",
+      priceNote: "Promo jusqu'au 31 janvier 2026",
     },
   ];
 
@@ -971,7 +974,7 @@ const Pricing = () => {
             Tarifs des Séances Uniques
           </h2>
           <p className="text-lg text-brand-purple font-semibold mb-12">
-            🎉 Promo jusqu'au 31 décembre 2025 : Tous les tarifs à 50€ !
+            🎉 Promo prolongée jusqu'au 31 janvier 2026 : Tous les tarifs à 50€ !
           </p>
           <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
             <div className="bg-white p-8 rounded-2xl shadow-lg text-brand-dark transition-all duration-300 hover:scale-105 hover:shadow-2xl">

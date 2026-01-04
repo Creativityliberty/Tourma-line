@@ -527,10 +527,10 @@ const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/hero-optimized.webp')",
+          backgroundImage: "url('/hero-spiritual.webp')",
         }}
         role="img"
-        aria-label="Image représentant la guidance spirituelle et l'accompagnement personnalisé"
+        aria-label="Forêt mystique avec énergie spirituelle lumineuse - Numérologie, cartomancie et soins énergétiques LAHOCHI pour guidance personnalisée"
       ></div>
 
       {/* Overlay with gradient */}
@@ -575,39 +575,45 @@ const Welcome = () => {
             adaptés à vos besoins spécifiques.
           </p>
           <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <HeartHandIcon className="w-12 h-12 mx-auto mb-4 text-brand-purple" />
-              <h3 className="text-2xl font-display text-brand-dark mb-2">
-                Approche humaine et bienveillante
-              </h3>
-              <p className="text-gray-700">
-                Chaque consultation est un moment d'écoute et de partage. Mon
-                objectif est de vous accompagner dans le respect de vos besoins
-                et de vos attentes.
-              </p>
-            </div>
-            <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <KeyIcon className="w-12 h-12 mx-auto mb-4 text-brand-purple" />
-              <h3 className="text-2xl font-display text-brand-dark mb-2">
-                Un chemin vers l'auto-connaissance
-              </h3>
-              <p className="text-gray-700">
-                Grâce à la numérologie et à la cartomancie, vous obtiendrez des
-                réponses qui vous permettront d'avancer plus sereinement, tout
-                en découvrant des clés pour mieux comprendre votre vie.
-              </p>
-            </div>
-            <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <SparklesIcon className="w-12 h-12 mx-auto mb-4 text-brand-purple" />
-              <h3 className="text-2xl font-display text-brand-dark mb-2">
-                Guérison énergétique
-              </h3>
-              <p className="text-gray-700">
-                Les soins LAHOCHI sont une véritable source de revitalisation et
-                de guérison, tant sur le plan physique qu'émotionnel, vous
-                permettant de vous reconnecter à votre énergie vitale.
-              </p>
-            </div>
+            <AnimateOnScroll animationClass="animate-fadeInLeft" delay={0}>
+              <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:glow">
+                <HeartHandIcon className="w-12 h-12 mx-auto mb-4 text-brand-purple animate-float" />
+                <h3 className="text-2xl font-display text-brand-dark mb-2">
+                  Approche humaine et bienveillante
+                </h3>
+                <p className="text-gray-700">
+                  Chaque consultation est un moment d'écoute et de partage. Mon
+                  objectif est de vous accompagner dans le respect de vos besoins
+                  et de vos attentes.
+                </p>
+              </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll animationClass="animate-scaleIn" delay={200}>
+              <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:glow">
+                <KeyIcon className="w-12 h-12 mx-auto mb-4 text-brand-purple animate-float" style={{ animationDelay: '0.5s' }} />
+                <h3 className="text-2xl font-display text-brand-dark mb-2">
+                  Un chemin vers l'auto-connaissance
+                </h3>
+                <p className="text-gray-700">
+                  Grâce à la numérologie et à la cartomancie, vous obtiendrez des
+                  réponses qui vous permettront d'avancer plus sereinement, tout
+                  en découvrant des clés pour mieux comprendre votre vie.
+                </p>
+              </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll animationClass="animate-fadeInRight" delay={400}>
+              <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:glow">
+                <SparklesIcon className="w-12 h-12 mx-auto mb-4 text-brand-purple animate-float" style={{ animationDelay: '1s' }} />
+                <h3 className="text-2xl font-display text-brand-dark mb-2">
+                  Guérison énergétique
+                </h3>
+                <p className="text-gray-700">
+                  Les soins LAHOCHI sont une véritable source de revitalisation et
+                  de guérison, tant sur le plan physique qu'émotionnel, vous
+                  permettant de vous reconnecter à votre énergie vitale.
+                </p>
+              </div>
+            </AnimateOnScroll>
           </div>
         </div>
       </AnimateOnScroll>
@@ -853,9 +859,9 @@ const Formules = () => {
           </p>
           <div className="grid md:grid-cols-2 gap-8 items-start max-w-4xl mx-auto">
             {formulesList.map((formule, index) => (
+              <AnimateOnScroll key={index} animationClass="animate-fadeInUp" delay={index * 200}>
               <div
-                key={index}
-                className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-purple transition-all duration-300 hover:scale-105 hover:shadow-2xl h-full flex flex-col text-left"
+                className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-purple transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:glow h-full flex flex-col text-left"
               >
                 {React.createElement(formule.icon, {
                   className: "w-12 h-12 mb-4 text-brand-purple self-center",
@@ -902,6 +908,7 @@ const Formules = () => {
                   <p className="text-gray-600 text-sm">{formule.priceNote}</p>
                 </div>
               </div>
+              </AnimateOnScroll>
             ))}
           </div>
         </div>
@@ -919,45 +926,51 @@ const SessionFlow = () => {
             Un accompagnement adapté à vous
           </h2>
           <div className="grid md:grid-cols-3 gap-10">
-            <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg border-t-4 border-brand-purple transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <h3 className="text-2xl font-display text-brand-dark mb-3">
-                À distance
-              </h3>
-              <p className="text-gray-600">
-                Par téléphone, visio ou Messenger, pour une flexibilité totale
-                où que vous soyez.
-              </p>
-            </div>
-            <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg border-t-4 border-brand-purple transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <h3 className="text-2xl font-display text-brand-dark mb-3">
-                Au cabinet
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Espace serein au 161 rue Souveraine, 76450
-                Saint-Riquier-ès-Plains, sur rendez-vous uniquement.
-              </p>
-              <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2581.307994998918!2d0.7769!3d49.6885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e16b8b8b8b8b8b%3A0x47e16b8b8b8b8b8b!2sTourma-Line%20-%20Gerponville!5e0!3m2!1sfr!2sfr!4v1703123456789!5m2!1sfr!2sfr"
-                  width="100%"
-                  height="200"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Carte montrant l'emplacement du cabinet de Tourma-Line à Saint-Riquier-ès-Plains, Normandie"
-                ></iframe>
+            <AnimateOnScroll animationClass="animate-fadeInLeft" delay={0}>
+              <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg border-t-4 border-brand-purple transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:glow">
+                <h3 className="text-2xl font-display text-brand-dark mb-3">
+                  À distance
+                </h3>
+                <p className="text-gray-600">
+                  Par téléphone, visio ou Messenger, pour une flexibilité totale
+                  où que vous soyez.
+                </p>
               </div>
-            </div>
-            <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg border-t-4 border-brand-purple transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <h3 className="text-2xl font-display text-brand-dark mb-3">
-                À domicile
-              </h3>
-              <p className="text-gray-600">
-                Je peux me déplacer à votre domicile dans les environs de
-                Gerponville (Valmont, Fécamp, Cany-Barville, Ourville-en-Caux).
-              </p>
-            </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll animationClass="animate-scaleIn" delay={200}>
+              <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg border-t-4 border-brand-purple transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:glow">
+                <h3 className="text-2xl font-display text-brand-dark mb-3">
+                  Au cabinet
+                </h3>
+                <p className="text-gray-600 mb-4">
+                  Espace serein au 161 rue Souveraine, 76450
+                  Saint-Riquier-ès-Plains, sur rendez-vous uniquement.
+                </p>
+                <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2581.307994998918!2d0.7769!3d49.6885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e16b8b8b8b8b8b%3A0x47e16b8b8b8b8b8b!2sTourma-Line%20-%20Gerponville!5e0!3m2!1sfr!2sfr!4v1703123456789!5m2!1sfr!2sfr"
+                    width="100%"
+                    height="200"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Carte montrant l'emplacement du cabinet de Tourma-Line à Saint-Riquier-ès-Plains, Normandie"
+                  ></iframe>
+                </div>
+              </div>
+            </AnimateOnScroll>
+            <AnimateOnScroll animationClass="animate-fadeInRight" delay={400}>
+              <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg border-t-4 border-brand-purple transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:glow">
+                <h3 className="text-2xl font-display text-brand-dark mb-3">
+                  À domicile
+                </h3>
+                <p className="text-gray-600">
+                  Je peux me déplacer à votre domicile dans les environs de
+                  Gerponville (Valmont, Fécamp, Cany-Barville, Ourville-en-Caux).
+                </p>
+              </div>
+            </AnimateOnScroll>
           </div>
         </div>
       </AnimateOnScroll>
@@ -977,28 +990,32 @@ const Pricing = () => {
             🎉 Promo prolongée jusqu'au 31 janvier 2026 : Tous les tarifs à 50€ !
           </p>
           <div className="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
-            <div className="bg-white p-8 rounded-2xl shadow-lg text-brand-dark transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <h3 className="text-2xl font-display mb-4">
-                Consultation Numérologie & Cartomancie
-              </h3>
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <p className="text-5xl font-bold text-brand-purple">50€</p>
-                <p className="text-3xl line-through text-gray-400">70€</p>
+            <AnimateOnScroll animationClass="animate-fadeInLeft" delay={0}>
+              <div className="bg-white p-8 rounded-2xl shadow-lg text-brand-dark transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:glow">
+                <h3 className="text-2xl font-display mb-4">
+                  Consultation Numérologie & Cartomancie
+                </h3>
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <p className="text-5xl font-bold text-brand-purple animate-pulse">50€</p>
+                  <p className="text-3xl line-through text-gray-400">70€</p>
+                </div>
+                <p className="text-gray-700">
+                  À distance, à domicile ou au cabinet
+                </p>
               </div>
-              <p className="text-gray-700">
-                À distance, à domicile ou au cabinet
-              </p>
-            </div>
-            <div className="bg-white p-8 rounded-2xl shadow-lg text-brand-dark transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-              <h3 className="text-2xl font-display mb-4">
-                Soin énergétique LAHOCHI
-              </h3>
-              <div className="flex items-center justify-center gap-3 mb-4">
-                <p className="text-5xl font-bold text-brand-purple">50€</p>
-                <p className="text-3xl line-through text-gray-400">60€</p>
+            </AnimateOnScroll>
+            <AnimateOnScroll animationClass="animate-fadeInRight" delay={200}>
+              <div className="bg-white p-8 rounded-2xl shadow-lg text-brand-dark transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:glow">
+                <h3 className="text-2xl font-display mb-4">
+                  Soin énergétique LAHOCHI
+                </h3>
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <p className="text-5xl font-bold text-brand-purple animate-pulse">50€</p>
+                  <p className="text-3xl line-through text-gray-400">60€</p>
+                </div>
+                <p className="text-gray-700">À distance ou en cabinet</p>
               </div>
-              <p className="text-gray-700">À distance ou en cabinet</p>
-            </div>
+            </AnimateOnScroll>
           </div>
         </div>
       </AnimateOnScroll>

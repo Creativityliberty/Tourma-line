@@ -534,10 +534,10 @@ const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
       ></div>
 
       {/* Overlay with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/10 to-black/20"></div>
 
       {/* Additional overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/10"></div>
 
       {/* Content */}
       <div className="relative z-10 p-4 animate-fadeInUp max-w-4xl">

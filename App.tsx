@@ -527,7 +527,7 @@ const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/hero-spiritual.webp')",
+          backgroundImage: "url('/hero-tourmaline.webp')",
         }}
         role="img"
         aria-label="Forêt mystique avec énergie spirituelle lumineuse - Numérologie, cartomancie et soins énergétiques LAHOCHI pour guidance personnalisée"

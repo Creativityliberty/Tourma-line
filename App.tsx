@@ -523,9 +523,19 @@ const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
       id="accueil"
       className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden"
     >
-      {/* Background Image - Optimized */}
+      {/* Background Image - Mobile */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat sm:hidden"
+        style={{
+          backgroundImage: "url('/hero-mobile-tourmaline.webp')",
+        }}
+        role="img"
+        aria-label="Forêt mystique avec énergie spirituelle lumineuse - Numérologie, cartomancie et soins énergétiques LAHOCHI pour guidance personnalisée"
+      ></div>
+
+      {/* Background Image - Desktop */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block"
         style={{
           backgroundImage: "url('/hero-tourma-line.webp')",
         }}

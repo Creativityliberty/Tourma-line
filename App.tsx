@@ -533,11 +533,11 @@ const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
         aria-label="Forêt mystique avec énergie spirituelle lumineuse - Numérologie, cartomancie et soins énergétiques LAHOCHI pour guidance personnalisée"
       ></div>
 
-      {/* Overlay with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-black/10 to-black/20"></div>
+      {/* Overlay with gradient - responsive opacity */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/5 to-black/10 sm:from-black/20 sm:via-black/10 sm:to-black/20"></div>
 
-      {/* Additional overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/10"></div>
+      {/* Additional overlay for better text readability - responsive opacity */}
+      <div className="absolute inset-0 bg-black/5 sm:bg-black/10"></div>
 
       {/* Content */}
       <div className="relative z-10 p-4 animate-fadeInUp max-w-4xl">

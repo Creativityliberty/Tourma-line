@@ -559,7 +559,7 @@ const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
           énergétiques Lahochi.
         </p>
         <a
-          href="https://calendly.com/line-simon-ls"
+          href="https://calendly.com/tourma-line/"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 animate-pulse inline-block shadow-lg mt-8 sm:mt-0"
@@ -698,7 +698,7 @@ const Services = ({
       content:
         "La numérologie est une science ancienne qui étudie l'impact des nombres sur notre existence. À travers l’analyse de votre date de naissance la numérologie permet de révéler des aspects essentiels de votre personnalité, de vos talents cachés, ainsi que les défis auxquels vous êtes confronté dans votre vie. Chaque consultation vous permet de mieux comprendre vos choix, vos relations et les événements marquants de votre vie, afin de prendre des décisions éclairées et d’aligner votre vie avec votre véritable mission.",
       calendlyButtonText: "Réserver une consultation de numérologie",
-      calendlyUrl: "https://calendly.com/line-simon-ls",
+      calendlyUrl: "https://calendly.com/tourma-line/",
     },
     cartomancy: {
       title: "Cartomancie",
@@ -707,7 +707,7 @@ const Services = ({
       content:
         "La cartomancie est l’art de lire et d’interpréter les cartes pour obtenir des réponses aux questions que vous vous posez. Que ce soit pour éclairer vos choix professionnels, amoureux ou personnels, la cartomancie offre des conseils pratiques et des prévisions sur votre avenir. J'utilise des jeux de cartes traditionnels ou des oracles pour explorer les énergies présentes et vous guider vers des solutions adaptées à votre situation.",
       calendlyButtonText: "Réserver une séance de cartomancie",
-      calendlyUrl: "https://calendly.com/line-simon-ls",
+      calendlyUrl: "https://calendly.com/tourma-line/",
     },
     lahochi: {
       title: "Soin LAHOCHI",
@@ -744,7 +744,7 @@ const Services = ({
         },
       ],
       calendlyButtonText: "Réserver un soin LAHOCHI",
-      calendlyUrl: "https://calendly.com/line-simon-ls",
+      calendlyUrl: "https://calendly.com/tourma-line/",
     },
   };
 
@@ -1173,7 +1173,7 @@ const Booking = () => {
             avec professionnalisme et bienveillance.
           </p>
           <a
-            href="https://www.facebook.com/tourma.line.534540"
+            href="https://calendly.com/tourma-line/"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-4 px-10 rounded-full text-xl transition-transform transform hover:scale-105 active:scale-95 inline-block animate-pulse"

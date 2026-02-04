@@ -50,14 +50,6 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
                     </a>
                     <a
-                        href="/tarifs"
-                        onClick={onNavClick}
-                        className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
-                    >
-                        Tarifs
-                        <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
-                    </a>
-                    <a
                         href="/rendezvous"
                         onClick={onNavClick}
                         className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform active:scale-95 text-sm lg:text-base ml-2"
@@ -132,16 +124,6 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                         className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors"
                     >
                         Bienfaits
-                    </a>
-                    <a
-                        href="/tarifs"
-                        onClick={(e) => {
-                            onNavClick(e);
-                            setMobileMenuOpen(false);
-                        }}
-                        className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors"
-                    >
-                        Tarifs
                     </a>
                     <a
                         href="/rendezvous"

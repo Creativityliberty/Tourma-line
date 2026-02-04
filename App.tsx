@@ -18,7 +18,6 @@ import { Testimonials } from "./src/components/sections/Testimonials";
 import { About } from "./src/components/sections/About";
 import { FAQ } from "./src/components/sections/FAQ";
 import { Contact } from "./src/components/sections/Contact";
-import { Pricing } from "./src/components/sections/Pricing";
 
 import "./src/index.css";
 
@@ -36,7 +35,6 @@ const SectionScroller = () => {
       "/consultations": "consultations",
       "/formules": "formules",
       "/bienfaits": "bienfaits",
-      "/tarifs": "tarifs",
       "/avis": "avis",
       "/temoignages": "avis",
       "/a-propos": "a-propos",
@@ -93,7 +91,6 @@ function App() {
       <Consultations />
       <Formules />
       <Benefits />
-      <Pricing />
       <Process />
       <Testimonials />
       <About />

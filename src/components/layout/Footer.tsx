@@ -61,7 +61,7 @@ export const Footer = () => {
                         <ul className="text-sm text-gray-300 space-y-2">
                             <li>
                                 <a
-                                    href="#mentions-legales"
+                                    href="/mentions-legales"
                                     className="hover:text-brand-purple underline"
                                 >
                                     Mentions légales
@@ -69,7 +69,7 @@ export const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="#politique-de-confidentialite"
+                                    href="/politique-de-confidentialite"
                                     className="hover:text-brand-purple underline"
                                 >
                                     Politique de confidentialité
@@ -77,7 +77,7 @@ export const Footer = () => {
                             </li>
                             <li>
                                 <a
-                                    href="#conditions-generales"
+                                    href="/conditions-generales"
                                     className="hover:text-brand-purple underline"
                                 >
                                     Conditions générales

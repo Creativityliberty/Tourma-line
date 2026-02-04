@@ -5,36 +5,12 @@ type NavClickHandler = (e: React.MouseEvent<HTMLAnchorElement>) => void;
 export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-    const handleHeaderClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-        const href = e.currentTarget.getAttribute("href");
-        if (
-            href &&
-            (href === "#accueil" ||
-                href === "#services" ||
-                href === "#formules" ||
-                href === "#bienfaits" ||
-                href === "#tarifs" ||
-                href === "#rendezvous")
-        ) {
-            const currentHash = window.location.hash.substring(1);
-            if (
-                currentHash === "mentions-legales" ||
-                currentHash === "politique-de-confidentialite" ||
-                currentHash === "conditions-generales"
-            ) {
-                window.location.hash = "#accueil";
-                return;
-            }
-        }
-        onNavClick(e);
-    };
-
     return (
         <header className="bg-brand-dark bg-opacity-50 text-white p-4 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-300">
             <div className="container mx-auto flex justify-between items-center px-4">
                 <a
-                    href="#accueil"
-                    onClick={handleHeaderClick}
+                    href="/"
+                    onClick={onNavClick}
                     className="text-xl sm:text-2xl md:text-3xl font-display font-bold flex-shrink-0"
                 >
                     TOURMA-LINE
@@ -42,48 +18,48 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white bg-opacity-10 rounded-full px-6 py-3 backdrop-blur-md border border-white border-opacity-20">
                     <a
-                        href="#accueil"
-                        onClick={handleHeaderClick}
+                        href="/"
+                        onClick={onNavClick}
                         className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
                     >
                         Accueil
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
                     </a>
                     <a
-                        href="#services"
-                        onClick={handleHeaderClick}
+                        href="/services"
+                        onClick={onNavClick}
                         className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
                     >
                         Services
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
                     </a>
                     <a
-                        href="#formules"
-                        onClick={handleHeaderClick}
+                        href="/formules"
+                        onClick={onNavClick}
                         className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
                     >
                         Formules
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
                     </a>
                     <a
-                        href="#bienfaits"
-                        onClick={handleHeaderClick}
+                        href="/bienfaits"
+                        onClick={onNavClick}
                         className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
                     >
                         Bienfaits
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
                     </a>
                     <a
-                        href="#tarifs"
-                        onClick={handleHeaderClick}
+                        href="/tarifs"
+                        onClick={onNavClick}
                         className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
                     >
                         Tarifs
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
                     </a>
                     <a
-                        href="#rendezvous"
-                        onClick={handleHeaderClick}
+                        href="/rendezvous"
+                        onClick={onNavClick}
                         className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform active:scale-95 text-sm lg:text-base ml-2"
                     >
                         RDV
@@ -118,9 +94,9 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
             {mobileMenuOpen && (
                 <nav className="md:hidden bg-white bg-opacity-10 backdrop-blur-md p-4 space-y-2 mt-2 rounded-2xl border border-white border-opacity-20">
                     <a
-                        href="#accueil"
+                        href="/"
                         onClick={(e) => {
-                            handleHeaderClick(e);
+                            onNavClick(e);
                             setMobileMenuOpen(false);
                         }}
                         className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors"
@@ -128,9 +104,9 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                         Accueil
                     </a>
                     <a
-                        href="#services"
+                        href="/services"
                         onClick={(e) => {
-                            handleHeaderClick(e);
+                            onNavClick(e);
                             setMobileMenuOpen(false);
                         }}
                         className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors"
@@ -138,9 +114,9 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                         Services
                     </a>
                     <a
-                        href="#formules"
+                        href="/formules"
                         onClick={(e) => {
-                            handleHeaderClick(e);
+                            onNavClick(e);
                             setMobileMenuOpen(false);
                         }}
                         className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors"
@@ -148,19 +124,19 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                         Formules
                     </a>
                     <a
-                        href="#bienfaits"
+                        href="/bienfaits"
                         onClick={(e) => {
-                            handleHeaderClick(e);
+                            onNavClick(e);
                             setMobileMenuOpen(false);
                         }}
-                        className="block px-4 py-2 hover:bg-purple hover:bg-opacity-30 rounded transition-colors"
+                        className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors"
                     >
                         Bienfaits
                     </a>
                     <a
-                        href="#tarifs"
+                        href="/tarifs"
                         onClick={(e) => {
-                            handleHeaderClick(e);
+                            onNavClick(e);
                             setMobileMenuOpen(false);
                         }}
                         className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors"
@@ -168,9 +144,9 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                         Tarifs
                     </a>
                     <a
-                        href="#rendezvous"
+                        href="/rendezvous"
                         onClick={(e) => {
-                            handleHeaderClick(e);
+                            onNavClick(e);
                             setMobileMenuOpen(false);
                         }}
                         className="block bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full text-center transition-all duration-300 mt-2"

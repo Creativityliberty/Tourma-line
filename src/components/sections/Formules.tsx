@@ -97,7 +97,7 @@ export const Formules = () => {
                             Réserver
                           </a>
                           <a
-                            href="https://wa.me/qr/NZDHZRB3ZW62B1"
+                            href="https://wa.me/33649653186"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-2 shadow-md"

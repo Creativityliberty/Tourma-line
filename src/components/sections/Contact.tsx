@@ -29,7 +29,7 @@ export const Contact = () => {
                   Réserver ma séance
                 </a>
                 <a
-                  href="https://wa.me/qr/NZDHZRB3ZW62B1"
+                  href="https://wa.me/33649653186"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block flex items-center justify-center gap-2"
@@ -81,7 +81,7 @@ export const Contact = () => {
                   <FacebookIcon className="w-8 h-8" aria-hidden="true" />
                 </a>
                 <a
-                  href="https://wa.me/qr/NZDHZRB3ZW62B1"
+                  href="https://wa.me/33649653186"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Nous contacter sur WhatsApp"

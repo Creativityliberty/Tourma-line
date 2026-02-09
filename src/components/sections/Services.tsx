@@ -54,7 +54,7 @@ export const Services = ({
                                     </div>
                                 )}
                                 <div className={`p-6 sm:p-8 ${currentService.imageUrl ? 'md:w-2/3' : 'w-full'}`}>
-                                    <h3 className="text-2xl sm:text-3xl font-display text-brand-dark mb-4">
+                                    <h3 className="text-xl sm:text-2xl md:text-3xl font-display text-brand-dark mb-4">
                                         {currentService.contentTitle}
                                     </h3>
                                     <p className="text-sm sm:text-base text-gray-700 leading-relaxed">

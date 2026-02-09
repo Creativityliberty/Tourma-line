@@ -21,6 +21,25 @@ html {
     }
   }
 
+  /* Animation défilement horizontal pour témoignages */
+  .animate-scroll {
+    animation: scroll 30s linear infinite;
+  }
+
+  .animate-scroll:hover,
+  .pause-animation {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
   /* Shiny card container */
   .shiny-card-container {
     position: relative;
@@ -37,12 +56,14 @@ html {
     width: 200%;
     height: 200%;
     transform: translate(-50%, -50%);
-    background: conic-gradient(from 0deg,
-        transparent 0deg,
-        transparent 150deg,
-        theme('colors.brand-purple') 180deg,
-        transparent 210deg,
-        transparent 360deg);
+    background: conic-gradient(
+      from 0deg,
+      transparent 0deg,
+      transparent 150deg,
+      theme("colors.brand-purple") 180deg,
+      transparent 210deg,
+      transparent 360deg
+    );
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 0;

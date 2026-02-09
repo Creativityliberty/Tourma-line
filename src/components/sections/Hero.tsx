@@ -38,14 +38,25 @@ export const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
           pèse ? La numérologie et la cartomancie vous aident à y voir clair —
           avec la justesse et la bienveillance que mes clients soulignent.
         </p>
-        <a
-          href="https://cal.com/line-simon"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 animate-pulse inline-block shadow-lg mt-8 sm:mt-0"
-        >
-          Découvrir mes accompagnements
-        </a>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 sm:mt-0">
+          <a
+            href="https://cal.com/line-simon"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 animate-pulse inline-block shadow-lg"
+          >
+            Découvrir mes accompagnements
+          </a>
+          <a
+            href="https://wa.me/qr/NZDHZRB3ZW62B1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block flex items-center justify-center gap-2 shadow-lg"
+          >
+            <WhatsAppIcon className="w-5 h-5" />
+            Contact direct WhatsApp
+          </a>
+        </div>
       </div>
     </section>
   );

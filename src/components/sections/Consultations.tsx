@@ -1,6 +1,6 @@
 import { consultations } from "../../data/consultations";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
-import { SparklesIcon } from "../ui/icons";
+import { SparklesIcon, WhatsAppIcon } from "../ui/icons";
 
 export const Consultations = () => {
   return (
@@ -95,20 +95,31 @@ export const Consultations = () => {
                         )}
                       </div>
 
-                      <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-brand-lilas pt-6">
+                      <div className="flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-brand-lilas pt-6">
                         <div className="text-center sm:text-left">
                           <p className="text-3xl font-bold text-brand-purple">
                             {consultation.price}
                           </p>
                         </div>
-                        <a
-                          href="https://cal.com/line-simon"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="bg-brand-purple hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center w-full sm:w-auto"
-                        >
-                          Réserver
-                        </a>
+                        <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                          <a
+                            href="https://cal.com/line-simon"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-brand-purple hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center"
+                          >
+                            Réserver
+                          </a>
+                          <a
+                            href="https://wa.me/qr/NZDHZRB3ZW62B1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-2"
+                          >
+                            <WhatsAppIcon className="w-5 h-5" />
+                            WhatsApp
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>

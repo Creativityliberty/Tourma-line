@@ -19,14 +19,25 @@ export const Contact = () => {
                 Pour réserver, il suffit de me contacter via le formulaire du
                 site ou par message privé.
               </p>
-              <a
-                href="https://cal.com/line-simon"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block animate-pulse mb-8"
-              >
-                Réserver ma séance
-              </a>
+              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                <a
+                  href="https://cal.com/line-simon"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block animate-pulse"
+                >
+                  Réserver ma séance
+                </a>
+                <a
+                  href="https://wa.me/qr/NZDHZRB3ZW62B1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block flex items-center justify-center gap-2"
+                >
+                  <WhatsAppIcon className="w-5 h-5" />
+                  Contact direct WhatsApp
+                </a>
+              </div>
             </div>
 
             <div className="bg-brand-lilas p-8 rounded-3xl shadow-lg text-left order-1 md:order-2">
@@ -70,11 +81,11 @@ export const Contact = () => {
                   <FacebookIcon className="w-8 h-8" aria-hidden="true" />
                 </a>
                 <a
-                  href="https://wa.me/qr/NZDHZRB3ZW52B1"
+                  href="https://wa.me/qr/NZDHZRB3ZW62B1"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Nous contacter sur WhatsApp"
-                  className="text-gray-500 hover:text-brand-purple transition-all duration-300 transform hover:scale-110 active:scale-95"
+                  className="text-green-500 hover:text-green-600 transition-all duration-300 transform hover:scale-110 active:scale-95"
                 >
                   <WhatsAppIcon className="w-8 h-8" aria-hidden="true" />
                 </a>

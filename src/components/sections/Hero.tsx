@@ -1,4 +1,5 @@
 import React from "react";
+import { WhatsAppIcon } from "../ui/icons";
 
 type NavClickHandler = (e: React.MouseEvent<HTMLAnchorElement>) => void;
 

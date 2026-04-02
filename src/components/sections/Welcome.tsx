@@ -7,22 +7,13 @@ export const Welcome = () => {
       <AnimateOnScroll>
         <div className="container mx-auto text-center px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-display text-brand-dark mb-4">
-            Line — un accompagnement ancré dans l'humain.
+            Mon parcours a commencé par une quête de sens.
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-            Numérologue, cartomancienne et praticienne en soins Lahochi installée en Normandie, je vous accueille en cabinet au 4 résidence Les Peupliers à Gerponville (76540), me déplace à domicile à Fécamp, Valmont, Cany-Barville et alentours, et propose des consultations à distance par téléphone ou visio pour toute la France et l'international francophone.
-          </p>
-          <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-            Comme beaucoup, j'ai cherché à comprendre les événements de ma vie,
-            les schémas qui se répétaient, les questions sans réponses. La
-            numérologie et la cartomancie m'ont offert des clés — non pas
-            magiques, mais précises et profondes.
+            Comme beaucoup, j'ai cherché à comprendre les événements de ma vie, les schémas qui se répétaient, les questions sans réponses. La numérologie et la cartomancie m'ont offert des clés — non pas magiques, mais précises et profondes.
           </p>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-            Aujourd'hui, je mets cette pratique au service de votre{" "}
-            <strong>clarté</strong> : avec votre date de naissance, je décrypte
-            votre chemin de vie, votre année en cours, et vous guide sur vos
-            questions concrètes — relation, travail, transition, choix à faire.
+            Aujourd'hui, je mets cette pratique au service de votre <strong>clarté</strong> : avec votre date de naissance, je décrypte votre chemin de vie, votre année en cours, et vous guide sur vos questions concrètes — relation, travail, transition, choix à faire.
           </p>
           <div className="grid md:grid-cols-3 gap-10">
             <AnimateOnScroll animationClass="animate-fadeInLeft" delay={0}>

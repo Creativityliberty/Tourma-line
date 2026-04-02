@@ -19,7 +19,7 @@ export const Footer = () => {
                         <div className="text-sm text-gray-300 space-y-1">
                             <p>4 résidence Les Peupliers, 76540 Gerponville</p>
                             <p className="text-gray-400 text-xs">
-                                Zone desservie : Fécamp, Valmont, Cany-Barville, Ourville-en-Caux, Saint-Riquier-ès-Plains
+                                Fécamp, Valmont, Cany-Barville, Ourville-en-Caux, Saint-Riquier-ès-Plains
                             </p>
                             <p className="text-gray-400 text-xs">
                                 Consultation à distance : toute la France &amp; international

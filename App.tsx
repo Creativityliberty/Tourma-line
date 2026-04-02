@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/react";
 import React, { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Routes, Route } from "react-router-dom";
 
 // Layout Components
 import { Header } from "./src/components/layout/Header";
@@ -20,16 +20,20 @@ import { About } from "./src/components/sections/About";
 import { FAQ } from "./src/components/sections/FAQ";
 import { Contact } from "./src/components/sections/Contact";
 
+// Service Pages (SEO — URLs dédiées)
+import { NumerologiePage } from "./src/pages/NumerologiePage";
+import { CartomancePage } from "./src/pages/CartomancePage";
+import { LahochiPage } from "./src/pages/LahochiPage";
+
 import "./src/index.css";
 
 /**
- * Component that handles automatic scrolling to sections based on the URL path
+ * Handles automatic scrolling to sections based on URL path
  */
 const SectionScroller = () => {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
-    // Map paths to section IDs
     const pathMap: Record<string, string> = {
       "/": "accueil",
       "/services": "services",
@@ -63,7 +67,8 @@ const SectionScroller = () => {
   return null;
 };
 
-function App() {
+/** Homepage — single page */
+function HomePage() {
   const [activeTab, setActiveTab] = useState("numerology");
   const navigate = useNavigate();
 
@@ -101,6 +106,19 @@ function App() {
       <Footer />
       <Analytics />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/numerologie" element={<NumerologiePage />} />
+      <Route path="/cartomancie" element={<CartomancePage />} />
+      <Route path="/soin-lahochi" element={<LahochiPage />} />
+      {/* Fallback — toutes les autres routes sont des sections de la homepage */}
+      <Route path="*" element={<HomePage />} />
+    </Routes>
   );
 }
 

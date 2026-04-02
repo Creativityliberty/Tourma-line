@@ -8,6 +8,26 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- Pages de service dédiées (SEO) -->
+  <url>
+    <loc>https://www.tourma-line.fr/numerologie</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://www.tourma-line.fr/cartomancie</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://www.tourma-line.fr/soin-lahochi</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
   <!-- Sections principales -->
   <url>
     <loc>https://www.tourma-line.fr/#services</loc>

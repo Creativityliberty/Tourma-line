@@ -47,23 +47,7 @@ export const CityLinks = () => {
             </div>
           </div>
 
-          {/* Cabinet local — liens cliquables */}
-          <div className="mb-10 bg-brand-lilas/20 rounded-2xl p-6 border border-brand-lilas/30">
-            <p className="text-sm font-semibold text-brand-dark uppercase tracking-widest mb-4">
-              📍 Cabinet en Normandie — Consultations en présentiel & domicile
-            </p>
-            <div className="flex flex-wrap gap-2">
-              {localCities.map((city) => (
-                <a
-                  key={city.slug}
-                  href={`/numerologie-${city.slug}`}
-                  className="bg-white text-brand-dark text-sm font-medium px-4 py-2 rounded-full border border-brand-lilas hover:bg-brand-lilas transition-all duration-200 hover:scale-105"
-                >
-                  {city.name}
-                </a>
-              ))}
-            </div>
-          </div>
+
 
           {/* CTA */}
           <div className="bg-brand-dark rounded-3xl p-8 sm:p-10 text-center text-white">

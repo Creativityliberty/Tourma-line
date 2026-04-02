@@ -23,9 +23,9 @@ export const services: Record<string, Service> = {
     id: "numerology",
     title: "Numérologie",
     icon: NumerologyIcon,
-    contentTitle: "Numérologie — Votre chemin de vie déchiffré avec précision",
+    contentTitle: "Numérologie — Découvrez les secrets de votre chemin de vie",
     content:
-      "La numérologie est une science ancienne qui étudie l'impact des nombres sur notre existence. À travers l'analyse de votre date de naissance, Line vous révèle des aspects essentiels de votre personnalité, vos talents cachés, et les défis auxquels vous êtes confronté dans votre vie. Consultation disponible en cabinet au 4 résidence Les Peupliers à Gerponville (Seine-Maritime), à domicile à Fécamp, Valmont, Cany-Barville, et à distance par téléphone pour toute la France et l'international. Chaque consultation vous aide à mieux comprendre vos choix, vos relations et les événements marquants de votre vie.",
+      "La numérologie est une science ancienne qui étudie l'impact des nombres sur notre existence. À travers l'analyse de votre date de naissance, elle révèle des aspects essentiels de votre personnalité, de vos talents cachés, ainsi que les défis auxquels vous êtes confronté dans votre vie. Chaque consultation vous permet de mieux comprendre vos choix, vos relations et les événements marquants de votre vie, afin de prendre des décisions éclairées et d'aligner votre vie avec votre véritable mission.",
     calendlyButtonText: "Réserver une consultation de numérologie",
     calendlyUrl: "https://cal.com/line-simon",
     imageUrl: "/images/services/numerology.jpg",
@@ -37,7 +37,7 @@ export const services: Record<string, Service> = {
     icon: CartomancyIcon,
     contentTitle: "Cartomancie — Des réponses claires grâce aux cartes",
     content:
-      "Cartomancienne installée en Normandie, Line lit et interprète les cartes pour obtenir des réponses aux questions que vous vous posez. Que ce soit pour éclairer vos choix professionnels, amoureux ou personnels, la cartomancie offre des conseils pratiques et des éclairages sur votre chemin de vie. J'utilise des jeux de cartes traditionnels ou des oracles pour explorer les énergies présentes et vous guider vers des solutions adaptées à votre situation. Séances disponibles au cabinet (4 résidence Les Peupliers, Gerponville), à domicile à Fécamp, Valmont, Cany-Barville, ou partout en France et à l'international par téléphone.",
+      "La cartomancie est l'art de lire et d'interpréter les cartes pour obtenir des réponses aux questions que vous vous posez. Que ce soit pour éclairer vos choix professionnels, amoureux ou personnels, la cartomancie offre des conseils pratiques et des prévisions sur votre avenir. J'utilise des jeux de cartes traditionnels ou des oracles pour explorer les énergies présentes et vous guider vers des solutions adaptées à votre situation.",
     calendlyButtonText: "Réserver une séance de cartomancie",
     calendlyUrl: "https://cal.com/line-simon",
     imageUrl: "/images/services/cartomancy.jpg",
@@ -49,7 +49,7 @@ export const services: Record<string, Service> = {
     icon: LahochiIcon,
     contentTitle: "Soin Énergétique LAHOCHI — Une puissante vague de guérison",
     content:
-      "Le LAHOCHI est une méthode de soins énergétiques très puissante, souvent comparée au Reiki, pratiquée par Line en Normandie. Son nom, 'LahoChi', fait référence à l'énergie divine universelle canalisée à travers les mains du praticien pour être transmise à la personne recevant le soin. Séances au cabinet (4 résidence Les Peupliers, Gerponville), à domicile à Fécamp, Valmont et Cany-Barville, ou à distance pour toute la France et l'international. Le Lahochi utilise des fréquences vibratoires élevées pour rééquilibrer les énergies du corps et favoriser la guérison physique, émotionnelle et spirituelle.",
+      "Le LAHOCHI est une méthode de soins énergétiques souvent comparée au Reiki, bien qu'elle soit considérée comme plus puissante et plus rapide. Son nom, 'LahoChi', fait référence à l'énergie divine universelle canalisée à travers les mains du praticien pour être transmise à la personne recevant le soin. Le Lahochi utilise des fréquences vibratoires élevées pour rééquilibrer les énergies du corps et favoriser la guérison physique, émotionnelle et spirituelle.",
     features: [
       {
         title: "Transmission d'énergie par les mains",

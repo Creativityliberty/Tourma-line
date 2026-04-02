@@ -40,6 +40,24 @@ html {
     }
   }
 
+  /* Banderolle défilante — villes */
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+  }
+
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
   /* Shiny card container */
   .shiny-card-container {
     position: relative;

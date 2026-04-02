@@ -38,7 +38,7 @@ export const LocalZone = () => {
               </h2>
               <p className="text-gray-300 text-lg mb-4 leading-relaxed">
                 Installée au <strong className="text-white">{contactInfo.address}</strong> à <strong className="text-white">{contactInfo.city} ({contactInfo.zipCode})</strong>, en
-                Seine-Maritime ({contactInfo.locationDetails}), je vous reçois en cabinet
+                Seine-Maritime, je vous reçois en cabinet
                 sur rendez-vous pour un accompagnement personnalisé.
               </p>
               <p className="text-gray-300 text-lg mb-8 leading-relaxed">
@@ -60,9 +60,6 @@ export const LocalZone = () => {
 
             {/* Right: City cards */}
             <div>
-              <p className="text-sm text-gray-400 mb-4 uppercase tracking-widest font-semibold">
-                Villes desservies
-              </p>
               <div className="space-y-3">
                 <div className="bg-white/10 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
                   <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest mb-3">

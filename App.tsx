@@ -14,6 +14,7 @@ import { Benefits } from "./src/components/sections/Benefits";
 import { Consultations } from "./src/components/sections/Consultations";
 import { Formules } from "./src/components/sections/Formules";
 import { Process } from "./src/components/sections/Process";
+import { LocalZone } from "./src/components/sections/LocalZone";
 import { Testimonials } from "./src/components/sections/Testimonials";
 import { About } from "./src/components/sections/About";
 import { FAQ } from "./src/components/sections/FAQ";
@@ -92,6 +93,7 @@ function App() {
       <Formules />
       <Benefits />
       <Process />
+      <LocalZone />
       <Testimonials />
       <About />
       <FAQ />

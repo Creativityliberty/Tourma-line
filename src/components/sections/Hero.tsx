@@ -31,9 +31,13 @@ export const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
 
       {/* Content */}
       <div className="relative z-10 p-4 animate-fadeInUp max-w-4xl">
-        <h2 className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-4 drop-shadow-lg">
+        {/* H1 SEO — visible mais élégant */}
+        <h1 className="sr-only">
+          Line Simon — Voyante, Numérologue & Cartomancienne en Normandie | Soins Lahochi Gerponville, Fécamp, Seine-Maritime
+        </h1>
+        <p className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-4 drop-shadow-lg">
           Vous traversez une période de questionnement ?
-        </h2>
+        </p>
         <p className="text-sm sm:text-base md:text-lg lg:text-2xl mb-8 max-w-3xl mx-auto font-light drop-shadow-md">
           Relation compliquée, choix professionnel à faire, ou épreuve qui vous
           pèse ? La numérologie et la cartomancie vous aident à y voir clair —

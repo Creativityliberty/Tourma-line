@@ -33,7 +33,7 @@ export const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
       <div className="relative z-10 p-4 animate-fadeInUp max-w-4xl">
         {/* H1 SEO — visible mais élégant */}
         <h1 className="sr-only">
-          Line Simon — Voyante, Numérologue & Cartomancienne en Normandie | Soins Lahochi Gerponville, Fécamp, Seine-Maritime
+          Line — Numérologue & Cartomancienne en Normandie | Soins Lahochi Gerponville, Seine-Maritime
         </h1>
         <p className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-4 drop-shadow-lg">
           Vous traversez une période de questionnement ?

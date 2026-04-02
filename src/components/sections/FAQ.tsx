@@ -5,6 +5,7 @@ const FAQItem = ({
   question,
   answer,
 }: {
+  key?: number;
   question: string;
   answer: string;
 }) => {
@@ -38,7 +39,7 @@ export const FAQ = () => {
   const faqs = [
     {
       question:
-        "J'ai déjà consulté des voyants et j'ai été déçu(e). En quoi est-ce différent avec vous ?",
+        "J'ai déjà consulté des professionnels de la guidance et j'ai été déçu(e). En quoi est-ce différent avec vous ?",
       answer:
         "C'est une question que j'entends souvent. Ce qui change : la précision dans les détails concrets de votre vie. Pas de généralités qui pourraient s'appliquer à tout le monde. Mes clients disent souvent : 'comme si vous connaissiez ma vie'. Votre date de naissance révèle des éléments spécifiques que nous explorons ensemble.",
     },

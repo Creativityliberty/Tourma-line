@@ -7,10 +7,10 @@ export const Welcome = () => {
       <AnimateOnScroll>
         <div className="container mx-auto text-center px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-display text-brand-dark mb-4">
-            Line Simon — un accompagnement ancré dans l'humain.
+            Line — un accompagnement ancré dans l'humain.
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-            Numérologue, cartomancienne et praticienne en soins Lahochi installée en Normandie, je reçois en cabinet à Gerponville (Seine-Maritime), à domicile à Fécamp, Valmont, Cany-Barville, et en consultation à distance partout en France.
+            Numérologue, cartomancienne et praticienne en soins Lahochi installée en Normandie, je vous accueille en cabinet au 4 résidence Les Peupliers à Gerponville (76540), me déplace à domicile à Fécamp, Valmont, Cany-Barville et alentours, et propose des consultations à distance par téléphone ou visio pour toute la France et l'international francophone.
           </p>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-4">
             Comme beaucoup, j'ai cherché à comprendre les événements de ma vie,

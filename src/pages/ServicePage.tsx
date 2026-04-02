@@ -179,8 +179,8 @@ export const ServicePage = ({
               Prêt(e) à réserver votre séance ?
             </h2>
             <p className="text-gray-300 text-lg mb-10">
-              Line Simon vous reçoit en cabinet à Gerponville, à domicile en
-              Normandie, ou en consultation téléphonique partout en France.
+              Line vous reçoit en cabinet au 4 rue de Givrandville à Gerponville,
+              ou en consultation téléphonique partout en France.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

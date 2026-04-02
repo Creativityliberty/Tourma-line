@@ -6,10 +6,10 @@ export const CartomancePage = () => {
   return (
     <>
       <Helmet>
-        <title>Cartomancienne en Normandie — Line Simon | Consultation Cartomancie 76</title>
+        <title>Cartomancienne en Normandie — Line | Consultation Cartomancie 76</title>
         <meta
           name="description"
-          content="Line Simon, cartomancienne en Seine-Maritime. Consultation de cartomancie à Gerponville, Fécamp, et à distance par téléphone. Réponses claires sur votre amour, travail, famille. RDV en ligne."
+          content="Line, cartomancienne en Seine-Maritime. Consultation de cartomancie à Gerponville (proche Saint-Riquier-ès-Plains) et à distance par téléphone. Réponses claires sur votre amour, travail, famille. RDV en ligne."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.tourma-line.fr/cartomancie" />
@@ -19,12 +19,11 @@ export const CartomancePage = () => {
           "name": "Consultation de Cartomancie",
           "provider": {
             "@type": "Person",
-            "name": "Line Simon",
+            "name": "Line",
             "jobTitle": "Cartomancienne",
             "url": "https://www.tourma-line.fr/"
           },
           "areaServed": [
-            { "@type": "City", "name": "Fécamp" },
             { "@type": "City", "name": "Gerponville" },
             { "@type": "AdministrativeArea", "name": "Seine-Maritime" },
             { "@type": "Country", "name": "France" }
@@ -42,11 +41,11 @@ export const CartomancePage = () => {
       <ServicePage
         title="Cartomancie"
         headline="Cartomancienne en Normandie — Des réponses claires et bienveillantes"
-        metaDescription="Cartomancienne à Fécamp, Seine-Maritime et à distance."
+        metaDescription="Cartomancienne à Gerponville, Seine-Maritime et à distance."
         heroImage="/hero-tourma-line.webp"
-        heroImageAlt="Line Simon, cartomancienne en Normandie — consultation de cartomancie"
-        intro="Line Simon lit et interprète les cartes pour répondre à vos questions concrètes — relation, travail, famille, choix à faire. Une guidance précise, sans détour, avec la bienveillance que ses clients soulignent."
-        localInfo="Cabinet à Gerponville (76540) — Domicile : Fécamp, Valmont, Cany-Barville — À distance : toute la France"
+        heroImageAlt="Line, cartomancienne en Normandie — consultation de cartomancie"
+        intro="Line lit et interprète les cartes pour répondre à vos questions concrètes — relation, travail, famille, choix à faire. Une guidance précise, sans détour, avec la bienveillance que ses clients soulignent."
+        localInfo="Cabinet à Gerponville (76540), proche Saint-Riquier-ès-Plains — À distance : toute la France"
         breadcrumb="Cartomancie"
         canonicalPath="/cartomancie"
         ctaText="Réserver ma séance de cartomancie"
@@ -55,25 +54,25 @@ export const CartomancePage = () => {
             icon: "🃏",
             heading: "Qu'est-ce que la cartomancie ?",
             content:
-              "La cartomancie est l'art de lire et d'interpréter des cartes — tarot, oracles ou jeux traditionnels — pour obtenir des éclairages sur votre situation présente et à venir. Contrairement à ce qu'on imagine, ce n'est pas une pratique floue ou mystérieuse : dans les mains de Line Simon, c'est une guidance structurée, précise, et orientée vers l'action.",
+              "La cartomancie est l'art de lire et d'interpréter des cartes — tarot, oracles ou jeux traditionnels — pour obtenir des éclairages sur votre situation présente et à venir. Contrairement à ce qu'on imagine, ce n'est pas une pratique floue ou mystérieuse : dans les mains de Line, c'est une guidance structurée, précise, et orientée vers l'action.",
           },
           {
             icon: "💬",
             heading: "Pour quelles questions consulter ?",
             content:
-              "La cartomancie répond aux questions que vous n'osez pas poser à votre entourage : votre relation amoureuse va-t-elle évoluer ? Ce changement professionnel est-il le bon ? Comment sortir de ce conflit familial ? Line Simon aborde chaque question avec clarté et sans jugement.",
+              "La cartomancie répond aux questions que vous n'osez pas poser à votre entourage : votre relation amoureuse va-t-elle évoluer ? Ce changement professionnel est-il le bon ? Comment sortir de ce conflit familial ? Line aborde chaque question avec clarté et sans jugement.",
           },
           {
             icon: "✨",
             heading: "Une précision qui surprend",
             content:
-              "Beaucoup de clients sont étonnés par la précision des réponses. Patricia témoigne : 'Elle a su mettre des mots sur ce que je ressentais, avec une précision qui m'a touchée en plein cœur'. Une consultation de cartomancie avec Line Simon, c'est repartir avec des réponses concrètes sur votre situation.",
+              "Beaucoup de clients sont étonnés par la précision des réponses. Patricia témoigne : 'Elle a su mettre des mots sur ce que je ressentais, avec une précision qui m'a touchée en plein cœur'. Une consultation de cartomancie avec Line, c'est repartir avec des réponses concrètes sur votre situation.",
           },
           {
             icon: "📍",
-            heading: "Cartomancienne à Fécamp, Gerponville et à distance",
+            heading: "Cartomancienne à Gerponville et à distance",
             content:
-              "Line Simon est cartomancienne installée à Gerponville (76540), en Seine-Maritime. Elle reçoit en cabinet, se déplace à domicile autour de Fécamp et Valmont, et propose des consultations de cartomancie à distance (téléphone ou visio) pour toute la France. La qualité de la séance est identique, quelle que soit la modalité.",
+              "Line est cartomancienne installée au 4 rue de Givrandville à Gerponville (76540), en Seine-Maritime (proche Saint-Riquier-ès-Plains). Elle vous reçoit en cabinet sur rendez-vous et propose des consultations de cartomancie à distance (téléphone ou visio) pour toute la France. La qualité de la séance est identique, quelle que soit la modalité.",
           },
         ]}
         faq={[
@@ -90,12 +89,12 @@ export const CartomancePage = () => {
           {
             question: "La cartomancie à distance est-elle aussi efficace qu'en présentiel ?",
             answer:
-              "Oui. Line Simon propose des consultations de cartomancie par téléphone ou visio avec le même niveau de précision. L'énergie et la connexion ne dépendent pas de la distance physique.",
+              "Oui. Line propose des consultations de cartomancie par téléphone ou visio avec le même niveau de précision. L'énergie et la connexion ne dépendent pas de la distance physique.",
           },
           {
-            question: "Quelle est la différence entre cartomancie et voyance ?",
+            question: "Quelle est la différence entre cartomancie et guidance ?",
             answer:
-              "La cartomancie est une forme de voyance qui utilise les cartes comme support de lecture. Line Simon combine souvent cartomancie et numérologie pour une guidance encore plus complète et précise.",
+              "La cartomancie est un outil de guidance qui utilise les cartes comme support de lecture. Line combine souvent cartomancie et numérologie pour une guidance encore plus complète et précise.",
           },
         ]}
       />

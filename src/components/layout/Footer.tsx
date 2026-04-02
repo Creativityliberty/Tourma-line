@@ -14,15 +14,15 @@ export const Footer = () => {
                             "Pour vous guider vers la clarté, la confiance et l'harmonie. ✨"
                         </p>
                         <p className="text-sm text-gray-400 mb-4 italic">
-                            Line Simon — Voyante, Numérologue & Cartomancienne
+                            Line — Numérologue & Cartomancienne
                         </p>
                         <div className="text-sm text-gray-300 space-y-1">
-                            <p>76540 Gerponville, Seine-Maritime</p>
+                            <p>4 résidence Les Peupliers, 76540 Gerponville</p>
                             <p className="text-gray-400 text-xs">
                                 Zone desservie : Fécamp, Valmont, Cany-Barville, Ourville-en-Caux, Saint-Riquier-ès-Plains
                             </p>
                             <p className="text-gray-400 text-xs">
-                                Consultation à distance : toute la France
+                                Consultation à distance : toute la France &amp; international
                             </p>
                             <p className="mt-2">SIRET : 93116533600013</p>
                         </div>
@@ -53,7 +53,7 @@ export const Footer = () => {
                                 href="https://www.facebook.com/tourma.line.534540"
                                 target="_blank"
                                 rel="noopener noreferrer me"
-                                aria-label="Suivez Line Simon sur Facebook"
+                                aria-label="Suivez Line sur Facebook"
                                 className="hover:text-brand-purple transition-all duration-300 transform hover:scale-110 active:scale-95"
                             >
                                 <FacebookIcon className="w-6 h-6" aria-hidden="true" />

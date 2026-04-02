@@ -24,6 +24,10 @@ import { Contact } from "./src/components/sections/Contact";
 import { NumerologiePage } from "./src/pages/NumerologiePage";
 import { CartomancePage } from "./src/pages/CartomancePage";
 import { LahochiPage } from "./src/pages/LahochiPage";
+import { CityPage } from "./src/pages/CityPage";
+import { CityLinks } from "./src/components/sections/CityLinks";
+import { WhatsAppFloat } from "./src/components/ui/WhatsAppFloat";
+import { allCities } from "./src/data/cities";
 
 import "./src/index.css";
 
@@ -98,12 +102,14 @@ function HomePage() {
       <Formules />
       <Benefits />
       <Process />
+      <CityLinks />
       <LocalZone />
       <Testimonials />
       <About />
       <FAQ />
       <Contact />
       <Footer />
+      <WhatsAppFloat />
       <Analytics />
     </div>
   );
@@ -116,7 +122,27 @@ function App() {
       <Route path="/numerologie" element={<NumerologiePage />} />
       <Route path="/cartomancie" element={<CartomancePage />} />
       <Route path="/soin-lahochi" element={<LahochiPage />} />
-      {/* Fallback — toutes les autres routes sont des sections de la homepage */}
+
+      {/* Pages SEO villes */}
+      {allCities.flatMap((city) => [
+        <Route
+          key={`num-${city.slug}`}
+          path={`/numerologie-${city.slug}`}
+          element={<CityPage city={city} service="numerologie" serviceLabel="Numérologie" />}
+        />,
+        <Route
+          key={`cart-${city.slug}`}
+          path={`/cartomancie-${city.slug}`}
+          element={<CityPage city={city} service="cartomancie" serviceLabel="Cartomancie" />}
+        />,
+        <Route
+          key={`laho-${city.slug}`}
+          path={`/soin-lahochi-${city.slug}`}
+          element={<CityPage city={city} service="lahochi" serviceLabel="Soin Lahochi" />}
+        />
+      ])}
+
+      {/* Fallback */}
       <Route path="*" element={<HomePage />} />
     </Routes>
   );

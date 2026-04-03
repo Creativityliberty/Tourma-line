@@ -18,8 +18,8 @@ export const BlogOverview = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-            {blogPosts.map((post) => (
+          <div className="grid md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {blogPosts.slice(0, 3).map((post) => (
               <div 
                 key={post.id} 
                 className="group bg-brand-lilas/10 rounded-3xl overflow-hidden border border-brand-lilas/20 hover:shadow-2xl hover:shadow-brand-purple/10 transition-all duration-500 flex flex-col h-full"

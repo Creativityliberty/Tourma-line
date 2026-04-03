@@ -111,10 +111,10 @@ function HomePage() {
       <CityLinks />
       <LocalZone />
       <Testimonials />
-      <BlogOverview />
       <About />
       <FAQ />
       <Contact />
+      <BlogOverview />
       <Footer />
     </div>
   );

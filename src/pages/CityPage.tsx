@@ -15,7 +15,7 @@ import {
   TargetIcon, 
   MapPinIcon, 
   ArrowLeftIcon 
-} from "../ui/icons";
+} from "../components/ui/icons";
 import type { City } from "../data/cities";
 
 interface CityPageProps {

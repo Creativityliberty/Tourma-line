@@ -12,6 +12,15 @@ Ce plan définit la structure, les piliers de contenu et le calendrier éditoria
 
 ---
 
+## 🤖 STANDARD SEO & LLM 2026 (GEO - Generative Engine Optimization)
+*   **Objectif** : Être cité par ChatGPT, Claude, Perplexity et Google AI Overviews.
+*   **Structure "Chunkable"** : Sections auto-suffisantes de 2-3 paragraphes pour faciliter l'extraction par les IA.
+*   **Réponse Directe** : La réponse à la question principale de l'article DOIT être dans le premier paragraphe.
+*   **Questions H2/H3** : Titres rédigés sous forme de questions naturelles (ex: "Comment calculer... ?" au lieu de "Méthode de calcul").
+*   **Signaux E-E-A-T** : Bios d'auteur systématiques et liens vers des sources d'autorité pour renforcer la crédibilité LLM.
+
+---
+
 ## 🏗️ Piliers de Contenu (Content Pillars)
 
 ### 1. Transition & Sens de Vie (Focus Persona : Sophie, 42 ans)

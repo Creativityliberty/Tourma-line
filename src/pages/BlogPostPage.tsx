@@ -36,13 +36,23 @@ export const BlogPostPage = () => {
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.excerpt,
+    "datePublished": post.date,
     "image": `https://www.tourma-line.fr${post.image}`,
     "author": {
       "@type": "Person",
       "name": "Line",
-      "jobTitle": "Numérologue & Cartomancienne"
+      "url": "https://www.tourma-line.fr/#a-propos",
+      "jobTitle": "Numérologue & Cartomancienne",
+      "knowsAbout": ["Numérologie", "Cartomancie", "Soins Énergétiques", "Lahochi"]
     },
-    "datePublished": post.date,
+    "publisher": {
+      "@type": "Organization",
+      "name": "Tourma-Line",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.tourma-line.fr/logo.png"
+      }
+    },
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `https://www.tourma-line.fr/blog/${post.slug}`

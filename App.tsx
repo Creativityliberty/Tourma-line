@@ -19,6 +19,7 @@ import { Testimonials } from "./src/components/sections/Testimonials";
 import { About } from "./src/components/sections/About";
 import { FAQ } from "./src/components/sections/FAQ";
 import { Contact } from "./src/components/sections/Contact";
+import { BlogOverview } from "./src/components/sections/BlogOverview";
 
 // Service Pages (SEO — URLs dédiées)
 import { NumerologiePage } from "./src/pages/NumerologiePage";
@@ -28,6 +29,7 @@ import { CityPage } from "./src/pages/CityPage";
 import { CityLinks } from "./src/components/sections/CityLinks";
 import { WhatsAppFloat } from "./src/components/ui/WhatsAppFloat";
 import { allCities } from "./src/data/cities";
+import { BlogPostPage } from "./src/pages/BlogPostPage";
 
 // Legal Pages
 import { MentionsLegales } from "./src/pages/MentionsLegales";
@@ -109,6 +111,7 @@ function HomePage() {
       <CityLinks />
       <LocalZone />
       <Testimonials />
+      <BlogOverview />
       <About />
       <FAQ />
       <Contact />
@@ -144,6 +147,9 @@ function App() {
             element={<CityPage city={city} service="lahochi" serviceLabel="Soin Lahochi" />}
           />
         ])}
+
+        {/* Blog Pages */}
+        <Route path="/blog/:slug" element={<BlogPostPage />} />
 
         {/* Legal Pages */}
         <Route path="/mentions-legales" element={<MentionsLegales />} />

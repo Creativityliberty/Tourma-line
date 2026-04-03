@@ -20,6 +20,7 @@ import {
   Briefcase, 
   Compass,
   ArrowRight,
+  ArrowLeft,
   ChevronRight,
   Quote,
   CheckCircle2,
@@ -59,6 +60,7 @@ export const CalendarIcon = createLucideIcon(Calendar);
 export const MailIcon = createLucideIcon(Mail);
 export const BriefcaseIcon = createLucideIcon(Briefcase);
 export const ArrowRightIcon = createLucideIcon(ArrowRight);
+export const ArrowLeftIcon = createLucideIcon(ArrowLeft);
 export const ChevronRightIcon = createLucideIcon(ChevronRight);
 export const QuoteIcon = createLucideIcon(Quote);
 export const CheckIcon = createLucideIcon(CheckCircle2);

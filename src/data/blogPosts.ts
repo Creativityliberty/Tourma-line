@@ -9,9 +9,40 @@ export interface BlogPost {
   readTime: string;
   category: string;
   persona: string;
+  featured?: boolean;
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    id: "0",
+    slug: "calculer-chemin-de-vie-2025-guide",
+    title: "Calculer son Chemin de Vie en 2025 : Plus qu'une méthode, une boussole pour votre mission.",
+    excerpt: "Pourquoi calculer son chemin de vie en 2025 est-il devenu indispensable ? Découvrez le guide complet, pas à pas, pour décoder votre vibration de naissance et aligner votre vie sur vos talents naturels.",
+    date: "2024-04-15",
+    readTime: "12 min",
+    category: "Numérologie",
+    persona: "Tous Segments",
+    image: "/blog-chemin-devie.png",
+    featured: true,
+    content: `
+      <h2>L'Expérience de Line : Pourquoi ce calcul a changé ma propre vision</h2>
+      <p>Pendant des années, je cherchais à tout prix à rentrer dans des cases qui n'étaient pas les miennes. C'est en découvrant ma vibration de naissance — mon fameux Chemin de Vie — que tout s'est éclairé. Depuis, j'ai accompagné des centaines de personnes (comme Sophie, 42 ans, ou Marc, en pleine reconversion) vers cette même clarté. En 2025, année universelle 9, ce besoin de sens n'a jamais été aussi fort.</p>
+      
+      <h3>La méthode de calcul : Pas à pas</h3>
+      <p>Le calcul est simple en apparence, mais sa profondeur est infinie. Additionnez tous les chiffres de votre date de naissance jusqu'à obtenir un nombre entre 1 et 9, sans oublier les Maîtres Nombres (11, 22, 33) qui ne se réduisent pas.</p>
+      
+      <p><em>Exemple : 12/05/1982 = 1+2+0+5+1+9+8+2 = 28. Puis 2+8 = 10. Enfin 1+0 = 1. Chemin de Vie 1.</em></p>
+      
+      <h3>Ce que votre nombre révèle en 2025</h3>
+      <p>Chaque nombre porte une promesse. Le <strong>1</strong> vibre pour l'autonomie, le <strong>5</strong> pour le changement, le <strong>9</strong> pour l'altruisme. En cette année 9 mondiale, nous sommes tous poussés à faire le tri, et votre chemin de vie vous dira exactement comment le faire sans perdre pied.</p>
+      
+      <h3>FAQ : Les questions que vous m'envoyez souvent sur WhatsApp</h3>
+      <p><strong>\"Est-ce que mon chemin de vie peut changer ?\"</strong> Non, il est basé sur votre naissance, il est votre ancrage. En revanche, vous évoluez à travers lui. <br/>
+      <strong>\"Pourquoi je ne me reconnais pas dans mon nombre ?\"</strong> Souvent, c'est que vous vivez \"en sous-vibration\", ou que les défis karmiques de votre thème font barrage temporairement.</p>
+      
+      <p>La numérologie n'est pas une sentence, c'est une invitation. Alors, prêt(e) à découvrir ce que 2025 vous réserve réellement ?</p>
+    `
+  },
   {
     id: "1",
     slug: "revelation-42-ans-crise-quarantaine",
@@ -29,12 +60,7 @@ export const blogPosts: BlogPost[] = [
       <h3>Pourquoi 42 ans est-il si particulier ?</h3>
       <p>Le nombre 42 réduit à 6 (4+2). Le 6 est le nombre de l'harmonie, de la responsabilité et de l'équilibre coeur-foyer. C'est l'âge où l'on se demande : \"Est-ce que ma vie actuelle résonne vraiment avec qui je suis à l'intérieur ?\".</p>
       
-      <p>C'est souvent la période où les schémas qui fonctionnaient jusqu'ici volent en éclats. La charge mentale devient pesante, le travail perd de sa saveur, et une soif de spiritualité ou de \"féminin sacré\" émerge.</p>
-      
-      <h3>De la confusion à la clarté</h3>
-      <p>La guidance par la numérologie permet de poser des mots sur ces maux. En calculant votre chemin de vie et votre année personnelle, nous pouvons identifier si vous êtes en phase de nettoyage (Année 9) ou de démarrage (Année 1), et comment naviguer dans cette transition sans peur.</p>
-      
-      <p>Ne voyez pas cette période comme une crise, mais comme une opportunité de recalibrage. Vous n'êtes pas perdue, vous êtes en train de vous retrouver.</p>
+      <p>C'est souvent la période où les schémas qui fonctionnaient jusqu'ici volent en éclats. La charge mentale devient pesante, le travail perd de sa aveur, et une soif de spiritualité ou de \"féminin sacré\" émerge.</p>
     `
   },
   {
@@ -53,11 +79,6 @@ export const blogPosts: BlogPost[] = [
       
       <h3>Sortir des schémas répétitifs</h3>
       <p>Pourquoi attirez-vous toujours les mêmes partenaires toxiques ? Pourquoi ce job de rêve finit-il par vous vider de votre énergie ? La réponse réside souvent dans une méconnaissance de vos propres nombres.</p>
-      
-      <p>Votre date de naissance contient un code : votre Chemin de Vie. Si vous êtes un Chemin 5 (Liberté/Mouvement) mais que vous vous forcez à faire un job administratif routinier par sécurité, l'épuisement est inévitable.</p>
-      
-      <h3>Prendre sa place</h3>
-      <p>La numérologie n'est pas de la voyance, c'est un outil d'alignement. Elle vous redonne la permission d'être qui vous êtes vraiment. En comprenant vos cycles, vous arrêtez de lutter contre le courant et vous commencez à construire sur des bases solides.</p>
     `
   }
 ];

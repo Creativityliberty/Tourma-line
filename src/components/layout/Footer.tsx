@@ -20,13 +20,8 @@ export const Footer = () => {
                             Line — Numérologue & Cartomancienne
                         </p>
                         <div className="text-sm text-gray-300 space-y-1">
-                            <p>4 résidence Les Peupliers, 76540 Gerponville</p>
-                            <p className="text-gray-400 text-xs">
-                                Fécamp, Valmont, Cany-Barville, Ourville-en-Caux, Saint-Riquier-ès-Plains
-                            </p>
-                            <p className="text-gray-400 text-xs">
-                                Consultation à distance : toute la France &amp; international
-                            </p>
+                            <p>Cabinet : 4 résidence Les Peupliers</p>
+                            <p>76540 Gerponville</p>
                             <p className="mt-2">SIRET : 93116533600013</p>
                         </div>
                     </div>

@@ -162,7 +162,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
           <div className="flex items-center gap-2 text-brand-lilas font-medium mb-10">
             <MapPinIcon className="w-5 h-5 flex-shrink-0" />
             <p className="text-sm">
-              4 résidence Les Peupliers, 76540 Gerponville — Consultations {isLocal ? "en présentiel ou à distance" : "à distance pour " + city.country}
+              4 résidence Les Peupliers, 76540 Gerponville — {isLocal ? "Consultation en présentiel ou à distance" : "Consultation à distance (France & International)"}
             </p>
           </div>
 
@@ -201,7 +201,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                 {
                   num: "01",
                   title: "Vous réservez",
-                  desc: `Via WhatsApp, Cal.com ou par téléphone. Line confirme votre créneau sous 24h. Pas de déplacement nécessaire ${isLocal ? "sauf si vous venez en cabinet" : "— tout se fait depuis chez vous"}.`,
+                  desc: `Via WhatsApp, Cal.com ou par téléphone. Line confirme votre créneau sous 24h. Pas de déplacement nécessaire — tout se fait au cabinet à Gerponville ou par téléphone.`,
                   icon: <CalendarIcon className="w-10 h-10 text-brand-purple" />
                 },
                 {

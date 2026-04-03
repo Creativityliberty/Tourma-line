@@ -6,7 +6,6 @@ const contactInfo = {
   address: "4 résidence Les Peupliers",
   zipCode: "76540",
   city: "Gerponville",
-  locationDetails: "Proche Saint-Riquier-ès-Plains",
 };
 
 export const LocalZone = () => {
@@ -22,7 +21,7 @@ export const LocalZone = () => {
             <div className="flex flex-col items-center mb-3">
               <MapPinIcon className="w-6 h-6 text-brand-lilas mb-2" />
               <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest">
-                Normandie & toute la France
+                En présentiel & distanciel
               </p>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6 leading-tight">
@@ -30,23 +29,21 @@ export const LocalZone = () => {
               <span className="text-brand-lilas">à votre écoute</span>
             </h2>
             <p className="text-gray-300 text-lg mb-4 leading-relaxed">
-              Installée au <strong className="text-white">{contactInfo.address}</strong> à <strong className="text-white">{contactInfo.city} ({contactInfo.zipCode})</strong>, en
-              Seine-Maritime, je vous reçois en cabinet
-              sur rendez-vous pour un accompagnement personnalisé.
+              Installée au <strong className="text-white">{contactInfo.address}</strong> à <strong className="text-white">{contactInfo.city} ({contactInfo.zipCode})</strong>, en Seine-Maritime, je vous reçois en cabinet sur rendez-vous pour un accompagnement personnalisé.
             </p>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
               Pour les personnes éloignées, les consultations de{" "}
               <strong className="text-white">
                 numérologie, cartomancie et soins Lahochi
               </strong>{" "}
-              sont disponibles pour toute la France, sans déplacement.
+              sont disponibles à distance par téléphone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
                 href="https://cal.com/line-simon"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95"
+                className="inline-block bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 shadow-lg shadow-brand-lilas/20"
               >
                 Prendre rendez-vous en ligne
               </a>
@@ -54,7 +51,7 @@ export const LocalZone = () => {
 
             {/* Contact Cards Centered */}
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
-              <div className="bg-white/10 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
+              <div className="bg-white/10 rounded-2xl p-6 border border-white/10 backdrop-blur-sm hover:bg-white/15 transition-colors">
                 <div className="flex items-center gap-2 mb-3">
                   <MapPinIcon className="w-5 h-5 text-brand-lilas" />
                   <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest">
@@ -63,15 +60,15 @@ export const LocalZone = () => {
                 </div>
                 <p className="font-display font-bold text-white mb-1">{contactInfo.address}</p>
                 <p className="text-gray-300">{contactInfo.zipCode} {contactInfo.city}</p>
-                <p className="text-xs text-gray-400 mt-1 italic">{contactInfo.locationDetails}</p>
               </div>
-              <div className="bg-brand-lilas/20 border border-brand-lilas/30 rounded-xl p-6 text-center flex flex-col justify-center items-center">
+              <div className="bg-brand-lilas/20 border border-brand-lilas/30 rounded-2xl p-6 text-center flex flex-col justify-center items-center hover:bg-brand-lilas/25 transition-colors">
                 <div className="flex items-center gap-2 mb-2">
                   <PhoneIcon className="w-5 h-5 text-brand-lilas" />
-                  <p className="text-brand-lilas font-semibold text-sm uppercase tracking-widest">Toute la France & International</p>
+                  <p className="text-brand-lilas font-bold text-sm uppercase tracking-widest">À distance</p>
                 </div>
-                <p className="text-xs text-gray-300">
-                  Consultation à distance — Téléphone ou visio
+                <p className="text-sm text-white font-medium">Par téléphone</p>
+                <p className="text-xs text-gray-400 mt-1">
+                  France & International
                 </p>
               </div>
             </div>

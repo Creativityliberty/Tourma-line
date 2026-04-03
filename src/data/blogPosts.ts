@@ -21,7 +21,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "8 min",
     category: "Transition de Vie",
     persona: "Sophie (42 ans)",
-    image: "/blog-midlife.webp",
+    image: "/blog-midlife.png",
     content: `
       <h2>Le cap des 40 ans : Plus qu'un chiffre, une vibration</h2>
       <p>Vous avez 42 ans, ou vous approchez de ce cap, et vous ressentez une étrange sensation de flottement ? Ce n'est pas un hasard. En numérologie humaniste, la quarantaine correspond à un changement de cycle majeur où l'individu passe de la construction extérieure (carrière, famille, acquisition) à la réalisation intérieure.</p>
@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
     readTime: "7 min",
     category: "Orientation",
     persona: "Chloé (28 ans)",
-    image: "/blog-clarity.webp",
+    image: "/blog-clarity.png",
     content: `
       <h2>La quête de sens de la génération 25-35 ans</h2>
       <p>À 28 ans, Chloé se sentait \"en retard\". Ses amies achetaient des appartements ou montaient des boîtes, alors qu'elle changeait encore de job tous les 18 mois, incapable de se fixer. Ce sentiment d'instabilité est le point de départ de beaucoup de mes consultations.</p>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { FacebookIcon, SparklesIcon } from "../ui/icons";
 
 export const Footer = () => {
@@ -67,36 +68,47 @@ export const Footer = () => {
                         <h4 className="text-lg font-semibold mb-3">Liens Légaux</h4>
                         <ul className="text-sm text-gray-300 space-y-2">
                             <li>
-                                <a
-                                    href="/mentions-legales"
+                                <Link
+                                    to="/mentions-legales"
                                     className="hover:text-brand-purple underline"
                                 >
                                     Mentions légales
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="/politique-de-confidentialite"
+                                <Link
+                                    to="/politique-de-confidentialite"
                                     className="hover:text-brand-purple underline"
                                 >
                                     Politique de confidentialité
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="/conditions-generales"
+                                <Link
+                                    to="/conditions-generales"
                                     className="hover:text-brand-purple underline"
                                 >
                                     Conditions générales
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="border-t border-gray-600 mt-8 pt-6 text-center text-sm text-gray-300">
+                <div className="border-t border-gray-600 mt-8 pt-6 text-center text-xs sm:text-sm text-gray-400 space-y-2">
                     <p>
                         © {new Date().getFullYear()} TOURMA-LINE. Tous droits réservés.
+                    </p>
+                    <p>
+                        Réalisé avec passion par{" "}
+                        <a
+                            href="https://www.numtemaagency.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-brand-purple hover:underline font-medium"
+                        >
+                            Numtema Agency — Lionel Numtema
+                        </a>
                     </p>
                 </div>
             </div>

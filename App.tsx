@@ -29,6 +29,11 @@ import { CityLinks } from "./src/components/sections/CityLinks";
 import { WhatsAppFloat } from "./src/components/ui/WhatsAppFloat";
 import { allCities } from "./src/data/cities";
 
+// Legal Pages
+import { MentionsLegales } from "./src/pages/MentionsLegales";
+import { PolitiqueConfidentialite } from "./src/pages/PolitiqueConfidentialite";
+import { CGV } from "./src/pages/CGV";
+
 import "./src/index.css";
 
 /**
@@ -139,6 +144,11 @@ function App() {
             element={<CityPage city={city} service="lahochi" serviceLabel="Soin Lahochi" />}
           />
         ])}
+
+        {/* Legal Pages */}
+        <Route path="/mentions-legales" element={<MentionsLegales />} />
+        <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
+        <Route path="/conditions-generales" element={<CGV />} />
 
         {/* Fallback */}
         <Route path="*" element={<HomePage />} />

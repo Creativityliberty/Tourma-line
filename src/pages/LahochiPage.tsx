@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ServicePage } from "./ServicePage";
+import { WavesIcon, LeafIcon, SparklesIcon, GlobeIcon, MapPinIcon } from "../components/ui/icons";
 
 export const LahochiPage = () => {
   return (
@@ -51,31 +52,31 @@ export const LahochiPage = () => {
         ctaText="Réserver mon soin Lahochi"
         sections={[
           {
-            icon: "🌊",
+            icon: <WavesIcon className="w-8 h-8" />,
             heading: "Qu'est-ce que le soin Lahochi ?",
             content:
               "Le Lahochi (LahoChi) est une méthode de soin énergétique canalisant une énergie de haute fréquence vibratoire, souvent décrite comme plus puissante et plus rapide que le Reiki. Line transmet cette énergie universelle par imposition des mains (en contact ou à quelques centimètres du corps) pour rééquilibrer vos champs énergétiques et favoriser une guérison profonde — physique, émotionnelle, et spirituelle.",
           },
           {
-            icon: "🌿",
+            icon: <LeafIcon className="w-8 h-8" />,
             heading: "Pour quoi le Lahochi peut-il aider ?",
             content:
               "Le soin Lahochi est particulièrement efficace pour réduire le stress et l'anxiété, améliorer la qualité du sommeil, relâcher les blocages émotionnels, soulager les douleurs chroniques, et accompagner les périodes de deuil ou de grands changements de vie. Christine témoigne : 'Ça m'a soulagé de mon angoisse — je dormais mieux dès après la première séance.'",
           },
           {
-            icon: "⚡",
+            icon: <SparklesIcon className="w-8 h-8" />,
             heading: "Comment se déroule une séance ?",
             content:
               "Vous êtes allongé(e), habillé(e), dans un état de détente. Line impose les mains sur ou près de votre corps en silence, pendant 45 à 60 minutes. La séance peut provoquer une sensation de chaleur, de légèreté ou d'endormissement profond. Aucune croyance particulière n'est nécessaire — il suffit d'être ouvert(e).",
           },
           {
-            icon: "📡",
+            icon: <GlobeIcon className="w-8 h-8" />,
             heading: "Soin Lahochi à distance — comment ça fonctionne ?",
             content:
               "Le soin à distance est une caractéristique unique du Lahochi. L'énergie n'est pas limitée par l'espace physique. Line peut pratiquer un soin à distance que vous soyez en Normandie, à Paris ou à l'autre bout de la France — avec les mêmes effets qu'en présentiel. Vous êtes allongé(e) chez vous à l'heure convenue et Line effectue le soin de son côté.",
           },
           {
-            icon: "📍",
+            icon: <MapPinIcon className="w-8 h-8" />,
             heading: "Soins Lahochi à Gerponville et en Normandie",
             content:
               "Line vous accueille en cabinet au 4 rue de Givrandville à Gerponville (76540, Seine-Maritime), proche de Saint-Riquier-ès-Plains. Soins à distance disponibles pour toute la France.",

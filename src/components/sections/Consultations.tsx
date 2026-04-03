@@ -1,6 +1,6 @@
 import { consultations } from "../../data/consultations";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
-import { SparklesIcon, WhatsAppIcon } from "../ui/icons";
+import { SparklesIcon, WhatsAppIcon, MapPinIcon, ClockIcon } from "../ui/icons";
 
 export const Consultations = () => {
   return (
@@ -40,14 +40,17 @@ export const Consultations = () => {
                     <div className="p-8 md:p-10 md:w-3/5 flex flex-col justify-between">
                       <div>
                         <div className="flex flex-wrap gap-2 mb-4">
-                          <span className="bg-brand-lilas/30 text-brand-purple px-3 py-1 rounded-full text-xs font-semibold flex items-center">
-                            ⏱️ {consultation.duration}
+                          <span className="bg-brand-lilas/30 text-brand-purple px-3 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 uppercase tracking-wider">
+                            <ClockIcon className="w-3.5 h-3.5" />
+                            {consultation.duration}
                           </span>
-                          <span className="bg-brand-lilas/30 text-brand-purple px-3 py-1 rounded-full text-xs font-semibold flex items-center">
-                            📍 {consultation.location}
+                          <span className="bg-brand-lilas/30 text-brand-purple px-3 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 uppercase tracking-wider">
+                            <MapPinIcon className="w-3.5 h-3.5" />
+                            {consultation.location}
                           </span>
-                          <span className="bg-brand-lilas/30 text-brand-purple px-3 py-1 rounded-full text-xs font-semibold flex items-center">
-                            💡 {consultation.type}
+                          <span className="bg-brand-lilas/30 text-brand-purple px-3 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 uppercase tracking-wider">
+                            <SparklesIcon className="w-3.5 h-3.5" />
+                            {consultation.type}
                           </span>
                         </div>
 

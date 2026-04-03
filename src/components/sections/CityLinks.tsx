@@ -1,7 +1,7 @@
 import React from "react";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { allCities, localCities } from "../../data/cities";
-import { WhatsAppIcon } from "../ui/icons";
+import { WhatsAppIcon, GlobeIcon } from "../ui/icons";
 
 // Toutes les villes pour la banderolle
 const marqueeItems = allCities.map(c => `${c.flag} ${c.name}`);
@@ -14,9 +14,12 @@ export const CityLinks = () => {
 
           {/* Header */}
           <div className="text-center mb-14">
-            <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest mb-3">
-              🌍 Consultation à distance
-            </p>
+            <div className="flex flex-col items-center mb-3">
+              <GlobeIcon className="w-6 h-6 text-brand-lilas mb-2" />
+              <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest">
+                Consultation à distance
+              </p>
+            </div>
             <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4">
               Où que vous soyez
             </h2>

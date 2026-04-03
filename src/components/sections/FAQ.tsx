@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
+import { ChevronDownIcon, NaturalIcon } from "../ui/icons";
 
 const FAQItem = ({
   question,
@@ -18,11 +19,9 @@ const FAQItem = ({
         onClick={() => setIsOpen(!isOpen)}
       >
         <h3 className="text-lg font-semibold text-brand-dark">{question}</h3>
-        <span
-          className={`text-brand-purple transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
-        >
-          ▼
-        </span>
+        <ChevronDownIcon
+          className={`w-5 h-5 text-brand-purple transform transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}
+        />
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ${
@@ -91,9 +90,12 @@ export const FAQ = () => {
           </h2>
 
           <div className="mb-12 bg-brand-green/20 p-6 rounded-xl border border-brand-green">
-            <h3 className="text-xl font-display text-brand-dark mb-4">
-              🌿 Comment se déroule une séance ?
-            </h3>
+            <div className="flex items-center gap-3 mb-4">
+              <NaturalIcon className="w-6 h-6 text-brand-dark" />
+              <h3 className="text-xl font-display text-brand-dark">
+                Comment se déroule une séance ?
+              </h3>
+            </div>
             <p className="text-gray-700 mb-2">
               Les consultations se font sur rendez-vous.
             </p>

@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ServicePage } from "./ServicePage";
+import { LayersIcon, ChatBubbleIcon, SparklesIcon, MapPinIcon } from "../components/ui/icons";
 
 export const CartomancePage = () => {
   return (
@@ -51,25 +52,25 @@ export const CartomancePage = () => {
         ctaText="Réserver ma séance de cartomancie"
         sections={[
           {
-            icon: "🃏",
+            icon: <LayersIcon className="w-8 h-8" />,
             heading: "Qu'est-ce que la cartomancie ?",
             content:
               "La cartomancie est l'art de lire et d'interpréter des cartes — tarot, oracles ou jeux traditionnels — pour obtenir des éclairages sur votre situation présente et à venir. Contrairement à ce qu'on imagine, ce n'est pas une pratique floue ou mystérieuse : dans les mains de Line, c'est une guidance structurée, précise, et orientée vers l'action.",
           },
           {
-            icon: "💬",
+            icon: <ChatBubbleIcon className="w-8 h-8" />,
             heading: "Pour quelles questions consulter ?",
             content:
               "La cartomancie répond aux questions que vous n'osez pas poser à votre entourage : votre relation amoureuse va-t-elle évoluer ? Ce changement professionnel est-il le bon ? Comment sortir de ce conflit familial ? Line aborde chaque question avec clarté et sans jugement.",
           },
           {
-            icon: "✨",
+            icon: <SparklesIcon className="w-8 h-8" />,
             heading: "Une précision qui surprend",
             content:
               "Beaucoup de clients sont étonnés par la précision des réponses. Patricia témoigne : 'Elle a su mettre des mots sur ce que je ressentais, avec une précision qui m'a touchée en plein cœur'. Une consultation de cartomancie avec Line, c'est repartir avec des réponses concrètes sur votre situation.",
           },
           {
-            icon: "📍",
+            icon: <MapPinIcon className="w-8 h-8" />,
             heading: "Cartomancienne à Gerponville et à distance",
             content:
               "Line est cartomancienne installée au 4 rue de Givrandville à Gerponville (76540), en Seine-Maritime (proche Saint-Riquier-ès-Plains). Elle vous reçoit en cabinet sur rendez-vous et propose des consultations de cartomancie à distance (téléphone ou visio) pour toute la France. La qualité de la séance est identique, quelle que soit la modalité.",

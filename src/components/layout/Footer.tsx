@@ -1,5 +1,4 @@
-import React from "react";
-import { FacebookIcon } from "../ui/icons";
+import { FacebookIcon, SparklesIcon } from "../ui/icons";
 
 export const Footer = () => {
     return (
@@ -10,9 +9,12 @@ export const Footer = () => {
                         <h3 className="text-3xl font-display font-bold mb-3">
                             TOURMA-LINE
                         </h3>
-                        <p className="text-brand-lilas mb-2">
-                            "Pour vous guider vers la clarté, la confiance et l'harmonie. ✨"
-                        </p>
+                        <div className="flex items-center gap-2 mb-2 text-brand-lilas">
+                            <p>
+                                "Pour vous guider vers la clarté, la confiance et l'harmonie."
+                            </p>
+                            <SparklesIcon className="w-4 h-4 flex-shrink-0" />
+                        </div>
                         <p className="text-sm text-gray-400 mb-4 italic">
                             Line — Numérologue & Cartomancienne
                         </p>

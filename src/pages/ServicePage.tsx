@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AnimateOnScroll } from "../components/ui/AnimateOnScroll";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
+import { WhatsAppIcon, MapPinIcon, ArrowLeftIcon } from "../components/ui/icons";
 
 interface ServicePageProps {
   title: string;
@@ -14,7 +15,7 @@ interface ServicePageProps {
   sections: {
     heading: string;
     content: string;
-    icon?: string;
+    icon?: React.ReactNode;
   }[];
   faq: { question: string; answer: string }[];
   ctaText: string;
@@ -85,9 +86,12 @@ export const ServicePage = ({
             {intro}
           </p>
           {localInfo && (
-            <p className="text-sm text-brand-lilas font-medium">
-              📍 {localInfo}
-            </p>
+            <div className="flex items-center gap-2 text-brand-lilas font-medium">
+              <MapPinIcon className="w-5 h-5 flex-shrink-0" />
+              <p className="text-sm">
+                {localInfo}
+              </p>
+            </div>
           )}
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <a
@@ -103,9 +107,10 @@ export const ServicePage = ({
               href="https://wa.me/33649653186"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block text-center"
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block text-center flex items-center justify-center gap-2"
             >
-              📱 WhatsApp
+              <WhatsAppIcon className="w-5 h-5" />
+              WhatsApp
             </a>
           </div>
         </div>
@@ -118,8 +123,8 @@ export const ServicePage = ({
             {sections.map((section, index) => (
               <AnimateOnScroll key={index} animationClass="animate-fadeInUp">
                 <article className="bg-brand-lilas/20 rounded-2xl p-8 hover:shadow-lg transition-shadow duration-300">
-                  <h2 className="text-2xl sm:text-3xl font-display text-brand-dark mb-4 flex items-center gap-3">
-                    {section.icon && <span className="text-3xl">{section.icon}</span>}
+                  <h2 className="text-2xl sm:text-3xl font-display text-brand-dark mb-4 flex items-center gap-4">
+                    {section.icon && <div className="text-brand-purple flex-shrink-0">{section.icon}</div>}
                     {section.heading}
                   </h2>
                   <p className="text-gray-700 leading-relaxed text-lg">
@@ -193,9 +198,10 @@ export const ServicePage = ({
               </a>
               <Link
                 to="/"
-                className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 border border-white/20"
+                className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 border border-white/20 flex items-center justify-center gap-2"
               >
-                ← Retour à l'accueil
+                <ArrowLeftIcon className="w-5 h-5" />
+                Retour à l'accueil
               </Link>
             </div>
           </div>

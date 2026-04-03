@@ -1,5 +1,6 @@
 import React from "react";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
+import { MapPinIcon, PhoneIcon } from "../ui/icons";
 
 const contactInfo = {
   address: "4 résidence Les Peupliers",
@@ -18,9 +19,12 @@ export const LocalZone = () => {
       <AnimateOnScroll>
         <div className="container mx-auto px-6 max-w-5xl text-center">
           <div className="max-w-3xl mx-auto">
-            <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest mb-3">
-              📍 Normandie & toute la France
-            </p>
+            <div className="flex flex-col items-center mb-3">
+              <MapPinIcon className="w-6 h-6 text-brand-lilas mb-2" />
+              <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest">
+                Normandie & toute la France
+              </p>
+            </div>
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6 leading-tight">
               Numérologue et cartomancienne{" "}
               <span className="text-brand-lilas">à votre écoute</span>
@@ -51,16 +55,22 @@ export const LocalZone = () => {
             {/* Contact Cards Centered */}
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
               <div className="bg-white/10 rounded-2xl p-6 border border-white/10 backdrop-blur-sm">
-                <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest mb-3">
-                  📍 Cabinet
-                </p>
+                <div className="flex items-center gap-2 mb-3">
+                  <MapPinIcon className="w-5 h-5 text-brand-lilas" />
+                  <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest">
+                    Cabinet
+                  </p>
+                </div>
                 <p className="font-display font-bold text-white mb-1">{contactInfo.address}</p>
                 <p className="text-gray-300">{contactInfo.zipCode} {contactInfo.city}</p>
                 <p className="text-xs text-gray-400 mt-1 italic">{contactInfo.locationDetails}</p>
               </div>
-              <div className="bg-brand-lilas/20 border border-brand-lilas/30 rounded-xl p-6 text-center flex flex-col justify-center">
-                <p className="text-brand-lilas font-semibold">📞 Toute la France & International</p>
-                <p className="text-xs text-gray-300 mt-1">
+              <div className="bg-brand-lilas/20 border border-brand-lilas/30 rounded-xl p-6 text-center flex flex-col justify-center items-center">
+                <div className="flex items-center gap-2 mb-2">
+                  <PhoneIcon className="w-5 h-5 text-brand-lilas" />
+                  <p className="text-brand-lilas font-semibold text-sm uppercase tracking-widest">Toute la France & International</p>
+                </div>
+                <p className="text-xs text-gray-300">
                   Consultation à distance — Téléphone ou visio
                 </p>
               </div>

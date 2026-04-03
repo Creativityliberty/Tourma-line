@@ -1,6 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { ServicePage } from "./ServicePage";
+import { HashIcon, CompassIcon, BriefcaseIcon, MapPinIcon } from "../components/ui/icons";
 
 export const NumerologiePage = () => {
   return (
@@ -51,25 +52,25 @@ export const NumerologiePage = () => {
         ctaText="Réserver ma consultation de numérologie"
         sections={[
           {
-            icon: "🔢",
+            icon: <HashIcon className="w-8 h-8" />,
             heading: "Qu'est-ce que la numérologie ?",
             content:
               "La numérologie est une science ancienne qui étudie l'influence des nombres sur notre existence. Chaque nombre issu de votre date de naissance possède une vibration particulière qui révèle des aspects profonds de votre personnalité, de votre chemin de vie, et des cycles que vous traversez. Ce n'est pas de la magie : c'est une lecture précise et structurée que Line pratique depuis plusieurs années.",
           },
           {
-            icon: "🗺️",
+            icon: <CompassIcon className="w-8 h-8" />,
             heading: "Ce que la numérologie révèle",
             content:
               "Grâce à votre date de naissance, Line déchiffre votre nombre chemin de vie (votre mission de fond), votre année personnelle (le cycle actuel que vous traversez), vos forces et défis récurrents, ainsi que les thèmes de vie qui se rejouent. Beaucoup de clients témoignent d'une résonnance immédiate : 'comme si elle connaissait ma vie sans que je lui aie rien dit'.",
           },
           {
-            icon: "💼",
+            icon: <BriefcaseIcon className="w-8 h-8" />,
             heading: "Pour quelles situations consulter ?",
             content:
               "Vous traversez une période de doute professionnel, une remise en question personnelle, une rupture, un deuil ou un tournant de vie ? La numérologie aide à clarifier ce qui se passe réellement, à comprendre pourquoi certains schémas se répètent, et à identifier la direction juste pour avancer.",
           },
           {
-            icon: "📍",
+            icon: <MapPinIcon className="w-8 h-8" />,
             heading: "Consultation à Gerponville ou à distance",
             content:
               "Line reçoit en cabinet au 4 rue de Givrandville à Gerponville (76540, Seine-Maritime), proche de Saint-Riquier-ès-Plains. Pour ceux qui n'habitent pas en Normandie, les consultations de numérologie sont disponibles par téléphone ou visio pour toute la France. Réservation en ligne via Cal.com.",

@@ -71,7 +71,6 @@ const SectionScroller = () => {
   return null;
 };
 
-/** Homepage — single page */
 function HomePage() {
   const [activeTab, setActiveTab] = useState("numerology");
   const navigate = useNavigate();
@@ -109,42 +108,44 @@ function HomePage() {
       <FAQ />
       <Contact />
       <Footer />
-      <WhatsAppFloat />
-      <Analytics />
     </div>
   );
 }
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/numerologie" element={<NumerologiePage />} />
-      <Route path="/cartomancie" element={<CartomancePage />} />
-      <Route path="/soin-lahochi" element={<LahochiPage />} />
+    <div className="relative">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/numerologie" element={<NumerologiePage />} />
+        <Route path="/cartomancie" element={<CartomancePage />} />
+        <Route path="/soin-lahochi" element={<LahochiPage />} />
 
-      {/* Pages SEO villes */}
-      {allCities.flatMap((city) => [
-        <Route
-          key={`num-${city.slug}`}
-          path={`/numerologie-${city.slug}`}
-          element={<CityPage city={city} service="numerologie" serviceLabel="Numérologie" />}
-        />,
-        <Route
-          key={`cart-${city.slug}`}
-          path={`/cartomancie-${city.slug}`}
-          element={<CityPage city={city} service="cartomancie" serviceLabel="Cartomancie" />}
-        />,
-        <Route
-          key={`laho-${city.slug}`}
-          path={`/soin-lahochi-${city.slug}`}
-          element={<CityPage city={city} service="lahochi" serviceLabel="Soin Lahochi" />}
-        />
-      ])}
+        {/* Pages SEO villes */}
+        {allCities.flatMap((city) => [
+          <Route
+            key={`num-${city.slug}`}
+            path={`/numerologie-${city.slug}`}
+            element={<CityPage city={city} service="numerologie" serviceLabel="Numérologie" />}
+          />,
+          <Route
+            key={`cart-${city.slug}`}
+            path={`/cartomancie-${city.slug}`}
+            element={<CityPage city={city} service="cartomancie" serviceLabel="Cartomancie" />}
+          />,
+          <Route
+            key={`laho-${city.slug}`}
+            path={`/soin-lahochi-${city.slug}`}
+            element={<CityPage city={city} service="lahochi" serviceLabel="Soin Lahochi" />}
+          />
+        ])}
 
-      {/* Fallback */}
-      <Route path="*" element={<HomePage />} />
-    </Routes>
+        {/* Fallback */}
+        <Route path="*" element={<HomePage />} />
+      </Routes>
+      <WhatsAppFloat />
+      <Analytics />
+    </div>
   );
 }
 

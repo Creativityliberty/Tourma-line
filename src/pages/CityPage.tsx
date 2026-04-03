@@ -4,7 +4,18 @@ import { Link } from "react-router-dom";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { AnimateOnScroll } from "../components/ui/AnimateOnScroll";
-import { WhatsAppIcon } from "../components/ui/icons";
+import { 
+  WhatsAppIcon, 
+  HashIcon, 
+  LayersIcon, 
+  WavesIcon, 
+  CalendarIcon, 
+  PhoneIcon, 
+  SparklesIcon, 
+  TargetIcon, 
+  MapPinIcon, 
+  ArrowLeftIcon 
+} from "../ui/icons";
 import type { City } from "../data/cities";
 
 interface CityPageProps {
@@ -18,7 +29,7 @@ const serviceDetails = {
     title: "Numérologie",
     description: "la numérologie, une science des nombres qui révèle votre chemin de vie, vos cycles personnels et vos talents profonds",
     what: "À partir de votre date de naissance, Line déchiffre votre nombre chemin de vie, votre année personnelle et les cycles que vous traversez en ce moment. Une lecture précise, structurée, avec des réponses concrètes sur votre situation.",
-    icon: "🔢",
+    icon: <HashIcon className="w-6 h-6" />,
     forWho: "Vous traversez un doute professionnel, une remise en question, une rupture ou une période de transition ? La numérologie vous aide à comprendre pourquoi et comment avancer.",
     cta: "Réserver ma consultation de numérologie",
     slug: "numerologie",
@@ -27,7 +38,7 @@ const serviceDetails = {
     title: "Cartomancie",
     description: "la cartomancie, une guidance par les cartes qui répond à vos questions concrètes sur l'amour, le travail et la famille",
     what: "Line lit et interprète les cartes pour répondre à vos questions avec clarté. Relation amoureuse, choix professionnel, conflit familial — chaque tirage est adapté à votre situation précise, sans généralités.",
-    icon: "🃏",
+    icon: <LayersIcon className="w-6 h-6" />,
     forWho: "Vous avez une question précise ou un doute profond ? Que ce soit sur votre vie amoureuse, professionnelle ou personnelle, la cartomancie apporte des éclairages concrets et bienveillants.",
     cta: "Réserver ma séance de cartomancie",
     slug: "cartomancie",
@@ -36,7 +47,7 @@ const serviceDetails = {
     title: "Soin Lahochi",
     description: "les soins énergétiques Lahochi, une méthode puissante de rééquilibrage par transmision d'énergie à distance",
     what: "Le Lahochi est un soin énergétique de haute fréquence, pratiqué à distance. Vous êtes allongé(e) chez vous à l'heure convenue, et Line effectue le soin depuis Gerponville. Les effets sur le stress, le sommeil et les tensions sont souvent ressentis dès la première séance.",
-    icon: "🌊",
+    icon: <WavesIcon className="w-6 h-6" />,
     forWho: "Stress chronique, anxiété, troubles du sommeil, blocages émotionnels, deuil ou burn-out ? Le Lahochi agit en profondeur, sans déplacement nécessaire.",
     cta: "Réserver mon soin Lahochi",
     slug: "soin-lahochi",
@@ -136,8 +147,8 @@ export const CityPage = ({ city, service }: CityPageProps) => {
             </ol>
           </nav>
 
-          <div className="inline-flex items-center gap-2 bg-brand-lilas/20 border border-brand-lilas/30 text-brand-lilas text-sm font-semibold px-4 py-2 rounded-full mb-6">
-            <span>{svc.icon}</span>
+          <div className="inline-flex items-center gap-3 bg-brand-lilas/20 border border-brand-lilas/30 text-brand-lilas text-sm font-semibold px-4 py-2 rounded-full mb-6">
+            <div className="flex-shrink-0">{svc.icon}</div>
             <span>{city.flag} {city.name} — {city.country}</span>
           </div>
 
@@ -148,9 +159,12 @@ export const CityPage = ({ city, service }: CityPageProps) => {
             Vous habitez à {city.name} et cherchez une consultation de {svc.title.toLowerCase()} ?
             Line vous reçoit <strong className="text-white">{distanceText}</strong>, avec la même précision qu'en cabinet.
           </p>
-          <p className="text-sm text-brand-lilas font-medium mb-10">
-            📍 Cabinet : 4 résidence Les Peupliers, 76540 Gerponville (Normandie) — Consultations {isLocal ? "en présentiel ou à distance" : "à distance pour " + city.country}
-          </p>
+          <div className="flex items-center gap-2 text-brand-lilas font-medium mb-10">
+            <MapPinIcon className="w-5 h-5 flex-shrink-0" />
+            <p className="text-sm">
+              4 résidence Les Peupliers, 76540 Gerponville — Consultations {isLocal ? "en présentiel ou à distance" : "à distance pour " + city.country}
+            </p>
+          </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
@@ -188,23 +202,23 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                   num: "01",
                   title: "Vous réservez",
                   desc: `Via WhatsApp, Cal.com ou par téléphone. Line confirme votre créneau sous 24h. Pas de déplacement nécessaire ${isLocal ? "sauf si vous venez en cabinet" : "— tout se fait depuis chez vous"}.`,
-                  icon: "📅"
+                  icon: <CalendarIcon className="w-10 h-10 text-brand-purple" />
                 },
                 {
                   num: "02",
                   title: "La séance",
                   desc: `Vous appelez (ou êtes appelé) à l'heure convenue. La séance dure 45 à 60 min. Pour ${svc.title === "Soin Lahochi" ? "le Lahochi, vous êtes allongé(e) chez vous en état de détente" : "la consultation, seule votre date de naissance est nécessaire"}.`,
-                  icon: "📞"
+                  icon: <PhoneIcon className="w-10 h-10 text-brand-purple" />
                 },
                 {
                   num: "03",
                   title: "Après la séance",
                   desc: "Un enregistrement audio peut être fourni sur demande. Vous pouvez revenir avec des questions. Suivi possible.",
-                  icon: "✨"
+                  icon: <SparklesIcon className="w-10 h-10 text-brand-purple" />
                 }
               ].map((step) => (
-                <div key={step.num} className="bg-brand-lilas/20 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
-                  <div className="text-4xl mb-4">{step.icon}</div>
+                <div key={step.num} className="bg-brand-lilas/20 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-300 flex flex-col items-center">
+                  <div className="mb-4">{step.icon}</div>
                   <div className="text-brand-purple font-bold text-sm uppercase tracking-widest mb-2">Étape {step.num}</div>
                   <h3 className="text-xl font-display text-brand-dark mb-3">{step.title}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
@@ -214,17 +228,23 @@ export const CityPage = ({ city, service }: CityPageProps) => {
 
             {/* Ce que c'est */}
             <div className="bg-brand-dark rounded-2xl p-8 sm:p-10 text-white mb-12">
-              <h2 className="text-2xl sm:text-3xl font-display font-bold mb-4">
-                {svc.icon} C'est quoi, {svc.description} ?
-              </h2>
+              <div className="flex items-center gap-4 mb-4">
+                <div className="text-brand-lilas">{svc.icon}</div>
+                <h2 className="text-2xl sm:text-3xl font-display font-bold">
+                  C'est quoi, {svc.description} ?
+                </h2>
+              </div>
               <p className="text-gray-300 leading-relaxed text-lg">{svc.what}</p>
             </div>
 
             {/* Pour qui */}
             <div className="bg-brand-lilas/30 rounded-2xl p-8 border border-brand-lilas/50 mb-12">
-              <h2 className="text-2xl font-display text-brand-dark mb-4">
-                🎯 Pour qui ? Pour quelles situations ?
-              </h2>
+              <div className="flex items-center gap-4 mb-4">
+                <TargetIcon className="w-8 h-8 text-brand-purple" />
+                <h2 className="text-2xl font-display text-brand-dark">
+                  Pour qui ? Pour quelles situations ?
+                </h2>
+              </div>
               <p className="text-gray-700 leading-relaxed text-lg">{svc.forWho}</p>
             </div>
 
@@ -271,7 +291,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
               href={`https://wa.me/33649653186?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3"
+              className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3 shadow-xl"
             >
               <WhatsAppIcon className="w-5 h-5" />
               WhatsApp — Réponse rapide
@@ -280,18 +300,20 @@ export const CityPage = ({ city, service }: CityPageProps) => {
               href="https://cal.com/line-simon"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95"
+              className="bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 shadow-lg"
             >
               Réserver en ligne
             </a>
           </div>
-          <div className="mt-10 pt-8 border-t border-white/10">
-            <Link to="/" className="text-gray-400 hover:text-brand-lilas transition-colors text-sm">
-              ← Retour à l'accueil
+          <div className="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-2">
+            <Link to="/" className="text-gray-400 hover:text-brand-lilas transition-colors text-sm flex items-center gap-2">
+              <ArrowLeftIcon className="w-4 h-4" />
+              Retour à l'accueil
             </Link>
-            <span className="text-gray-600 mx-4">·</span>
-            <Link to={`/${svc.slug}`} className="text-gray-400 hover:text-brand-lilas transition-colors text-sm">
-              ← Retour à la page {svc.title}
+            <span className="text-gray-600 hidden sm:block">·</span>
+            <Link to={`/${svc.slug}`} className="text-gray-400 hover:text-brand-lilas transition-colors text-sm flex items-center gap-2">
+              <ArrowLeftIcon className="w-4 h-4" />
+              Retour à la page {svc.title}
             </Link>
           </div>
         </div>

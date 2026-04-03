@@ -27,7 +27,8 @@ import {
   Users,
   Leaf,
   Clock,
-  ChevronDown
+  ChevronDown,
+  Target
 } from 'lucide-react';
 
 // --- WRAPPER FOR LUCIDE ICONS (Ensures consistent strokeWidth and sizing) ---
@@ -69,6 +70,7 @@ export const NaturalIcon = createLucideIcon(Leaf);
 export const LeafIcon = NaturalIcon;
 export const ClockIcon = createLucideIcon(Clock);
 export const ChevronDownIcon = createLucideIcon(ChevronDown);
+export const TargetIcon = createLucideIcon(Target);
 
 // --- SOCIAL ICONS (Keeping original SVGs for specific branding) ---
 export const FacebookIcon = ({ className = "w-6 h-6" }: { className?: string }) => (

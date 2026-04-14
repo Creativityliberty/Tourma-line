@@ -13,7 +13,7 @@ export const CartomancePage = () => {
           content="Line, cartomancienne en Seine-Maritime. Consultation de cartomancie à Gerponville (proche Saint-Riquier-ès-Plains) et à distance par téléphone. Réponses claires sur votre amour, travail, famille. RDV en ligne."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.tourma-line.fr/cartomancie" />
+        <link rel="canonical" href="https://tourma-line.fr/cartomancie" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
@@ -22,7 +22,7 @@ export const CartomancePage = () => {
             "@type": "Person",
             "name": "Line",
             "jobTitle": "Cartomancienne",
-            "url": "https://www.tourma-line.fr/"
+            "url": "https://tourma-line.fr/"
           },
           "areaServed": [
             { "@type": "City", "name": "Gerponville" },
@@ -30,7 +30,7 @@ export const CartomancePage = () => {
             { "@type": "Country", "name": "France" }
           ],
           "description": "Consultation de cartomancie — lecture de cartes pour répondre à vos questions sur l'amour, le travail et la famille. Séances en Normandie et à distance.",
-          "url": "https://www.tourma-line.fr/cartomancie",
+          "url": "https://tourma-line.fr/cartomancie",
           "offers": {
             "@type": "Offer",
             "url": "https://cal.com/line-simon",

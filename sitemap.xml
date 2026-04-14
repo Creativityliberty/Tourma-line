@@ -2,120 +2,105 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Page principale -->
   <url>
-    <loc>https://www.tourma-line.fr/</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://tourma-line.fr/</loc>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Pages de service dédiées (SEO) -->
+  <!-- Pages de service dédiées -->
   <url>
-    <loc>https://www.tourma-line.fr/numerologie</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://tourma-line.fr/numerologie</loc>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.tourma-line.fr/cartomancie</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://tourma-line.fr/cartomancie</loc>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.tourma-line.fr/soin-lahochi</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://tourma-line.fr/soin-lahochi</loc>
+    <lastmod>2026-04-14</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
+    <priority>0.9</priority>
   </url>
 
-  <!-- Sections principales -->
+  <!-- Blog Posts -->
   <url>
-    <loc>https://www.tourma-line.fr/#services</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.tourma-line.fr/#formules</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.tourma-line.fr/#consultations</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.tourma-line.fr/#bienfaits</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.tourma-line.fr/#zone-consultation</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.tourma-line.fr/#avis</loc>
-    <lastmod>2026-04-02</lastmod>
+    <loc>https://tourma-line.fr/blog/calculer-chemin-de-vie-2025-guide</loc>
+    <lastmod>2026-04-15</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.tourma-line.fr/#a-propos</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://tourma-line.fr/blog/revelation-42-ans-crise-quarantaine</loc>
+    <lastmod>2026-04-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://www.tourma-line.fr/#faq</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://tourma-line.fr/blog/trouver-sa-voie-queti-clarte-30-ans</loc>
+    <lastmod>2026-04-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
   </url>
-  <url>
-    <loc>https://www.tourma-line.fr/#rendezvous</loc>
-    <lastmod>2026-04-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+
   <!-- Pages SEO villes — Numérologie -->
-  <url><loc>https://www.tourma-line.fr/numerologie-paris</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-nice</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-cannes</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-bordeaux</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-lyon</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-marseille</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-la-rochelle</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-toulouse</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-nantes</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-fecamp</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-rouen</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-le-havre</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-monaco</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-bruxelles</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://www.tourma-line.fr/numerologie-geneve</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-fecamp</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-rouen</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-le-havre</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-paris</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-nice</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-cannes</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-bordeaux</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-lyon</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-marseille</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-la-rochelle</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-toulouse</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-nantes</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-monaco</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-bruxelles</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tourma-line.fr/numerologie-geneve</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Pages SEO villes — Cartomancie -->
-  <url><loc>https://www.tourma-line.fr/cartomancie-paris</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/cartomancie-nice</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/cartomancie-bordeaux</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/cartomancie-lyon</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/cartomancie-marseille</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/cartomancie-fecamp</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.tourma-line.fr/cartomancie-rouen</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://www.tourma-line.fr/cartomancie-bruxelles</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
-  <url><loc>https://www.tourma-line.fr/cartomancie-geneve</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://tourma-line.fr/cartomancie-fecamp</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tourma-line.fr/cartomancie-rouen</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tourma-line.fr/cartomancie-paris</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/cartomancie-nice</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/cartomancie-bordeaux</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/cartomancie-lyon</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/cartomancie-marseille</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/cartomancie-bruxelles</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://tourma-line.fr/cartomancie-geneve</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
   <!-- Pages SEO villes — Soin Lahochi -->
-  <url><loc>https://www.tourma-line.fr/soin-lahochi-paris</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/soin-lahochi-nice</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/soin-lahochi-bordeaux</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
-  <url><loc>https://www.tourma-line.fr/soin-lahochi-fecamp</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.tourma-line.fr/soin-lahochi-rouen</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.88</priority></url>
-  <url><loc>https://www.tourma-line.fr/soin-lahochi-bruxelles</loc><lastmod>2026-04-03</lastmod><changefreq>monthly</changefreq><priority>0.82</priority></url>
+  <url><loc>https://tourma-line.fr/soin-lahochi-fecamp</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tourma-line.fr/soin-lahochi-rouen</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://tourma-line.fr/soin-lahochi-paris</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/soin-lahochi-nice</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/soin-lahochi-bordeaux</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://tourma-line.fr/soin-lahochi-bruxelles</loc><lastmod>2026-04-14</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Pages légales -->
+  <url>
+    <loc>https://tourma-line.fr/mentions-legales</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://tourma-line.fr/politique-de-confidentialite</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://tourma-line.fr/conditions-generales</loc>
+    <lastmod>2026-04-14</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

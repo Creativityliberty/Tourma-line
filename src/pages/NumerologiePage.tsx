@@ -13,7 +13,7 @@ export const NumerologiePage = () => {
           content="Line, numérologue en Seine-Maritime. Consultation de numérologie à Gerponville (proche Saint-Riquier-ès-Plains) et à distance. Découvrez votre chemin de vie, votre année personnelle et vos défis. RDV en ligne."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.tourma-line.fr/numerologie" />
+        <link rel="canonical" href="https://tourma-line.fr/numerologie" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
@@ -22,7 +22,7 @@ export const NumerologiePage = () => {
             "@type": "Person",
             "name": "Line",
             "jobTitle": "Numérologue",
-            "url": "https://www.tourma-line.fr/"
+            "url": "https://tourma-line.fr/"
           },
           "areaServed": [
             { "@type": "City", "name": "Gerponville" },
@@ -30,7 +30,7 @@ export const NumerologiePage = () => {
             { "@type": "Country", "name": "France" }
           ],
           "description": "Consultation de numérologie personnalisée à partir de votre date de naissance. Décryptage de votre chemin de vie, année personnelle et défis actuels.",
-          "url": "https://www.tourma-line.fr/numerologie",
+          "url": "https://tourma-line.fr/numerologie",
           "offers": {
             "@type": "Offer",
             "url": "https://cal.com/line-simon",

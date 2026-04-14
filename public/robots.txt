@@ -1,21 +1,10 @@
-# Robots.txt for TOURMA-LINE
-# Allow all search engines to crawl the site
-
+# https://www.robotstxt.org/robotstxt.html
 User-agent: *
 Allow: /
-Disallow: /node_modules/
-Disallow: /.env
-Disallow: /.git/
 
-# Sitemap location
-Sitemap: https://www.tourma-line.fr/sitemap.xml
+# Host
+Host: https://tourma-line.fr/
 
-# Specific rules for Google
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-# Specific rules for Bing
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 1
+# Sitemaps
+Sitemap: https://tourma-line.fr/sitemap.xml
+Sitemap: https://tourma-line.fr/llms.txt

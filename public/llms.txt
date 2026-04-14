@@ -5,10 +5,11 @@
 ## Key Information
 
 - **Practitioner:** Line Simon (Tourma-Line)
-- **Location:** 161 rue Souveraine, 76450 Saint-Riquier-ès-Plains, Normandy, France
+- **Location:** 4 résidence Les Peupliers, 76540 Gerponville, Normandy, France
 - **Service Areas:** Remote (phone, video, Messenger), in-office, and home visits in Gerponville area (Valmont, Fécamp, Cany-Barville, Ourville-en-Caux)
 - **Contact:** 06 49 65 31 86 | line.simon.ls@gmail.com
 - **Booking:** https://cal.com/line-simon
+- **Website:** https://tourma-line.fr/
 
 ## Services
 
@@ -33,7 +34,7 @@ Tourma-Line combines three complementary modalities:
 ## How Sessions Work
 
 - **À distance (Remote):** Flexible sessions via phone, video call, or Messenger from anywhere
-- **Au cabinet (In-office):** Serene private space at 161 rue Souveraine, 76450 Saint-Riquier-ès-Plains (by appointment only)
+- **Au cabinet (In-office):** Serene private space at 4 résidence Les Peupliers, 76540 Gerponville (by appointment only)
 - **À domicile (Home visits):** Available in Gerponville area and surrounding towns
 
 ## Benefits
@@ -55,17 +56,22 @@ Tourma-Line combines three complementary modalities:
 
 ## Pages
 
-- [Home](https://www.tourma-line.fr/): Welcome and hero section with service overview
-- [Services](https://www.tourma-line.fr/#services): Detailed information about numerology, cartomancy, and LAHOCHI healing
-- [Accompaniment Formulas](https://www.tourma-line.fr/#formules): Multi-session packages for deeper transformation
-- [Benefits](https://www.tourma-line.fr/#bienfaits): What spiritual guidance and energy healing can provide
-- [Pricing](https://www.tourma-line.fr/#tarifs): Current rates and promotional pricing
-- [Testimonials](https://www.tourma-line.fr/#temoignages): Client experiences and reviews
-- [Booking](https://www.tourma-line.fr/#rendezvous): How to schedule a session
+- [Home](https://tourma-line.fr/): Welcome and hero section with service overview
+- [Services](https://tourma-line.fr/numerologie): Detailed information about numerology
+- [Cartomancie](https://tourma-line.fr/cartomancie): Detailed information about cartomancy
+- [Soin Lahochi](https://tourma-line.fr/soin-lahochi): Detailed information about LAHOCHI healing
+- [Accompaniment Formulas](https://tourma-line.fr/#formules): Multi-session packages for deeper transformation
+- [Testimonials](https://tourma-line.fr/#avis): Client experiences and reviews
+- [Booking](https://tourma-line.fr/#rendezvous): How to schedule a session
 
-## Optional
+## Blog Content
 
-- [FAQ](https://www.tourma-line.fr/): Frequently asked questions about numerology, cartomancy, and LAHOCHI
-- [Legal Notices](https://www.tourma-line.fr/#mentions-legales): Legal information and business details
-- [Privacy Policy](https://www.tourma-line.fr/#politique-de-confidentialite): Data protection and privacy information
-- [Terms & Conditions](https://www.tourma-line.fr/#conditions-generales): General terms of service
+- [Calculer son Chemin de Vie en 2025](https://tourma-line.fr/blog/calculer-chemin-de-vie-2025-guide)
+- [Crise de la quarantaine à 42 ans](https://tourma-line.fr/blog/revelation-42-ans-crise-quarantaine)
+- [Trouver sa voie à 30 ans](https://tourma-line.fr/blog/trouver-sa-voie-queti-clarte-30-ans)
+
+## Legal
+
+- [Mentions Légales](https://tourma-line.fr/mentions-legales)
+- [Politique de Confidentialité](https://tourma-line.fr/politique-de-confidentialite)
+- [Conditions Générales](https://tourma-line.fr/conditions-generales)

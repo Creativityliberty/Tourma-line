@@ -5,4 +5,4 @@ User-agent: *
 Allow: /
 
 # Provide the location of the sitemap to help crawlers understand the site structure.
-Sitemap: https://tourma-line.fr/sitemap.xml
+Sitemap: https://www.tourma-line.fr/sitemap.xml

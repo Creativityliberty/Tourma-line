@@ -3,8 +3,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://tourma-line.fr/
+Host: https://www.tourma-line.fr/
 
 # Sitemaps
-Sitemap: https://tourma-line.fr/sitemap.xml
-Sitemap: https://tourma-line.fr/llms.txt
+Sitemap: https://www.tourma-line.fr/sitemap.xml
+Sitemap: https://www.tourma-line.fr/llms.txt

@@ -80,7 +80,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
 
   const pageTitle = `${svc.title} à ${city.name} — Consultation avec Line`;
   const metaDesc = `Consultation de ${svc.title.toLowerCase()} à ${city.name} (${city.region}) avec Line, numérologue et cartomancienne en Normandie. Séance ${distanceText}. RDV en ligne ou WhatsApp.`;
-  const canonicalUrl = `https://tourma-line.fr/${svc.slug}-${city.slug}`;
+  const canonicalUrl = `https://www.tourma-line.fr/${svc.slug}-${city.slug}`;
 
   const whatsappMessage = encodeURIComponent(
     `Bonjour Line, je suis à ${city.name} et je souhaite une consultation de ${svc.title.toLowerCase()}. Pouvez-vous m'en dire plus ?`
@@ -101,7 +101,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
             "@type": "Person",
             "name": "Line",
             "jobTitle": "Numérologue et Cartomancienne",
-            "url": "https://tourma-line.fr/"
+            "url": "https://www.tourma-line.fr/"
           },
           "areaServed": [
             { "@type": "City", "name": city.name },

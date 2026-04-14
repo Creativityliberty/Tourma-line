@@ -13,7 +13,7 @@ export const LahochiPage = () => {
           content="Line, praticienne en soins énergétiques Lahochi en Normandie. Séances au cabinet à Gerponville (proche Saint-Riquier-ès-Plains) et à distance. Rééquilibrage énergétique, stress, douleurs, sommeil. RDV en ligne."
         />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://tourma-line.fr/soin-lahochi" />
+        <link rel="canonical" href="https://www.tourma-line.fr/soin-lahochi" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
@@ -22,7 +22,7 @@ export const LahochiPage = () => {
             "@type": "Person",
             "name": "Line",
             "jobTitle": "Praticienne en soins Lahochi",
-            "url": "https://tourma-line.fr/"
+            "url": "https://www.tourma-line.fr/"
           },
           "areaServed": [
             { "@type": "City", "name": "Gerponville" },
@@ -30,7 +30,7 @@ export const LahochiPage = () => {
             { "@type": "Country", "name": "France" }
           ],
           "description": "Soin énergétique Lahochi — rééquilibrage par les mains, stress, anxiété, sommeil. Séances en Normandie (Fécamp, Gerponville) et à distance.",
-          "url": "https://tourma-line.fr/soin-lahochi",
+          "url": "https://www.tourma-line.fr/soin-lahochi",
           "offers": {
             "@type": "Offer",
             "url": "https://cal.com/line-simon",

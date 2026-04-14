@@ -1,17 +1,4 @@
 {
-  "redirects": [
-    {
-      "source": "/:path(.*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.tourma-line.fr"
-        }
-      ],
-      "destination": "https://tourma-line.fr/:path",
-      "permanent": true
-    }
-  ],
   "headers": [
     {
       "source": "/sitemap.xml",
@@ -43,8 +30,5 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     }
-  ],
-  "rewrites": [
-    { "source": "/((?!api|_next|sitemap\\.xml|robots\\.txt|llms\\.txt|favicon\\.svg|.*\\..*).*)", "destination": "/index.html" }
   ]
 }

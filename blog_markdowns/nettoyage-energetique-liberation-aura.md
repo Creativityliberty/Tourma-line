@@ -70,7 +70,7 @@ Pour les personnes travaillant en contact du public (soignants, enseignants, ven
 
 Ne laissez plus les énergies des autres décider de votre humeur. Reprenez le contrôle de votre espace sacré.
 
-<div class="mt-14 mb-8 bg-gradient-to-br from-cream to-white border border-gold-200 rounded-xl shadow-sm overflow-hidden not-prose">
+<div class="mt-14 mb-8 bg-gradient-to-br from-cream to-white border border-gold-200 rounded-xl shadow-sm overflow-hidden not-prose text-left">
   <div class="p-8 text-center border-b border-gold-100">
     <span class="text-sm font-bold tracking-widest text-[#d4af37] uppercase mb-2 block">Libération Totale</span>
     <h3 class="text-2xl text-primary font-serif mb-3">Séance de Nettoyage & Protection</h3>
@@ -83,10 +83,12 @@ Ne laissez plus les énergies des autres décider de votre humeur. Reprenez le c
         <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Harmonisation des chakras majeurs</li>
         <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Pose d'une protection énergétique durable</li>
       </ul>
+      <div class="mt-4 text-sm text-gray-500">Durée : 1h15 environ • Séance à distance</div>
     </div>
     <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
       <span class="text-3xl font-serif text-primary font-bold mb-4 block">65 €</span>
       <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#0f1c2eb3] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-[#0f1c2ee6] hover:shadow-lg w-full md:w-auto whitespace-nowrap">
+        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
         Réserver mon Nettoyage
       </a>
     </div>

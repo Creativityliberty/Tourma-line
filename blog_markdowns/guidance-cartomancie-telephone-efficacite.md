@@ -75,7 +75,7 @@ Oui, sauf les questions liées à la santé pure (qui relèvent de la médecine)
 
 Comme Sandrine, ne restez pas seule avec cette boule au ventre. Parfois, une simple conversation de 30 minutes peut éviter des mois d'errance émotionnelle. 
 
-<div class="mt-14 mb-8 bg-gradient-to-br from-cream to-white border border-gold-200 rounded-xl shadow-sm overflow-hidden not-prose">
+<div class="mt-14 mb-8 bg-gradient-to-br from-cream to-white border border-gold-200 rounded-xl shadow-sm overflow-hidden not-prose text-left">
   <div class="p-8 text-center border-b border-gold-100">
     <span class="text-sm font-bold tracking-widest text-[#d4af37] uppercase mb-2 block">Clarté Immédiate</span>
     <h3 class="text-2xl text-primary font-serif mb-3">Consultation Guidance & Cartomancie</h3>
@@ -88,7 +88,7 @@ Comme Sandrine, ne restez pas seule avec cette boule au ventre. Parfois, une sim
         <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Analyse des blocages sentimentaux, pro ou familiaux</li>
         <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Conseils concrets pour retrouver votre sérénité</li>
       </ul>
-      <div class="mt-4 text-sm text-gray-500">30 min, 1h ou 1h30 • Par téléphone ou WhatsApp</div>
+      <div class="mt-4 text-sm text-gray-500">30 min, 1h ou 1h30 • Séance par téléphone ou WhatsApp</div>
     </div>
     <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
       <span class="text-3xl font-serif text-primary font-bold mb-4 block">À partir de 40 €</span>

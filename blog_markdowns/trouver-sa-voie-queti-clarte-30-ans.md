@@ -70,7 +70,7 @@ Absolument. En comprenant votre propre vibration, vous arrêtez d'attirer des pa
 
 Si vous vous sentez comme Chloé, perdu(e) au milieu du gué, ne restez pas seule avec vos questions. La clarté est à portée de main.
 
-<div class="mt-14 mb-8 bg-gradient-to-br from-cream to-white border border-gold-200 rounded-xl shadow-sm overflow-hidden not-prose">
+<div class="mt-14 mb-8 bg-gradient-to-br from-cream to-white border border-gold-200 rounded-xl shadow-sm overflow-hidden not-prose text-left">
   <div class="p-8 text-center border-b border-gold-100">
     <span class="text-sm font-bold tracking-widest text-[#d4af37] uppercase mb-2 block">Spécial Orientation</span>
     <h3 class="text-2xl text-primary font-serif mb-3">La Consultation "Nouvel Élan 30 ans"</h3>
@@ -83,7 +83,7 @@ Si vous vous sentez comme Chloé, perdu(e) au milieu du gué, ne restez pas seul
         <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Levée des blocages professionnels et peur de l'échec</li>
         <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Plan d'action concret pour les 6 prochains mois</li>
       </ul>
-      <div class="mt-4 text-sm text-gray-500">Séance à distance (WhatsApp ou Téléphone)</div>
+      <div class="mt-4 text-sm text-gray-500">1h30 • Séance à distance (WhatsApp ou Téléphone)</div>
     </div>
     <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
       <span class="text-3xl font-serif text-primary font-bold mb-4 block">70 €</span>

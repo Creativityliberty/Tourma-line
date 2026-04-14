@@ -73,7 +73,9 @@ Ils voient le changement, mais ils ne ressentent pas l'appel. C'est normal. C'es
 
 Si vous vous reconnaissez dans l'histoire de Sophie, ne laissez pas cette transition se transformer en burn-out. La numérologie et la guidance ne sont pas là pour prédire votre futur, mais pour vous donner les clés de votre présent.
 
-<div class="mt-14 mb-8 bg-gradient-to-br from-cream to-white border border-gold-200 rounded-xl shadow-sm overflow-hidden not-prose">
+---
+
+<div class="mt-14 mb-8 bg-gradient-to-br from-cream to-white border border-gold-200 rounded-xl shadow-sm overflow-hidden not-prose text-left">
   <div class="p-8 text-center border-b border-gold-100">
     <span class="text-sm font-bold tracking-widest text-[#d4af37] uppercase mb-2 block">Accompagnement Spécial Transition</span>
     <h3 class="text-2xl text-primary font-serif mb-3">La Consultation "Révélation Quarantaine"</h3>
@@ -86,7 +88,7 @@ Si vous vous reconnaissez dans l'histoire de Sophie, ne laissez pas cette transi
         <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Clarification de votre mission d'âme actuelle</li>
         <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Séance empathique, confidentielle et éclairante</li>
       </ul>
-      <div class="mt-4 text-sm text-gray-500">1h30 à 1h45 • À distance (Par téléphone/WhatsApp)</div>
+      <div class="mt-4 text-sm text-gray-500">Durée : 1h30 à 1h45 • À distance (Par téléphone/WhatsApp)</div>
     </div>
     <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
       <span class="text-3xl font-serif text-primary font-bold mb-4 block">70 €</span>
@@ -97,3 +99,4 @@ Si vous vous reconnaissez dans l'histoire de Sophie, ne laissez pas cette transi
     </div>
   </div>
 </div>
+---

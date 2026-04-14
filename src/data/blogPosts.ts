@@ -23,13 +23,12 @@ export const blogPosts: BlogPost[] = [
     category: "Numérologie",
     persona: "Tous Segments",
     image: "/blog-chemin-devie.png",
-    featured: true,
-    content: `
+    featured:    content: `
       <p><strong>RÉPONSE DIRECTE :</strong> Le calcul de votre chemin de vie s'effectue en additionnant tous les chiffres de votre date de naissance (Jour + Mois + Année), puis en réduisant le résultat final par addition temporelle pour obtenir un chiffre unique situé entre 1 et 9. Les nombres 11, 22 et 33 font exception : ce sont des "Maîtres Nombres" qui ne se réduisent pas.</p>
       
       <p>Si vous vous posez des questions sur votre carrière, vos blocages relationnels ou si vous traversez une crise de sens, la réponse se trouve très souvent dans ce simple calcul. Voici la méthode analytique et humaniste pour décoder le contrat de votre âme.</p>
 
-      <h2>🧮 La méthode de calcul officielle (Étape par Étape)</h2>
+      <h2 class="flex items-center"><svg class="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg> La méthode de calcul officielle (Étape par Étape)</h2>
       <p>Oubliez les logiciels automatiques. Pour capter l'essence numérologique de votre naissance, le calcul manuel (appelé "réduction théosophique") est indispensable.</p>
       <p><strong>Prenons un exemple clair. Vous êtes né(e) le 15 Juillet 1985 (15/07/1985).</strong></p>
       <ul>
@@ -39,11 +38,15 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p><strong>Résultat :</strong> Le Chemin de Vie de cette personne est le <strong>9</strong>.</p>
 
-      <div class="bg-amber-50 p-4 border-l-4 border-amber-500 rounded my-4 text-amber-900">
-      <strong>🛑 L'erreur que 80% des gens font :</strong> Ne réduisez jamais le résultat final s'il correspond à <strong>11, 22 ou 33</strong>. Ce sont des "Maîtres Nombres". Si votre addition donne 11 (ex: 29), votre chemin de vie est le 11, et non pas le 2. Ils portent une vibration énergétique supérieure qui implique des missions de vie d'envergure.
+      <div class="bg-amber-50 p-5 border-l-4 border-amber-500 rounded my-6 text-amber-900 shadow-sm flex gap-3">
+      <svg class="w-6 h-6 text-amber-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+      <div>
+        <strong class="block mb-1">L'erreur que 80% des gens font :</strong> 
+        Ne réduisez jamais le résultat final s'il correspond à <strong>11, 22 ou 33</strong>. Ce sont des "Maîtres Nombres". Si votre addition donne 11 (ex: 29), votre chemin de vie est le 11, et non pas le 2. Ils portent une vibration énergétique supérieure qui implique des missions de vie d'envergure.
+      </div>
       </div>
 
-      <h2>🧭 Pourquoi calculer son chemin de vie aujourd'hui ?</h2>
+      <h2 class="flex items-center"><svg class="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Pourquoi calculer son chemin de vie aujourd'hui ?</h2>
       <p>Contrairement à la voyance traditionnelle qui enferme dans la fatalité, la numérologie humaniste offre une boussole. Votre chemin de vie symbolise le <strong>paysage</strong> que vous êtes venu traverser dans cette incarnation.</p>
       <p>Si aujourd'hui, à 35, 40 ou 50 ans, vous ressentez :</p>
       <ul>
@@ -53,7 +56,7 @@ export const blogPosts: BlogPost[] = [
       </ul>
       <p>...c'est bien souvent parce que <strong>vous marchez à contre-courant de votre chemin naturel</strong>. Le calculer n'est pas une prédiction d'avenir, c'est un diagnostic de l'âme. C'est comprendre pourquoi certains murs se dressent inlassablement devant vous.</p>
 
-      <h2>📖 Les 9 Chemins de Vie : L'Interprétation Humaniste</h2>
+      <h2 class="flex items-center"><svg class="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg> Les 9 Chemins de Vie : L'Interprétation Humaniste</h2>
       <p>Voici la signification vibratoire de chaque ligne directrice. Cherchez votre nombre ci-dessous.</p>
 
       <h3>Chemin 1 : Le Bâtisseur Indépendant</h3>
@@ -90,7 +93,7 @@ export const blogPosts: BlogPost[] = [
           <li><strong>33 : Le Guide Compatissant</strong> – Énergie du don total et de l'abnégation pour élever l'humanité (rarement vécu pleinement).</li>
       </ul>
 
-      <h2>❓ FAQ sur la méthode et le résultat</h2>
+      <h2 class="flex items-center"><svg class="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> FAQ sur la méthode et le résultat</h2>
       <h3>Puis-je changer de chemin de vie ?</h3>
       <p>Non. Votre date de naissance est votre point d'ancrage dans cette dimension, votre "contrat" de départ. En revanche, vous évoluez dans la vibration de ce nombre tout au long de votre vie, passant de ses faiblesses à sa pleine lumière.</p>
 
@@ -100,13 +103,16 @@ export const blogPosts: BlogPost[] = [
       <h3>Faut-il réduire le mois de mon calcul (ex: Novembre = 11) ?</h3>
       <p>Pour le calcul du Chemin de Vie global en numérologie classique OUI, on procède souvent à l'addition de l'ensemble bout à bout. Cependant, une étude approfondie isolera d'abord chaque bloc (Jour, Mois, Année) pour comprendre par quelles sous-vibrations vous passez pour atteindre votre chemin ultime.</p>
 
-      <h2>🔮 Le mot de la fin (Et votre étape suivante)</h2>
+      <h2 class="flex items-center"><svg class="w-6 h-6 mr-2 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> Le mot de la fin (Et votre étape suivante)</h2>
       <p>En ligne, les milliers d'articles gratuits ne vous donneront toujours que l'étiquette (votre chemin). Mais <strong>ils ne vous diront jamais pourquoi votre moteur bloque</strong>. Vous savez désormais que vous êtes "Chemin 5", mais cela ne vous dit pas <em>pourquoi</em> vous ne parvenez pas à quitter un emploi toxique.</p>
       <p>C'est ici qu'intervient <strong>la véritable analyse numérologique</strong>. En croisant votre chemin de vie avec votre carte natale complète et en y couplant des flashs clairs d'accompagnement, la confusion devient subitement clarté.</p>
       <p><strong>Vous ne voulez plus tâtonner dans le brouillard ? Vous voulez savoir exactement comment débloquer le prochain chapitre de votre vie professionnelle ou personnelle ?</strong></p>
-      <div class="mt-8 text-center p-6 bg-cream border border-gold-200 rounded-lg">
-        <h3 class="text-xl text-primary font-serif mb-4">Passez de la confusion à la clarté</h3>
-        <a href="https://cal.com/linesimon" target="_blank" rel="noopener noreferrer" class="inline-block bg-[#0f1c2eb3] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-opacity-90 hover:shadow-lg">
+      
+      <div class="mt-10 text-center p-8 bg-gradient-to-br from-cream to-white border border-gold-200 rounded-xl shadow-sm">
+        <h3 class="text-2xl text-primary font-serif mb-3">Passez de la confusion à la clarté</h3>
+        <p class="text-gray-600 mb-6 font-light">Clarifiez votre chemin dès aujourd'hui. L'étude complète révèle vos défis et ressources cachés.</p>
+        <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#0f1c2eb3] text-white px-8 py-4 rounded-full font-medium transition-all hover:bg-[#0f1c2ee6] hover:shadow-lg">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
           Réserver mon Étude Karmique & Numérologique
         </a>
       </div>

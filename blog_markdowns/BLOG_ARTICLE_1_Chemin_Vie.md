@@ -105,5 +105,5 @@ C'est ici qu'intervient **la véritable analyse numérologique**. En croisant vo
 
 **Vous ne voulez plus tâtonner dans le brouillard ? Vous voulez savoir exactement comment débloquer le prochain chapitre de votre vie professionnelle ou personnelle ?**
 
-[👉 Réserver mon Étude Karmique & Numérologique (Bouton Calendly)](#)
+[👉 Réserver mon Étude Karmique & Numérologique (Bouton Calendly)](https://cal.com/line-simon)
 *(Les places étant limitées, réservez dès que vous sentez que c'est le "bon" moment pour vous).*

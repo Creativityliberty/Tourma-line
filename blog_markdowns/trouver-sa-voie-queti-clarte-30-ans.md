@@ -14,7 +14,7 @@ featured: false
 
 ---
 
-## 📖 L'histoire de Chloé : Le sentiment de "stagner"
+## L'histoire de Chloé : Le sentiment de "stagner"
 
 À 31 ans, Chloé avait l'impression d'être "en retard". Ses amies achetaient des maisons, se mariaient ou gravissaient les échelons en entreprise. Chloé, elle, changeait de job tous les 18 mois, incapable de trouver un sens à ce qu'elle faisait. Elle vivait encore dans un appartement qui ressemblait à une colocation d'étudiante, avec le sentiment persistant que sa "vraie vie" n'avait pas encore commencé.
 
@@ -24,7 +24,7 @@ En regardant sa carte numérologique, la réponse était évidente. Chloé essay
 
 ---
 
-## 📋 Votre parcours de clarté
+## Votre parcours de clarté
 1. [La crise des 30 ans : Le premier bilan de l'âme](#bilan)
 2. [Arrêter le poison de la comparaison sociale](#comparaison)
 3. [Numérologie : Identifier vos talents innés](#talents)
@@ -32,7 +32,7 @@ En regardant sa carte numérologique, la réponse était évidente. Chloé essay
 
 ---
 
-## 🌪️ <a name="bilan"></a> 1. La crise des 30 ans : Le premier bilan de l'âme
+## <a name="bilan"></a> 1. La crise des 30 ans : Le premier bilan de l'âme
 
 Vers 30 ans, on atteint un carrefour énergétique majeur. C'est le moment où les choix faits "pour faire plaisir aux parents" ou "parce que c'était logique après les études" commencent à s'effondrer. 
 
@@ -40,7 +40,7 @@ Pour Chloé, ce n'était pas un manque de compétence, c'était un **désalignem
 
 ---
 
-## 🚫 <a name="comparaison"></a> 2. Arrêter le poison de la comparaison sociale
+## <a name="comparaison"></a> 2. Arrêter le poison de la comparaison sociale
 
 Le plus grand ennemi de Chloé (et peut-être le vôtre) était la comparaison. Elle voyait la réussite des autres comme un écran de fumée qui masquait son propre potentiel. 
 
@@ -48,7 +48,7 @@ Chaque personne a son propre rythme numérologique. Certains sont des "sprinteur
 
 ---
 
-## 🗺️ <a name="talents"></a> 3. Numérologie : Identifier vos talents innés
+## <a name="talents"></a> 3. Numérologie : Identifier vos talents innés
 
 Grâce à son **Nombre d'Expression**, nous avons identifié que Chloé avait un talent immense pour la communication et l'indépendance, mais qu'elle était terrifiée par l'échec. 
 
@@ -56,7 +56,7 @@ En mettant des mots sur ses peurs grâce à la guidance, Chloé a enfin osé lan
 
 ---
 
-## ❓ <a name="faq"></a> 4. FAQ : Questions que vous vous posez peut-être
+## FAQ : Questions que vous vous posez peut-être
 
 **Est-ce que je peux vraiment changer de métier maintenant ?**
 Oui, et c'est même le meilleur moment. À 30 ans, vous avez encore toute la vitalité nécessaire pour rebâtir, mais avec l'expérience que vous n'aviez pas à 20 ans.
@@ -66,7 +66,7 @@ Absolument. En comprenant votre propre vibration, vous arrêtez d'attirer des pa
 
 ---
 
-## 🚀 Ne laissez plus le doute piloter votre vie
+## Ne laissez plus le doute piloter votre vie
 
 Si vous vous sentez comme Chloé, perdu(e) au milieu du gué, ne restez pas seule avec vos questions. La clarté est à portée de main.
 
@@ -87,8 +87,7 @@ Si vous vous sentez comme Chloé, perdu(e) au milieu du gué, ne restez pas seul
     </div>
     <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
       <span class="text-3xl font-serif text-primary font-bold mb-4 block">70 €</span>
-      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#0f1c2eb3] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-[#0f1c2ee6] hover:shadow-lg w-full md:w-auto whitespace-nowrap">
-        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#4A4063] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-opacity-90 hover:shadow-lg w-full md:w-auto whitespace-nowrap">
         Je trouve ma voie
       </a>
     </div>

@@ -4,6 +4,7 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
     "./*.{ts,tsx}",
+    "./blog_markdowns/*.md",
   ],
   theme: {
     extend: {

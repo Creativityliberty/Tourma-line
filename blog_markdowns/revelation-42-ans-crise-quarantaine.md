@@ -14,7 +14,7 @@ featured: true
 
 ---
 
-## 📖 L'histoire de "Sophie" : Quand le succès ne suffit plus
+## L'histoire de "Sophie" : Quand le succès ne suffit plus
 
 Imaginez une femme de 42 ans. Disons qu'elle s'appelle Sophie. De l'extérieur, elle a "tout réussi" : un poste de cadre, une famille, une vie rythmée. Pourtant, un matin, en se garant sur le parking de son entreprise, Sophie ressent une oppression. Une question tourne en boucle : *"Est-ce que c'est ça, la vie ? Est-ce que je suis vraiment à ma place ?"*
 
@@ -22,7 +22,7 @@ Ce n'est pas qu'elle n'aime plus sa famille ou son métier. C'est simplement qu'
 
 ---
 
-## 📋 Sommaire de votre transformation
+## Sommaire de votre transformation
 1. [La vibration 6 : Le passage du 'Faire' à 'l'Être'](#vibration)
 2. [Pourquoi ce sentiment de vide est une excellente nouvelle](#vide)
 3. [Les 3 phases de votre éveil à 42 ans](#phases)
@@ -30,7 +30,7 @@ Ce n'est pas qu'elle n'aime plus sa famille ou son métier. C'est simplement qu'
 
 ---
 
-## 🌟 <a name="vibration"></a> 1. La vibration 6 : Le passage du 'Faire' à 'l'Être'
+## <a name="vibration"></a> 1. La vibration 6 : Le passage du 'Faire' à 'l'Être'
 
 Pourquoi 42 ans précisément ? En numérologie, chaque dizaine porte une leçon. La trentaine était celle de l'affirmation. La quarantaine, et particulièrement l'année des 42 ans, est celle de l'**Alchimie du Cœur**.
 
@@ -38,7 +38,7 @@ Le chiffre **6** (4+2) symbolise l'harmonie. Il nous demande de faire la paix en
 
 ---
 
-## 🌪️ <a name="vide"></a> 2. Pourquoi ce sentiment de vide est une excellente nouvelle
+## <a name="vide"></a> 2. Pourquoi ce sentiment de vide est une excellente nouvelle
 
 Ce sentiment de "perte de sens" n'est pas un bug, c'est une **mise à jour**. 
 
@@ -46,7 +46,7 @@ Votre système actuel (vos habitudes, vos défenses émotionnelles, votre carri�
 
 ---
 
-## 🔍 <a name="phases"></a> 3. Les 3 phases de votre éveil à 42 ans
+## <a name="phases"></a> 3. Les 3 phases de votre éveil à 42 ans
 
 ### Phase 1 : La Friction
 Vous ressentez de l'irritabilité face aux petites choses du quotidien. Les conversations superficielles vous épuisent. C'est votre intuition qui essaie de capter votre attention.
@@ -59,7 +59,7 @@ Une fois que vous acceptez que "l'ancienne vous" ne reviendra pas, vous commence
 
 ---
 
-## ❓ <a name="faq"></a> 4. FAQ : Faut-il tout plaquer pour être heureuse ?
+## FAQ : Faut-il tout plaquer pour être heureuse ?
 
 **Est-ce que je dois changer de vie pour aller mieux ?**
 Pas forcément. Le réalignement des 42 ans commence par l'intérieur. Parfois, une simple pratique énergétique régulière ou la compréhension de vos cycles numérologiques suffit à faire baisser la pression.
@@ -69,7 +69,7 @@ Ils voient le changement, mais ils ne ressentent pas l'appel. C'est normal. C'es
 
 ---
 
-## 🔥 Transformez votre confusion en une force créatrice
+## Transformez votre confusion en une force créatrice
 
 Si vous vous reconnaissez dans l'histoire de Sophie, ne laissez pas cette transition se transformer en burn-out. La numérologie et la guidance ne sont pas là pour prédire votre futur, mais pour vous donner les clés de votre présent.
 
@@ -92,8 +92,7 @@ Si vous vous reconnaissez dans l'histoire de Sophie, ne laissez pas cette transi
     </div>
     <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
       <span class="text-3xl font-serif text-primary font-bold mb-4 block">70 €</span>
-      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#0f1c2eb3] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-[#0f1c2ee6] hover:shadow-lg w-full md:w-auto whitespace-nowrap">
-        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#4A4063] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-opacity-90 hover:shadow-lg w-full md:w-auto whitespace-nowrap">
         Réserver ma Guidance
       </a>
     </div>

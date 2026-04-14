@@ -14,7 +14,7 @@ featured: false
 
 ---
 
-## 📖 L'histoire de Thomas : Le poids invisible du bureau
+## L'histoire de Thomas : Le poids invisible du bureau
 
 Thomas est infirmier. C'est un homme solide, pragmatique. Pourtant, au bout de 10 ans de métier, il a commencé à ressentir une "lourdeur" dans le dos qu'aucun kiné n'arrivait à soulager. Il avait l'impression de porter toute la misère de ses patients sur ses épaules.
 
@@ -24,7 +24,7 @@ Pendant la séance, il a eu l'impression que des "fils" se détachaient de lui. 
 
 ---
 
-## 📋 Sommaire de votre libération
+## Sommaire de votre libération
 1. [Qu'est-ce qu'une scorie énergétique ?](#scories)
 2. [Les symptômes d'une aura "encrassée"](#symptomes)
 3. [Nettoyage à distance : Comment ça se passe ?](#distance)
@@ -32,7 +32,7 @@ Pendant la séance, il a eu l'impression que des "fils" se détachaient de lui. 
 
 ---
 
-## 🌟 <a name="scories"></a> 1. Qu'est-ce qu'une scorie énergétique ?
+## <a name="scories"></a> 1. Qu'est-ce qu'une scorie énergétique ?
 
 Nous sommes des êtres vibratoires. Chaque émotion négative (la vôtre ou celle d'un collègue) produit une fréquence. Si cette fréquence n'est pas évacuée, elle reste dans votre champ énergétique. C'est ce qu'on appelle les charges émotionnelles ou larves énergétiques. 
 
@@ -40,7 +40,7 @@ Elles agissent comme une poussière qui viendrait recouvrir une ampoule : au bou
 
 ---
 
-## ⚠️ <a name="symptomes"></a> 2. Les symptômes d'une aura "encrassée"
+## <a name="symptomes"></a> 2. Les symptômes d'une aura "encrassée"
 
 Voici les signes qui ne trompent pas :
 *   Vous vous réveillez fatigué(e) même après 8h de sommeil.
@@ -50,13 +50,13 @@ Voici les signes qui ne trompent pas :
 
 ---
 
-## 📡 <a name="distance"></a> 3. Nettoyage à distance : Comment ça se passe ?
+## <a name="distance"></a> 3. Nettoyage à distance : Comment ça se passe ?
 
 Comme pour le Lahochi, le nettoyage énergétique utilise la canalisation pour "balayer" votre aura. On utilise souvent des fréquences de lumière bleue ou violette pour transmuter les énergies lourdes en lumière. Le résultat est une sensation immédiate de **légèreté et de clarté mentale**.
 
 ---
 
-## ❓ <a name="faq"></a> 4. FAQ : Questions courantes
+## FAQ : Questions courantes
 
 **Est-ce douloureux ?**
 Absolument pas. C'est un moment de profonde douceur. On peut ressentir des vagues de froid ou des frissons au moment où l'énergie se libère, mais c'est tout.
@@ -66,7 +66,7 @@ Pour les personnes travaillant en contact du public (soignants, enseignants, ven
 
 ---
 
-## ✨ Retrouvez votre légèreté intérieure
+## Retrouvez votre légèreté intérieure
 
 Ne laissez plus les énergies des autres décider de votre humeur. Reprenez le contrôle de votre espace sacré.
 
@@ -87,8 +87,7 @@ Ne laissez plus les énergies des autres décider de votre humeur. Reprenez le c
     </div>
     <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
       <span class="text-3xl font-serif text-primary font-bold mb-4 block">65 €</span>
-      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#0f1c2eb3] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-[#0f1c2ee6] hover:shadow-lg w-full md:w-auto whitespace-nowrap">
-        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#4A4063] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-opacity-90 hover:shadow-lg w-full md:w-auto whitespace-nowrap">
         Réserver mon Nettoyage
       </a>
     </div>

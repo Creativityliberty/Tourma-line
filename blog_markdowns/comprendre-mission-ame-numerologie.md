@@ -24,7 +24,7 @@ Aujourd'hui, Marc est formateur en psychologie positive. Il gagne peut-être moi
 
 ---
 
-## 📋 Votre boussole intérieure
+## Votre boussole intérieure
 1. [Mission d'Âme vs Métier : La nuance cruciale](#nuance)
 2. [Les 3 nombres qui cachent votre destinée](#nombres)
 3. [Les signes que vous êtes sur la mauvaise voie](#signes)
@@ -32,14 +32,14 @@ Aujourd'hui, Marc est formateur en psychologie positive. Il gagne peut-être moi
 
 ---
 
-## 🌟 <a name="nuance"></a> 1. Mission d'Âme vs Métier : La nuance cruciale
+## <a name="nuance"></a> 1. Mission d'Âme vs Métier : La nuance cruciale
 
 On confond souvent ce que l'on *fait* et ce que l'on *est*. 
 Votre mission d'âme peut s'exercer dans n'importe quel domaine. Un **Chemin 2** (le collaborateur) pourra exercer sa mission aussi bien en tant qu'infirmier qu'en tant que médiateur dans une grande entreprise. L'important n'est pas l'étiquette sur votre contrat de travail, mais la **qualité vibratoire** que vous insufflez à vos actes.
 
 ---
 
-## 🔢 <a name="nombres"></a> 2. Les 3 nombres qui cachent votre destinée
+## <a name="nombres"></a> 2. Les 3 nombres qui cachent votre destinée
 
 Pour identifier votre mission, la numérologie croise trois données majeures :
 *   **Le Chemin de Vie :** Votre itinéraire, le terrain sur lequel vous allez évoluer.
@@ -50,7 +50,7 @@ Quand ces trois nombres sont alignés, la fatigue disparaît et la "chance" (la 
 
 ---
 
-## ⚠️ <a name="signes"></a> 3. Les signes que vous êtes sur la mauvaise voie
+## <a name="signes"></a> 3. Les signes que vous êtes sur la mauvaise voie
 
 *   Un sentiment de fatigue chronique dès le réveil.
 *   L'impression d'être une "imposture" dans votre domaine actuel.
@@ -58,7 +58,7 @@ Quand ces trois nombres sont alignés, la fatigue disparaît et la "chance" (la 
 
 ---
 
-## 🔥 Alignez votre vie sur votre vibration sacrée
+## Alignez votre vie sur votre vibration sacrée
 
 Ne passez pas une année de plus à ignorer l'appel de votre âme. La clarté est le point de départ de toute transformation.
 
@@ -75,12 +75,11 @@ Ne passez pas une année de plus à ignorer l'appel de votre âme. La clarté es
         <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Identification de vos blocages karmiques ancestraux</li>
         <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Accompagnement bienveillant vers votre nouvelle voie</li>
       </ul>
-      <div class="mt-4 text-sm text-gray-500">--- Durée : 1h30 à 2h00 • Séance personnalisée ---</div>
+      <div class="mt-4 text-sm text-gray-500">Durée : 1h30 à 2h00 • Séance personnalisée</div>
     </div>
     <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
       <span class="text-3xl font-serif text-primary font-bold mb-4 block">80 €</span>
-      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#0f1c2eb3] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-[#0f1c2ee6] hover:shadow-lg w-full md:w-auto whitespace-nowrap">
-        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#4A4063] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-opacity-90 hover:shadow-lg w-full md:w-auto whitespace-nowrap">
         Réserver mon Étude
       </a>
     </div>

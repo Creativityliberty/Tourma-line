@@ -14,7 +14,7 @@ featured: true
 
 ---
 
-## 📖 L'histoire de Julie : Quand le corps dit "Stop"
+## L'histoire de Julie : Quand le corps dit "Stop"
 
 Julie a 35 ans. Elle travaille dans le marketing, court après le temps, gère ses enfants et sa charge mentale explose. Un soir, elle se rend compte qu'elle n'arrive plus à dormir, malgré une fatigue écrasante. Elle se sent "grise", sans éclat, comme si une chape de plomb pesait sur ses épaules.
 
@@ -26,7 +26,7 @@ Le lendemain, Julie m'appelle : *"C'est incroyable, j'ai l'impression d'avoir en
 
 ---
 
-## 📋 Sommaire de votre soin
+## Sommaire de votre soin
 1. [Le Lahochi : La fréquence de l'amour et de la lumière](#frequence)
 2. [Pourquoi la distance ne change rien à l'efficacité](#distance)
 3. [Les 4 signes que vous avez besoin d'un nettoyage](#signes)
@@ -34,7 +34,7 @@ Le lendemain, Julie m'appelle : *"C'est incroyable, j'ai l'impression d'avoir en
 
 ---
 
-## 🌟 <a name="frequence"></a> 1. Le Lahochi : La fréquence de l'amour et de la lumière
+## <a name="frequence"></a> 1. Le Lahochi : La fréquence de l'amour et de la lumière
 
 Le Lahochi (prononcé La-Ho-Chi) est l'une des fréquences de guérison les plus élevées actuellement accessibles. 
 *   **La** fait référence à la lumière, l'amour et la sagesse venant des fréquences supérieures.
@@ -45,7 +45,7 @@ C'est un soin "intelligent". Il ne remplace pas la médecine, mais il vient **r�
 
 ---
 
-## 📡 <a name="distance"></a> 2. Pourquoi la distance ne change rien à l'efficacité
+## Pourquoi la distance ne change rien à l'efficacité
 
 C'est la question que Julie m'a posée au début : *"Comment pouvez-vous me soigner si vous ne me touchez pas ?"*
 
@@ -55,7 +55,7 @@ En réalité, être chez soi permet souvent un lâcher-prise plus authentique qu
 
 ---
 
-## ⚠️ <a name="signes"></a> 3. Les 4 signes que vous avez besoin d'un nettoyage Lahochi
+## Les 4 signes que vous avez besoin d'un nettoyage Lahochi
 
 *   **Le sommeil non réparateur :** Vous dormez, mais vous vous réveillez aussi fatiguée qu'au coucher.
 *   **L'irritabilité inexpliquée :** Vous perdez patience pour des broutilles, signe que votre plexus solaire est saturé.
@@ -64,7 +64,7 @@ En réalité, être chez soi permet souvent un lâcher-prise plus authentique qu
 
 ---
 
-## ❓ <a name="faq"></a> 4. FAQ : Questions fréquentes
+## FAQ : Questions fréquentes
 
 **Est-ce que je vais sentir quelque chose ?**
 Chaque personne est différente. Julie a ressenti de la chaleur. D'autres voient des couleurs, ressentent des picotements ou n'éprouvent qu'une immense paix. L'absence de sensation physique ne signifie pas que le soin ne fonctionne pas.
@@ -74,7 +74,7 @@ Les effets immédiats (relaxation) durent environ 48h. Le travail profond de ré
 
 ---
 
-## 🔥 Retrouvez votre éclat originel
+## Retrouvez votre éclat originel
 
 Ne restez pas dans cet état de grisaille intérieure. Comme Julie, permettez-vous de déposer ce sac à dos trop lourd. Le Lahochi est un cadeau que vous faites à votre corps et à votre esprit.
 
@@ -95,8 +95,7 @@ Ne restez pas dans cet état de grisaille intérieure. Comme Julie, permettez-vo
     </div>
     <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
       <span class="text-3xl font-serif text-primary font-bold mb-4 block">60 €</span>
-      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#0f1c2eb3] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-[#0f1c2ee6] hover:shadow-lg w-full md:w-auto whitespace-nowrap">
-        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#4A4063] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-opacity-90 hover:shadow-lg w-full md:w-auto whitespace-nowrap">
         Réserver mon Soin
       </a>
     </div>

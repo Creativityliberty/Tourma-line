@@ -14,7 +14,7 @@ featured: true
 
 ---
 
-## 📖 L'histoire de Sandrine : Un appel dans la nuit
+## L'histoire de Sandrine : Un appel dans la nuit
 
 Sandrine a 45 ans. Elle traverse une période de doutes profonds avec son compagnon. Elle n'arrive plus à faire la part des choses entre ses peurs et son intuition. Habitant loin de tout cabinet spécialisé, elle hésite à prendre rendez-vous par téléphone. *"Est-ce que Line pourra vraiment capter mes énergies sans me voir ?"*, se demande-t-elle.
 
@@ -26,7 +26,7 @@ Dès les premières secondes de l'appel, avant même qu'elle ne pose sa question
 
 ---
 
-## 📋 Sommaire de votre guidance
+## Sommaire de votre guidance
 1. [Pourquoi la voix est le canal le plus pur](#voix)
 2. [Cartomancie : Le jeu caché derrière le téléphone](#cartomancie)
 3. [Les avantages concrets de la consultation à distance](#avantages)
@@ -34,7 +34,7 @@ Dès les premières secondes de l'appel, avant même qu'elle ne pose sa question
 
 ---
 
-## 🌟 <a name="voix"></a> 1. Pourquoi la voix est le canal le plus pur
+## <a name="voix"></a> 1. Pourquoi la voix est le canal le plus pur
 
 En cabinet, le visuel (votre tenue, votre posture, vos expressions faciales) peut parfois biaiser la perception du praticien. Par téléphone, ces filtres disparaissent. 
 
@@ -42,7 +42,7 @@ La voix est une **onde**. Elle porte vos émotions, vos doutes et vos espoirs de
 
 ---
 
-## 🃏 <a name="cartomancie"></a> 2. Cartomancie : Le jeu caché derrière le téléphone
+## <a name="cartomancie"></a> 2. Cartomancie : Le jeu caché derrière le téléphone
 
 Pendant que nous parlons, je tire les cartes comme si vous étiez devant moi. L'intention de la question traverse la ligne. Que ce soit pour un tirage en croix ou une guidance intuitive libre, les énergies sont instantanées.
 
@@ -53,7 +53,7 @@ L'objectif n'est pas de "prédire" que vous allez gagner au loto, mais de vous d
 
 ---
 
-## ✅ <a name="avantages"></a> 3. Les avantages concrets de la consultation à distance
+## <a name="avantages"></a> 3. Les avantages concrets de la consultation à distance
 
 *   **L'anonymat et la liberté :** Vous êtes chez vous, vous pouvez pleurer, rire, ou être en pyjama. Vous êtes totalement vous-même.
 *   **Le gain de temps :** Pas de trajet, pas de stress de parking. La séance commence et finit dans le calme de votre foyer.
@@ -61,7 +61,7 @@ L'objectif n'est pas de "prédire" que vous allez gagner au loto, mais de vous d
 
 ---
 
-## ❓ <a name="faq"></a> 4. FAQ : Questions fréquentes
+## FAQ : Questions fréquentes
 
 **Est-ce que je dois envoyer une photo avant ?**
 Ce n'est pas obligatoire, mais cela peut m'aider à fixer votre énergie au début de la séance. Votre voix reste mon guide principal.
@@ -71,7 +71,7 @@ Oui, sauf les questions liées à la santé pure (qui relèvent de la médecine)
 
 ---
 
-## 💡 Éclairez votre chemin dès maintenant
+## Éclairez votre chemin dès maintenant
 
 Comme Sandrine, ne restez pas seule avec cette boule au ventre. Parfois, une simple conversation de 30 minutes peut éviter des mois d'errance émotionnelle. 
 
@@ -92,8 +92,7 @@ Comme Sandrine, ne restez pas seule avec cette boule au ventre. Parfois, une sim
     </div>
     <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
       <span class="text-3xl font-serif text-primary font-bold mb-4 block">À partir de 40 €</span>
-      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#0f1c2eb3] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-[#0f1c2ee6] hover:shadow-lg w-full md:w-auto whitespace-nowrap">
-        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#4A4063] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-opacity-90 hover:shadow-lg w-full md:w-auto whitespace-nowrap">
         Réserver ma Guidance
       </a>
     </div>

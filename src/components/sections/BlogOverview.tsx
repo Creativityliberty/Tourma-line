@@ -65,7 +65,13 @@ export const BlogOverview = () => {
           </div>
 
           <div className="mt-16 text-center">
-             <p className="text-gray-400 text-sm italic mb-4">D'autres articles arrivent prochainement...</p>
+             <Link 
+              to="/blog"
+              className="inline-flex items-center gap-2 bg-brand-purple text-white px-8 py-3 rounded-full font-bold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-brand-purple/20"
+             >
+               Explorer tous les articles
+               <span className="transform rotate-180"><ArrowLeftIcon className="w-4 h-4" /></span>
+             </Link>
           </div>
         </div>
       </AnimateOnScroll>

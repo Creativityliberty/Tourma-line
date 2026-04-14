@@ -81,6 +81,8 @@ export const BlogPostPage = () => {
             <nav className="mb-12 flex items-center gap-2 text-sm text-gray-400 font-bold uppercase tracking-widest">
               <Link to="/" className="hover:text-brand-purple transition-colors">Accueil</Link>
               <span className="opacity-30">/</span>
+              <Link to="/blog" className="hover:text-brand-purple transition-colors">Blog</Link>
+              <span className="opacity-30">/</span>
               <span className="text-brand-purple">{post.category}</span>
             </nav>
 
@@ -180,11 +182,11 @@ export const BlogPostPage = () => {
             {/* Back to Blog Button */}
             <div className="mt-16 text-center">
                <Link 
-                to="/"
+                to="/blog"
                 className="inline-flex items-center gap-2 text-gray-400 hover:text-brand-purple transition-all font-bold uppercase tracking-widest text-sm"
                >
                  <ArrowLeftIcon className="w-4 h-4" />
-                 <span>Retour à l'accueil / Blog</span>
+                 <span>Retour à tous les articles</span>
                </Link>
             </div>
           </div>

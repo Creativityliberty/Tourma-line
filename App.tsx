@@ -30,6 +30,7 @@ import { CityLinks } from "./src/components/sections/CityLinks";
 import { WhatsAppFloat } from "./src/components/ui/WhatsAppFloat";
 import { allCities } from "./src/data/cities";
 import { BlogPostPage } from "./src/pages/BlogPostPage";
+import { BlogListPage } from "./src/pages/BlogListPage";
 
 // Legal Pages
 import { MentionsLegales } from "./src/pages/MentionsLegales";
@@ -149,6 +150,7 @@ function App() {
         ])}
 
         {/* Blog Pages */}
+        <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
 
         {/* Legal Pages */}

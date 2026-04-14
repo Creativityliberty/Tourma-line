@@ -115,7 +115,7 @@ function HomePage() {
       <About />
       <FAQ />
       <Contact />
-      <BlogOverview />
+      {/* <BlogOverview /> */}
       <Footer />
     </div>
   );

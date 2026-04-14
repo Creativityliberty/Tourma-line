@@ -21,6 +21,20 @@ Ce plan définit la structure, les piliers de contenu et le calendrier éditoria
 
 ---
 
+## 🔍 Classification des Mots-Clés par Intention (Stratégie d'Acquisition)
+
+Pour structurer notre blog et nos pages, nous avons "éclaté" les mots-clés du Google Keyword Planner selon les 5 grands types d'intention de recherche :
+
+| Type de Mot-Clé | Intention de Recherche | Exemples de Mots-Clés (Tirés du Keyword Planner) | Action Recommandée |
+| :--- | :--- | :--- | :--- |
+| **1. Navigationnel** | Recherche d'une page spécifique de notre site ou de la marque. | `line simon`, `tourmaline` | Optimiser la page d'accueil (Home) et la page "À propos". |
+| **2. Informationnel** | Recherche d'informations, phase d'apprentissage. | `calcul chemin de vie`, `qu'est ce que le lahochi`, `signification des nombres`, `numérologie karmique` | **Articles de blog piliers** (Guides complets, tutoriels). |
+| **3. Commercial** | Recherche comparative, phase de décision avant l'achat. | `soins lahochi avis`, `meilleur voyant haute normandie` | Pages de services détaillées avec témoignages et réassurance. |
+| **4. Transactionnel** | Intention d'achat ou de réservation imminente. | `consultation numérologie en ligne`, `voyance par téléphone`, `rdv voyance`, `cartomancie en ligne` | **Boutons d'Appel à l'Action (CTA)** clairs vers Cal.com sur ces pages d'atterrissage. |
+| **5. Local** | Recherche d'un service dans une zone géographique précise. | `voyante autour de moi`, `voyance le havre`, `voyante normandie`, `cartomancienne fécamp` | **Pages de destination locales (City Pages)** optimisées Google Business Profile. |
+
+---
+
 ## 🏗️ Piliers de Contenu (Content Pillars)
 
 ### 1. Transition & Sens de Vie (Focus Persona : Sophie, 42 ans)
@@ -67,5 +81,27 @@ Ce plan définit la structure, les piliers de contenu et le calendrier éditoria
 
 ---
 
-## 📈 Mots-clés Stratégiques (SEO High-Intent)
-`crise de la quarantaine spiritualité`, `calcul chemin de vie expert`, `pourquoi je ne trouve pas ma voie professionnelle`, `numérologie karmique couple`, `soin lahochi distance avis`, `consultation numérologie normandie`, `reconversion professionnelle spiritualité`.
+## 📈 Mots-clés Stratégiques (SEO High-Intent & Search Console 2026)
+
+**Requêtes actuelles les plus performantes (GSC) :**
+`voyante autour de moi`, `soins lahochi`, `voyance autour de moi`, `voyant medium`, `line simon`.
+
+**Opportunités à fort volume :**
+`voyance`, `cartomancie`, `voyante`, `cartomancienne autour de moi`, `voyance par téléphone`.
+
+**Mots-clés longue traîne & géolocalisés (à cibler) :**
+`numérologie seine maritime`, `soins énergétiques lahochi`, `meilleur voyant haute normandie`, `voyante normandie`, `cartomancie normandie`, `numérologie gerponville`, `voyance fécamp`.
+
+**Mots-clés Blog / Intention de recherche :**
+`crise de la quarantaine spiritualité`, `calcul chemin de vie expert`, `pourquoi je ne trouve pas ma voie professionnelle`, `numérologie karmique couple`, `soin lahochi distance avis`, `reconversion professionnelle spiritualité`, `qu'est ce que le lahochi`.
+
+---
+
+## 💡 Nouvelles Idées d'Articles (Basées sur l'Audit SEO)
+1. **"Voyance ou Guidance : Quelle est la vraie différence ?"** (Pour capter "voyance", "voyante", "voyance autour de moi")
+2. **"Soin Lahochi à distance : comment ça marche vraiment ?"** (Pour capter "soins lahochi", "lahochi autour de moi", "soins énergétiques lahochi")
+3. **"Consultation par téléphone : pourquoi la guidance à distance fonctionne"** (Pour capter "voyance par téléphone", "voyance à distance")
+4. **"Numérologie en Seine-Maritime : l'expertise locale de Line"** (Pour capter "voyance seine maritime", "voyante normandie")
+5. **"Cartomancie expliquée : bien plus qu'un simple tirage de cartes"** (Pour capter "cartomancie", "cartomancienne autour de moi")
+6. **"Médiumnité et numérologie : deux approches complémentaires"** (Pour capter "médiumnité", "médium", "medium autour de moi")
+7. **"La tourmaline noire : la pierre de protection qui a inspiré mon nom"** (Pour capter "tourmaline", "la tourmaline", "tourma")

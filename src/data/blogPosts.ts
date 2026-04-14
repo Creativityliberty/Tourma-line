@@ -1,9 +1,12 @@
+import fm from "front-matter";
+
+// Définition de la structure d'un article de blog
 export interface BlogPost {
   id: string;
   slug: string;
   title: string;
   excerpt: string;
-  content: string;
+  content: string; // Le corps de l'article en Markdown
   image: string;
   date: string;
   readTime: string;
@@ -12,207 +15,32 @@ export interface BlogPost {
   featured?: boolean;
 }
 
-export const blogPosts: BlogPost[] = [
-  {
-    id: "0",
-    slug: "calculer-chemin-de-vie-2026-guide",
-    title: "Calcul du Chemin de Vie : Le Guide Numérologie 2026 (Avec votre date de naissance)",
-    excerpt: "Apprenez le vrai calcul de votre chemin de vie en numérologie (formule exacte). Découvrez la signification secrète de votre nombre pour débloquer votre destinée.",
-    date: "2026-04-14",
-    readTime: "12 min",
-    category: "Numérologie",
-    persona: "Tous Segments",
-    image: "/blog-chemin-devie.png",
-    featured: true,
-    content: `
-      <div class="space-y-6 text-gray-700 leading-relaxed">
-        <p><strong>RÉPONSE DIRECTE :</strong> Le calcul de votre chemin de vie s'effectue en additionnant tous les chiffres de votre date de naissance (Jour + Mois + Année), puis en réduisant le résultat final par addition temporelle pour obtenir un chiffre unique situé entre 1 et 9. Les nombres 11, 22 et 33 font exception : ce sont des "Maîtres Nombres" qui ne se réduisent pas.</p>
-        
-        <p>Si vous vous posez des questions sur votre carrière, vos blocages relationnels ou si vous traversez une crise de sens, la réponse se trouve très souvent dans ce simple calcul. Voici la méthode analytique et humaniste pour décoder le contrat de votre âme.</p>
+// Vite permet de charger automatiquement tous les fichiers Markdown du dossier
+// avec l'option eager: true pour les avoir de suite à l'exécution.
+const rawPosts = import.meta.glob('../../blog_markdowns/*.md', { query: '?raw', import: 'default', eager: true });
 
-        <div class="bg-gray-50 border border-gray-200 rounded-lg p-6 my-8">
-          <h3 class="text-lg font-serif text-primary mb-4 font-bold border-b border-gray-200 pb-2">Sommaire du Guide</h3>
-          <ul class="space-y-2 list-none p-0 m-0">
-            <li><a href="#methode" class="text-primary hover:underline flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> 1. La méthode de calcul officielle (Étape par Étape)</a></li>
-            <li><a href="#pourquoi" class="text-primary hover:underline flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> 2. Pourquoi calculer son chemin de vie aujourd'hui ?</a></li>
-            <li><a href="#significations" class="text-primary hover:underline flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> 3. L'Interprétation Humaniste des 9 Chemins</a></li>
-            <li><a href="#faq" class="text-primary hover:underline flex items-center"><svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg> 4. FAQ sur la méthode et le résultat</a></li>
-          </ul>
-        </div>
-
-        <h2 id="methode" class="flex items-center text-2xl font-serif text-primary mt-12 mb-4"><svg class="w-6 h-6 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg> La méthode de calcul officielle (Étape par Étape)</h2>
-        <p>Oubliez les logiciels automatiques. Pour capter l'essence numérologique de votre naissance, le calcul manuel (appelé "réduction théosophique") est indispensable.</p>
-        <p><strong>Prenons un exemple clair. Vous êtes né(e) le 15 Juillet 1985 (15/07/1985).</strong></p>
-        <ul class="list-disc pl-6 space-y-2">
-            <li><strong>Étape 1 : Séparez</strong> tous les chiffres de votre date entière. <code class="bg-gray-100 px-1 py-0.5 rounded">1 + 5 + 0 + 7 + 1 + 9 + 8 + 5</code></li>
-            <li><strong>Étape 2 : Additionnez</strong> l'ensemble pour obtenir un total. <code class="bg-gray-100 px-1 py-0.5 rounded">1+5+0+7+1+9+8+5 = 36</code></li>
-            <li><strong>Étape 3 : Réduisez</strong> ce total pour atteindre un chiffre entre 1 et 9. <code class="bg-gray-100 px-1 py-0.5 rounded">3 + 6 = 9</code></li>
-        </ul>
-        <p class="font-bold text-lg text-primary">Résultat : Le Chemin de Vie de cette personne est le 9.</p>
-
-        <div class="bg-amber-50 p-6 border-l-4 border-amber-500 rounded my-8 text-amber-900 shadow-sm flex gap-4 items-start">
-        <svg class="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
-        <div>
-          <strong class="block mb-1 text-lg">L'erreur que 80% des gens font :</strong> 
-          Ne réduisez jamais le résultat final s'il correspond à <strong>11, 22 ou 33</strong>. Ce sont des "Maîtres Nombres". Si votre addition donne 11 (ex: 29), votre chemin de vie est le 11, et non pas le 2. Ils portent une vibration énergétique supérieure qui implique des missions de vie d'envergure.
-        </div>
-        </div>
-
-        <h2 id="pourquoi" class="flex items-center text-2xl font-serif text-primary mt-12 mb-4"><svg class="w-6 h-6 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> Pourquoi calculer son chemin de vie aujourd'hui ?</h2>
-        <p>Contrairement à la voyance traditionnelle qui enferme dans la fatalité, la numérologie humaniste offre une boussole. Votre chemin de vie symbolise le <strong>paysage</strong> que vous êtes venu traverser dans cette incarnation.</p>
-        <p>Si aujourd'hui, à 35, 40 ou 50 ans, vous ressentez :</p>
-        <ul class="list-disc pl-6 space-y-2">
-            <li>Le "syndrome de l'imposteur" professionnellement.</li>
-            <li>L'attirance répétée pour des relations qui vous consument.</li>
-            <li>Une crise de la quarantaine où tout semble perdre son sens...</li>
-        </ul>
-        <p>...c'est bien souvent parce que <strong>vous marchez à contre-courant de votre chemin naturel</strong>. Le calculer n'est pas une prédiction d'avenir, c'est un diagnostic de l'âme. C'est comprendre pourquoi certains murs se dressent inlassablement devant vous.</p>
-
-        <h2 id="significations" class="flex items-center text-2xl font-serif text-primary mt-12 mb-4"><svg class="w-6 h-6 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg> Les 9 Chemins de Vie : L'Interprétation Humaniste</h2>
-        <p>Voici la signification vibratoire de chaque ligne directrice. Cherchez votre nombre ci-dessous.</p>
-
-        <div class="space-y-6 mt-6 pl-4 border-l-2 border-gray-100">
-          <div>
-            <h3 class="text-xl font-medium text-gray-900 mb-2">Chemin 1 : Le Bâtisseur Indépendant</h3>
-            <p>Vous êtes ici pour apprendre l'autonomie et le leadership. Votre plus grand défi ? Assumer votre unicité sans écraser les autres, et oser avancer seul(e). Si vous vous sentez bloqué(e), c'est que vous dépendez trop de l'aval d'autrui.</p>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-medium text-gray-900 mb-2">Chemin 2 : L'Artisan de la Paix</h3>
-            <p>Le chemin de la coopération et de l'écoute. Vous possédez une profonde empathie. La difficulté de ce chemin est d'apprendre à poser des limites pour ne pas vous faire vampiriser, notamment dans vos relations de couple.</p>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-medium text-gray-900 mb-2">Chemin 3 : L'Étincelle Communicative</h3>
-            <p>L'expression de soi, la créativité et la parole sont vos outils. Un chemin 3 frustré au travail est un chemin 3 à qui on interdit d'amener de la joie ou des idées nouvelles. Votre mission est de libérer votre parole.</p>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-medium text-gray-900 mb-2">Chemin 4 : L'Architecte Structuré</h3>
-            <p>Le travail, l'ancrage, les fondations solides. Vous avancez lentement mais sûrement. Votre blocage karmique ? La rigidité. Votre défi est d'accepter l'imprévu et de lâcher le contrôle quand l'univers bouscule vos plans.</p>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-medium text-gray-900 mb-2">Chemin 5 : L'Explorateur Libre</h3>
-            <p>Changement, mouvement, liberté. Le chemin 5 a horreur de la routine. Si vous traversez une crise existentielle, c'est que la "cage dorée" de votre vie (CDI sécurisant, couple plan-plan) est en train d'étouffer votre soif de vivre.</p>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-medium text-gray-900 mb-2">Chemin 6 : Le Gardien de l'Harmonie</h3>
-            <p>Tourné vers la famille, le soin aux autres, le beau. Le piège de ce chemin ? L'oubli de soi et le perfectionnisme étouffant. En apprenant à accepter les failles (les vôtres et celles de vos proches), vous rayonnerez de guérison.</p>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-medium text-gray-900 mb-2">Chemin 7 : Le Chercheur de Vérité</h3>
-            <p>Spiritualité, analyse, introspection. Vous avez besoin de comprendre les coulisses du monde. La crise survient souvent par l'isolement extrême ou le besoin de tout rationaliser en niant votre immense intuition.</p>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-medium text-gray-900 mb-2">Chemin 8 : Le Maître des Énergies (Alchimiste)</h3>
-            <p>Un chemin puissant, lié à l'argent, au pouvoir matériel et à la justice. Tout est dans les extrêmes (faillite/succès). Le défi est d'apprendre à manipuler les énergies matérielles de manière juste, sans se laisser corrompre ni sombrer dans l'abnégation et la pauvreté.</p>
-          </div>
-
-          <div>
-            <h3 class="text-xl font-medium text-gray-900 mb-2">Chemin 9 : Le Philanthrope Universel</h3>
-            <p>L'accomplissement, l'humanitaire, la vue d'ensemble. C'est un chemin de sagesse. Si c'est le vôtre, vous avez souvent l'impression de "porter la misère du monde". Le but : donner sans attendre de reconnaissance directe, dans l'amour inconditionnel.</p>
-          </div>
-
-          <div class="bg-gray-50 p-6 rounded-lg mt-8 border border-gray-200">
-            <h3 class="text-xl font-bold text-gray-900 mb-4 border-b pb-2">Les Maîtres Nombres (11, 22, 33)</h3>
-            <ul class="space-y-3 list-none">
-                <li><span class="inline-flex w-8 h-8 items-center justify-center bg-primary text-white rounded-full font-bold mr-2">11</span> <strong>L'Idéaliste Inspiré</strong> – Intuition fulgurante, sensibilité extrême.</li>
-                <li><span class="inline-flex w-8 h-8 items-center justify-center bg-primary text-white rounded-full font-bold mr-2">22</span> <strong>Le Grand Constructeur</strong> – Capacité à matérialiser de très hautes visions à grande échelle.</li>
-                <li><span class="inline-flex w-8 h-8 items-center justify-center bg-primary text-white rounded-full font-bold mr-2">33</span> <strong>Le Guide Compatissant</strong> – Énergie du don total et de l'abnégation pour élever l'humanité (rarement vécu pleinement).</li>
-            </ul>
-          </div>
-        </div>
-
-        <h2 id="faq" class="flex items-center text-2xl font-serif text-primary mt-12 mb-4"><svg class="w-6 h-6 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg> FAQ sur la méthode et le résultat</h2>
-        <div class="space-y-6">
-          <div>
-            <h3 class="font-bold text-lg mb-1">Puis-je changer de chemin de vie ?</h3>
-            <p>Non. Votre date de naissance est votre point d'ancrage dans cette dimension, votre "contrat" de départ. En revanche, vous évoluez dans la vibration de ce nombre tout au long de votre vie, passant de ses faiblesses à sa pleine lumière.</p>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg mb-1">Je n'arrive pas à me reconnaitre dans la description, pourquoi ?</h3>
-            <p>Le Chemin de Vie n'est que <strong>le paysage</strong>. Votre "Année Personnelle", vos "Nombres d'Expression" (issus de vos prénoms et noms) ou encore vos blocages karmiques modulent fortement ce paysage. Lire un seul chiffre ne suffit pas pour poser un diagnostic spirituel complet.</p>
-          </div>
-          <div>
-            <h3 class="font-bold text-lg mb-1">Faut-il réduire le mois de mon calcul (ex: Novembre = 11) ?</h3>
-            <p>Pour le calcul du Chemin de Vie global en numérologie classique OUI, on procède souvent à l'addition de l'ensemble bout à bout. Cependant, une étude approfondie isolera d'abord chaque bloc (Jour, Mois, Année) pour comprendre par quelles sous-vibrations vous passez pour atteindre votre chemin ultime.</p>
-          </div>
-        </div>
-
-        <h2 class="flex items-center text-2xl font-serif text-primary mt-12 mb-4"><svg class="w-6 h-6 mr-3 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> Le mot de la fin (Et votre étape suivante)</h2>
-        <p>En ligne, les milliers d'articles gratuits ne vous donneront toujours que l'étiquette (votre chemin). Mais <strong>ils ne vous diront jamais pourquoi votre moteur bloque</strong>. Vous savez désormais que vous êtes "Chemin 5", mais cela ne vous dit pas <em>pourquoi</em> vous ne parvenez pas à quitter un emploi toxique.</p>
-        <p>C'est ici qu'intervient <strong>la véritable analyse numérologique</strong>. En croisant votre chemin de vie avec votre carte natale complète et en y couplant des flashs clairs d'accompagnement, la confusion devient subitement clarté.</p>
-        <p><strong>Vous ne voulez plus tâtonner dans le brouillard ? Vous voulez savoir exactement comment débloquer le prochain chapitre de votre vie professionnelle ou personnelle ?</strong></p>
-        
-        <div class="mt-14 mb-8 bg-gradient-to-br from-cream to-white border border-gold-200 rounded-xl shadow-sm overflow-hidden">
-          <div class="p-8 text-center border-b border-gold-100">
-            <span class="text-sm font-bold tracking-widest text-[#d4af37] uppercase mb-2 block">Aller plus loin</span>
-            <h3 class="text-2xl text-primary font-serif mb-3">Consultation Guidance Complète</h3>
-            <p class="text-gray-600 font-light max-w-2xl mx-auto">Une séance approfondie pour faire le point sur votre situation actuelle. C'est le rendez-vous idéal pour étudier votre base numérologique et bénéficier d'un accompagnement structuré.</p>
-          </div>
-          <div class="p-8 bg-white/40 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="text-left flex-1">
-              <ul class="space-y-2 text-gray-700">
-                <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> L'étude approfondie de votre chemin de vie</li>
-                <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> L'analyse de votre année personnelle</li>
-                <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Guidance cartomancie personnalisée (Affectif, Pro...)</li>
-              </ul>
-              <div class="mt-4 text-sm text-gray-500">1h30 à 1h45 • À distance ou au Cabinet</div>
-            </div>
-            <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
-              <span class="text-3xl font-serif text-primary font-bold mb-4 block">70 €</span>
-              <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#0f1c2eb3] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-[#0f1c2ee6] hover:shadow-lg w-full md:w-auto whitespace-nowrap">
-                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                Réserver ma séance
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    `
-  },
-  {
-    id: "1",
-    slug: "revelation-42-ans-crise-quarantaine",
-    title: "Crise de la quarantaine ou éveil de conscience ? Pourquoi 42 ans est l'âge de toutes les révélations.",
-    excerpt: "À 42 ans, beaucoup de femmes ressentent un basculement profond. Entre remise en question professionnelle et quête de sens, découvrez comment la numérologie éclaire ce cycle majeur de votre vie.",
-    date: "2024-04-03",
-    readTime: "8 min",
-    category: "Transition de Vie",
-    persona: "Sophie (42 ans)",
-    image: "/blog-midlife.png",
-    content: `
-      <p><strong>RÉPONSE DIRECTE :</strong> À 42 ans, vous traversez l'un des cycles les plus puissants de la numérologie humaniste (le passage au nombre 6 : 4+2). Ce n'est pas une crise, mais un réalignement obligatoire vers votre vérité intérieure et votre équilibre émotionnel, souvent marqué par une soif de sens et de spiritualité.</p>
-
-      <h2>Le cap des 40 ans : Plus qu'un chiffre, une vibration</h2>
-      <p>Vous avez 42 ans, ou vous approchez de ce cap, et vous ressentez une étrange sensation de flottement ? Ce n'est pas un hasard. En numérologie humaniste, la quarantaine correspond à un changement de cycle majeur où l'individu passe de la construction extérieure (carrière, famille, acquisition) à la réalisation intérieure.</p>
-      
-      <h3>Pourquoi 42 ans est-il si particulier ?</h3>
-      <p>Le nombre 42 réduit à 6 (4+2). Le 6 est le nombre de l'harmonie, de la responsabilité et de l'équilibre coeur-foyer. C'est l'âge où l'on se demande : \"Est-ce que ma vie actuelle résonne vraiment avec qui je suis à l'intérieur ?\".</p>
-    `
-  },
-  {
-    id: "2",
-    slug: "trouver-sa-voie-queti-clarte-30-ans",
-    title: "Le syndrome de la colocation à 30 ans : Comment la numérologie vous aide à enfin trouver votre voie.",
-    excerpt: "Vous avez 28 ou 30 ans et l'impression de stagner ? Entre instabilité sentimentale et flou professionnel, apprenez à décoder votre chemin de vie pour aligner vos choix sur votre véritable identité.",
-    date: "2024-04-10",
-    readTime: "7 min",
-    category: "Orientation",
-    persona: "Chloé (28 ans)",
-    image: "/blog-clarity.png",
-    content: `
-      <p><strong>RÉPONSE DIRECTE :</strong> Pour sortir de l'instabilité à 30 ans, vous devez identifier votre "Chemin de Vie" numérique. Ce code de naissance révèle si vous agissez selon vos talents innés ou si vous luttez contre votre nature, transformant ainsi le flou actuel en une trajectoire professionnelle et personnelle alignée.</p>
-
-      <h2>La quête de sens de la génération 25-35 ans</h2>
-      <p>À 28 ans, Chloé se sentait \"en retard\". Ses amies achetaient des appartements ou montaient des boîtes, alors qu'elle changeait encore de job tous les 18 mois, incapable de se fixer. Ce sentiment d'instabilité est le point de départ de beaucoup de mes consultations.</p>
-      
-      <h3>Sortir des schémas répétitifs</h3>
-      <p>Pourquoi attirez-vous toujours les mêmes partenaires toxiques ? Pourquoi ce job de rêve finit-il par vous vider de votre énergie ? La réponse réside souvent dans une méconnaissance de vos propres nombres.</p>
-    `
-  }
-];
+export const blogPosts: BlogPost[] = Object.keys(rawPosts)
+  // Filtrer les fichiers de gestion interne (comme BLOG_PLAN ou PROGRAMME) pour ne pas les publier
+  .filter((path) => !path.includes('PLAN') && !path.includes('PROGRAMME'))
+  .map((path, index) => {
+    const fileContent = rawPosts[path] as string;
+    
+    // Extraction des métadonnées (YAML frontmatter) et du corps du texte Markdown
+    const { attributes, body } = fm<any>(fileContent);
+    
+    return {
+      id: String(index),
+      slug: attributes.slug || path.replace('../../blog_markdowns/', '').replace('.md', ''),
+      title: attributes.title || "Titre Provisoire",
+      excerpt: attributes.description || "",
+      content: body,
+      image: attributes.image || "/blog-chemin-devie.png",
+      date: attributes.date || new Date().toISOString().split('T')[0],
+      readTime: attributes.readTime || "5 min",
+      category: attributes.category || "Général",
+      persona: attributes.persona || "",
+      featured: attributes.featured || false,
+    };
+  })
+  // Trier les articles du plus récent au plus ancien
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

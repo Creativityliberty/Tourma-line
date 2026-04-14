@@ -6,6 +6,9 @@ import { Footer } from "../components/layout/Footer";
 import { blogPosts } from "../data/blogPosts";
 import { ArrowLeftIcon, WhatsAppIcon, SparklesIcon, CalendarIcon } from "../components/ui/icons";
 import { AnimateOnScroll } from "../components/ui/AnimateOnScroll";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
 export const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -121,9 +124,15 @@ export const BlogPostPage = () => {
 
             {/* Content Body */}
             <article 
-              className="prose prose-lg sm:prose-xl prose-brand max-w-none mb-24 text-gray-700 font-light leading-relaxed first-letter:text-7xl first-letter:font-display first-letter:font-bold first-letter:text-brand-purple first-letter:mr-3 first-letter:float-left prose-headings:font-display prose-headings:text-brand-dark prose-headings:font-bold prose-strong:text-brand-dark"
-              dangerouslySetInnerHTML={{ __html: post.content }}
-            />
+              className="prose prose-lg sm:prose-xl prose-brand max-w-none mb-24 text-gray-700 font-light leading-relaxed first-letter:text-7xl first-letter:font-display first-letter:font-bold first-letter:text-brand-purple first-letter:mr-3 first-letter:float-left prose-headings:font-display prose-headings:text-brand-dark prose-headings:font-bold prose-strong:text-brand-dark prose-a:text-brand-purple hover:prose-a:text-brand-dark"
+            >
+              <Markdown 
+                remarkPlugins={[remarkGfm]} 
+                rehypePlugins={[rehypeRaw]}
+              >
+                {post.content}
+              </Markdown>
+            </article>
 
             {/* Final CTA Action (Requested) */}
             <AnimateOnScroll>

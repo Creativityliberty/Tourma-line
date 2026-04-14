@@ -148,13 +148,29 @@ export const blogPosts: BlogPost[] = [
         <p>C'est ici qu'intervient <strong>la véritable analyse numérologique</strong>. En croisant votre chemin de vie avec votre carte natale complète et en y couplant des flashs clairs d'accompagnement, la confusion devient subitement clarté.</p>
         <p><strong>Vous ne voulez plus tâtonner dans le brouillard ? Vous voulez savoir exactement comment débloquer le prochain chapitre de votre vie professionnelle ou personnelle ?</strong></p>
         
-        <div class="mt-14 mb-8 text-center p-8 bg-gradient-to-br from-cream to-white border border-gold-200 rounded-xl shadow-sm">
-          <h3 class="text-2xl text-primary font-serif mb-3">Passez de la confusion à la clarté</h3>
-          <p class="text-gray-600 mb-6 font-light">Clarifiez votre chemin dès aujourd'hui. L'étude complète révèle vos défis et ressources cachés.</p>
-          <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#0f1c2eb3] text-white px-8 py-4 rounded-full font-medium transition-all hover:bg-[#0f1c2ee6] hover:shadow-lg">
-            <svg class="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-            Réserver mon Étude Karmique & Numérologique
-          </a>
+        <div class="mt-14 mb-8 bg-gradient-to-br from-cream to-white border border-gold-200 rounded-xl shadow-sm overflow-hidden">
+          <div class="p-8 text-center border-b border-gold-100">
+            <span class="text-sm font-bold tracking-widest text-[#d4af37] uppercase mb-2 block">Aller plus loin</span>
+            <h3 class="text-2xl text-primary font-serif mb-3">Consultation Guidance Complète</h3>
+            <p class="text-gray-600 font-light max-w-2xl mx-auto">Une séance approfondie pour faire le point sur votre situation actuelle. C'est le rendez-vous idéal pour étudier votre base numérologique et bénéficier d'un accompagnement structuré.</p>
+          </div>
+          <div class="p-8 bg-white/40 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="text-left flex-1">
+              <ul class="space-y-2 text-gray-700">
+                <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> L'étude approfondie de votre chemin de vie</li>
+                <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> L'analyse de votre année personnelle</li>
+                <li class="flex items-start"><svg class="w-5 h-5 mr-3 text-[#d4af37] mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg> Guidance cartomancie personnalisée (Affectif, Pro...)</li>
+              </ul>
+              <div class="mt-4 text-sm text-gray-500">1h30 à 1h45 • À distance ou au Cabinet</div>
+            </div>
+            <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
+              <span class="text-3xl font-serif text-primary font-bold mb-4 block">70 €</span>
+              <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#0f1c2eb3] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-[#0f1c2ee6] hover:shadow-lg w-full md:w-auto whitespace-nowrap">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                Réserver ma séance
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     `

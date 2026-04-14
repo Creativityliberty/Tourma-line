@@ -94,7 +94,7 @@ export const BlogPostPage = () => {
                    </div>
                    <div className="flex flex-col">
                      <span className="text-brand-purple">Par Line</span>
-                     <span className="text-[10px] opacity-60">Numérologue experte</span>
+                     <span className="text-[10px] opacity-60">Numérologue</span>
                    </div>
                  </div>
                  <div className="h-6 w-px bg-gray-200 hidden sm:block"></div>

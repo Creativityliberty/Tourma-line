@@ -102,10 +102,6 @@ html, body {
     width: 100%;
   }
 
-  .animate-pulsing-glow {
-    position: relative;
-  }
-
   .animate-pulsing-glow::after {
     content: '';
     position: absolute;

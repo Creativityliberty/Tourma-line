@@ -22,6 +22,7 @@ import {
   ArrowRight,
   ArrowLeft,
   ChevronRight,
+  ChevronLeft,
   Quote,
   CheckCircle2,
   Users,
@@ -63,6 +64,7 @@ export const BriefcaseIcon = createLucideIcon(Briefcase);
 export const ArrowRightIcon = createLucideIcon(ArrowRight);
 export const ArrowLeftIcon = createLucideIcon(ArrowLeft);
 export const ChevronRightIcon = createLucideIcon(ChevronRight);
+export const ChevronLeftIcon = createLucideIcon(ChevronLeft);
 export const QuoteIcon = createLucideIcon(Quote);
 export const CheckIcon = createLucideIcon(CheckCircle2);
 export const UsersIcon = createLucideIcon(Users);

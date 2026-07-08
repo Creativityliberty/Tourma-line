@@ -25,6 +25,7 @@ import { BlogOverview } from "./src/components/sections/BlogOverview";
 import { NumerologiePage } from "./src/pages/NumerologiePage";
 import { CartomancePage } from "./src/pages/CartomancePage";
 import { LahochiPage } from "./src/pages/LahochiPage";
+import { PrestationsPage } from "./src/pages/PrestationsPage";
 import { CityPage } from "./src/pages/CityPage";
 import { CityLinks } from "./src/components/sections/CityLinks";
 import { WhatsAppFloat } from "./src/components/ui/WhatsAppFloat";
@@ -126,6 +127,7 @@ function App() {
     <div className="relative">
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/prestations" element={<PrestationsPage />} />
         <Route path="/numerologie" element={<NumerologiePage />} />
         <Route path="/cartomancie" element={<CartomancePage />} />
         <Route path="/soin-lahochi" element={<LahochiPage />} />

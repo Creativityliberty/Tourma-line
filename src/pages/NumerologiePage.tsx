@@ -33,7 +33,7 @@ export const NumerologiePage = () => {
           "url": "https://www.tourma-line.fr/numerologie",
           "offers": {
             "@type": "Offer",
-            "url": "https://cal.com/line-simon",
+            "url": "https://cal.com/tourma-line",
             "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock"
           }
@@ -43,13 +43,13 @@ export const NumerologiePage = () => {
         title="Numérologie"
         headline="Numérologie en Normandie — Décryptez votre chemin de vie"
         metaDescription="Numérologue à Gerponville, Fécamp, Seine-Maritime et à distance."
-        heroImage="/hero-tourma-line.webp"
+        heroImage="/hero-tourma-line.jpg"
         heroImageAlt="Line, numérologue en Normandie — consultation de numérologie"
-        intro="À partir de votre date de naissance, Line révèle les clés de votre personnalité, vos cycles de vie et les opportunités qui s'offrent à vous. Une consultation précise, bienveillante, que vous soyez en Normandie ou partout en France."
+        intro="Chez Tourma-Line, la numérologie et la cartomancie sont fusionnées pour vous offrir une guidance complète. Line combine l'étude de votre date de naissance avec l'interprétation des cartes pour vous guider de manière globale et personnalisée."
         localInfo="Cabinet à Gerponville (76540), proche Saint-Riquier-ès-Plains — À distance : toute la France"
         breadcrumb="Numérologie"
         canonicalPath="/numerologie"
-        ctaText="Réserver ma consultation de numérologie"
+        ctaText="Réserver ma séance"
         sections={[
           {
             icon: <HashIcon className="w-8 h-8" />,
@@ -95,7 +95,7 @@ export const NumerologiePage = () => {
           {
             question: "Combien de temps dure une consultation de numérologie avec Line ?",
             answer:
-              "Les consultations durent généralement entre 45 minutes et 1 heure, selon la profondeur des questions abordées. Un enregistrement audio peut être fourni sur demande.",
+              "Les séances de guidance complète, combinant numérologie et cartomancie, durent généralement entre 1h et 1h30, selon les thèmes abordés. Un enregistrement audio peut être fourni sur demande.",
           },
         ]}
       />

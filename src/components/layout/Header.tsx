@@ -1,42 +1,67 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 type NavClickHandler = (e: React.MouseEvent<HTMLAnchorElement>) => void;
 
 export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 20) {
+                setIsScrolled(true);
+            } else {
+                setIsScrolled(false);
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
-        <header className="bg-brand-dark bg-opacity-50 text-white p-4 fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-all duration-300">
+        <header className={`fixed top-0 left-0 right-0 z-50 p-4 text-white transition-all duration-300 ${
+            isScrolled 
+                ? "bg-brand-dark bg-opacity-90 backdrop-blur-md shadow-lg" 
+                : "bg-transparent"
+        }`}>
             <div className="container mx-auto flex justify-between items-center px-4">
                 <a
                     href="/"
                     onClick={onNavClick}
-                    className="text-xl sm:text-2xl md:text-3xl font-display font-bold flex-shrink-0"
+                    className="flex items-center gap-3 text-xl sm:text-2xl md:text-3xl font-display font-bold flex-shrink-0 group/logo text-white"
                 >
-                    TOURMA-LINE
+                    <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 bg-white flex items-center justify-center flex-shrink-0 transition-transform duration-500 group-hover/logo:rotate-[360deg]">
+                        <img 
+                            src="/logo-tourmaline.png" 
+                            alt="Tourma-Line Logo" 
+                            className="w-full h-full object-cover"
+                            loading="eager"
+                        />
+                    </div>
+                    <span>Tourma-Line</span>
                 </a>
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white bg-opacity-10 rounded-full px-6 py-3 backdrop-blur-md border border-white border-opacity-20">
+                <nav className="hidden md:flex items-center space-x-1 lg:space-x-2 bg-white bg-opacity-10 rounded-full px-6 py-3 backdrop-blur-md border border-white border-opacity-20 text-white">
                     <a
                         href="/"
                         onClick={onNavClick}
-                        className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
+                        className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple text-white"
                     >
                         Accueil
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
                     </a>
                     <a
-                        href="/services"
+                        href="/prestations"
                         onClick={onNavClick}
-                        className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
+                        className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple text-white"
                     >
-                        Services
+                        Prestations
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
                     </a>
                     <a
                         href="/formules"
                         onClick={onNavClick}
-                        className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
+                        className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple text-white"
                     >
                         Formules
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
@@ -44,7 +69,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                     <a
                         href="/bienfaits"
                         onClick={onNavClick}
-                        className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
+                        className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple text-white"
                     >
                         Bienfaits
                         <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
@@ -53,7 +78,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                      <a
                          href="/blog"
                          onClick={onNavClick}
-                         className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple"
+                         className="text-sm lg:text-base px-3 py-2 relative group transition-colors hover:text-brand-purple text-white"
                      >
                          Blog
                          <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-purple group-hover:w-full transition-all duration-300"></span>
@@ -94,26 +119,26 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
             </div>
             {/* Mobile Navigation */}
             {mobileMenuOpen && (
-                <nav className="md:hidden bg-white bg-opacity-10 backdrop-blur-md p-4 space-y-2 mt-2 rounded-2xl border border-white border-opacity-20">
+                <nav className="md:hidden bg-white bg-opacity-10 backdrop-blur-md p-4 space-y-2 mt-2 rounded-2xl border border-white border-opacity-20 text-white">
                     <a
                         href="/"
                         onClick={(e) => {
                             onNavClick(e);
                             setMobileMenuOpen(false);
                         }}
-                        className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors"
+                        className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors text-white"
                     >
                         Accueil
                     </a>
                     <a
-                        href="/services"
+                        href="/prestations"
                         onClick={(e) => {
                             onNavClick(e);
                             setMobileMenuOpen(false);
                         }}
-                        className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors"
+                        className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors text-white"
                     >
-                        Services
+                        Prestations
                     </a>
                     <a
                         href="/formules"
@@ -121,7 +146,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                             onNavClick(e);
                             setMobileMenuOpen(false);
                         }}
-                        className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors"
+                        className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors text-white"
                     >
                         Formules
                     </a>
@@ -131,7 +156,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                             onNavClick(e);
                             setMobileMenuOpen(false);
                         }}
-                        className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors"
+                        className="block px-4 py-2 hover:bg-brand-purple hover:bg-opacity-30 rounded transition-colors text-white"
                     >
                         Bienfaits
                     </a>

@@ -25,10 +25,10 @@ const FAQItem = ({
       </button>
       <div
         className={`overflow-hidden transition-all duration-300 ${
-          isOpen ? "max-h-40 opacity-100 mb-4" : "max-h-0 opacity-0"
+          isOpen ? "max-h-[500px] opacity-100 mb-4" : "max-h-0 opacity-0"
         }`}
       >
-        <p className="text-gray-600">{answer}</p>
+        <p className="text-gray-600 leading-relaxed text-sm sm:text-base">{answer}</p>
       </div>
     </div>
   );

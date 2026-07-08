@@ -21,7 +21,7 @@ export const Contact = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a
-                  href="https://cal.com/line-simon"
+                  href="https://cal.com/tourma-line"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block animate-pulse"

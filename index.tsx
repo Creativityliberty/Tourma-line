@@ -11,8 +11,7 @@ if (!rootElement) {
   throw new Error("Could not find root element to mount to");
 }
 
-const root = ReactDOM.createRoot(rootElement);
-root.render(
+const appElement = (
   <React.StrictMode>
     <HelmetProvider>
       <BrowserRouter>
@@ -21,3 +20,10 @@ root.render(
     </HelmetProvider>
   </React.StrictMode>
 );
+
+if (rootElement.hasChildNodes()) {
+  ReactDOM.hydrateRoot(rootElement, appElement);
+} else {
+  const root = ReactDOM.createRoot(rootElement);
+  root.render(appElement);
+}

@@ -16,6 +16,7 @@ import {
   MapPinIcon, 
   ArrowLeftIcon 
 } from "../components/ui/icons";
+import { allCities } from "../data/cities";
 import type { City } from "../data/cities";
 
 interface CityPageProps {
@@ -63,6 +64,27 @@ export const CityPage = ({ city, service }: CityPageProps) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
+  // Obtenir les villes du même type
+  const siblingCities = allCities.filter(c => c.type === city.type);
+  const currentIndex = siblingCities.findIndex(c => c.slug === city.slug);
+  
+  // Sélectionner les 3 villes suivantes de manière déterministe (boucle circulaire)
+  const relatedCities: City[] = [];
+  if (siblingCities.length > 1) {
+    for (let i = 1; i <= Math.min(3, siblingCities.length - 1); i++) {
+      const targetIndex = (currentIndex + i) % siblingCities.length;
+      relatedCities.push(siblingCities[targetIndex]);
+    }
+  }
+
+  // Autres services dans la même ville
+  const otherServices = Object.entries(serviceDetails)
+    .filter(([key]) => key !== service)
+    .map(([key, value]) => ({
+      slug: value.slug,
+      title: value.title,
+    }));
+
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     const href = e.currentTarget.getAttribute("href");
     if (href && href.startsWith("#")) e.preventDefault();
@@ -70,13 +92,11 @@ export const CityPage = ({ city, service }: CityPageProps) => {
 
   const localityText = isLocal
     ? `près de Gerponville, à ${city.name}`
-    : isInternational
-    ? `depuis ${city.country}`
-    : `depuis ${city.name}`;
+    : `à distance`;
 
   const distanceText = isLocal
     ? `en cabinet à Gerponville ou par téléphone`
-    : `par téléphone ou visio, depuis ${city.name}`;
+    : `par téléphone ou visioconférence`;
 
   const pageTitle = `${svc.title} à ${city.name} — Consultation avec Line`;
   const metaDesc = `Consultation de ${svc.title.toLowerCase()} à ${city.name} (${city.region}) avec Line, numérologue et cartomancienne en Normandie. Séance ${distanceText}. RDV en ligne ou WhatsApp.`;
@@ -112,7 +132,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
           "url": canonicalUrl,
           "offers": {
             "@type": "Offer",
-            "url": "https://cal.com/line-simon",
+            "url": "https://cal.com/tourma-line",
             "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock"
           },
@@ -131,7 +151,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
       <section className="relative pt-32 pb-20 bg-brand-dark text-white overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
-          style={{ backgroundImage: "url(/hero-tourma-line.webp)" }}
+          style={{ backgroundImage: "url(/hero-tourma-line.jpg)" }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/70 to-brand-dark" />
 
@@ -167,22 +187,19 @@ export const CityPage = ({ city, service }: CityPageProps) => {
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href={`https://wa.me/33649653186?text=${whatsappMessage}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3 shadow-xl"
+            <Link
+              to="/prestations"
+              className="bg-brand-dark/50 hover:bg-brand-dark/80 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3 shadow-xl border border-white/20 backdrop-blur-sm text-center"
             >
-              <WhatsAppIcon className="w-5 h-5" />
-              Contacter Line sur WhatsApp
-            </a>
+              Découvrir tous les services
+            </Link>
             <a
-              href="https://cal.com/line-simon"
+              href="https://cal.com/tourma-line"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 text-center animate-pulse shadow-lg"
             >
-              {svc.cta}
+              Réserver ma séance
             </a>
           </div>
         </div>
@@ -277,6 +294,67 @@ export const CityPage = ({ city, service }: CityPageProps) => {
         </AnimateOnScroll>
       </section>
 
+      {/* Maillage SEO - Villes à proximité et autres services */}
+      {relatedCities.length > 0 && (
+        <section className="py-16 bg-gray-50 border-t border-b border-gray-100">
+          <div className="container mx-auto px-6 max-w-4xl">
+            <h2 className="text-2xl sm:text-3xl font-display text-brand-dark mb-10 text-center font-bold">
+              Consultez aussi dans les villes voisines & autres prestations
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Villes similaires */}
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100/80">
+                <h3 className="text-lg font-semibold text-brand-dark mb-4 flex items-center gap-2 border-b border-gray-100 pb-3">
+                  <MapPinIcon className="w-5 h-5 text-brand-purple" />
+                  <span>{city.type === "local" ? "En Normandie (Cabinet & Domicile)" : "Autres villes à distance"}</span>
+                </h3>
+                <ul className="space-y-3">
+                  {relatedCities.map((relatedCity) => {
+                    const path = `/${svc.slug}-${relatedCity.slug}`;
+                    return (
+                      <li key={relatedCity.slug}>
+                        <Link 
+                          to={path} 
+                          className="text-gray-600 hover:text-brand-purple transition-colors flex items-center gap-2 text-sm font-medium"
+                        >
+                          <span className="text-brand-lilas text-xs">✦</span>
+                          <span>{svc.title} à {relatedCity.name} ({relatedCity.region})</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+
+              {/* Autres services dans la même ville */}
+              <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100/80">
+                <h3 className="text-lg font-semibold text-brand-dark mb-4 flex items-center gap-2 border-b border-gray-100 pb-3">
+                  <SparklesIcon className="w-5 h-5 text-brand-purple" />
+                  <span>Prestations à {city.name}</span>
+                </h3>
+                <ul className="space-y-3">
+                  {otherServices.map((otherSvc) => {
+                    const path = `/${otherSvc.slug}-${city.slug}`;
+                    return (
+                      <li key={otherSvc.slug}>
+                        <Link 
+                          to={path} 
+                          className="text-gray-600 hover:text-brand-purple transition-colors flex items-center gap-2 text-sm font-medium"
+                        >
+                          <span className="text-brand-lilas text-xs">✦</span>
+                          <span>{otherSvc.title} à {city.name}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* CTA Final */}
       <section className="py-20 bg-brand-dark text-white text-center">
         <div className="container mx-auto px-6 max-w-2xl">
@@ -297,7 +375,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
               WhatsApp — Réponse rapide
             </a>
             <a
-              href="https://cal.com/line-simon"
+              href="https://cal.com/tourma-line"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 shadow-lg"
@@ -308,7 +386,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
           <div className="mt-10 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-center gap-2">
             <Link to="/" className="text-gray-400 hover:text-brand-lilas transition-colors text-sm flex items-center gap-2">
               <ArrowLeftIcon className="w-4 h-4" />
-              Retour à l'accueil
+              Visiter le site internet
             </Link>
             <span className="text-gray-600 hidden sm:block">·</span>
             <Link to={`/${svc.slug}`} className="text-gray-400 hover:text-brand-lilas transition-colors text-sm flex items-center gap-2">

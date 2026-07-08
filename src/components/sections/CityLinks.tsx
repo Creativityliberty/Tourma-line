@@ -71,7 +71,7 @@ export const CityLinks = () => {
                 WhatsApp
               </a>
               <a
-                href="https://cal.com/line-simon"
+                href="https://cal.com/tourma-line"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95"

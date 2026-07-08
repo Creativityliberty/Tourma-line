@@ -95,7 +95,7 @@ export const ServicePage = ({
           )}
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
             <a
-              href="https://cal.com/line-simon"
+              href="https://cal.com/tourma-line"
               target="_blank"
               rel="noopener noreferrer"
               id={`cta-hero-${breadcrumb.toLowerCase().replace(/\s/g, "-")}`}
@@ -189,7 +189,7 @@ export const ServicePage = ({
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://cal.com/line-simon"
+                href="https://cal.com/tourma-line"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-4 px-10 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95"
@@ -201,7 +201,7 @@ export const ServicePage = ({
                 className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 border border-white/20 flex items-center justify-center gap-2"
               >
                 <ArrowLeftIcon className="w-5 h-5" />
-                Retour à l'accueil
+                Visiter le site internet
               </Link>
             </div>
           </div>

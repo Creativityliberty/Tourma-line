@@ -33,7 +33,7 @@ export const CartomancePage = () => {
           "url": "https://www.tourma-line.fr/cartomancie",
           "offers": {
             "@type": "Offer",
-            "url": "https://cal.com/line-simon",
+            "url": "https://cal.com/tourma-line",
             "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock"
           }
@@ -43,13 +43,13 @@ export const CartomancePage = () => {
         title="Cartomancie"
         headline="Cartomancienne en Normandie — Des réponses claires et bienveillantes"
         metaDescription="Cartomancienne à Gerponville, Seine-Maritime et à distance."
-        heroImage="/hero-tourma-line.webp"
+        heroImage="/hero-tourma-line.jpg"
         heroImageAlt="Line, cartomancienne en Normandie — consultation de cartomancie"
-        intro="Line lit et interprète les cartes pour répondre à vos questions concrètes — relation, travail, famille, choix à faire. Une guidance précise, sans détour, avec la bienveillance que ses clients soulignent."
+        intro="Chez Tourma-Line, la cartomancie et la numérologie sont fusionnées pour vous offrir une guidance complète. Line associe l'interprétation intuitive des cartes à la structure des nombres pour répondre précisément à vos questions de vie."
         localInfo="Cabinet à Gerponville (76540), proche Saint-Riquier-ès-Plains — À distance : toute la France"
         breadcrumb="Cartomancie"
         canonicalPath="/cartomancie"
-        ctaText="Réserver ma séance de cartomancie"
+        ctaText="Réserver ma séance"
         sections={[
           {
             icon: <LayersIcon className="w-8 h-8" />,
@@ -95,7 +95,7 @@ export const CartomancePage = () => {
           {
             question: "Quelle est la différence entre cartomancie et guidance ?",
             answer:
-              "La cartomancie est un outil de guidance qui utilise les cartes comme support de lecture. Line combine souvent cartomancie et numérologie pour une guidance encore plus complète et précise.",
+              "La cartomancie est un outil de guidance qui utilise les cartes comme support de lecture. Chez Tourma-Line, chaque séance associe systématiquement la cartomancie et la numérologie (étude du chemin de vie et des cycles) pour vous apporter une clarté totale et un accompagnement sur mesure.",
           },
         ]}
       />

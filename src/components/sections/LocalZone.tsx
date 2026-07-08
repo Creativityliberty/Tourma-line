@@ -40,7 +40,7 @@ export const LocalZone = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
-                href="https://cal.com/line-simon"
+                href="https://cal.com/tourma-line"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 shadow-lg shadow-brand-lilas/20"

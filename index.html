@@ -31,8 +31,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Momo+Trust+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Viga&display=swap" rel="stylesheet">
     
     <!-- React Import Map -->
     <script type="importmap">
@@ -46,14 +45,26 @@
 }
     </script>
     
-    <!-- External Services -->
-    <link rel="preconnect" href="https://images.unsplash.com">
+    <!-- External Services (Optimized Preconnects) -->
     <link rel="preconnect" href="https://elfsightcdn.com">
-    <link rel="preconnect" href="https://maps.googleapis.com">
-    <link rel="preconnect" href="https://maps.gstatic.com">
     
-    <!-- Elfsight Google Reviews -->
-    <script src="https://elfsightcdn.com/platform.js" async></script>
+    <!-- Deferred load of heavy Elfsight Reviews widget for better FCP/LCP -->
+    <script>
+      window.addEventListener('DOMContentLoaded', () => {
+        const loadElfsight = () => {
+          const script = document.createElement('script');
+          script.src = 'https://elfsightcdn.com/platform.js';
+          script.async = true;
+          document.head.appendChild(script);
+        };
+        // Delay script injection until browser is idle or 3 seconds have passed
+        if ('requestIdleCallback' in window) {
+          requestIdleCallback(() => setTimeout(loadElfsight, 1500));
+        } else {
+          setTimeout(loadElfsight, 3000);
+        }
+      });
+    </script>
 
     <!-- Schema.org — LocalBusiness -->
     <script type="application/ld+json">
@@ -128,7 +139,7 @@
       "telephone": "+33649653186",
       "sameAs": [
         "https://www.facebook.com/tourma.line.534540",
-        "https://cal.com/line-simon"
+        "https://cal.com/tourma-line"
       ]
     }
     </script>

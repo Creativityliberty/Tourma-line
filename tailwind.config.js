@@ -13,7 +13,7 @@ export default {
       },
       fontFamily: {
         sans: ['Poppins', 'sans-serif'],
-        display: ['"Momo Trust Display"', 'sans-serif'],
+        display: ['Viga', 'sans-serif'],
       },
       colors: {
         'brand-lilas': '#E6E0F8',

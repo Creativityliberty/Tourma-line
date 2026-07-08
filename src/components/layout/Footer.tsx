@@ -8,7 +8,7 @@ export const Footer = () => {
                 <div className="grid gap-8 md:grid-cols-3">
                     <div>
                         <h3 className="text-3xl font-display font-bold mb-3">
-                            TOURMA-LINE
+                            Tourma-Line
                         </h3>
                         <div className="flex items-center gap-2 mb-2 text-brand-lilas">
                             <p>
@@ -92,7 +92,7 @@ export const Footer = () => {
 
                 <div className="border-t border-gray-600 mt-8 pt-6 text-center text-xs sm:text-sm text-gray-400 space-y-2">
                     <p>
-                        © {new Date().getFullYear()} TOURMA-LINE. Tous droits réservés.
+                        © {new Date().getFullYear()} Tourma-Line. Tous droits réservés.
                     </p>
                     <p>
                         Réalisé avec passion par{" "}

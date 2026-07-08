@@ -16,7 +16,7 @@ const LegalLayout = ({ title, children }: { title: string; children: React.React
       <main className="pt-32 pb-20 container mx-auto px-6 max-w-4xl">
         <Link to="/" className="inline-flex items-center gap-2 text-brand-purple hover:text-brand-dark transition-colors mb-8 group">
           <ArrowLeftIcon className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-          Retour à l'accueil
+          Visiter le site internet
         </Link>
         <h1 className="text-4xl font-display font-bold text-brand-dark mb-12">{title}</h1>
         <div className="prose prose-brand max-w-none text-gray-700 leading-relaxed space-y-8">

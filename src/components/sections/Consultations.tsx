@@ -28,7 +28,7 @@ export const Consultations = () => {
               >
                 <div className="shiny-card-container rounded-[2rem]">
                   <div className="shiny-card-border"></div>
-                  <div className="shiny-card-content bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row transition-all duration-300 hover:shadow-2xl">
+                  <div className="shiny-card-content bg-white/60 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row transition-all duration-300 hover:shadow-2xl hover:bg-white/85 border border-white/35">
                     <div className="md:w-2/5 relative h-64 md:h-auto">
                       <div className="absolute inset-0 bg-brand-purple/10 z-10"></div>
                       <img
@@ -106,7 +106,7 @@ export const Consultations = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
                           <a
-                            href="https://cal.com/line-simon"
+                            href="https://cal.com/tourma-line"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-brand-purple hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center"

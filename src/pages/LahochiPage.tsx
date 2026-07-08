@@ -33,7 +33,7 @@ export const LahochiPage = () => {
           "url": "https://www.tourma-line.fr/soin-lahochi",
           "offers": {
             "@type": "Offer",
-            "url": "https://cal.com/line-simon",
+            "url": "https://cal.com/tourma-line",
             "priceCurrency": "EUR",
             "availability": "https://schema.org/InStock"
           }
@@ -43,7 +43,7 @@ export const LahochiPage = () => {
         title="Soin Lahochi"
         headline="Soin Énergétique Lahochi en Normandie — Rééquilibre & Soulagement"
         metaDescription="Soins Lahochi au cabinet à Gerponville et à distance."
-        heroImage="/hero-tourma-line.webp"
+        heroImage="/hero-tourma-line.jpg"
         heroImageAlt="Line, praticienne en soins Lahochi en Normandie"
         intro="Le soin Lahochi est une méthode énergétique puissante, praticable en présentiel ou à distance. Line vous aide à relâcher les tensions, retrouver l'équilibre et dormir mieux — souvent dès la première séance."
         localInfo="Cabinet à Gerponville (76540) au 4 rue de Givrandville — Soin à distance possible : toute la France"

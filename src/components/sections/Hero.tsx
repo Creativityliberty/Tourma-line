@@ -11,23 +11,27 @@ export const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
     >
       {/* Background Image - Mobile */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat sm:hidden bg-[url('/hero-mobile-tourmaline.webp')]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat sm:hidden bg-[url('/hero-mobile-tourmaline.jpg')]"
         role="img"
         aria-label="Forêt mystique avec énergie spirituelle lumineuse - Numérologie, cartomancie et soins énergétiques LAHOCHI pour guidance personnalisée"
       ></div>
 
       {/* Background Image - Desktop */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block bg-[url('/hero-tourma-line.webp')]"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block bg-[url('/hero-tourma-line.jpg')]"
         role="img"
         aria-label="Forêt mystique avec énergie spirituelle lumineuse - Numérologie, cartomancie et soins énergétiques LAHOCHI pour guidance personnalisée"
       ></div>
 
+      {/* Glowing cosmic circles in the background */}
+      <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-brand-purple/25 blur-[120px] pointer-events-none animate-pulse-slow z-0"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-emerald-500/15 blur-[140px] pointer-events-none animate-pulse-slow-delay z-0"></div>
+
       {/* Overlay with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/5 to-black/10 sm:from-black/20 sm:via-black/10 sm:to-black/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/10 via-black/5 to-black/10 sm:from-black/20 sm:via-black/10 sm:to-black/20 z-0"></div>
 
       {/* Additional overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/5 sm:bg-black/10"></div>
+      <div className="absolute inset-0 bg-black/5 sm:bg-black/10 z-0"></div>
 
       {/* Content */}
       <div className="relative z-10 p-4 animate-fadeInUp max-w-4xl">
@@ -45,7 +49,7 @@ export const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 sm:mt-0">
           <a
-            href="https://cal.com/line-simon"
+            href="https://cal.com/tourma-line"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 animate-pulse inline-block shadow-lg"
@@ -61,6 +65,14 @@ export const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
             <WhatsAppIcon className="w-5 h-5" />
             Contact direct WhatsApp
           </a>
+        </div>
+      </div>
+
+      {/* Scroll Down Indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-1.5 opacity-70 hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+        <span className="text-[10px] uppercase tracking-[0.25em] text-white/50">Découvrir</span>
+        <div className="w-5 h-8 border border-white/30 rounded-full flex justify-center p-1">
+          <div className="w-1 h-2 bg-white/70 rounded-full animate-scrollIndicator"></div>
         </div>
       </div>
     </section>

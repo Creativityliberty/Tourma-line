@@ -87,7 +87,7 @@ Si vous vous sentez comme Chloé, perdu(e) au milieu du gué, ne restez pas seul
     </div>
     <div class="text-center md:text-right flex flex-col items-center md:items-end w-full md:w-auto">
       <span class="text-3xl font-serif text-primary font-bold mb-4 block">70 €</span>
-      <a href="https://cal.com/line-simon" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#4A4063] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-opacity-90 hover:shadow-lg w-full md:w-auto whitespace-nowrap">
+      <a href="https://cal.com/tourma-line" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-[#4A4063] text-white px-8 py-3 rounded-full font-medium transition-all hover:bg-opacity-90 hover:shadow-lg w-full md:w-auto whitespace-nowrap">
         Je trouve ma voie
       </a>
     </div>

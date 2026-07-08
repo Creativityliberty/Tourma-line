@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
+import { Testimonials } from "../components/sections/Testimonials";
 import { AnimateOnScroll } from "../components/ui/AnimateOnScroll";
 import { 
   WhatsAppIcon, 
@@ -354,6 +355,9 @@ export const CityPage = ({ city, service }: CityPageProps) => {
           </div>
         </section>
       )}
+
+      {/* Témoignages / Avis clients */}
+      <Testimonials />
 
       {/* CTA Final */}
       <section className="py-20 bg-brand-dark text-white text-center">

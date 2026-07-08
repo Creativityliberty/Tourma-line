@@ -6,6 +6,7 @@ import { Footer } from "../components/layout/Footer";
 import { Services } from "../components/sections/Services";
 import { Consultations } from "../components/sections/Consultations";
 import { Formules } from "../components/sections/Formules";
+import { Testimonials } from "../components/sections/Testimonials";
 
 export const PrestationsPage = () => {
   const [activeTab, setActiveTab] = useState("numerology");
@@ -75,6 +76,9 @@ export const PrestationsPage = () => {
       <div className="bg-brand-green/20">
         <Formules />
       </div>
+
+      {/* Client Reviews / Testimonials */}
+      <Testimonials />
 
       <Footer />
     </div>

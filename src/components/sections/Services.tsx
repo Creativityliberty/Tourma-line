@@ -75,16 +75,7 @@ export const Services = ({
                                             ))}
                                         </ul>
                                     )}
-                                    {currentService.calendlyButtonText && currentService.calendlyUrl && (
-                                        <a
-                                            href={currentService.calendlyUrl}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="inline-block mt-8 bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105 active:scale-95"
-                                        >
-                                            {currentService.calendlyButtonText}
-                                        </a>
-                                    )}
+
                                 </div>
                             </div>
                         </AnimateOnScroll>

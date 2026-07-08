@@ -11,7 +11,7 @@ export const Testimonials = () => {
             Ils étaient comme vous
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-16 text-center">
-            Voici ce qu'ils disent maintenant — 5,0/5 sur Google, 13 avis
+            Découvrez les retours d'expérience de ceux que j'ai accompagnés
           </p>
 
           <div className="max-w-6xl mx-auto min-h-[400px]">

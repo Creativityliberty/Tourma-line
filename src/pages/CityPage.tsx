@@ -107,6 +107,23 @@ export const CityPage = ({ city, service }: CityPageProps) => {
     `Bonjour Line, je suis à ${city.name} et je souhaite une consultation de ${svc.title.toLowerCase()}. Pouvez-vous m'en dire plus ?`
   );
 
+  const cityFaq = [
+    {
+      q: `Est-ce que la consultation de ${svc.title.toLowerCase()} à distance depuis ${city.name} est aussi précise ?`,
+      a: `Oui, totalement. Que vous soyez à ${city.name}, Paris ou à l'autre bout du monde, la qualité de la lecture est identique. La numérologie et la cartomancie travaillent avec des données précises (date de naissance, questions posées) — la distance ne change rien.`
+    },
+    {
+      q: `Comment se fait le paiement depuis ${city.name} ?`,
+      a: "Le règlement se fait avant la séance via Cal.com (carte bancaire, PayPal) ou par virement. Tout se passe en ligne, de manière simple et sécurisée."
+    },
+    {
+      q: `Puis-je avoir un enregistrement de la consultation ?`,
+      a: "Oui, sur demande, un enregistrement audio de la séance peut vous être envoyé. Idéal pour réécouter les éléments importants à votre rythme."
+    }
+  ];
+
+  const ogImage = "https://www.tourma-line.fr/hero-tourma-line.jpg";
+
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
@@ -131,6 +148,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
           ],
           "description": metaDesc,
           "url": canonicalUrl,
+          "image": ogImage,
           "offers": {
             "@type": "Offer",
             "url": "https://cal.com/tourma-line",
@@ -144,6 +162,35 @@ export const CityPage = ({ city, service }: CityPageProps) => {
             "availableLanguage": "French"
           }
         })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.tourma-line.fr/" },
+            { "@type": "ListItem", "position": 2, "name": svc.title, "item": `https://www.tourma-line.fr/${svc.slug}` },
+            { "@type": "ListItem", "position": 3, "name": city.name, "item": canonicalUrl }
+          ]
+        })}</script>
+        <script type="application/ld+json">{JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": cityFaq.map((item) => ({
+            "@type": "Question",
+            "name": item.q,
+            "acceptedAnswer": { "@type": "Answer", "text": item.a }
+          }))
+        })}</script>
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Tourma-Line" />
+        <meta property="og:locale" content="fr_FR" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={metaDesc} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={metaDesc} />
+        <meta name="twitter:image" content={ogImage} />
       </Helmet>
 
       <Header onNavClick={handleNavClick} />
@@ -271,20 +318,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
               <h2 className="text-2xl font-display text-brand-dark mb-6 text-center">
                 Questions fréquentes — {svc.title} depuis {city.name}
               </h2>
-              {[
-                {
-                  q: `Est-ce que la consultation de ${svc.title.toLowerCase()} à distance depuis ${city.name} est aussi précise ?`,
-                  a: `Oui, totalement. Que vous soyez à ${city.name}, Paris ou à l'autre bout du monde, la qualité de la lecture est identique. La numérologie et la cartomancie travaillent avec des données précises (date de naissance, questions posées) — la distance ne change rien.`
-                },
-                {
-                  q: `Comment se fait le paiement depuis ${city.name} ?`,
-                  a: "Le règlement se fait avant la séance via Cal.com (carte bancaire, PayPal) ou par virement. Tout se passe en ligne, de manière simple et sécurisée."
-                },
-                {
-                  q: `Puis-je avoir un enregistrement de la consultation ?`,
-                  a: "Oui, sur demande, un enregistrement audio de la séance peut vous être envoyé. Idéal pour réécouter les éléments importants à votre rythme."
-                }
-              ].map((item, i) => (
+              {cityFaq.map((item, i) => (
                 <div key={i} className="bg-white border border-gray-100 rounded-xl p-6 shadow-sm">
                   <h3 className="font-semibold text-brand-dark mb-2">{item.q}</h3>
                   <p className="text-gray-600 text-sm leading-relaxed">{item.a}</p>

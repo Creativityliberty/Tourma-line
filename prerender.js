@@ -1,26 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { getRoutes } from './scripts/routes.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-// 1. Lire sitemap.xml pour obtenir toutes les URLs du site
-const sitemapPath = path.resolve(__dirname, 'sitemap.xml');
-if (!fs.existsSync(sitemapPath)) {
-  console.error("Erreur : sitemap.xml introuvable à la racine !");
-  process.exit(1);
-}
-
-const sitemapContent = fs.readFileSync(sitemapPath, 'utf-8');
-const urls = [];
-const matches = sitemapContent.matchAll(/<loc>https:\/\/www\.tourma-line\.fr([^<]*)<\/loc>/g);
-for (const match of matches) {
-  urls.push(match[1] || '/');
-}
-
-// Nettoyer les doublons et s'assurer que / est présent
-const routes = [...new Set(urls)].map(r => r === '' ? '/' : r);
-console.log(`Routes trouvées dans le sitemap (${routes.length}) :`, routes);
+// 1. Obtenir toutes les routes depuis la source unique de vérité
+const routes = getRoutes();
+console.log(`Routes à pré-rendre (${routes.length}) :`, routes);
 
 // 2. Définir les chemins des répertoires de build
 const clientBuildDir = path.resolve(__dirname, 'dist');
@@ -39,7 +26,7 @@ if (!fs.existsSync(serverBuildFile)) {
 
 // 3. Charger le template HTML de base et le module SSR
 const template = fs.readFileSync(templatePath, 'utf-8');
-const { render } = await import(serverBuildFile);
+const { render } = await import(pathToFileURL(serverBuildFile).href);
 
 console.log("Démarrage du pré-rendu statique (SSG)...");
 

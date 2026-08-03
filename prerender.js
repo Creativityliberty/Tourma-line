@@ -53,12 +53,12 @@ for (const route of [...routes, ...extraRoutes]) {
     
     // Obtenir le HTML brut rendu par le serveur (avec React 19 et react-helmet-async)
     const { html } = render(route);
-    
+
     // Extraire les balises SEO (hoistées par React 19 au début du rendu string)
-    const titleTag = (html.match(/<title>.*?<\/title>/i) || [''])[0];
-    const metaTags = Array.from(html.matchAll(/<meta[^>]*?\/?>/gi)).map(m => m[0]).join('\n');
-    const linkTags = Array.from(html.matchAll(/<link[^>]*?\/?>/gi)).map(m => m[0]).join('\n');
-    const scriptTags = Array.from(html.matchAll(/<script type="application\/ld\+json">.*?<\/script>/gi)).map(m => m[0]).join('\n');
+    const titleMatch = html.match(/<title>.*?<\/title>/i);
+    const metaMatches = Array.from(html.matchAll(/<meta[^>]*?\/?>/gi)).map(m => m[0]);
+    const linkMatches = Array.from(html.matchAll(/<link[^>]*?\/?>/gi)).map(m => m[0]);
+    const scriptTags = Array.from(html.matchAll(/<script type="application\/ld\+json">.*?<\/script>/gi)).map(m => m[0]);
 
     // Nettoyer le HTML restant pour la div #root (retirer les balises hoistées du body)
     const cleanHtml = html
@@ -67,19 +67,21 @@ for (const route of [...routes, ...extraRoutes]) {
       .replaceAll(/<link[^>]*?\/?>/gi, '')
       .replaceAll(/<script type="application\/ld\+json">.*?<\/script>/gi, '');
 
-    // Supprimer les balises SEO par défaut du template index.html pour éviter les doublons clignotants
-    let cleanTemplate = template
-      .replace(/<title>[^<]*<\/title>/i, '')
-      .replace(/<meta[^>]*name="description"[^>]*>/i, '')
-      .replace(/<meta[^>]*name="keywords"[^>]*>/i, '')
-      .replace(/<link[^>]*rel="canonical"[^>]*>/i, '');
+    // Supprimer du template UNIQUEMENT les balises que le SSR fournit en remplacement.
+    // (Pages sans Helmet — ex. accueil — conservent celles du template index.html.)
+    let cleanTemplate = template;
+    if (titleMatch) cleanTemplate = cleanTemplate.replace(/<title>[^<]*<\/title>/i, '');
+    if (metaMatches.length) cleanTemplate = cleanTemplate.replace(/<meta[^>]*name="description"[^>]*>/i, '');
+    if (metaMatches.length) cleanTemplate = cleanTemplate.replace(/<meta[^>]*name="keywords"[^>]*>/i, '');
+    if (metaMatches.some(m => /name="robots"/i.test(m))) cleanTemplate = cleanTemplate.replace(/<meta[^>]*name="robots"[^>]*>/i, '');
+    if (linkMatches.length) cleanTemplate = cleanTemplate.replace(/<link[^>]*rel="canonical"[^>]*>/i, '');
 
     // Préparer l'injection dans le <head>
     const headInject = `
-      ${titleTag}
-      ${metaTags}
-      ${linkTags}
-      ${scriptTags}
+      ${titleMatch ? titleMatch[0] : ''}
+      ${metaMatches.join('\n')}
+      ${linkMatches.join('\n')}
+      ${scriptTags.join('\n')}
     `;
 
     // Injecter les balises dans le <head> et le contenu dans la div #root

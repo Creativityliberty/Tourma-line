@@ -7,10 +7,10 @@ export const NumerologiePage = () => {
   return (
     <>
       <Helmet>
-        <title>Numérologie en Normandie — Line | Consultation Numérologue 76</title>
+        <title>Numérologue en Normandie | Consultation Chemin de Vie — Tourma-Line</title>
         <meta
           name="description"
-          content="Line, numérologue en Seine-Maritime. Consultation de numérologie à Gerponville (proche Saint-Riquier-ès-Plains) et à distance. Découvrez votre chemin de vie, votre année personnelle et vos défis. RDV en ligne."
+          content="Numérologue en Seine-Maritime : décryptez votre chemin de vie, année personnelle et défis. Consultation à Gerponville (76) ou à distance, toute la France. Réponses concrètes dès aujourd'hui. RDV en ligne."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.tourma-line.fr/numerologie" />

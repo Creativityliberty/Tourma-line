@@ -99,8 +99,14 @@ export const CityPage = ({ city, service }: CityPageProps) => {
     ? `en cabinet à Gerponville ou par téléphone`
     : `par téléphone ou visioconférence`;
 
-  const pageTitle = `${svc.title} à ${city.name} — Consultation avec Line`;
-  const metaDesc = `Consultation de ${svc.title.toLowerCase()} à ${city.name} (${city.region}) avec Line, numérologue et cartomancienne en Normandie. Séance ${distanceText}. RDV en ligne ou WhatsApp.`;
+  const serviceTitleBySlug = {
+    numerologie: "Numérologue",
+    cartomancie: "Voyante & Cartomancienne",
+    lahochi: "Soin Lahochi",
+  };
+  const serviceTitle = serviceTitleBySlug[service];
+  const pageTitle = `${serviceTitle} à ${city.name} | Consultation avec Tourma-Line`;
+  const metaDesc = `${serviceTitle} à ${city.name} (${city.region}) : ${svc.slug === "cartomancie" ? "voyance et réponses claires sur l'amour, le travail, la famille" : svc.slug === "numerologie" ? "chemin de vie, année personnelle et défis" : "rééquilibrage énergétique, stress et sommeil"} dès aujourd'hui. Séance ${distanceText}. RDV en ligne ou WhatsApp.`;
   const canonicalUrl = `https://www.tourma-line.fr/${svc.slug}-${city.slug}`;
 
   const localDesc = city.description

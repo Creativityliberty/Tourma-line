@@ -7,10 +7,10 @@ export const LahochiPage = () => {
   return (
     <>
       <Helmet>
-        <title>Soin Lahochi en Normandie — Line | Soins Énergétiques 76</title>
+        <title>Soin Lahochi en Normandie | Soins Énergétiques à Distance — Tourma-Line</title>
         <meta
           name="description"
-          content="Line, praticienne en soins énergétiques Lahochi en Normandie. Séances au cabinet à Gerponville (proche Saint-Riquier-ès-Plains) et à distance. Rééquilibrage énergétique, stress, douleurs, sommeil. RDV en ligne."
+          content="Soin énergétique Lahochi en Normandie et à distance : stress, anxiété, sommeil. Séance à Gerponville (76) ou à distance partout en France. Effets souvent ressentis dès la 1ère séance. RDV en ligne."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.tourma-line.fr/soin-lahochi" />

@@ -7,10 +7,10 @@ export const CartomancePage = () => {
   return (
     <>
       <Helmet>
-        <title>Cartomancienne en Normandie — Line | Consultation Cartomancie 76</title>
+        <title>Voyante & Cartomancienne en Normandie | Tourma-Line — Voyance par téléphone</title>
         <meta
           name="description"
-          content="Line, cartomancienne en Seine-Maritime. Consultation de cartomancie à Gerponville (proche Saint-Riquier-ès-Plains) et à distance par téléphone. Réponses claires sur votre amour, travail, famille. RDV en ligne."
+          content="Voyance et cartomancie avec Line : réponses claires sur l'amour, le travail et la famille, dès aujourd'hui. Consultation en Seine-Maritime (Gerponville 76) ou par téléphone, toute la France. RDV en ligne."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.tourma-line.fr/cartomancie" />

@@ -33,10 +33,10 @@ export const PrestationsPage = () => {
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
-        <title>Prestations & Accompagnements — Tourma-Line</title>
+        <title>Prestations & Tarifs | Voyance, Numérologie, Lahochi — Tourma-Line</title>
         <meta 
           name="description" 
-          content="Découvrez l'ensemble des prestations et formules d'accompagnement de Line : séances de numérologie, consultations de cartomancie et soins énergétiques Lahochi, en présentiel en Normandie ou à distance." 
+          content="Toutes les prestations de Line : voyance & cartomancie, numérologie et soins Lahochi. Tarifs dès 30€. Séances en Normandie (Gerponville 76) ou à distance. Réservez votre créneau en ligne." 
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.tourma-line.fr/prestations" />

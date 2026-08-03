@@ -1,6 +1,7 @@
 ---
 title: "Nettoyage énergétique : Pourquoi vous vous sentez lourd sans raison médicale."
-description: "Sensation d'oppression, fatigue au réveil, idées noires... Découvrez comment le nettoyage énergétique permet de libérer votre aura des pollutions quotidiennes."
+seoTitle: "Nettoyage Énergétique : Libérer Votre Aura"
+description: "Oppression, fatigue au réveil, idées noires... Découvrez comment le nettoyage énergétique libère votre aura des pollutions quotidiennes."
 slug: "nettoyage-energetique-liberation-aura"
 date: "2026-04-14"
 readTime: "7 min"

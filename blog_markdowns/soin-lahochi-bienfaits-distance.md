@@ -1,6 +1,7 @@
 ---
 title: "Soin Lahochi à distance : L'histoire de Julie et le secret d'une batterie rechargée en 45 minutes."
-description: "Découvrez comment le soin énergétique Lahochi peut transformer un état d'épuisement profond en une clarté retrouvée. L'histoire vraie d'une séance à distance et ses bienfaits immédiats."
+seoTitle: "Soin Lahochi à Distance : Bienfaits Immédiats"
+description: "Découvrez comment le soin énergétique Lahochi transforme un épuisement profond en clarté retrouvée, grâce à l'histoire d'une séance à distance."
 slug: "soin-lahochi-bienfaits-distance"
 date: "2026-04-14"
 readTime: "8 min"

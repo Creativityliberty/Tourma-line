@@ -1,6 +1,7 @@
 ---
 title: "Le syndrome de la colocation à 30 ans : L'histoire de Chloé et comment la numérologie a éclairé sa voie."
-description: "Vous avez 30 ans et l'impression de stagner alors que tout le monde avance ? Découvrez comment Chloé a utilisé la numérologie pour sortir du flou professionnel et sentimental."
+seoTitle: "Trouver sa Voie à 30 Ans avec la Numérologie"
+description: "Vous avez 30 ans et l'impression de stagner ? Découvrez comment la numérologie a aidé Chloé à sortir du flou professionnel et sentimental."
 slug: "trouver-sa-voie-queti-clarte-30-ans"
 date: "2026-04-14"
 readTime: "7 min"

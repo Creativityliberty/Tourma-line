@@ -1,6 +1,7 @@
 ---
 title: "Crise de la quarantaine ou éveil de conscience ? Pourquoi 42 ans est l'âge de toutes les révélations."
-description: "À 42 ans, beaucoup de femmes ressentent un basculement profond. Entre remise en question professionnelle et quête de sens, découvrez comment la numérologie éclaire ce cycle majeur de votre vie."
+seoTitle: "Crise de la Quarantaine à 42 Ans : les Révélations"
+description: "À 42 ans, beaucoup de femmes vivent un basculement profond. Découvrez comment la numérologie éclaire cette remise en question et votre quête de sens."
 slug: "revelation-42-ans-crise-quarantaine"
 date: "2026-04-14"
 readTime: "10 min"

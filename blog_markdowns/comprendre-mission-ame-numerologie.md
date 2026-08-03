@@ -1,6 +1,7 @@
 ---
 title: "Comprendre sa mission d'âme : Pourquoi la numérologie est la clé de votre épanouissement."
-description: "Vous sentez-vous décalé(e) par rapport à votre vie actuelle ? Découvrez comment la numérologie permet d'identifier votre mission d'âme et de retrouver un sens profond à vos actions."
+seoTitle: "Mission d'Âme : la Clé de Votre Épanouissement"
+description: "Vous sentez-vous décalé(e) par rapport à votre vie ? Découvrez comment la numérologie identifie votre mission d'âme et vous aide à retrouver du sens."
 slug: "comprendre-mission-ame-numerologie"
 date: "2026-04-14"
 readTime: "9 min"

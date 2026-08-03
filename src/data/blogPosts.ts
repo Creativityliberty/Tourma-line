@@ -5,6 +5,7 @@ export interface BlogPost {
   id: string;
   slug: string;
   title: string;
+  seoTitle?: string;
   excerpt: string;
   content: string; // Le corps de l'article en Markdown
   image: string;
@@ -32,6 +33,7 @@ export const blogPosts: BlogPost[] = Object.keys(rawPosts)
       id: String(index),
       slug: attributes.slug || path.replace('../../blog_markdowns/', '').replace('.md', ''),
       title: attributes.title || "Titre Provisoire",
+      seoTitle: attributes.seoTitle || undefined,
       excerpt: attributes.description || "",
       content: body,
       image: attributes.image || "/blog-chemin-devie.png",

@@ -65,7 +65,7 @@ export const BlogPostPage = () => {
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
-        <title>{`${post.title} — Blog Tourma-Line`}</title>
+        <title>{`${post.seoTitle || post.title} | Tourma-Line`}</title>
         <meta name="description" content={post.excerpt} />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href={`https://www.tourma-line.fr/blog/${post.slug}`} />

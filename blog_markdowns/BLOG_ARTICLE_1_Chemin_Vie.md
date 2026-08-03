@@ -1,6 +1,7 @@
 ---
 title: "Calcul du Chemin de Vie : Le Guide Numérologie 2026 (Avec votre date de naissance)"
-description: "Apprenez le vrai calcul de votre chemin de vie en numérologie (formule exacte). Découvrez la signification secrète de votre nombre pour débloquer votre destinée."
+seoTitle: "Calcul du Chemin de Vie en Numérologie"
+description: "Apprenez le vrai calcul de votre chemin de vie en numérologie (formule exacte) et la signification secrète de votre nombre pour débloquer votre destinée."
 keywords: "calcul chemin de vie, numérologie date de naissance, numérologie chemin de vie, signification des nombres"
 slug: "calcul-chemin-de-vie-numerologie"
 author: "Line Simon"

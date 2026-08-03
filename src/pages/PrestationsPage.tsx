@@ -46,9 +46,12 @@ export const PrestationsPage = () => {
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-brand-dark text-white overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
-          style={{ backgroundImage: "url(/hero-tourma-line.jpg)" }}
+        <img
+          src="/hero-tourma-line.jpg"
+          alt="Prestations de numérologie, cartomancie et soin Lahochi — forêt mystique en Normandie"
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/70 to-brand-dark" />
 

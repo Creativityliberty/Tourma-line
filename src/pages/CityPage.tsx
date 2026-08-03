@@ -103,6 +103,10 @@ export const CityPage = ({ city, service }: CityPageProps) => {
   const metaDesc = `Consultation de ${svc.title.toLowerCase()} à ${city.name} (${city.region}) avec Line, numérologue et cartomancienne en Normandie. Séance ${distanceText}. RDV en ligne ou WhatsApp.`;
   const canonicalUrl = `https://www.tourma-line.fr/${svc.slug}-${city.slug}`;
 
+  const localDesc = city.description
+    ? `${city.description} Pour les habitants de ${city.name}, la consultation se fait ${distanceText}.`
+    : `Pour les habitants de ${city.name}, la consultation se fait ${distanceText}.`;
+
   const whatsappMessage = encodeURIComponent(
     `Bonjour Line, je suis à ${city.name} et je souhaite une consultation de ${svc.title.toLowerCase()}. Pouvez-vous m'en dire plus ?`
   );
@@ -110,15 +114,19 @@ export const CityPage = ({ city, service }: CityPageProps) => {
   const cityFaq = [
     {
       q: `Est-ce que la consultation de ${svc.title.toLowerCase()} à distance depuis ${city.name} est aussi précise ?`,
-      a: `Oui, totalement. Que vous soyez à ${city.name}, Paris ou à l'autre bout du monde, la qualité de la lecture est identique. La numérologie et la cartomancie travaillent avec des données précises (date de naissance, questions posées) — la distance ne change rien.`
+      a: `Oui, totalement. Que vous soyez à ${city.name}, Paris ou à l'autre bout du monde, la qualité de la lecture est identique. La ${svc.title.toLowerCase()} travaille avec des données précises (${svc.slug === "numerologie" ? "date de naissance" : svc.slug === "cartomancie" ? "vos questions" : "votre état énergétique"}) — la distance ne change rien.`
     },
     {
       q: `Comment se fait le paiement depuis ${city.name} ?`,
-      a: "Le règlement se fait avant la séance via Cal.com (carte bancaire, PayPal) ou par virement. Tout se passe en ligne, de manière simple et sécurisée."
+      a: `Le règlement se fait avant la séance via Cal.com (carte bancaire, PayPal) ou par virement. Tout se passe en ligne, de manière simple et sécurisée, même depuis ${city.name} (${city.country}).`
     },
     {
-      q: `Puis-je avoir un enregistrement de la consultation ?`,
-      a: "Oui, sur demande, un enregistrement audio de la séance peut vous être envoyé. Idéal pour réécouter les éléments importants à votre rythme."
+      q: `Comment réserver une séance à ${city.name} sans me déplacer ?`,
+      a: `Vous réservez en ligne sur Cal.com ou via WhatsApp : choisissez votre créneau, puis vous recevez par téléphone ou visioconférence à l'heure convenue. Aucun déplacement nécessaire, depuis ${city.name} ou ailleurs.`
+    },
+    {
+      q: `Depuis ${city.name}, faut-il un équipement particulier ?`,
+      a: `Non. ${svc.slug === "lahochi" ? "Pour le soin Lahochi, installez-vous simplement, allongé(e) ou assis(e), dans un endroit calme à l'heure convenue." : "Une simple connexion téléphonique suffit — l'appel est passé au moment du rendez-vous."}`
     }
   ];
 
@@ -197,9 +205,12 @@ export const CityPage = ({ city, service }: CityPageProps) => {
 
       {/* Hero */}
       <section className="relative pt-32 pb-20 bg-brand-dark text-white overflow-hidden">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-25"
-          style={{ backgroundImage: "url(/hero-tourma-line.jpg)" }}
+        <img
+          src="/hero-tourma-line.jpg"
+          alt={`Consultation de ${svc.title.toLowerCase()} à ${city.name} — forêt mystique en Normandie`}
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/70 to-brand-dark" />
 
@@ -311,6 +322,17 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                 </h2>
               </div>
               <p className="text-gray-700 leading-relaxed text-lg">{svc.forWho}</p>
+            </div>
+
+            {/* Contexte local unique */}
+            <div className="bg-brand-purple/10 rounded-2xl p-8 border border-brand-purple/20 mb-12">
+              <div className="flex items-center gap-4 mb-4">
+                <MapPinIcon className="w-8 h-8 text-brand-purple" />
+                <h2 className="text-2xl font-display text-brand-dark">
+                  À propos de {city.name}
+                </h2>
+              </div>
+              <p className="text-gray-700 leading-relaxed text-lg">{localDesc}</p>
             </div>
 
             {/* FAQ locale */}

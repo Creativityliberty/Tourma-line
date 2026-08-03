@@ -1,10 +1,11 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { allCities, localCities } from "../../data/cities";
 import { WhatsAppIcon, GlobeIcon } from "../ui/icons";
 
-// Toutes les villes pour la banderolle
-const marqueeItems = allCities.map(c => `${c.flag} ${c.name}`);
+// Toutes les villes pour la banderolle (liens vers la page numérologie de chaque ville)
+const marqueeItems = allCities.map((c) => ({ slug: c.slug, flag: c.flag, name: c.name }));
 
 export const CityLinks = () => {
   return (
@@ -39,12 +40,13 @@ export const CityLinks = () => {
             <div className="flex overflow-hidden">
               <div className="flex animate-marquee whitespace-nowrap gap-3 py-2">
                 {[...marqueeItems, ...marqueeItems].map((item, i) => (
-                  <span
+                  <Link
                     key={i}
-                    className="inline-flex items-center bg-brand-lilas/20 text-brand-dark text-sm font-medium px-5 py-2.5 rounded-full border border-brand-lilas/30 flex-shrink-0"
+                    to={`/numerologie-${item.slug}`}
+                    className="inline-flex items-center bg-brand-lilas/20 text-brand-dark text-sm font-medium px-5 py-2.5 rounded-full border border-brand-lilas/30 flex-shrink-0 hover:bg-brand-lilas/40 transition-colors"
                   >
-                    {item}
-                  </span>
+                    {item.flag} {item.name}
+                  </Link>
                 ))}
               </div>
             </div>

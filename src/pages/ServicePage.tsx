@@ -57,11 +57,12 @@ export const ServicePage = ({
         className="relative pt-32 pb-20 bg-brand-dark text-white overflow-hidden"
         aria-label={`Page dédiée — ${breadcrumb}`}
       >
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
-          style={{ backgroundImage: `url(${heroImage})` }}
-          role="img"
-          aria-label={heroImageAlt}
+        <img
+          src={heroImage}
+          alt={heroImageAlt}
+          className="absolute inset-0 w-full h-full object-cover opacity-30"
+          loading="eager"
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/60 to-brand-dark" />
 

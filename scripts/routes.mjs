@@ -8,6 +8,9 @@ const rootDir = path.resolve(__dirname, "..");
 
 export const BASE_URL = "https://www.tourma-line.fr";
 
+// Date de dernière modification du contenu (stable, à mettre à jour manuellement lors d'une vraie mise à jour)
+export const SITE_LAST_MOD = "2026-08-03";
+
 export const SERVICES = [
   { slug: "numerologie", label: "Numérologie" },
   { slug: "cartomancie", label: "Cartomancie" },

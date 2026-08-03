@@ -5,6 +5,7 @@ import {
   BASE_URL,
   STATIC_ROUTES,
   SERVICES,
+  SITE_LAST_MOD,
   getBlogPosts,
   getCityMeta,
 } from "./routes.mjs";
@@ -12,12 +13,10 @@ import {
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 
-const today = new Date().toISOString().split("T")[0];
-
 const entries = [];
 
 // Page principale
-entries.push({ loc: `${BASE_URL}/`, lastmod: today, changefreq: "weekly", priority: "1.0" });
+entries.push({ loc: `${BASE_URL}/`, lastmod: SITE_LAST_MOD, changefreq: "weekly", priority: "1.0" });
 
 // Pages de service
 const serviceRoutes = {
@@ -27,15 +26,15 @@ const serviceRoutes = {
   "/soin-lahochi": { changefreq: "monthly", priority: "0.9" },
 };
 for (const [route, conf] of Object.entries(serviceRoutes)) {
-  entries.push({ loc: `${BASE_URL}${route}`, lastmod: today, changefreq: conf.changefreq, priority: conf.priority });
+  entries.push({ loc: `${BASE_URL}${route}`, lastmod: SITE_LAST_MOD, changefreq: conf.changefreq, priority: conf.priority });
 }
 
 // Blog (liste + articles)
-entries.push({ loc: `${BASE_URL}/blog`, lastmod: today, changefreq: "weekly", priority: "0.9" });
+entries.push({ loc: `${BASE_URL}/blog`, lastmod: SITE_LAST_MOD, changefreq: "weekly", priority: "0.9" });
 for (const post of getBlogPosts()) {
   entries.push({
     loc: `${BASE_URL}/blog/${post.slug}`,
-    lastmod: post.date || today,
+    lastmod: post.date || SITE_LAST_MOD,
     changefreq: "weekly",
     priority: "0.85",
   });
@@ -54,7 +53,7 @@ for (const [type, cities] of cityGroups) {
     for (const svc of SERVICES) {
       entries.push({
         loc: `${BASE_URL}/${svc.slug}-${city.slug}`,
-        lastmod: today,
+        lastmod: SITE_LAST_MOD,
         changefreq: "monthly",
         priority: priorityByType[type],
       });
@@ -65,7 +64,7 @@ for (const [type, cities] of cityGroups) {
 // Pages légales
 const legalRoutes = ["/mentions-legales", "/politique-de-confidentialite", "/conditions-generales"];
 for (const route of legalRoutes) {
-  entries.push({ loc: `${BASE_URL}${route}`, lastmod: today, changefreq: "yearly", priority: "0.3" });
+  entries.push({ loc: `${BASE_URL}${route}`, lastmod: SITE_LAST_MOD, changefreq: "yearly", priority: "0.3" });
 }
 
 function buildXml() {

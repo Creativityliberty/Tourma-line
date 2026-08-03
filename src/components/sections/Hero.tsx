@@ -10,18 +10,22 @@ export const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
       className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden"
     >
       {/* Background Image - Mobile */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat sm:hidden bg-[url('/hero-mobile-tourmaline.jpg')]"
-        role="img"
-        aria-label="Forêt mystique avec énergie spirituelle lumineuse - Numérologie, cartomancie et soins énergétiques LAHOCHI pour guidance personnalisée"
-      ></div>
+      <img
+        src="/hero-mobile-tourmaline.jpg"
+        alt="Forêt mystique avec énergie spirituelle lumineuse — numérologie, cartomancie et soins Lahochi"
+        className="absolute inset-0 w-full h-full object-cover sm:hidden"
+        loading="eager"
+        fetchPriority="high"
+      />
 
       {/* Background Image - Desktop */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat hidden sm:block bg-[url('/hero-tourma-line.jpg')]"
-        role="img"
-        aria-label="Forêt mystique avec énergie spirituelle lumineuse - Numérologie, cartomancie et soins énergétiques LAHOCHI pour guidance personnalisée"
-      ></div>
+      <img
+        src="/hero-tourma-line.jpg"
+        alt="Forêt mystique avec énergie spirituelle lumineuse — numérologie, cartomancie et soins Lahochi"
+        className="absolute inset-0 w-full h-full object-cover hidden sm:block"
+        loading="eager"
+        fetchPriority="high"
+      />
 
       {/* Glowing cosmic circles in the background */}
       <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-brand-purple/25 blur-[120px] pointer-events-none animate-pulse-slow z-0"></div>

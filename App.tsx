@@ -32,6 +32,7 @@ import { WhatsAppFloat } from "./src/components/ui/WhatsAppFloat";
 import { allCities } from "./src/data/cities";
 import { BlogPostPage } from "./src/pages/BlogPostPage";
 import { BlogListPage } from "./src/pages/BlogListPage";
+import { NotFoundPage } from "./src/pages/NotFoundPage";
 
 // Legal Pages
 import { MentionsLegales } from "./src/pages/MentionsLegales";
@@ -160,8 +161,24 @@ function App() {
         <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
         <Route path="/conditions-generales" element={<CGV />} />
 
+        {/* Sections de la page d'accueil (ancres, gérées par SectionScroller) */}
+        <Route path="/services" element={<HomePage />} />
+        <Route path="/consultations" element={<HomePage />} />
+        <Route path="/formules" element={<HomePage />} />
+        <Route path="/bienfaits" element={<HomePage />} />
+        <Route path="/avis" element={<HomePage />} />
+        <Route path="/temoignages" element={<HomePage />} />
+        <Route path="/a-propos" element={<HomePage />} />
+        <Route path="/about" element={<HomePage />} />
+        <Route path="/faq" element={<HomePage />} />
+        <Route path="/contact" element={<HomePage />} />
+        <Route path="/rendezvous" element={<HomePage />} />
+
+        {/* 404 */}
+        <Route path="/404" element={<NotFoundPage />} />
+
         {/* Fallback */}
-        <Route path="*" element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <WhatsAppFloat />
       <Analytics />

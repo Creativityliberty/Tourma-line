@@ -5,6 +5,7 @@ export interface CityData {
   country: string;
   flag: string;
   type: "local" | "national" | "international";
+  description?: string;
 }
 
 export declare const localCities: CityData[];

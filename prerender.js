@@ -9,6 +9,22 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const routes = getRoutes();
 console.log(`Routes à pré-rendre (${routes.length}) :`, routes);
 
+// Routes supplémentaires non présentes dans le sitemap (page 404 + ancres de sections)
+const extraRoutes = [
+  "/404",
+  "/services",
+  "/consultations",
+  "/formules",
+  "/bienfaits",
+  "/avis",
+  "/temoignages",
+  "/a-propos",
+  "/about",
+  "/faq",
+  "/contact",
+  "/rendezvous",
+];
+
 // 2. Définir les chemins des répertoires de build
 const clientBuildDir = path.resolve(__dirname, 'dist');
 const serverBuildFile = path.resolve(__dirname, 'dist/server/entry-server.js');
@@ -31,7 +47,7 @@ const { render } = await import(pathToFileURL(serverBuildFile).href);
 console.log("Démarrage du pré-rendu statique (SSG)...");
 
 // 4. Parcourir chaque route et générer son fichier HTML physique
-for (const route of routes) {
+for (const route of [...routes, ...extraRoutes]) {
   try {
     console.log(`Génération du HTML pour la route : ${route}`);
     
@@ -75,6 +91,9 @@ for (const route of routes) {
     let outputPath;
     if (route === '/') {
       outputPath = path.resolve(clientBuildDir, 'index.html');
+    } else if (route === '/404') {
+      // Vercel sert 404.html à la racine avec un vrai statut 404
+      outputPath = path.resolve(clientBuildDir, '404.html');
     } else {
       // Supprimer le slash de début et s'assurer que c'est un sous-dossier avec index.html
       const cleanRoute = route.startsWith('/') ? route.slice(1) : route;

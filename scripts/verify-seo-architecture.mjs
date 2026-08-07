@@ -182,18 +182,70 @@ for (const [citySlug, services] of Object.entries(expectedSprint4)) {
 const premiumSprint4Targets = getPremiumLocalTargets({ phase: 4 })
   .map((target) => `${target.serviceSlug}-${target.citySlug}`)
   .sort();
+const expectedPremiumSprint4Targets = [
+  "cartomancie-cany-barville",
+  "cartomancie-saint-riquier-es-plains",
+  "cartomancie-valmont",
+  "cartomancie-yvetot",
+  "numerologie-valmont",
+  "soin-lahochi-cany-barville",
+  "soin-lahochi-valmont",
+].sort();
 assert.deepEqual(
   premiumSprint4Targets,
-  [
-    "cartomancie-cany-barville",
-    "cartomancie-saint-riquier-es-plains",
-    "cartomancie-valmont",
-    "cartomancie-yvetot",
-    "numerologie-valmont",
-    "soin-lahochi-cany-barville",
-    "soin-lahochi-valmont",
-  ].sort(),
+  expectedPremiumSprint4Targets,
   "Sprint 4 must premiumise only the evidence-backed Tier A targets"
+);
+
+// Sprint 4 — Tier A content and internal-link wiring.
+const premiumContentPath = path.join(rootDir, "src/data/premiumLocalContent.mjs");
+assert(
+  fs.existsSync(premiumContentPath),
+  "Sprint 4 Tier A pages must have a dedicated premium content registry"
+);
+
+const { getPremiumLocalContent, premiumLocalContent } = await import(
+  "../src/data/premiumLocalContent.mjs"
+);
+const premiumContentKeys = Object.keys(premiumLocalContent)
+  .filter((key) => !key.endsWith("-fecamp"))
+  .sort();
+assert.deepEqual(
+  premiumContentKeys,
+  expectedPremiumSprint4Targets,
+  "Premium content registry must contain exactly the seven Sprint 4 winners"
+);
+
+for (const target of getPremiumLocalTargets({ phase: 4 })) {
+  const content = getPremiumLocalContent(target.citySlug, target.serviceSlug);
+  assert(content, `Missing premium content for ${target.serviceSlug}-${target.citySlug}`);
+  assert(content.headline.includes(target.cityLabel), `Premium H1 must name ${target.cityLabel}`);
+  assert(content.localHeading.includes(target.cityLabel), `Local heading must name ${target.cityLabel}`);
+  assert(content.locationIntro.includes("Gerponville"), `Premium local intro must keep the real cabinet in Gerponville for ${target.cityLabel}`);
+  assert(content.faq?.length >= 2, `Premium page needs at least two local FAQs for ${target.cityLabel}`);
+}
+
+const cityLinksPath = path.join(rootDir, "src/components/sections/CityLinks.tsx");
+const cityLinks = fs.readFileSync(cityLinksPath, "utf8");
+assert(
+  cityLinks.includes("getPremiumLocalTargetsForCity") &&
+    cityLinks.includes("priorityCities"),
+  "Homepage city links must be driven by Tier A scoring rather than three links per city"
+);
+
+const servicePagePath = path.join(rootDir, "src/pages/ServicePage.tsx");
+const servicePage = fs.readFileSync(servicePagePath, "utf8");
+assert(
+  servicePage.includes("getPremiumLocalTargetsForService") &&
+    servicePage.includes("Priorités locales"),
+  "Pillar pages must link directly to their Tier A local targets"
+);
+
+assert(
+  cityPage.includes("getLocalSeoDecision") &&
+    cityPage.includes("getPremiumLocalContent") &&
+    cityPage.includes('seoDecision?.tier === "A"'),
+  "CityPage must apply premium content only when the scoring decision is Tier A"
 );
 
 console.log("SEO architecture verification passed.");

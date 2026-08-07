@@ -1,7 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { SparklesIcon } from "../ui/icons";
 import { services } from "../../data/services";
+
+const servicePaths: Record<string, string> = {
+    numerology: "/numerologie",
+    cartomancy: "/cartomancie",
+    lahochi: "/soin-lahochi",
+};
 
 export const Services = ({
     activeTab,
@@ -11,6 +18,7 @@ export const Services = ({
     setActiveTab: (tab: string) => void;
 }) => {
     const currentService = services[activeTab];
+    const currentServicePath = servicePaths[activeTab];
 
     return (
         <section id="services" className="py-20 bg-white">
@@ -74,6 +82,14 @@ export const Services = ({
                                                 </li>
                                             ))}
                                         </ul>
+                                    )}
+                                    {currentServicePath && (
+                                        <Link
+                                            to={currentServicePath}
+                                            className="inline-flex mt-7 items-center justify-center rounded-full bg-brand-dark px-6 py-3 text-sm sm:text-base font-semibold text-white transition-transform hover:scale-105 active:scale-95"
+                                        >
+                                            Découvrir {currentService.title.toLowerCase()} en détail
+                                        </Link>
                                     )}
                                 </div>
                             </div>

@@ -131,4 +131,69 @@ assert(
   "Fécamp premium page must expose a useful directions CTA"
 );
 
+// Sprint 4 — evidence-driven service × city scoring.
+const localSeoStrategyPath = path.join(rootDir, "src/data/localSeoStrategy.mjs");
+assert(
+  fs.existsSync(localSeoStrategyPath),
+  "Sprint 4 must define src/data/localSeoStrategy.mjs before premiumising more local pages"
+);
+
+const { getLocalSeoDecision, getPremiumLocalTargets } = await import(
+  "../src/data/localSeoStrategy.mjs"
+);
+
+const expectedSprint4 = {
+  valmont: {
+    cartomancie: ["A", 90],
+    numerologie: ["A", 80],
+    "soin-lahochi": ["A", 83],
+  },
+  "cany-barville": {
+    cartomancie: ["A", 90],
+    numerologie: ["B", 65],
+    "soin-lahochi": ["A", 78],
+  },
+  yvetot: {
+    cartomancie: ["A", 85],
+    numerologie: ["B", 60],
+    "soin-lahochi": ["B", 73],
+  },
+  "ourville-en-caux": {
+    cartomancie: ["B", 70],
+    numerologie: ["B", 60],
+    "soin-lahochi": ["B", 73],
+  },
+  "saint-riquier-es-plains": {
+    cartomancie: ["A", 79],
+    numerologie: ["C", 54],
+    "soin-lahochi": ["B", 67],
+  },
+};
+
+for (const [citySlug, services] of Object.entries(expectedSprint4)) {
+  for (const [serviceSlug, [tier, score]] of Object.entries(services)) {
+    const decision = getLocalSeoDecision(citySlug, serviceSlug);
+    assert(decision, `Missing Sprint 4 decision for ${serviceSlug}-${citySlug}`);
+    assert.equal(decision.tier, tier, `Wrong tier for ${serviceSlug}-${citySlug}`);
+    assert.equal(decision.score, score, `Wrong score for ${serviceSlug}-${citySlug}`);
+  }
+}
+
+const premiumSprint4Targets = getPremiumLocalTargets({ phase: 4 })
+  .map((target) => `${target.serviceSlug}-${target.citySlug}`)
+  .sort();
+assert.deepEqual(
+  premiumSprint4Targets,
+  [
+    "cartomancie-cany-barville",
+    "cartomancie-saint-riquier-es-plains",
+    "cartomancie-valmont",
+    "cartomancie-yvetot",
+    "numerologie-valmont",
+    "soin-lahochi-cany-barville",
+    "soin-lahochi-valmont",
+  ].sort(),
+  "Sprint 4 must premiumise only the evidence-backed Tier A targets"
+);
+
 console.log("SEO architecture verification passed.");

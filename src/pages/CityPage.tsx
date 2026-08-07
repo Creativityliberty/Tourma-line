@@ -21,6 +21,7 @@ import { localCities } from "../data/cities";
 import type { City } from "../data/cities";
 import { getLocalSeoDecision } from "../data/localSeoStrategy.mjs";
 import { getPremiumLocalContent } from "../data/premiumLocalContent.mjs";
+import { getTerritoryHubForCity } from "../data/territorialHubs.mjs";
 
 interface CityPageProps {
   city: City;
@@ -140,6 +141,9 @@ export const CityPage = ({ city, service }: CityPageProps) => {
   const svc = serviceDetails[service];
   const isFecamp = city.slug === "fecamp";
   const seoDecision = getLocalSeoDecision(city.slug, svc.slug);
+  const isIndexableLocalPage = isFecamp || seoDecision?.tier === "A";
+  const robotsDirective = isIndexableLocalPage ? "index, follow" : "noindex, follow";
+  const territoryHub = getTerritoryHubForCity(city.slug);
   const scoredPremiumContent =
     seoDecision?.tier === "A" ? getPremiumLocalContent(city.slug, svc.slug) : null;
   const premiumContent = isFecamp
@@ -228,7 +232,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
       <Helmet>
         <title>{pageTitle}</title>
         <meta name="description" content={metaDesc} />
-        <meta name="robots" content="index, follow" />
+        <meta name="robots" content={robotsDirective} />
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
@@ -307,12 +311,20 @@ export const CityPage = ({ city, service }: CityPageProps) => {
           <p className="text-xl text-gray-300 max-w-3xl mb-5 leading-relaxed">
             {locationIntro}
           </p>
-          <div className="flex items-start gap-2 text-brand-lilas font-medium mb-10">
+          <div className="flex items-start gap-2 text-brand-lilas font-medium mb-5">
             <MapPinIcon className="w-5 h-5 flex-shrink-0 mt-0.5" />
             <p className="text-sm">
               Cabinet : 4 résidence Les Peupliers, 76540 Gerponville — sur rendez-vous
             </p>
           </div>
+          {territoryHub && (
+            <p className="mb-10 text-sm text-gray-300">
+              Cette commune est reliée au hub territorial{" "}
+              <Link to={`/zones/${territoryHub.slug}`} className="font-semibold text-brand-lilas hover:underline">
+                {territoryHub.label}
+              </Link>.
+            </p>
+          )}
 
           <div className="flex flex-col sm:flex-row gap-4">
             <a
@@ -389,6 +401,28 @@ export const CityPage = ({ city, service }: CityPageProps) => {
           </section>
         )}
 
+        {!isIndexableLocalPage && territoryHub && (
+          <section className="border-b border-brand-lilas/30 bg-brand-lilas/10 py-12">
+            <div className="container mx-auto max-w-4xl px-6 text-center">
+              <p className="mb-2 text-sm font-bold uppercase tracking-widest text-brand-purple">
+                Couverture territoriale
+              </p>
+              <h2 className="mb-4 font-display text-3xl text-brand-dark">
+                {city.name} est couvert via {territoryHub.label}
+              </h2>
+              <p className="mx-auto mb-6 max-w-3xl leading-relaxed text-gray-600">
+                Pour éviter des pages locales dupliquées, Tourma-Line concentre les informations de secteur dans un hub territorial unique. La prestation reste disponible depuis le cabinet de Gerponville ou à distance selon la formule.
+              </p>
+              <Link
+                to={`/zones/${territoryHub.slug}`}
+                className="inline-flex rounded-full bg-brand-dark px-6 py-3 font-bold text-white"
+              >
+                Voir {territoryHub.label}
+              </Link>
+            </div>
+          </section>
+        )}
+
         <section className="py-20 bg-white">
           <AnimateOnScroll>
             <div className="container mx-auto px-6 max-w-4xl">
@@ -459,6 +493,13 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                 <p className="text-gray-700 leading-relaxed text-lg">
                   {locationIntro} Le site indique toujours le lieu réel d'exercice afin d'éviter toute confusion sur l'implantation du cabinet.
                 </p>
+                {territoryHub && (
+                  <p className="mt-5">
+                    <Link to={`/zones/${territoryHub.slug}`} className="font-semibold text-brand-purple hover:underline">
+                      Voir toutes les informations pour {territoryHub.label} →
+                    </Link>
+                  </p>
+                )}
               </div>
             </div>
           </AnimateOnScroll>
@@ -500,9 +541,16 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                         {item.title} — {city.name}
                       </Link>
                     ))
+                  ) : territoryHub ? (
+                    <Link
+                      to={`/zones/${territoryHub.slug}`}
+                      className="block rounded-xl border border-white/15 bg-white/5 px-5 py-4 hover:bg-white/10 transition-colors"
+                    >
+                      Toutes les prestations — {territoryHub.label}
+                    </Link>
                   ) : (
                     <p className="text-gray-300">
-                      Retrouvez les autres prestations depuis leurs pages principales. Les secteurs secondaires seront regroupés dans des pages territoriales utiles plutôt que dupliqués artificiellement.
+                      Retrouvez les autres prestations depuis leurs pages principales.
                     </p>
                   )}
                 </div>
@@ -522,6 +570,14 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                       {svc.title} — {relatedCity.name}
                     </Link>
                   ))}
+                  {territoryHub && (
+                    <Link
+                      to={`/zones/${territoryHub.slug}`}
+                      className="block rounded-xl border border-brand-lilas/40 bg-brand-lilas/10 px-5 py-4 text-brand-lilas hover:bg-brand-lilas/20 transition-colors"
+                    >
+                      Explorer {territoryHub.label}
+                    </Link>
+                  )}
                 </div>
               </div>
             </div>

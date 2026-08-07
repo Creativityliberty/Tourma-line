@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "node scripts/generate-llms.mjs && node scripts/generate-sitemap.mjs && vite build && vite build --ssr src/entry-server.tsx --outDir dist/server && node prerender.js",
+    "verify:seo": "node scripts/verify-seo-architecture.mjs",
+    "build": "npm run verify:seo && node scripts/generate-llms.mjs && node scripts/generate-sitemap.mjs && vite build && vite build --ssr src/entry-server.tsx --outDir dist/server && node prerender.js",
     "preview": "vite preview",
     "generate": "node scripts/generate-llms.mjs && node scripts/generate-sitemap.mjs"
   },

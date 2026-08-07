@@ -61,7 +61,7 @@ const SectionScroller = () => {
       "/rendezvous": "rendezvous"
     };
 
-    const targetId = pathMap[pathname] || (hash ? hash.substring(1) : null);
+    const targetId = hash ? hash.substring(1) : (pathMap[pathname] || null);
 
     if (targetId) {
       const element = document.getElementById(targetId);

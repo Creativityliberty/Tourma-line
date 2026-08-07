@@ -92,7 +92,7 @@ export const LahochiPage = () => {
           {
             question: "Une séance Lahochi à distance garantit-elle les mêmes effets qu'en présentiel ?",
             answer:
-              "Non résultat ne peut être garanti, en présentiel comme à distance. Les séances à distance sont proposées dans le cadre de la pratique énergétique Lahochi et les ressentis restent personnels et variables.",
+              "Aucun résultat ne peut être garanti, en présentiel comme à distance. Les séances à distance sont proposées dans le cadre de la pratique énergétique Lahochi et les ressentis restent personnels et variables.",
           },
           {
             question: "Combien de séances faut-il prévoir ?",

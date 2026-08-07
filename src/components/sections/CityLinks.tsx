@@ -74,15 +74,16 @@ export const CityLinks = () => {
               Vous habitez plus loin ?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Certaines prestations sont proposées à distance par téléphone, visioconférence
-              ou selon les modalités précisées lors de la réservation. Tourma-Line reste basé à Gerponville.
+              Voyance et cartomancie, numérologie et Lahochi peuvent être proposés à distance
+              selon la prestation. Tourma-Line reste basé à Gerponville : il n'existe pas de
+              cabinet Tourma-Line dans chaque ville affichée sur internet.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/prestations"
+                to="/consultation-a-distance"
                 className="bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95"
               >
-                Voir les prestations
+                Voir les consultations à distance
               </Link>
               <a
                 href="https://wa.me/33649653186"

@@ -50,27 +50,29 @@ assert(
   "App.tsx city routes must be generated from localCities only"
 );
 
-assert.equal(
-  vercelConfig.bulkRedirectsPath,
-  "redirects.csv",
-  "vercel.json must point bulkRedirectsPath to redirects.csv"
+assert(
+  Array.isArray(vercelConfig.redirects),
+  "vercel.json must define standard redirects"
 );
 
-const redirectsPath = path.join(rootDir, "redirects.csv");
-assert(fs.existsSync(redirectsPath), "redirects.csv must exist");
-const redirects = fs.readFileSync(redirectsPath, "utf8");
-assert(
-  redirects.startsWith("source,destination,permanent\n"),
-  "redirects.csv must use Vercel bulk redirect headers"
+const redirectMap = new Map(
+  vercelConfig.redirects.map((redirect) => [
+    redirect.source,
+    { destination: redirect.destination, permanent: redirect.permanent },
+  ])
 );
 
 for (const city of [...nationalCities, ...internationalCities]) {
   for (const service of SERVICES) {
     const source = `/${service.slug}-${city.slug}`;
-    assert(
-      redirects.includes(`${source},/consultation-a-distance,true`),
-      `Missing permanent redirect for ${source}`
+    const redirect = redirectMap.get(source);
+    assert(redirect, `Missing permanent redirect for ${source}`);
+    assert.equal(
+      redirect.destination,
+      "/consultation-a-distance",
+      `Wrong destination for ${source}`
     );
+    assert.equal(redirect.permanent, true, `${source} must be permanent`);
   }
 }
 
@@ -89,10 +91,10 @@ const legacyHomeRoutes = {
 };
 
 for (const [source, destination] of Object.entries(legacyHomeRoutes)) {
-  assert(
-    redirects.includes(`${source},${destination},true`),
-    `Missing permanent redirect ${source} -> ${destination}`
-  );
+  const redirect = redirectMap.get(source);
+  assert(redirect, `Missing permanent redirect ${source} -> ${destination}`);
+  assert.equal(redirect.destination, destination, `Wrong destination for ${source}`);
+  assert.equal(redirect.permanent, true, `${source} must be permanent`);
 }
 
 const consultationPagePath = path.join(rootDir, "src/pages/ConsultationDistancePage.tsx");

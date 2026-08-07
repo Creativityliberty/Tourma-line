@@ -17,7 +17,7 @@ import {
   MapPinIcon,
   ArrowLeftIcon,
 } from "../components/ui/icons";
-import { allCities } from "../data/cities";
+import { localCities } from "../data/cities";
 import type { City } from "../data/cities";
 
 interface CityPageProps {
@@ -65,15 +65,86 @@ const serviceDetails = {
   },
 };
 
+const fecampPremiumContent = {
+  cartomancie: {
+    pageTitle: "Voyante près de Fécamp | Cartomancie — Tourma-Line",
+    headline: "Voyante & cartomancienne près de Fécamp",
+    metaDescription:
+      "Voyante près de Fécamp : cartomancie et guidance avec Line Simon au cabinet de Gerponville, à environ 15 km de Fécamp, ou à distance. RDV en ligne.",
+    locationIntro:
+      "Vous cherchez une voyante ou une cartomancienne près de Fécamp ? Line Simon vous reçoit à Gerponville, dans le même territoire de Fécamp Caux Littoral, ou vous accompagne à distance par téléphone ou visioconférence.",
+    localHeading: "Voyance & cartomancie pour Fécamp et Fécamp Caux Littoral",
+    serviceAngle:
+      "La séance peut partir d'une question sur une relation, le travail, la famille, une décision ou une période de changement. Le tirage sert de support à l'échange et à la guidance, sans être présenté comme une certitude absolue sur l'avenir.",
+    faq: [
+      {
+        q: "Où consulter une voyante près de Fécamp ?",
+        a: "Tourma-Line reçoit sur rendez-vous au 4 résidence Les Peupliers, 76540 Gerponville. Depuis Fécamp, le cabinet se situe à environ 15 km, soit environ 20 minutes en voiture selon l'itinéraire et la circulation.",
+      },
+      {
+        q: "Puis-je faire une consultation de voyance depuis Fécamp sans me déplacer ?",
+        a: "Oui. La cartomancie et la guidance peuvent être proposées par téléphone ou visioconférence. Vous pouvez choisir la modalité adaptée lors de la réservation.",
+      },
+    ],
+  },
+  numerologie: {
+    pageTitle: "Numérologue près de Fécamp | Chemin de vie — Tourma-Line",
+    headline: "Numérologue près de Fécamp — chemin de vie & année personnelle",
+    metaDescription:
+      "Numérologue près de Fécamp : chemin de vie, année personnelle et cycles avec Line Simon à Gerponville, à environ 15 km, ou à distance. RDV en ligne.",
+    locationIntro:
+      "Vous recherchez une numérologue près de Fécamp ? Line Simon vous reçoit à Gerponville, dans le territoire de Fécamp Caux Littoral, pour explorer chemin de vie, année personnelle et cycles, avec une option à distance.",
+    localHeading: "Numérologie près de Fécamp, au cœur de Fécamp Caux Littoral",
+    serviceAngle:
+      "La consultation s'appuie sur votre date de naissance pour mettre en perspective votre chemin de vie, votre année personnelle et les cycles que vous traversez. Elle peut aider à structurer une réflexion autour d'une transition, d'un choix ou d'une période de questionnement.",
+    faq: [
+      {
+        q: "Où trouver une numérologue près de Fécamp ?",
+        a: "Line Simon reçoit au cabinet Tourma-Line à Gerponville, à environ 15 km de Fécamp et environ 20 minutes en voiture selon l'itinéraire et la circulation.",
+      },
+      {
+        q: "La numérologie peut-elle se faire à distance depuis Fécamp ?",
+        a: "Oui. La lecture numérologique peut être réalisée à distance puis expliquée par téléphone ou visioconférence, selon la formule réservée.",
+      },
+    ],
+  },
+  lahochi: {
+    pageTitle: "Énergéticienne près de Fécamp | Soin Lahochi — Tourma-Line",
+    headline: "Énergéticienne près de Fécamp — soin énergétique Lahochi",
+    metaDescription:
+      "Énergéticienne près de Fécamp : séance énergétique Lahochi de bien-être avec Line Simon à Gerponville, à environ 15 km, ou à distance. RDV en ligne.",
+    locationIntro:
+      "Vous cherchez une énergéticienne près de Fécamp ? Line Simon propose des séances Lahochi à Gerponville, dans le territoire de Fécamp Caux Littoral, comme temps de détente et de recentrage, au cabinet ou à distance.",
+    localHeading: "Soin énergétique Lahochi près de Fécamp",
+    serviceAngle:
+      "La séance Lahochi est proposée comme une pratique énergétique de bien-être : un temps pour ralentir, se recentrer et porter attention à ses ressentis. Elle ne constitue pas un acte médical et aucun résultat thérapeutique n'est garanti.",
+    faq: [
+      {
+        q: "Où trouver une énergéticienne près de Fécamp ?",
+        a: "Line Simon reçoit sur rendez-vous à Gerponville, à environ 15 km de Fécamp et environ 20 minutes en voiture selon l'itinéraire et la circulation.",
+      },
+      {
+        q: "Peut-on réserver un soin énergétique Lahochi à distance depuis Fécamp ?",
+        a: "Oui. Tourma-Line propose également le Lahochi à distance comme pratique énergétique de bien-être. Cette pratique ne remplace pas un diagnostic, un traitement ou un suivi par un professionnel de santé.",
+      },
+    ],
+  },
+};
+
+const fecampDirectionsUrl =
+  "https://www.google.com/maps/dir/?api=1&origin=F%C3%A9camp%2C%20France&destination=4%20r%C3%A9sidence%20Les%20Peupliers%2C%2076540%20Gerponville%2C%20France";
+
 export const CityPage = ({ city, service }: CityPageProps) => {
   const svc = serviceDetails[service];
   const isLocal = city.type === "local";
+  const isFecamp = city.slug === "fecamp";
+  const premiumContent = isFecamp ? fecampPremiumContent[service] : null;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  const siblingCities = allCities.filter((candidate) => candidate.type === city.type);
+  const siblingCities = localCities;
   const currentIndex = siblingCities.findIndex((candidate) => candidate.slug === city.slug);
   const relatedCities: City[] = [];
 
@@ -92,37 +163,27 @@ export const CityPage = ({ city, service }: CityPageProps) => {
     if (href?.startsWith("#")) event.preventDefault();
   };
 
-  const pageTitle = isLocal
-    ? `${svc.role} près de ${city.name} | ${svc.title} — Tourma-Line`
-    : `${svc.title} à distance depuis ${city.name} | Tourma-Line`;
+  const pageTitle = premiumContent?.pageTitle ?? `${svc.role} près de ${city.name} | ${svc.title} — Tourma-Line`;
 
-  const metaDesc = isLocal
-    ? `${svc.role} près de ${city.name} : ${svc.metaIntent}. Cabinet Tourma-Line à Gerponville (76540) ou séance à distance. RDV en ligne ou WhatsApp.`
-    : `${svc.title} à distance depuis ${city.name} : ${svc.metaIntent}. Tourma-Line est basé à Gerponville en Normandie. Consultation sur rendez-vous.`;
+  const metaDesc = premiumContent?.metaDescription ??
+    `${svc.role} près de ${city.name} : ${svc.metaIntent}. Cabinet Tourma-Line à Gerponville (76540) ou séance à distance. RDV en ligne ou WhatsApp.`;
 
   const canonicalUrl = `https://www.tourma-line.fr/${svc.slug}-${city.slug}`;
   const ogImage = "https://www.tourma-line.fr/hero-tourma-line.jpg";
 
-  const headline = isLocal
-    ? `${svc.role} près de ${city.name}`
-    : `${svc.title} à distance depuis ${city.name}`;
+  const headline = premiumContent?.headline ?? `${svc.role} près de ${city.name}`;
 
-  const locationIntro = isLocal
-    ? `Vous habitez ${city.name} ou ses alentours ? Line Simon vous reçoit au cabinet Tourma-Line à Gerponville, en Seine-Maritime, et propose également des séances à distance selon la prestation.`
-    : `Tourma-Line n'a pas de cabinet à ${city.name}. Line Simon exerce depuis Gerponville, en Seine-Maritime, et propose cette prestation à distance pour les personnes qui ne peuvent pas se déplacer.`;
+  const locationIntro = premiumContent?.locationIntro ??
+    `Vous habitez ${city.name} ou ses alentours ? Line Simon vous reçoit au cabinet Tourma-Line à Gerponville, en Seine-Maritime, et propose également des séances à distance selon la prestation.`;
 
   const whatsappMessage = encodeURIComponent(
     `Bonjour Line, je suis à ${city.name} et je souhaite en savoir plus sur ${svc.title.toLowerCase()}.`
   );
 
-  const cityFaq = [
+  const genericFaq = [
     {
-      q: isLocal
-        ? `Où se trouve Tourma-Line si j'habite ${city.name} ?`
-        : `Tourma-Line possède-t-il un cabinet à ${city.name} ?`,
-      a: isLocal
-        ? `Le cabinet Tourma-Line se trouve au 4 résidence Les Peupliers, 76540 Gerponville. Si vous habitez ${city.name}, vous pouvez venir au cabinet sur rendez-vous ou choisir une modalité à distance lorsqu'elle est proposée.`
-        : `Non. Le cabinet de Line Simon est situé au 4 résidence Les Peupliers, 76540 Gerponville, en Normandie. Depuis ${city.name}, la prestation est proposée à distance selon les modalités indiquées lors de la réservation.`,
+      q: `Où se trouve Tourma-Line si j'habite ${city.name} ?`,
+      a: `Le cabinet Tourma-Line se trouve au 4 résidence Les Peupliers, 76540 Gerponville. Si vous habitez ${city.name}, vous pouvez venir au cabinet sur rendez-vous ou choisir une modalité à distance lorsqu'elle est proposée.`,
     },
     {
       q: `Comment réserver une séance de ${svc.title.toLowerCase()} ?`,
@@ -144,6 +205,15 @@ export const CityPage = ({ city, service }: CityPageProps) => {
     },
   ];
 
+  const cityFaq = premiumContent
+    ? [
+        ...premiumContent.faq,
+        genericFaq[1],
+        genericFaq[2],
+        genericFaq[3],
+      ]
+    : genericFaq;
+
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
@@ -154,7 +224,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "name": isLocal ? `${svc.title} près de ${city.name}` : `${svc.title} à distance depuis ${city.name}`,
+          "name": `${svc.title} près de ${city.name}`,
           "provider": { "@id": "https://www.tourma-line.fr/#business" },
           "areaServed": [
             { "@type": "City", "name": city.name },
@@ -258,6 +328,54 @@ export const CityPage = ({ city, service }: CityPageProps) => {
       </section>
 
       <main>
+        {premiumContent && (
+          <section className="py-16 bg-brand-lilas/10 border-b border-brand-lilas/30">
+            <AnimateOnScroll>
+              <div className="container mx-auto px-6 max-w-5xl">
+                <div className="grid lg:grid-cols-[1.4fr_0.6fr] gap-8 items-stretch">
+                  <article className="rounded-3xl bg-white p-8 sm:p-10 shadow-sm border border-brand-lilas/30">
+                    <p className="text-brand-purple text-sm font-bold uppercase tracking-widest mb-3">
+                      Fécamp → Gerponville
+                    </p>
+                    <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-5">
+                      {premiumContent.localHeading}
+                    </h2>
+                    <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                      Gerponville et Fécamp font partie de Fécamp Caux Littoral Agglomération. Le cabinet Tourma-Line est situé à environ 15 km de Fécamp, soit environ 20 minutes en voiture selon l'itinéraire et la circulation.
+                    </p>
+                    <p className="text-gray-700 leading-relaxed">
+                      {premiumContent.serviceAngle}
+                    </p>
+                  </article>
+
+                  <aside className="rounded-3xl bg-brand-dark text-white p-8 flex flex-col justify-between">
+                    <div>
+                      <MapPinIcon className="w-8 h-8 text-brand-lilas mb-5" />
+                      <h3 className="text-2xl font-display font-bold mb-3">
+                        Venir depuis Fécamp
+                      </h3>
+                      <p className="text-gray-300 leading-relaxed mb-2">
+                        Destination : 4 résidence Les Peupliers, 76540 Gerponville.
+                      </p>
+                      <p className="text-brand-lilas text-sm font-semibold">
+                        Environ 15 km • environ 20 minutes en voiture
+                      </p>
+                    </div>
+                    <a
+                      href={fecampDirectionsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-8 inline-flex items-center justify-center rounded-full bg-brand-lilas px-6 py-3 font-bold text-brand-dark transition-transform hover:scale-105 active:scale-95"
+                    >
+                      Itinéraire Fécamp → Gerponville
+                    </a>
+                  </aside>
+                </div>
+              </div>
+            </AnimateOnScroll>
+          </section>
+        )}
+
         <section className="py-20 bg-white">
           <AnimateOnScroll>
             <div className="container mx-auto px-6 max-w-4xl">
@@ -322,7 +440,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                 <div className="flex items-center gap-4 mb-4">
                   <MapPinIcon className="w-8 h-8 text-brand-purple" />
                   <h2 className="text-2xl font-display text-brand-dark">
-                    {isLocal ? `Depuis ${city.name} : cabinet à Gerponville ou séance à distance` : `Depuis ${city.name} : consultation à distance`}
+                    Depuis {city.name} : cabinet à Gerponville ou séance à distance
                   </h2>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-lg">

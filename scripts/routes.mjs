@@ -24,6 +24,7 @@ export const STATIC_ROUTES = [
   "/numerologie",
   "/cartomancie",
   "/soin-lahochi",
+  "/consultation-a-distance",
   "/blog",
   "/mentions-legales",
   "/politique-de-confidentialite",
@@ -80,8 +81,11 @@ export function getBlogSlugSet() {
   return new Set(getBlogSlugs());
 }
 
+// Seules les communes locales sont générées/prérendues/indexables.
+// Les anciennes pages nationales et internationales sont consolidées vers
+// /consultation-a-distance via des redirections permanentes Vercel.
 export function getCityRoutes() {
-  return allCities.flatMap((city) =>
+  return localCities.flatMap((city) =>
     SERVICES.map((service) => `/${service.slug}-${city.slug}`)
   );
 }

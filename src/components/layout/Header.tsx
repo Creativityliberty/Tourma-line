@@ -8,6 +8,7 @@ const navItems = [
     { href: "/cartomancie", label: "Voyance" },
     { href: "/numerologie", label: "Numérologie" },
     { href: "/soin-lahochi", label: "Énergétique" },
+    { href: "/consultation-a-distance", label: "À distance" },
     { href: "/blog", label: "Blog" },
 ];
 
@@ -46,7 +47,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                     <span>Tourma-Line</span>
                 </a>
 
-                <nav className="hidden lg:flex items-center space-x-1 bg-white bg-opacity-10 rounded-full px-4 py-3 backdrop-blur-md border border-white border-opacity-20 text-white">
+                <nav className="hidden xl:flex items-center space-x-1 bg-white bg-opacity-10 rounded-full px-4 py-3 backdrop-blur-md border border-white border-opacity-20 text-white">
                     {navItems.map((item) => (
                         <a
                             key={item.href}
@@ -59,7 +60,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                         </a>
                     ))}
                     <a
-                        href="/rendezvous"
+                        href="/#rendezvous"
                         onClick={onNavClick}
                         className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform active:scale-95 text-sm ml-2"
                     >
@@ -69,7 +70,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
 
                 <button
                     onClick={() => setMobileMenuOpen((open) => !open)}
-                    className="lg:hidden text-white p-2 hover:bg-brand-purple hover:bg-opacity-30 rounded-lg transition-colors"
+                    className="xl:hidden text-white p-2 hover:bg-brand-purple hover:bg-opacity-30 rounded-lg transition-colors"
                     aria-label={mobileMenuOpen ? "Fermer le menu" : "Ouvrir le menu"}
                     aria-expanded={mobileMenuOpen}
                 >
@@ -95,7 +96,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
             </div>
 
             {mobileMenuOpen ? (
-                <nav className="lg:hidden bg-white bg-opacity-10 backdrop-blur-md p-4 space-y-2 mt-2 rounded-2xl border border-white border-opacity-20 text-white">
+                <nav className="xl:hidden bg-white bg-opacity-10 backdrop-blur-md p-4 space-y-2 mt-2 rounded-2xl border border-white border-opacity-20 text-white">
                     {navItems.map((item) => (
                         <a
                             key={item.href}
@@ -110,7 +111,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                         </a>
                     ))}
                     <a
-                        href="/rendezvous"
+                        href="/#rendezvous"
                         onClick={(event) => {
                             onNavClick(event);
                             setMobileMenuOpen(false);

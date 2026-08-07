@@ -37,17 +37,16 @@ export const CityLinks = () => {
             <div className="flex flex-col items-center mb-3">
               <MapPinIcon className="w-6 h-6 text-brand-lilas mb-2" />
               <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest">
-                Secteur du cabinet
+                Autour de Gerponville
               </p>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4">
-              Voyance, numérologie & soins énergétiques près de Gerponville
+              Voyance, numérologie & soins énergétiques dans votre secteur
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Le cabinet Tourma-Line est à Gerponville. Nous mettons en avant les pages locales
-              qui répondent aux recherches les plus utiles autour de Fécamp, Valmont,
-              Cany-Barville, Yvetot et la Côte d'Albâtre, sans créer trois pages fortes
-              automatiquement pour chaque commune.
+              Le cabinet Tourma-Line est à Gerponville. Retrouvez les accompagnements les plus
+              recherchés autour de Fécamp, Valmont, Cany-Barville, Yvetot et la Côte d'Albâtre,
+              avec une adresse de cabinet clairement indiquée et la possibilité de consulter à distance.
             </p>
           </div>
 
@@ -77,9 +76,9 @@ export const CityLinks = () => {
           </div>
 
           <p className="text-sm text-gray-500 text-center max-w-3xl mx-auto mb-14">
-            Les communes ou prestations secondaires — notamment Ourville-en-Caux — restent
-            accessibles sur le site et seront consolidées dans les hubs territoriaux du Pays de Caux
-            et de la Côte d'Albâtre plutôt que surpondérées depuis la page d'accueil.
+            Vous habitez Ourville-en-Caux ou une autre commune proche ? Les trois accompagnements
+            restent accessibles depuis Gerponville ou à distance. Les pages territoriales à venir
+            faciliteront également la navigation par secteur.
           </p>
 
           <div className="bg-brand-dark rounded-3xl p-8 sm:p-10 text-center text-white">

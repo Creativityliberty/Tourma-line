@@ -28,9 +28,11 @@ import { LahochiPage } from "./src/pages/LahochiPage";
 import { ConsultationDistancePage } from "./src/pages/ConsultationDistancePage";
 import { PrestationsPage } from "./src/pages/PrestationsPage";
 import { CityPage } from "./src/pages/CityPage";
+import { TerritoryHubPage } from "./src/pages/TerritoryHubPage";
 import { CityLinks } from "./src/components/sections/CityLinks";
 import { WhatsAppFloat } from "./src/components/ui/WhatsAppFloat";
 import { localCities } from "./src/data/cities";
+import { territorialHubs } from "./src/data/territorialHubs.mjs";
 import { BlogPostPage } from "./src/pages/BlogPostPage";
 import { BlogListPage } from "./src/pages/BlogListPage";
 import { NotFoundPage } from "./src/pages/NotFoundPage";
@@ -131,6 +133,14 @@ function App() {
         <Route path="/cartomancie" element={<CartomancePage />} />
         <Route path="/soin-lahochi" element={<LahochiPage />} />
         <Route path="/consultation-a-distance" element={<ConsultationDistancePage />} />
+
+        {territorialHubs.map((hub) => (
+          <Route
+            key={hub.slug}
+            path={hub.path}
+            element={<TerritoryHubPage hub={hub} />}
+          />
+        ))}
 
         {localCities.flatMap((city) => [
           <Route

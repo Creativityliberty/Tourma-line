@@ -19,6 +19,8 @@ import {
 } from "../components/ui/icons";
 import { localCities } from "../data/cities";
 import type { City } from "../data/cities";
+import { getLocalSeoDecision } from "../data/localSeoStrategy.mjs";
+import { getPremiumLocalContent } from "../data/premiumLocalContent.mjs";
 
 interface CityPageProps {
   city: City;
@@ -136,45 +138,57 @@ const fecampDirectionsUrl =
 
 export const CityPage = ({ city, service }: CityPageProps) => {
   const svc = serviceDetails[service];
-  const isLocal = city.type === "local";
   const isFecamp = city.slug === "fecamp";
-  const premiumContent = isFecamp ? fecampPremiumContent[service] : null;
+  const seoDecision = getLocalSeoDecision(city.slug, svc.slug);
+  const scoredPremiumContent =
+    seoDecision?.tier === "A" ? getPremiumLocalContent(city.slug, svc.slug) : null;
+  const premiumContent = isFecamp
+    ? fecampPremiumContent[service]
+    : scoredPremiumContent;
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
 
-  const siblingCities = localCities;
-  const currentIndex = siblingCities.findIndex((candidate) => candidate.slug === city.slug);
-  const relatedCities: City[] = [];
-
-  if (siblingCities.length > 1) {
-    for (let index = 1; index <= Math.min(3, siblingCities.length - 1); index += 1) {
-      relatedCities.push(siblingCities[(currentIndex + index) % siblingCities.length]);
-    }
-  }
+  const relatedCities = localCities
+    .filter((candidate) => candidate.slug !== city.slug)
+    .filter((candidate) => getLocalSeoDecision(candidate.slug, svc.slug)?.tier === "A")
+    .slice(0, 3);
 
   const otherServices = Object.entries(serviceDetails)
     .filter(([key]) => key !== service)
-    .map(([, value]) => ({ slug: value.slug, title: value.title }));
+    .map(([, value]) => ({ slug: value.slug, title: value.title }))
+    .filter((item) => getLocalSeoDecision(city.slug, item.slug)?.tier === "A");
 
   const handleNavClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
     const href = event.currentTarget.getAttribute("href");
     if (href?.startsWith("#")) event.preventDefault();
   };
 
-  const pageTitle = premiumContent?.pageTitle ?? `${svc.role} près de ${city.name} | ${svc.title} — Tourma-Line`;
+  const pageTitle =
+    premiumContent?.pageTitle ??
+    `${svc.role} près de ${city.name} | ${svc.title} — Tourma-Line`;
 
-  const metaDesc = premiumContent?.metaDescription ??
+  const metaDesc =
+    premiumContent?.metaDescription ??
     `${svc.role} près de ${city.name} : ${svc.metaIntent}. Cabinet Tourma-Line à Gerponville (76540) ou séance à distance. RDV en ligne ou WhatsApp.`;
 
   const canonicalUrl = `https://www.tourma-line.fr/${svc.slug}-${city.slug}`;
   const ogImage = "https://www.tourma-line.fr/hero-tourma-line.jpg";
-
   const headline = premiumContent?.headline ?? `${svc.role} près de ${city.name}`;
-
-  const locationIntro = premiumContent?.locationIntro ??
+  const locationIntro =
+    premiumContent?.locationIntro ??
     `Vous habitez ${city.name} ou ses alentours ? Line Simon vous reçoit au cabinet Tourma-Line à Gerponville, en Seine-Maritime, et propose également des séances à distance selon la prestation.`;
+
+  const premiumLocalContext = isFecamp
+    ? "Gerponville et Fécamp font partie de Fécamp Caux Littoral Agglomération. Le cabinet Tourma-Line est situé à environ 15 km de Fécamp, soit environ 20 minutes en voiture selon l'itinéraire et la circulation."
+    : premiumContent?.localContext;
+  const directionsUrl = isFecamp
+    ? fecampDirectionsUrl
+    : premiumContent?.directionsUrl;
+  const directionsLabel = isFecamp
+    ? "Itinéraire Fécamp → Gerponville"
+    : premiumContent?.directionsLabel;
 
   const whatsappMessage = encodeURIComponent(
     `Bonjour Line, je suis à ${city.name} et je souhaite en savoir plus sur ${svc.title.toLowerCase()}.`
@@ -206,12 +220,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
   ];
 
   const cityFaq = premiumContent
-    ? [
-        ...premiumContent.faq,
-        genericFaq[1],
-        genericFaq[2],
-        genericFaq[3],
-      ]
+    ? [...premiumContent.faq, genericFaq[1], genericFaq[2], genericFaq[3]]
     : genericFaq;
 
   return (
@@ -335,14 +344,16 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                 <div className="grid lg:grid-cols-[1.4fr_0.6fr] gap-8 items-stretch">
                   <article className="rounded-3xl bg-white p-8 sm:p-10 shadow-sm border border-brand-lilas/30">
                     <p className="text-brand-purple text-sm font-bold uppercase tracking-widest mb-3">
-                      Fécamp → Gerponville
+                      {city.name} → Gerponville
                     </p>
                     <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-5">
                       {premiumContent.localHeading}
                     </h2>
-                    <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                      Gerponville et Fécamp font partie de Fécamp Caux Littoral Agglomération. Le cabinet Tourma-Line est situé à environ 15 km de Fécamp, soit environ 20 minutes en voiture selon l'itinéraire et la circulation.
-                    </p>
+                    {premiumLocalContext && (
+                      <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                        {premiumLocalContext}
+                      </p>
+                    )}
                     <p className="text-gray-700 leading-relaxed">
                       {premiumContent.serviceAngle}
                     </p>
@@ -352,23 +363,27 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                     <div>
                       <MapPinIcon className="w-8 h-8 text-brand-lilas mb-5" />
                       <h3 className="text-2xl font-display font-bold mb-3">
-                        Venir depuis Fécamp
+                        Venir depuis {city.name}
                       </h3>
-                      <p className="text-gray-300 leading-relaxed mb-2">
+                      <p className="text-gray-300 leading-relaxed">
                         Destination : 4 résidence Les Peupliers, 76540 Gerponville.
                       </p>
-                      <p className="text-brand-lilas text-sm font-semibold">
-                        Environ 15 km • environ 20 minutes en voiture
-                      </p>
+                      {seoDecision && (
+                        <p className="text-brand-lilas text-sm font-semibold mt-4">
+                          Priorité SEO locale : Tier {seoDecision.tier} • score {seoDecision.score}/100
+                        </p>
+                      )}
                     </div>
-                    <a
-                      href={fecampDirectionsUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-8 inline-flex items-center justify-center rounded-full bg-brand-lilas px-6 py-3 font-bold text-brand-dark transition-transform hover:scale-105 active:scale-95"
-                    >
-                      Itinéraire Fécamp → Gerponville
-                    </a>
+                    {directionsUrl && directionsLabel && (
+                      <a
+                        href={directionsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="mt-8 inline-flex items-center justify-center rounded-full bg-brand-lilas px-6 py-3 font-bold text-brand-dark transition-transform hover:scale-105 active:scale-95"
+                      >
+                        {directionsLabel}
+                      </a>
+                    )}
                   </aside>
                 </div>
               </div>
@@ -474,24 +489,30 @@ export const CityPage = ({ city, service }: CityPageProps) => {
             <div className="grid md:grid-cols-2 gap-10">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold mb-5">
-                  Autres accompagnements pour {city.name}
+                  Autres priorités locales pour {city.name}
                 </h2>
                 <div className="space-y-3">
-                  {otherServices.map((item) => (
-                    <Link
-                      key={item.slug}
-                      to={`/${item.slug}-${city.slug}`}
-                      className="block rounded-xl border border-white/15 bg-white/5 px-5 py-4 hover:bg-white/10 transition-colors"
-                    >
-                      {item.title} — {city.name}
-                    </Link>
-                  ))}
+                  {otherServices.length > 0 ? (
+                    otherServices.map((item) => (
+                      <Link
+                        key={item.slug}
+                        to={`/${item.slug}-${city.slug}`}
+                        className="block rounded-xl border border-white/15 bg-white/5 px-5 py-4 hover:bg-white/10 transition-colors"
+                      >
+                        {item.title} — {city.name}
+                      </Link>
+                    ))
+                  ) : (
+                    <p className="text-gray-300">
+                      Les autres prestations sont accessibles depuis leurs pages principales et seront renforcées par les hubs territoriaux lorsque les données le justifient.
+                    </p>
+                  )}
                 </div>
               </div>
 
               <div>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold mb-5">
-                  Voir aussi
+                  Autres villes prioritaires
                 </h2>
                 <div className="space-y-3">
                   {relatedCities.map((relatedCity) => (

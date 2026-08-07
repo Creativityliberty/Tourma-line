@@ -21,7 +21,7 @@ import { FAQ } from "./src/components/sections/FAQ";
 import { Contact } from "./src/components/sections/Contact";
 import { BlogOverview } from "./src/components/sections/BlogOverview";
 
-// Service Pages (SEO — URLs dédiées)
+// Service Pages
 import { NumerologiePage } from "./src/pages/NumerologiePage";
 import { CartomancePage } from "./src/pages/CartomancePage";
 import { LahochiPage } from "./src/pages/LahochiPage";
@@ -41,9 +41,6 @@ import { CGV } from "./src/pages/CGV";
 
 import "./src/index.css";
 
-/**
- * Handles automatic scrolling to sections based on URL path
- */
 const SectionScroller = () => {
   const { pathname, hash } = useLocation();
 
@@ -116,8 +113,8 @@ function HomePage() {
       <Testimonials />
       <About />
       <FAQ />
+      <BlogOverview />
       <Contact />
-      {/* <BlogOverview /> */}
       <Footer />
     </div>
   );
@@ -133,7 +130,6 @@ function App() {
         <Route path="/cartomancie" element={<CartomancePage />} />
         <Route path="/soin-lahochi" element={<LahochiPage />} />
 
-        {/* Pages SEO villes */}
         {allCities.flatMap((city) => [
           <Route
             key={`num-${city.slug}`}
@@ -152,16 +148,13 @@ function App() {
           />
         ])}
 
-        {/* Blog Pages */}
         <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
 
-        {/* Legal Pages */}
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
         <Route path="/conditions-generales" element={<CGV />} />
 
-        {/* Sections de la page d'accueil (ancres, gérées par SectionScroller) */}
         <Route path="/services" element={<HomePage />} />
         <Route path="/consultations" element={<HomePage />} />
         <Route path="/formules" element={<HomePage />} />
@@ -174,10 +167,7 @@ function App() {
         <Route path="/contact" element={<HomePage />} />
         <Route path="/rendezvous" element={<HomePage />} />
 
-        {/* 404 */}
         <Route path="/404" element={<NotFoundPage />} />
-
-        {/* Fallback */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <WhatsAppFloat />

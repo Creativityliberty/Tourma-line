@@ -7,29 +7,30 @@ export const LahochiPage = () => {
   return (
     <>
       <Helmet>
-        <title>Soin Lahochi en Normandie | Soins Énergétiques à Distance — Tourma-Line</title>
+        <title>Énergéticienne en Seine-Maritime | Soin énergétique Lahochi — Tourma-Line</title>
         <meta
           name="description"
-          content="Soin énergétique Lahochi en Normandie et à distance : stress, anxiété, sommeil. Séance à Gerponville (76) ou à distance partout en France. Effets souvent ressentis dès la 1ère séance. RDV en ligne."
+          content="Énergéticienne en Seine-Maritime : séances de bien-être Lahochi à Gerponville près de Fécamp et Valmont, ou à distance. Relaxation, recentrage et détente."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.tourma-line.fr/soin-lahochi" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "name": "Soin Énergétique Lahochi",
+          "name": "Soin énergétique Lahochi",
           "provider": {
             "@type": "Person",
-            "name": "Line",
-            "jobTitle": "Praticienne en soins Lahochi",
+            "name": "Line Simon",
+            "jobTitle": "Praticienne en soins énergétiques Lahochi",
             "url": "https://www.tourma-line.fr/"
           },
           "areaServed": [
             { "@type": "City", "name": "Gerponville" },
             { "@type": "AdministrativeArea", "name": "Seine-Maritime" },
+            { "@type": "AdministrativeArea", "name": "Normandie" },
             { "@type": "Country", "name": "France" }
           ],
-          "description": "Soin énergétique Lahochi — rééquilibrage par les mains, stress, anxiété, sommeil. Séances en Normandie (Fécamp, Gerponville) et à distance.",
+          "description": "Séance énergétique Lahochi proposée comme pratique de bien-être, de relaxation et de recentrage, en cabinet à Gerponville ou à distance.",
           "url": "https://www.tourma-line.fr/soin-lahochi",
           "offers": {
             "@type": "Offer",
@@ -40,68 +41,68 @@ export const LahochiPage = () => {
         })}</script>
       </Helmet>
       <ServicePage
-        title="Soin Lahochi"
-        headline="Soin Énergétique Lahochi en Normandie — Rééquilibre & Soulagement"
-        metaDescription="Soins Lahochi au cabinet à Gerponville et à distance."
+        title="Soin énergétique Lahochi"
+        headline="Énergéticienne en Seine-Maritime — Soin énergétique Lahochi"
+        metaDescription="Soin énergétique Lahochi à Gerponville, près de Fécamp et Valmont, ou à distance."
         heroImage="/hero-tourma-line.jpg"
-        heroImageAlt="Line, praticienne en soins Lahochi en Normandie"
-        intro="Le soin Lahochi est une méthode énergétique puissante, praticable en présentiel ou à distance. Line vous aide à relâcher les tensions, retrouver l'équilibre et dormir mieux — souvent dès la première séance."
-        localInfo="Cabinet à Gerponville (76540) au 4 rue de Givrandville — Soin à distance possible : toute la France"
-        breadcrumb="Soin Lahochi"
+        heroImageAlt="Line Simon, praticienne en soins énergétiques Lahochi en Seine-Maritime"
+        intro="Line Simon propose des séances énergétiques Lahochi comme temps de détente, de recentrage et de bien-être. Les séances sont disponibles au cabinet à Gerponville ou à distance, selon vos préférences."
+        localInfo="Cabinet : 4 résidence Les Peupliers, 76540 Gerponville — près de Fécamp et Valmont — séances à distance disponibles"
+        breadcrumb="Soin énergétique Lahochi"
         canonicalPath="/soin-lahochi"
-        ctaText="Réserver mon soin Lahochi"
+        ctaText="Réserver ma séance Lahochi"
         sections={[
           {
             icon: <WavesIcon className="w-8 h-8" />,
-            heading: "Qu'est-ce que le soin Lahochi ?",
+            heading: "Qu'est-ce qu'un soin énergétique Lahochi ?",
             content:
-              "Le Lahochi (LahoChi) est une méthode de soin énergétique canalisant une énergie de haute fréquence vibratoire, souvent décrite comme plus puissante et plus rapide que le Reiki. Line transmet cette énergie universelle par imposition des mains (en contact ou à quelques centimètres du corps) pour rééquilibrer vos champs énergétiques et favoriser une guérison profonde — physique, émotionnelle, et spirituelle.",
+              "Le Lahochi est une pratique énergétique de bien-être reposant sur un protocole d'imposition des mains, en contact ou à proximité du corps. Chez Tourma-Line, la séance est proposée comme un moment de relaxation, de recentrage et d'écoute de soi. Elle ne constitue pas un acte médical et ne remplace pas un diagnostic ou un traitement.",
           },
           {
             icon: <LeafIcon className="w-8 h-8" />,
-            heading: "Pour quoi le Lahochi peut-il aider ?",
+            heading: "Pourquoi réserver une séance énergétique ?",
             content:
-              "Le soin Lahochi est particulièrement efficace pour réduire le stress et l'anxiété, améliorer la qualité du sommeil, relâcher les blocages émotionnels, soulager les douleurs chroniques, et accompagner les périodes de deuil ou de grands changements de vie. Christine témoigne : 'Ça m'a soulagé de mon angoisse — je dormais mieux dès après la première séance.'",
+              "Certaines personnes choisissent une séance Lahochi lorsqu'elles souhaitent ralentir, prendre un temps pour elles, se détendre ou accompagner une période de changement sur le plan personnel. Les ressentis varient d'une personne à l'autre et aucun résultat thérapeutique n'est garanti.",
           },
           {
             icon: <SparklesIcon className="w-8 h-8" />,
             heading: "Comment se déroule une séance ?",
             content:
-              "Vous êtes allongé(e), habillé(e), dans un état de détente. Line impose les mains sur ou près de votre corps en silence, pendant 45 à 60 minutes. La séance peut provoquer une sensation de chaleur, de légèreté ou d'endormissement profond. Aucune croyance particulière n'est nécessaire — il suffit d'être ouvert(e).",
+              "Vous restez habillé(e) et vous vous installez confortablement. Line suit le protocole Lahochi pendant la durée prévue de la séance. Certaines personnes décrivent de la chaleur, une sensation de détente ou simplement un moment calme ; d'autres ressentent peu de choses sur le moment. Chaque expérience est personnelle.",
           },
           {
             icon: <GlobeIcon className="w-8 h-8" />,
-            heading: "Soin Lahochi à distance — comment ça fonctionne ?",
+            heading: "Soin Lahochi à distance",
             content:
-              "Le soin à distance est une caractéristique unique du Lahochi. L'énergie n'est pas limitée par l'espace physique. Line peut pratiquer un soin à distance que vous soyez en Normandie, à Paris ou à l'autre bout de la France — avec les mêmes effets qu'en présentiel. Vous êtes allongé(e) chez vous à l'heure convenue et Line effectue le soin de son côté.",
+              "Tourma-Line propose également des séances Lahochi à distance. Vous vous installez dans un endroit calme à l'heure convenue pendant que Line réalise le protocole depuis Gerponville. Cette modalité relève de la pratique énergétique et du bien-être ; elle ne doit pas être confondue avec une prise en charge médicale à distance.",
           },
           {
             icon: <MapPinIcon className="w-8 h-8" />,
-            heading: "Soins Lahochi à Gerponville et en Normandie",
+            heading: "Énergéticienne près de Fécamp, Valmont et Cany-Barville",
             content:
-              "Line vous accueille en cabinet au 4 rue de Givrandville à Gerponville (76540, Seine-Maritime), proche de Saint-Riquier-ès-Plains. Soins à distance disponibles pour toute la France.",
+              "Line Simon vous reçoit sur rendez-vous au 4 résidence Les Peupliers, 76540 Gerponville, en Seine-Maritime. Le cabinet se situe dans le secteur de Fécamp, Valmont et Cany-Barville. Des séances à distance sont également proposées.",
           },
         ]}
         faq={[
           {
-            question: "C'est quoi la différence entre le Lahochi et le Reiki ?",
+            question: "Quelle est la différence entre le Lahochi et le Reiki ?",
             answer:
-              "Le Lahochi et le Reiki sont deux méthodes de soins énergétiques. Le Lahochi est considéré comme plus puissant, avec des fréquences vibratoires plus élevées, et intègre des protocoles différents. Les effets sont souvent ressentis plus rapidement et plus intensément.",
+              "Le Lahochi et le Reiki sont deux pratiques énergétiques avec des histoires et des protocoles différents. Tourma-Line pratique le Lahochi. Il n'existe pas de base sérieuse pour affirmer qu'une méthode est médicalement plus puissante ou plus efficace que l'autre.",
           },
           {
-            question: "Est-ce que le soin Lahochi à distance est vraiment efficace ?",
+            question: "Une séance Lahochi à distance garantit-elle les mêmes effets qu'en présentiel ?",
             answer:
-              "Oui. De nombreux clients témoignent d'effets identiques à une séance en présentiel. L'énergie Lahochi n'est pas limitée par la distance physique — c'est une caractéristique attestée par la pratique de nombreux praticiens dans le monde.",
+              "Non résultat ne peut être garanti, en présentiel comme à distance. Les séances à distance sont proposées dans le cadre de la pratique énergétique Lahochi et les ressentis restent personnels et variables.",
           },
           {
-            question: "Combien de séances sont nécessaires ?",
+            question: "Combien de séances faut-il prévoir ?",
             answer:
-              "Cela dépend de votre situation. Beaucoup de personnes ressentent un effet positif dès la première séance. Pour des problématiques profondes (stress chronique, deuil, douleurs), un suivi de 3 à 5 séances est souvent recommandé.",
+              "Il n'existe pas de nombre de séances médicalement nécessaire. Vous pouvez commencer par une séance et décider ensuite, selon votre expérience et vos attentes, si vous souhaitez renouveler ce temps de bien-être.",
           },
           {
             question: "Le soin Lahochi remplace-t-il un traitement médical ?",
             answer:
-              "Non. Le soin Lahochi est un accompagnement complémentaire et ne remplace en aucun cas un avis ou un traitement médical. Il peut venir en soutien d'un traitement conventionnel, jamais en substitution.",
+              "Non. Le Lahochi est présenté ici comme une pratique de bien-être complémentaire. Il ne remplace pas un diagnostic, un traitement, un suivi psychologique ni l'avis d'un professionnel de santé.",
           },
         ]}
       />

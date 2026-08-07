@@ -12,7 +12,7 @@ export const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
       {/* Background Image - Mobile */}
       <img
         src="/hero-mobile-tourmaline.jpg"
-        alt="Forêt mystique avec énergie spirituelle lumineuse — numérologie, cartomancie et soins Lahochi"
+        alt="Forêt mystique avec énergie spirituelle lumineuse — voyance, numérologie et soins énergétiques Lahochi"
         className="absolute inset-0 w-full h-full object-cover sm:hidden"
         loading="eager"
         fetchPriority="high"
@@ -21,7 +21,7 @@ export const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
       {/* Background Image - Desktop */}
       <img
         src="/hero-tourma-line.jpg"
-        alt="Forêt mystique avec énergie spirituelle lumineuse — numérologie, cartomancie et soins Lahochi"
+        alt="Forêt mystique avec énergie spirituelle lumineuse — voyance, numérologie et soins énergétiques Lahochi"
         className="absolute inset-0 w-full h-full object-cover hidden sm:block"
         loading="eager"
         fetchPriority="high"
@@ -38,18 +38,20 @@ export const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
       <div className="absolute inset-0 bg-black/5 sm:bg-black/10 z-0"></div>
 
       {/* Content */}
-      <div className="relative z-10 p-4 animate-fadeInUp max-w-4xl">
-        {/* H1 SEO — visible mais élégant */}
-        <h1 className="sr-only">
-          Line — Numérologue & Cartomancienne en Normandie | Soins Lahochi Gerponville, Seine-Maritime
-        </h1>
-        <p className="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-4 drop-shadow-lg">
-          Vous traversez une période de questionnement ?
+      <div className="relative z-10 p-4 animate-fadeInUp max-w-5xl">
+        <p className="text-sm sm:text-base uppercase tracking-[0.22em] text-white/75 mb-4 drop-shadow-md">
+          Tourma-Line · Gerponville · Seine-Maritime
         </p>
-        <p className="text-sm sm:text-base md:text-lg lg:text-2xl mb-8 max-w-3xl mx-auto font-light drop-shadow-md">
-          Relation compliquée, choix professionnel à faire, ou épreuve qui vous
-          pèse ? La numérologie et la cartomancie vous aident à y voir clair —
-          avec la justesse et la bienveillance que mes clients soulignent.
+        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-5 drop-shadow-lg">
+          Voyante, numérologue & énergéticienne en Seine-Maritime
+        </h1>
+        <p className="text-sm sm:text-base md:text-lg lg:text-2xl mb-4 max-w-3xl mx-auto font-light drop-shadow-md">
+          Cartomancie, numérologie et soins énergétiques Lahochi au cabinet à Gerponville,
+          près de Fécamp et Valmont, ou à distance.
+        </p>
+        <p className="text-sm sm:text-base md:text-lg mb-8 max-w-3xl mx-auto text-white/85 drop-shadow-md">
+          Vous traversez une période de questionnement ? Relation, choix professionnel,
+          transition personnelle ou besoin de recentrage : découvrez l'accompagnement qui vous correspond.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 sm:mt-0">
           <a

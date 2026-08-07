@@ -36,7 +36,6 @@ export const ServicePage = ({
   breadcrumb,
   localInfo,
 }: ServicePageProps) => {
-  // Scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -52,7 +51,6 @@ export const ServicePage = ({
     <div className="min-h-screen bg-white font-sans">
       <Header onNavClick={handleNavClick} />
 
-      {/* Hero Section */}
       <section
         className="relative pt-32 pb-20 bg-brand-dark text-white overflow-hidden"
         aria-label={`Page dédiée — ${breadcrumb}`}
@@ -67,7 +65,6 @@ export const ServicePage = ({
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/60 to-brand-dark" />
 
         <div className="relative z-10 container mx-auto px-6 max-w-4xl">
-          {/* Breadcrumb */}
           <nav aria-label="Fil d'Ariane" className="mb-6">
             <ol className="flex items-center gap-2 text-sm text-gray-400">
               <li>
@@ -89,9 +86,7 @@ export const ServicePage = ({
           {localInfo && (
             <div className="flex items-center gap-2 text-brand-lilas font-medium">
               <MapPinIcon className="w-5 h-5 flex-shrink-0" />
-              <p className="text-sm">
-                {localInfo}
-              </p>
+              <p className="text-sm">{localInfo}</p>
             </div>
           )}
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -117,7 +112,6 @@ export const ServicePage = ({
         </div>
       </section>
 
-      {/* Content Sections */}
       <main>
         <div className="container mx-auto px-6 max-w-4xl py-20">
           <div className="space-y-16">
@@ -137,7 +131,6 @@ export const ServicePage = ({
           </div>
         </div>
 
-        {/* FAQ Section avec Schema.org FAQPage */}
         <section
           className="py-20 bg-white"
           aria-label="Questions fréquentes"
@@ -178,14 +171,13 @@ export const ServicePage = ({
           </div>
         </section>
 
-        {/* CTA Bottom */}
         <section className="py-20 bg-brand-dark text-white text-center">
           <div className="container mx-auto px-6 max-w-2xl">
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6">
               Prêt(e) à réserver votre séance ?
             </h2>
             <p className="text-gray-300 text-lg mb-10">
-              Line vous reçoit en cabinet au 4 rue de Givrandville à Gerponville,
+              Line vous reçoit en cabinet au 4 résidence Les Peupliers à Gerponville,
               ou en consultation téléphonique partout en France.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

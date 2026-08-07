@@ -365,14 +365,12 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                       <h3 className="text-2xl font-display font-bold mb-3">
                         Venir depuis {city.name}
                       </h3>
-                      <p className="text-gray-300 leading-relaxed">
+                      <p className="text-gray-300 leading-relaxed mb-3">
                         Destination : 4 résidence Les Peupliers, 76540 Gerponville.
                       </p>
-                      {seoDecision && (
-                        <p className="text-brand-lilas text-sm font-semibold mt-4">
-                          Priorité SEO locale : Tier {seoDecision.tier} • score {seoDecision.score}/100
-                        </p>
-                      )}
+                      <p className="text-brand-lilas text-sm font-semibold">
+                        Cabinet réel à Gerponville • consultation sur rendez-vous
+                      </p>
                     </div>
                     {directionsUrl && directionsLabel && (
                       <a
@@ -489,7 +487,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
             <div className="grid md:grid-cols-2 gap-10">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold mb-5">
-                  Autres priorités locales pour {city.name}
+                  Autres accompagnements prioritaires pour {city.name}
                 </h2>
                 <div className="space-y-3">
                   {otherServices.length > 0 ? (
@@ -504,7 +502,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                     ))
                   ) : (
                     <p className="text-gray-300">
-                      Les autres prestations sont accessibles depuis leurs pages principales et seront renforcées par les hubs territoriaux lorsque les données le justifient.
+                      Retrouvez les autres prestations depuis leurs pages principales. Les secteurs secondaires seront regroupés dans des pages territoriales utiles plutôt que dupliqués artificiellement.
                     </p>
                   )}
                 </div>
@@ -512,7 +510,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
 
               <div>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold mb-5">
-                  Autres villes prioritaires
+                  Autres secteurs proches
                 </h2>
                 <div className="space-y-3">
                   {relatedCities.map((relatedCity) => (

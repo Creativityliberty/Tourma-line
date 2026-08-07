@@ -25,11 +25,12 @@ import { BlogOverview } from "./src/components/sections/BlogOverview";
 import { NumerologiePage } from "./src/pages/NumerologiePage";
 import { CartomancePage } from "./src/pages/CartomancePage";
 import { LahochiPage } from "./src/pages/LahochiPage";
+import { ConsultationDistancePage } from "./src/pages/ConsultationDistancePage";
 import { PrestationsPage } from "./src/pages/PrestationsPage";
 import { CityPage } from "./src/pages/CityPage";
 import { CityLinks } from "./src/components/sections/CityLinks";
 import { WhatsAppFloat } from "./src/components/ui/WhatsAppFloat";
-import { allCities } from "./src/data/cities";
+import { localCities } from "./src/data/cities";
 import { BlogPostPage } from "./src/pages/BlogPostPage";
 import { BlogListPage } from "./src/pages/BlogListPage";
 import { NotFoundPage } from "./src/pages/NotFoundPage";
@@ -129,8 +130,9 @@ function App() {
         <Route path="/numerologie" element={<NumerologiePage />} />
         <Route path="/cartomancie" element={<CartomancePage />} />
         <Route path="/soin-lahochi" element={<LahochiPage />} />
+        <Route path="/consultation-a-distance" element={<ConsultationDistancePage />} />
 
-        {allCities.flatMap((city) => [
+        {localCities.flatMap((city) => [
           <Route
             key={`num-${city.slug}`}
             path={`/numerologie-${city.slug}`}
@@ -155,6 +157,8 @@ function App() {
         <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
         <Route path="/conditions-generales" element={<CGV />} />
 
+        {/* Legacy section URLs remain available client-side for old in-app links.
+            Direct requests are permanently redirected at the Vercel edge. */}
         <Route path="/services" element={<HomePage />} />
         <Route path="/consultations" element={<HomePage />} />
         <Route path="/formules" element={<HomePage />} />

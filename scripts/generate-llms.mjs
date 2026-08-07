@@ -7,7 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 const publicDir = path.resolve(rootDir, "public");
 
-const { all } = getCityMeta();
+const { local } = getCityMeta();
 
 const SERVICES_META = {
   numerologie: {
@@ -37,7 +37,7 @@ const FAQ = [
   },
   {
     q: "Les consultations sont-elles disponibles à distance ?",
-    a: "Oui. La numérologie et la cartomancie sont proposées par téléphone ou visioconférence pour les personnes qui ne peuvent pas se déplacer au cabinet de Gerponville.",
+    a: "Oui. La numérologie et la cartomancie sont proposées par téléphone ou visioconférence pour les personnes qui ne peuvent pas se déplacer au cabinet de Gerponville. Le Lahochi à distance est proposé comme pratique énergétique de bien-être.",
   },
   {
     q: "Comment se fait la réservation et le paiement ?",
@@ -122,6 +122,7 @@ function pagesSection() {
     `- [Numérologie](${BASE_URL}/numerologie) : chemin de vie, année personnelle et cycles.`,
     `- [Voyance & Cartomancie](${BASE_URL}/cartomancie) : guidance par les cartes au cabinet ou à distance.`,
     `- [Soin énergétique Lahochi](${BASE_URL}/soin-lahochi) : pratique énergétique de bien-être au cabinet ou à distance.`,
+    `- [Consultation à distance](${BASE_URL}/consultation-a-distance) : voyance, numérologie et Lahochi à distance, Tourma-Line restant basé à Gerponville.`,
     `- [Blog](${BASE_URL}/blog) : articles sur la numérologie, la cartomancie et les pratiques de bien-être.`,
     `- [Mentions légales](${BASE_URL}/mentions-legales)`,
     `- [Politique de confidentialité](${BASE_URL}/politique-de-confidentialite)`,
@@ -140,13 +141,13 @@ function blogSection() {
 }
 
 function cityPagesSection() {
-  const lines = ["## Pages par ville", ""];
+  const lines = ["## Pages locales", ""];
   for (const svc of SERVICES) {
     const meta = SERVICES_META[svc.slug];
     lines.push(`### ${meta.title}`);
     lines.push("");
-    for (const city of all) {
-      lines.push(`- [${meta.title} — ${city.name} (${city.region}, ${city.country})](${BASE_URL}/${svc.slug}-${city.slug})`);
+    for (const city of local) {
+      lines.push(`- [${meta.title} — près de ${city.name}](${BASE_URL}/${svc.slug}-${city.slug})`);
     }
     lines.push("");
   }

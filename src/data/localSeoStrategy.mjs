@@ -102,17 +102,17 @@ const markets = {
       cartomancie: {
         gscScore: 20,
         pageStatus: "indexed-reinforce",
-        evidence: "URL cartomancie-ourville-en-caux déjà valide dans GSC ; conserver sans surinvestir avant le hub territorial.",
+        evidence: "URL cartomancie-ourville-en-caux déjà valide dans GSC ; conserver accessible mais consolider l'indexation via le hub Côte d'Albâtre.",
       },
       numerologie: {
         gscScore: 20,
         pageStatus: "indexed-reinforce",
-        evidence: "URL numerologie-ourville-en-caux déjà valide dans GSC ; conserver sans surinvestir avant le hub territorial.",
+        evidence: "URL numerologie-ourville-en-caux déjà valide dans GSC ; conserver accessible mais consolider l'indexation via le hub Côte d'Albâtre.",
       },
       "soin-lahochi": {
         gscScore: 20,
         pageStatus: "indexed-reinforce",
-        evidence: "URL soin-lahochi-ourville-en-caux déjà valide dans GSC ; conserver sans surinvestir avant le hub territorial.",
+        evidence: "URL soin-lahochi-ourville-en-caux déjà valide dans GSC ; conserver accessible mais consolider l'indexation via le hub Côte d'Albâtre.",
       },
     },
   },
@@ -138,7 +138,7 @@ const markets = {
       "soin-lahochi": {
         gscScore: 20,
         pageStatus: "indexed-reinforce",
-        evidence: "URL soin-lahochi-saint-riquier-es-plains déjà valide dans GSC ; conserver et renforcer via le cluster Côte d'Albâtre.",
+        evidence: "URL soin-lahochi-saint-riquier-es-plains déjà valide dans GSC ; conserver accessible et renforcer le cluster Côte d'Albâtre.",
       },
     },
   },
@@ -159,12 +159,12 @@ const markets = {
       numerologie: {
         gscScore: 20,
         pageStatus: "indexed-reinforce",
-        evidence: "URL numerologie-yvetot déjà valide dans GSC et marquée CONSERVER + RENFORCER.",
+        evidence: "URL numerologie-yvetot déjà valide dans GSC ; conserver accessible mais concentrer l'indexation secondaire via le hub Pays de Caux.",
       },
       "soin-lahochi": {
         gscScore: 20,
         pageStatus: "indexed-reinforce",
-        evidence: "URL soin-lahochi-yvetot déjà valide dans GSC ; concurrence locale énergétique plus forte, donc renforcement progressif.",
+        evidence: "URL soin-lahochi-yvetot déjà valide dans GSC ; concurrence locale énergétique plus forte, donc couverture via le hub Pays de Caux avant nouvelle premiumisation.",
       },
     },
   },

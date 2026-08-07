@@ -108,4 +108,27 @@ assert(
   "Distance page must clearly cover the three core service families"
 );
 
+const cityPagePath = path.join(rootDir, "src/pages/CityPage.tsx");
+const cityPage = fs.readFileSync(cityPagePath, "utf8");
+assert(
+  cityPage.includes("fecampPremiumContent"),
+  "CityPage must define dedicated premium content for Fécamp"
+);
+assert(
+  cityPage.includes("Fécamp Caux Littoral") &&
+    cityPage.includes("environ 15 km") &&
+    cityPage.includes("environ 20 minutes"),
+  "Fécamp page must include useful local access context"
+);
+assert(
+  cityPage.includes("Voyante & cartomancienne près de Fécamp") &&
+    cityPage.includes("Numérologue près de Fécamp") &&
+    cityPage.includes("Énergéticienne près de Fécamp"),
+  "Fécamp premium content must cover the three commercial service intents"
+);
+assert(
+  cityPage.includes("Itinéraire Fécamp → Gerponville"),
+  "Fécamp premium page must expose a useful directions CTA"
+);
+
 console.log("SEO architecture verification passed.");

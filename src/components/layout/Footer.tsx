@@ -12,16 +12,16 @@ export const Footer = () => {
                         </h3>
                         <div className="flex items-center gap-2 mb-2 text-brand-lilas">
                             <p>
-                                "Pour vous guider vers la clarté, la confiance et l'harmonie."
+                                "Pour vous guider vers plus de clarté et vous offrir un temps de recentrage."
                             </p>
                             <SparklesIcon className="w-4 h-4 flex-shrink-0" />
                         </div>
                         <p className="text-sm text-gray-400 mb-4 italic">
-                            Line — Numérologue & Cartomancienne
+                            Line Simon — Voyante, numérologue & praticienne Lahochi
                         </p>
                         <div className="text-sm text-gray-300 space-y-1">
                             <p>Cabinet : 4 résidence Les Peupliers</p>
-                            <p>76540 Gerponville</p>
+                            <p>76540 Gerponville — Seine-Maritime</p>
                             <p className="mt-2">SIRET : 93116533600013</p>
                         </div>
                     </div>
@@ -31,7 +31,7 @@ export const Footer = () => {
                         <p className="text-sm text-gray-300">
                             Tél :{" "}
                             <a
-                                href="tel:0649653186"
+                                href="tel:+33649653186"
                                 className="hover:text-brand-purple underline"
                             >
                                 06 49 65 31 86
@@ -51,7 +51,7 @@ export const Footer = () => {
                                 href="https://www.facebook.com/tourma.line.534540"
                                 target="_blank"
                                 rel="noopener noreferrer me"
-                                aria-label="Suivez Line sur Facebook"
+                                aria-label="Tourma-Line sur Facebook"
                                 className="hover:text-brand-purple transition-all duration-300 transform hover:scale-110 active:scale-95"
                             >
                                 <FacebookIcon className="w-6 h-6" aria-hidden="true" />
@@ -60,29 +60,27 @@ export const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="text-lg font-semibold mb-3">Liens Légaux</h4>
+                        <h4 className="text-lg font-semibold mb-3">Liens utiles</h4>
+                        <ul className="text-sm text-gray-300 space-y-2 mb-5">
+                            <li><Link to="/cartomancie" className="hover:text-brand-purple underline">Voyance & cartomancie</Link></li>
+                            <li><Link to="/numerologie" className="hover:text-brand-purple underline">Numérologie</Link></li>
+                            <li><Link to="/soin-lahochi" className="hover:text-brand-purple underline">Soin énergétique Lahochi</Link></li>
+                            <li><Link to="/blog" className="hover:text-brand-purple underline">Blog</Link></li>
+                        </ul>
+                        <h4 className="text-lg font-semibold mb-3">Liens légaux</h4>
                         <ul className="text-sm text-gray-300 space-y-2">
                             <li>
-                                <Link
-                                    to="/mentions-legales"
-                                    className="hover:text-brand-purple underline"
-                                >
+                                <Link to="/mentions-legales" className="hover:text-brand-purple underline">
                                     Mentions légales
                                 </Link>
                             </li>
                             <li>
-                                <Link
-                                    to="/politique-de-confidentialite"
-                                    className="hover:text-brand-purple underline"
-                                >
+                                <Link to="/politique-de-confidentialite" className="hover:text-brand-purple underline">
                                     Politique de confidentialité
                                 </Link>
                             </li>
                             <li>
-                                <Link
-                                    to="/conditions-generales"
-                                    className="hover:text-brand-purple underline"
-                                >
+                                <Link to="/conditions-generales" className="hover:text-brand-purple underline">
                                     Conditions générales
                                 </Link>
                             </li>

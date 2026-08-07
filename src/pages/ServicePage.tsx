@@ -4,6 +4,7 @@ import { AnimateOnScroll } from "../components/ui/AnimateOnScroll";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { WhatsAppIcon, MapPinIcon, ArrowLeftIcon } from "../components/ui/icons";
+import { getPremiumLocalTargetsForService } from "../data/localSeoStrategy.mjs";
 
 interface ServicePageProps {
   title: string;
@@ -33,6 +34,7 @@ export const ServicePage = ({
   sections,
   faq,
   ctaText,
+  canonicalPath,
   breadcrumb,
   localInfo,
 }: ServicePageProps) => {
@@ -46,6 +48,9 @@ export const ServicePage = ({
       e.preventDefault();
     }
   };
+
+  const serviceSlug = canonicalPath.replace(/^\//, "");
+  const priorityTargets = getPremiumLocalTargetsForService(serviceSlug);
 
   return (
     <div className="min-h-screen bg-white font-sans">
@@ -130,6 +135,39 @@ export const ServicePage = ({
             ))}
           </div>
         </div>
+
+        {priorityTargets.length > 0 && (
+          <section className="py-16 bg-brand-lilas/10 border-y border-brand-lilas/30">
+            <div className="container mx-auto px-6 max-w-5xl">
+              <div className="text-center mb-10">
+                <p className="text-brand-purple text-sm font-bold uppercase tracking-widest mb-3">
+                  Priorités locales
+                </p>
+                <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4">
+                  {title} dans les secteurs les plus pertinents
+                </h2>
+                <p className="text-gray-600 max-w-3xl mx-auto">
+                  Tourma-Line est installé à Gerponville. Ces pages locales répondent aux recherches
+                  les plus utiles autour du cabinet, sans prétendre disposer d'un établissement dans
+                  chacune de ces communes.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {priorityTargets.map((target) => (
+                  <Link
+                    key={`${target.serviceSlug}-${target.citySlug}`}
+                    to={`/${target.serviceSlug}-${target.citySlug}`}
+                    className="rounded-2xl bg-white border border-brand-lilas/30 p-5 text-brand-dark hover:border-brand-purple hover:shadow-md transition-all"
+                  >
+                    <span className="block font-display text-xl mb-1">{target.cityLabel}</span>
+                    <span className="text-sm text-gray-600">{title} près de {target.cityLabel} →</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section
           className="py-20 bg-white"

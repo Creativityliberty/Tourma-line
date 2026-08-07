@@ -3,7 +3,6 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import {
   BASE_URL,
-  STATIC_ROUTES,
   SERVICES,
   SITE_LAST_MOD,
   getBlogPosts,
@@ -15,74 +14,60 @@ const rootDir = path.resolve(__dirname, "..");
 
 const entries = [];
 
-// Page principale
-entries.push({ loc: `${BASE_URL}/`, lastmod: SITE_LAST_MOD, changefreq: "weekly", priority: "1.0" });
-
-// Pages de service
-const serviceRoutes = {
-  "/prestations": { changefreq: "monthly", priority: "0.9" },
-  "/numerologie": { changefreq: "monthly", priority: "0.9" },
-  "/cartomancie": { changefreq: "monthly", priority: "0.9" },
-  "/soin-lahochi": { changefreq: "monthly", priority: "0.9" },
-};
-for (const [route, conf] of Object.entries(serviceRoutes)) {
-  entries.push({ loc: `${BASE_URL}${route}`, lastmod: SITE_LAST_MOD, changefreq: conf.changefreq, priority: conf.priority });
+function add(loc, lastmod = null) {
+  entries.push({ loc, lastmod });
 }
 
-// Blog (liste + articles)
-entries.push({ loc: `${BASE_URL}/blog`, lastmod: SITE_LAST_MOD, changefreq: "weekly", priority: "0.9" });
+// Pages principales dont le contenu a été substantiellement mis à jour.
+add(`${BASE_URL}/`, SITE_LAST_MOD);
+add(`${BASE_URL}/prestations`, SITE_LAST_MOD);
+add(`${BASE_URL}/numerologie`, SITE_LAST_MOD);
+add(`${BASE_URL}/cartomancie`, SITE_LAST_MOD);
+add(`${BASE_URL}/soin-lahochi`, SITE_LAST_MOD);
+
+// Blog : la date de publication est utilisée lorsqu'elle est disponible.
+add(`${BASE_URL}/blog`, SITE_LAST_MOD);
 for (const post of getBlogPosts()) {
-  entries.push({
-    loc: `${BASE_URL}/blog/${post.slug}`,
-    lastmod: post.date || SITE_LAST_MOD,
-    changefreq: "weekly",
-    priority: "0.85",
-  });
+  add(`${BASE_URL}/blog/${post.slug}`, post.date || null);
 }
 
-// Pages villes (générées depuis citiesData.mjs — source unique)
+// Pages villes : le template et le positionnement ont été mis à jour à SITE_LAST_MOD.
 const { local, national, international } = getCityMeta();
-const priorityByType = { local: "0.8", national: "0.75", international: "0.7" };
-const cityGroups = [
-  ["local", local],
-  ["national", national],
-  ["international", international],
-];
-for (const [type, cities] of cityGroups) {
+for (const cities of [local, national, international]) {
   for (const city of cities) {
-    for (const svc of SERVICES) {
-      entries.push({
-        loc: `${BASE_URL}/${svc.slug}-${city.slug}`,
-        lastmod: SITE_LAST_MOD,
-        changefreq: "monthly",
-        priority: priorityByType[type],
-      });
+    for (const service of SERVICES) {
+      add(`${BASE_URL}/${service.slug}-${city.slug}`, SITE_LAST_MOD);
     }
   }
 }
 
-// Pages légales
-const legalRoutes = ["/mentions-legales", "/politique-de-confidentialite", "/conditions-generales"];
-for (const route of legalRoutes) {
-  entries.push({ loc: `${BASE_URL}${route}`, lastmod: SITE_LAST_MOD, changefreq: "yearly", priority: "0.3" });
+// Pages légales : pas de lastmod artificiel si leur contenu n'a pas changé.
+for (const route of [
+  "/mentions-legales",
+  "/politique-de-confidentialite",
+  "/conditions-generales",
+]) {
+  add(`${BASE_URL}${route}`);
+}
+
+function escapeXml(value) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&apos;");
 }
 
 function buildXml() {
   const urls = entries
-    .map(
-      (e) => `  <url>
-    <loc>${e.loc}</loc>
-    <lastmod>${e.lastmod}</lastmod>
-    <changefreq>${e.changefreq}</changefreq>
-    <priority>${e.priority}</priority>
-  </url>`
-    )
+    .map((entry) => {
+      const lastmod = entry.lastmod ? `\n    <lastmod>${escapeXml(entry.lastmod)}</lastmod>` : "";
+      return `  <url>\n    <loc>${escapeXml(entry.loc)}</loc>${lastmod}\n  </url>`;
+    })
     .join("\n");
-  return `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${urls}
-</urlset>
-`;
+
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 }
 
 const xml = buildXml();

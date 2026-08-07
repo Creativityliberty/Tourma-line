@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { localCities } from "../../data/cities";
 import { getPremiumLocalTargetsForCity } from "../../data/localSeoStrategy.mjs";
+import { territorialHubs } from "../../data/territorialHubs.mjs";
 import { WhatsAppIcon, GlobeIcon, MapPinIcon } from "../ui/icons";
 
 const serviceLabels: Record<string, string> = {
@@ -50,7 +51,7 @@ export const CityLinks = () => {
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {priorityCities.map(({ city, targets }) => (
               <article
                 key={city.slug}
@@ -75,11 +76,39 @@ export const CityLinks = () => {
             ))}
           </div>
 
-          <p className="text-sm text-gray-500 text-center max-w-3xl mx-auto mb-14">
-            Vous habitez Ourville-en-Caux ou une autre commune proche ? Les trois accompagnements
-            restent accessibles depuis Gerponville ou à distance. Les pages territoriales à venir
-            faciliteront également la navigation par secteur.
-          </p>
+          <div className="mb-14 rounded-3xl border border-brand-lilas/30 bg-brand-lilas/10 p-7 sm:p-9">
+            <div className="mb-7 text-center">
+              <p className="mb-2 text-sm font-bold uppercase tracking-[0.2em] text-brand-purple">
+                Zones couvertes
+              </p>
+              <h3 className="font-display text-2xl text-brand-dark sm:text-3xl">
+                Les hubs territoriaux Tourma-Line
+              </h3>
+              <p className="mx-auto mt-3 max-w-3xl text-gray-600">
+                Les communes secondaires sont regroupées dans des pages de territoire utiles plutôt que dupliquées en dizaines de pages quasi identiques.
+              </p>
+            </div>
+            <div className="grid gap-4 md:grid-cols-3">
+              {territorialHubs.map((hub) => (
+                <Link
+                  key={hub.slug}
+                  to={`/zones/${hub.slug}`}
+                  className="rounded-2xl border border-white bg-white p-5 transition hover:-translate-y-1 hover:shadow-md"
+                >
+                  <p className="mb-2 text-xs font-bold uppercase tracking-widest text-brand-purple">
+                    {hub.eyebrow}
+                  </p>
+                  <h4 className="mb-2 font-display text-xl text-brand-dark">{hub.label}</h4>
+                  <p className="text-sm leading-relaxed text-gray-600">
+                    {hub.coverageExamples.slice(0, 4).join(" · ")}
+                  </p>
+                  <span className="mt-4 inline-block text-sm font-semibold text-brand-purple">
+                    Explorer la zone →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </div>
 
           <div className="bg-brand-dark rounded-3xl p-8 sm:p-10 text-center text-white">
             <GlobeIcon className="w-7 h-7 text-brand-lilas mx-auto mb-3" />

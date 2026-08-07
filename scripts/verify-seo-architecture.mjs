@@ -147,4 +147,65 @@ assert(
 );
 assert(!cityPage.includes("Priorité SEO locale : Tier"), "Internal SEO scores must never be rendered in visitor-facing CityPage copy");
 
+// Sprint 5 — territory hubs must absorb B/C coverage without creating doorway pages.
+const expectedHubRoutes = [
+  "/zones/pays-de-caux",
+  "/zones/cote-d-albatre",
+  "/zones/fecamp-caux-littoral",
+];
+for (const route of expectedHubRoutes) {
+  assert(STATIC_ROUTES.includes(route), `STATIC_ROUTES must include ${route}`);
+}
+
+const territoryDataPath = path.join(rootDir, "src/data/territorialHubs.mjs");
+assert(fs.existsSync(territoryDataPath), "Sprint 5 must define src/data/territorialHubs.mjs");
+const { territorialHubs, getTerritoryHub, getTerritoryHubForCity } = await import("../src/data/territorialHubs.mjs");
+assert.deepEqual(
+  territorialHubs.map((hub) => hub.slug).sort(),
+  ["cote-d-albatre", "fecamp-caux-littoral", "pays-de-caux"],
+  "Sprint 5 must expose exactly the three validated territory hubs"
+);
+assert(getTerritoryHub("fecamp-caux-littoral")?.facts?.some((fact) => fact.includes("33 communes")), "Fécamp Caux Littoral hub must state the official 33-commune perimeter");
+assert(getTerritoryHub("cote-d-albatre")?.facts?.some((fact) => fact.includes("63 communes")), "Côte d'Albâtre hub must state the official 63-commune perimeter");
+assert(getTerritoryHub("pays-de-caux")?.boundaryNote?.includes("repère géographique"), "Pays de Caux must be presented as a geographic reference, not a fake administrative perimeter");
+assert.equal(getTerritoryHubForCity("fecamp")?.slug, "fecamp-caux-littoral", "Fécamp must map to Fécamp Caux Littoral");
+assert.equal(getTerritoryHubForCity("valmont")?.slug, "fecamp-caux-littoral", "Valmont must map to Fécamp Caux Littoral");
+assert.equal(getTerritoryHubForCity("cany-barville")?.slug, "cote-d-albatre", "Cany-Barville must map to Côte d'Albâtre");
+assert.equal(getTerritoryHubForCity("ourville-en-caux")?.slug, "cote-d-albatre", "Ourville-en-Caux must map to Côte d'Albâtre");
+assert.equal(getTerritoryHubForCity("saint-riquier-es-plains")?.slug, "cote-d-albatre", "Saint-Riquier-ès-Plains must map to Côte d'Albâtre");
+assert.equal(getTerritoryHubForCity("yvetot")?.slug, "pays-de-caux", "Yvetot must map to Pays de Caux");
+
+const territoryPagePath = path.join(rootDir, "src/pages/TerritoryHubPage.tsx");
+assert(fs.existsSync(territoryPagePath), "Sprint 5 must add TerritoryHubPage.tsx");
+const territoryPage = fs.readFileSync(territoryPagePath, "utf8");
+assert(territoryPage.includes("CollectionPage") && territoryPage.includes("BreadcrumbList"), "TerritoryHubPage must expose useful structured data");
+assert(territoryPage.includes("Cabinet à Gerponville"), "Territory hubs must stay transparent about the real cabinet location");
+assert(territoryPage.includes("officialSourceUrl"), "Administrative territory hubs must expose their official source");
+
+assert(appSource.includes("TerritoryHubPage") && appSource.includes("territorialHubs.map"), "App.tsx must route all territory hubs from the data registry");
+
+const routeModule = await import("./routes.mjs");
+assert.equal(typeof routeModule.getIndexableCityRoutes, "function", "Sprint 5 must separate runtime city routes from indexable city routes");
+const indexableCityRoutes = routeModule.getIndexableCityRoutes().sort();
+const expectedIndexableCityRoutes = [
+  "/cartomancie-fecamp",
+  "/numerologie-fecamp",
+  "/soin-lahochi-fecamp",
+  ...expectedPremiumSprint4Targets.map((key) => `/${key}`),
+].sort();
+assert.deepEqual(indexableCityRoutes, expectedIndexableCityRoutes, "Only Fécamp + Tier A local landings should remain in sitemap/prerender after hubs launch");
+for (const route of expectedHubRoutes) {
+  assert(routeModule.getRoutes().includes(route), `${route} must be included in generated routes/sitemap`);
+}
+assert(!routeModule.getRoutes().includes("/numerologie-cany-barville"), "Tier B city pages must leave the sitemap after territory hubs launch");
+assert(!routeModule.getRoutes().includes("/soin-lahochi-yvetot"), "Tier B city pages must leave the sitemap after territory hubs launch");
+assert(!routeModule.getRoutes().includes("/numerologie-saint-riquier-es-plains"), "Tier C city pages must leave the sitemap after territory hubs launch");
+
+assert(cityPage.includes("getTerritoryHubForCity"), "CityPage must link secondary city coverage to its territory hub");
+assert(cityPage.includes("noindex, follow"), "Non-premium city pages must become noindex, follow once territory hubs exist");
+assert(cityPage.includes("robotsDirective"), "CityPage must compute a robots directive from the evidence-backed indexability decision");
+
+assert(cityLinks.includes("territorialHubs") && cityLinks.includes("/zones/"), "Homepage local section must link to the three territory hubs");
+assert(servicePage.includes("territorialHubs") && servicePage.includes("Zones couvertes"), "Service pillars must link to territory hubs");
+
 console.log("SEO architecture verification passed.");

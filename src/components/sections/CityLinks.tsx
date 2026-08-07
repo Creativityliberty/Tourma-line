@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { localCities } from "../../data/cities";
+import { getPremiumLocalTargetsForCity } from "../../data/localSeoStrategy.mjs";
 import { WhatsAppIcon, GlobeIcon, MapPinIcon } from "../ui/icons";
 
-const localServiceLinks = [
-  { slug: "cartomancie", label: "Voyance & cartomancie" },
-  { slug: "numerologie", label: "Numérologie" },
-  { slug: "soin-lahochi", label: "Soin énergétique" },
-];
+const serviceLabels: Record<string, string> = {
+  cartomancie: "Voyance & cartomancie",
+  numerologie: "Numérologie",
+  "soin-lahochi": "Soin énergétique Lahochi",
+};
 
 const nearbySlugs = new Set([
   "fecamp",
@@ -19,7 +20,13 @@ const nearbySlugs = new Set([
   "yvetot",
 ]);
 
-const nearbyCities = localCities.filter((city) => nearbySlugs.has(city.slug));
+const priorityCities = localCities
+  .filter((city) => nearbySlugs.has(city.slug))
+  .map((city) => ({
+    city,
+    targets: getPremiumLocalTargetsForCity(city.slug),
+  }))
+  .filter(({ targets }) => targets.length > 0);
 
 export const CityLinks = () => {
   return (
@@ -37,14 +44,15 @@ export const CityLinks = () => {
               Voyance, numérologie & soins énergétiques près de Gerponville
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Le cabinet Tourma-Line est à Gerponville. Retrouvez les pages locales utiles
-              pour Fécamp, Valmont, Cany-Barville et les communes proches, sans prétendre
-              disposer d'un cabinet dans chaque ville.
+              Le cabinet Tourma-Line est à Gerponville. Nous mettons en avant les pages locales
+              qui répondent aux recherches les plus utiles autour de Fécamp, Valmont,
+              Cany-Barville, Yvetot et la Côte d'Albâtre, sans créer trois pages fortes
+              automatiquement pour chaque commune.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
-            {nearbyCities.map((city) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-8">
+            {priorityCities.map(({ city, targets }) => (
               <article
                 key={city.slug}
                 className="rounded-2xl border border-brand-lilas/30 bg-brand-lilas/10 p-6"
@@ -54,19 +62,25 @@ export const CityLinks = () => {
                   <h3 className="font-display text-xl text-brand-dark">{city.name}</h3>
                 </div>
                 <div className="space-y-2">
-                  {localServiceLinks.map((service) => (
+                  {targets.map((target) => (
                     <Link
-                      key={service.slug}
-                      to={`/${service.slug}-${city.slug}`}
+                      key={target.serviceSlug}
+                      to={`/${target.serviceSlug}-${city.slug}`}
                       className="block text-sm font-medium text-brand-dark hover:text-brand-purple transition-colors"
                     >
-                      {service.label} près de {city.name} →
+                      {serviceLabels[target.serviceSlug] ?? target.serviceSlug} près de {city.name} →
                     </Link>
                   ))}
                 </div>
               </article>
             ))}
           </div>
+
+          <p className="text-sm text-gray-500 text-center max-w-3xl mx-auto mb-14">
+            Les communes ou prestations secondaires — notamment Ourville-en-Caux — restent
+            accessibles sur le site et seront consolidées dans les hubs territoriaux du Pays de Caux
+            et de la Côte d'Albâtre plutôt que surpondérées depuis la page d'accueil.
+          </p>
 
           <div className="bg-brand-dark rounded-3xl p-8 sm:p-10 text-center text-white">
             <GlobeIcon className="w-7 h-7 text-brand-lilas mx-auto mb-3" />

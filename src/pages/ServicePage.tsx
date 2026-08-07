@@ -5,6 +5,7 @@ import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { WhatsAppIcon, MapPinIcon, ArrowLeftIcon } from "../components/ui/icons";
 import { getPremiumLocalTargetsForService } from "../data/localSeoStrategy.mjs";
+import { territorialHubs } from "../data/territorialHubs.mjs";
 
 interface ServicePageProps {
   title: string;
@@ -168,6 +169,37 @@ export const ServicePage = ({
             </div>
           </section>
         )}
+
+        <section className="py-16 bg-white" aria-label="Zones couvertes">
+          <div className="container mx-auto px-6 max-w-5xl">
+            <div className="text-center mb-10">
+              <p className="text-brand-purple text-sm font-bold uppercase tracking-widest mb-3">
+                Zones couvertes
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4">
+                {title} dans le Pays de Caux et autour du cabinet
+              </h2>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Les communes secondaires sont regroupées dans des hubs territoriaux afin de couvrir le secteur sans multiplier des pages locales quasi identiques.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              {territorialHubs.map((hub) => (
+                <Link
+                  key={hub.slug}
+                  to={`/zones/${hub.slug}`}
+                  className="rounded-2xl border border-brand-lilas/30 bg-brand-lilas/10 p-6 hover:border-brand-purple hover:shadow-md transition-all"
+                >
+                  <span className="block font-display text-xl text-brand-dark mb-2">{hub.label}</span>
+                  <span className="text-sm leading-relaxed text-gray-600">
+                    {hub.coverageExamples.slice(0, 4).join(" · ")}
+                  </span>
+                  <span className="mt-4 block text-sm font-semibold text-brand-purple">Explorer la zone →</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section
           className="py-20 bg-white"

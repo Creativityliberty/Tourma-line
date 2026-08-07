@@ -10,6 +10,17 @@ const localServiceLinks = [
   { slug: "soin-lahochi", label: "Soin énergétique" },
 ];
 
+const nearbySlugs = new Set([
+  "fecamp",
+  "valmont",
+  "cany-barville",
+  "ourville-en-caux",
+  "saint-riquier-es-plains",
+  "yvetot",
+]);
+
+const nearbyCities = localCities.filter((city) => nearbySlugs.has(city.slug));
+
 export const CityLinks = () => {
   return (
     <section id="consultations-france" className="py-20 bg-white overflow-hidden">
@@ -19,21 +30,21 @@ export const CityLinks = () => {
             <div className="flex flex-col items-center mb-3">
               <MapPinIcon className="w-6 h-6 text-brand-lilas mb-2" />
               <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest">
-                Autour de Gerponville
+                Secteur du cabinet
               </p>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4">
-              Voyance, numérologie & soins énergétiques en Seine-Maritime
+              Voyance, numérologie & soins énergétiques près de Gerponville
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Le cabinet Tourma-Line est à Gerponville. Retrouvez les pages locales utiles
-              pour Fécamp, Valmont, Cany-Barville et les principales communes du secteur,
-              sans prétendre disposer d'un cabinet dans chaque ville.
+              pour Fécamp, Valmont, Cany-Barville et les communes proches, sans prétendre
+              disposer d'un cabinet dans chaque ville.
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-14">
-            {localCities.map((city) => (
+            {nearbyCities.map((city) => (
               <article
                 key={city.slug}
                 className="rounded-2xl border border-brand-lilas/30 bg-brand-lilas/10 p-6"

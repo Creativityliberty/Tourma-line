@@ -2,6 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { allCities, localCities, nationalCities, internationalCities } from "../src/data/citiesData.mjs";
+import { territorialHubs } from "../src/data/territorialHubs.mjs";
+import { getPremiumLocalTargets } from "../src/data/localSeoStrategy.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -10,13 +12,15 @@ export const BASE_URL = "https://www.tourma-line.fr";
 
 // Date de dernière modification des pages principales et des templates villes.
 // À mettre à jour uniquement lors d'une modification substantielle de ces contenus.
-export const SITE_LAST_MOD = "2026-08-07";
+export const SITE_LAST_MOD = "2026-08-08";
 
 export const SERVICES = [
   { slug: "numerologie", label: "Numérologie" },
   { slug: "cartomancie", label: "Voyance & Cartomancie" },
   { slug: "soin-lahochi", label: "Soin énergétique Lahochi" },
 ];
+
+export const TERRITORY_ROUTES = territorialHubs.map((hub) => hub.path);
 
 export const STATIC_ROUTES = [
   "/",
@@ -25,6 +29,7 @@ export const STATIC_ROUTES = [
   "/cartomancie",
   "/soin-lahochi",
   "/consultation-a-distance",
+  ...TERRITORY_ROUTES,
   "/blog",
   "/mentions-legales",
   "/politique-de-confidentialite",
@@ -81,12 +86,19 @@ export function getBlogSlugSet() {
   return new Set(getBlogSlugs());
 }
 
-// Seules les communes locales sont générées/prérendues/indexables.
-// Les anciennes pages nationales et internationales sont consolidées vers
-// /consultation-a-distance via des redirections permanentes Vercel.
+// Routes runtime : les anciennes pages locales restent accessibles pour conserver
+// les URLs historiques et le maillage, même lorsqu'elles ne sont plus indexables.
 export function getCityRoutes() {
   return localCities.flatMap((city) =>
     SERVICES.map((service) => `/${service.slug}-${city.slug}`)
+  );
+}
+
+// Routes réellement proposées à Google : seulement les landings locales qui ont
+// obtenu un signal Tier A dans le moteur SEO. Les Tier B/C sont absorbées par les hubs.
+export function getIndexableCityRoutes() {
+  return getPremiumLocalTargets().map(
+    (target) => `/${target.serviceSlug}-${target.citySlug}`
   );
 }
 
@@ -95,7 +107,7 @@ export function getRoutes() {
   return [
     ...STATIC_ROUTES,
     ...blogSlugs.map((slug) => `/blog/${slug}`),
-    ...getCityRoutes(),
+    ...getIndexableCityRoutes(),
   ];
 }
 

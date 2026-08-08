@@ -97,7 +97,7 @@ for (const [slug, contract] of Object.entries(required)) {
     assert(!content.includes(route), `${file} must not link to HOLD local landing ${route}`);
   }
 
-  for (const riskyPhrase of ["guérison garantie", "prédiction certaine", "guérit"] ) {
+  for (const riskyPhrase of ["guérison garantie", "prédiction certaine", "guérit"]) {
     assert(!lower.includes(riskyPhrase), `${file} contains prohibited guaranteed/medical wording: ${riskyPhrase}`);
   }
   if (slug !== "choisir-voyante-cartomancienne-serieuse") {
@@ -115,5 +115,18 @@ const routes = getRoutes();
 for (const slug of Object.keys(required)) {
   assert(routes.includes(`/blog/${slug}`), `Generated routes must include /blog/${slug}`);
 }
+
+const servicePage = fs.readFileSync(path.join(rootDir, "src/pages/ServicePage.tsx"), "utf8");
+const numerologiePage = fs.readFileSync(path.join(rootDir, "src/pages/NumerologiePage.tsx"), "utf8");
+const cartomancePage = fs.readFileSync(path.join(rootDir, "src/pages/CartomancePage.tsx"), "utf8");
+const territoryHubPage = fs.readFileSync(path.join(rootDir, "src/pages/TerritoryHubPage.tsx"), "utf8");
+const blogPostPage = fs.readFileSync(path.join(rootDir, "src/pages/BlogPostPage.tsx"), "utf8");
+
+assert(servicePage.includes("Guides pour aller plus loin"), "ServicePage must expose the reciprocal editorial guide section");
+assert(numerologiePage.includes("choisir-numerologue-consultation"), "NumerologiePage must link to the choosing-a-numerologist guide");
+assert(numerologiePage.includes("annee-personnelle-numerologie"), "NumerologiePage must link to the personal-year guide");
+assert(cartomancePage.includes("choisir-voyante-cartomancienne-serieuse"), "CartomancePage must link to the voyance trust guide");
+assert(territoryHubPage.includes("consulter-seine-maritime-cabinet-distance"), "TerritoryHubPage must link to the Seine-Maritime decision guide");
+assert(blogPostPage.includes("post.author") && blogPostPage.includes("#line-simon"), "BlogPostPage must identify Line Simon from article metadata and entity schema");
 
 console.log("Editorial authority verification passed.");

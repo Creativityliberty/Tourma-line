@@ -60,31 +60,37 @@ export const Footer = () => {
                     </div>
 
                     <div>
-                        <h4 className="text-lg font-semibold mb-3">Liens utiles</h4>
-                        <ul className="text-sm text-gray-300 space-y-2 mb-5">
-                            <li><Link to="/cartomancie" className="hover:text-brand-purple underline">Voyance & cartomancie</Link></li>
-                            <li><Link to="/numerologie" className="hover:text-brand-purple underline">Numérologie</Link></li>
-                            <li><Link to="/soin-lahochi" className="hover:text-brand-purple underline">Soin énergétique Lahochi</Link></li>
-                            <li><Link to="/blog" className="hover:text-brand-purple underline">Blog</Link></li>
-                        </ul>
-                        <h4 className="text-lg font-semibold mb-3">Liens légaux</h4>
-                        <ul className="text-sm text-gray-300 space-y-2">
-                            <li>
-                                <Link to="/mentions-legales" className="hover:text-brand-purple underline">
-                                    Mentions légales
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/politique-de-confidentialite" className="hover:text-brand-purple underline">
-                                    Politique de confidentialité
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/conditions-generales" className="hover:text-brand-purple underline">
-                                    Conditions générales
-                                </Link>
-                            </li>
-                        </ul>
+                        <nav aria-label="Liens principaux Tourma-Line">
+                            <h4 className="text-lg font-semibold mb-3">Liens utiles</h4>
+                            <ul className="text-sm text-gray-300 space-y-2 mb-5">
+                                <li><Link to="/prestations" className="hover:text-brand-purple underline">Prestations</Link></li>
+                                <li><Link to="/cartomancie" className="hover:text-brand-purple underline">Voyance & cartomancie</Link></li>
+                                <li><Link to="/numerologie" className="hover:text-brand-purple underline">Numérologie</Link></li>
+                                <li><Link to="/soin-lahochi" className="hover:text-brand-purple underline">Soin énergétique Lahochi</Link></li>
+                                <li><Link to="/consultation-a-distance" className="hover:text-brand-purple underline">Consultation à distance</Link></li>
+                                <li><Link to="/blog" className="hover:text-brand-purple underline">Guides & blog</Link></li>
+                            </ul>
+                        </nav>
+                        <nav aria-label="Liens légaux">
+                            <h4 className="text-lg font-semibold mb-3">Liens légaux</h4>
+                            <ul className="text-sm text-gray-300 space-y-2">
+                                <li>
+                                    <Link to="/mentions-legales" className="hover:text-brand-purple underline">
+                                        Mentions légales
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/politique-de-confidentialite" className="hover:text-brand-purple underline">
+                                        Politique de confidentialité
+                                    </Link>
+                                </li>
+                                <li>
+                                    <Link to="/conditions-generales" className="hover:text-brand-purple underline">
+                                        Conditions générales
+                                    </Link>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
 

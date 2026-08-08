@@ -79,6 +79,46 @@ const HUBS = [
     officialSourceUrl: "https://www.cote-albatre.fr/territoire",
   },
   {
+    slug: "caux-seine-agglo",
+    path: "/zones/caux-seine-agglo",
+    label: "Caux Seine Agglo",
+    shortLabel: "Caux Seine",
+    pageTitle: "Voyance, numérologie & soins énergétiques — Caux Seine Agglo | Tourma-Line",
+    headline: "Voyance, numérologie & soins énergétiques dans Caux Seine Agglo",
+    metaDescription:
+      "Tourma-Line accompagne les habitants de Bolbec, Lillebonne, Port-Jérôme-sur-Seine et Caux Seine : voyance, numérologie et Lahochi depuis Gerponville ou à distance.",
+    eyebrow: "Bolbec / Lillebonne / vallée de Seine",
+    intro:
+      "Caux Seine Agglo devient le premier nouveau hub issu de la validation SERP départementale. Il regroupe les recherches autour de Bolbec, Lillebonne, Port-Jérôme-sur-Seine et des communes voisines sans fabriquer trois pages par ville. Tourma-Line reste physiquement installé à Gerponville et propose la consultation à distance lorsque le déplacement n'est pas pertinent.",
+    localContext:
+      "Caux Seine agglo compte officiellement 50 communes et 79 337 habitants en vigueur au 1er janvier 2026. Les recherches observées autour de Bolbec et Lillebonne montrent des praticiens locaux mais aussi une forte présence d'annuaires : le bon niveau de réponse pour Tourma-Line est donc un hub territorial utile avant d'envisager une landing ville spécifique.",
+    boundaryNote:
+      "Caux Seine Agglo est utilisé selon son périmètre intercommunal officiel. Tourma-Line ne possède aucun cabinet à Bolbec, Lillebonne ou Port-Jérôme-sur-Seine ; l'unique cabinet reste à Gerponville.",
+    facts: [
+      "50 communes dans le périmètre officiel",
+      "79 337 habitants en vigueur au 1er janvier 2026",
+      "Bolbec et Lillebonne font partie des pôles locaux utilisés pour orienter la couverture SEO",
+    ],
+    featuredCities: [
+      { slug: "bolbec", label: "Bolbec" },
+      { slug: "lillebonne", label: "Lillebonne" },
+      { slug: "port-jerome-sur-seine", label: "Port-Jérôme-sur-Seine" },
+      { slug: "rives-en-seine", label: "Rives-en-Seine" },
+    ],
+    coverageExamples: [
+      "Bolbec",
+      "Lillebonne",
+      "Port-Jérôme-sur-Seine",
+      "Rives-en-Seine",
+      "Gruchet-le-Valasse",
+      "Terres-de-Caux",
+      "Saint-Nicolas-de-la-Taille",
+      "La Frénaye",
+    ],
+    officialSourceLabel: "Caux Seine agglo — 50 communes",
+    officialSourceUrl: "https://www.cauxseine.fr/lagglomeration/territoire/50-communes/",
+  },
+  {
     slug: "pays-de-caux",
     path: "/zones/pays-de-caux",
     label: "Pays de Caux",
@@ -91,7 +131,7 @@ const HUBS = [
     intro:
       "Le Pays de Caux constitue le grand repère géographique de la stratégie locale Tourma-Line. Ce hub relie les secteurs de Fécamp, Valmont, Cany-Barville, Ourville-en-Caux et Yvetot sans prétendre qu'il s'agit d'une intercommunalité unique.",
     localContext:
-      "Yvetot se présente officiellement comme la capitale du Pays de Caux. Pour Tourma-Line, ce hub sert de niveau géographique supérieur : il oriente vers les pages locales fortes et vers les deux hubs administratifs plus précis autour de Fécamp et de la Côte d'Albâtre.",
+      "Yvetot se présente officiellement comme la capitale du Pays de Caux. Pour Tourma-Line, ce hub sert de niveau géographique supérieur : il oriente vers les pages locales fortes et vers les hubs administratifs plus précis autour de Fécamp, de la Côte d'Albâtre et désormais de Caux Seine.",
     boundaryNote:
       "Pays de Caux est utilisé ici comme repère géographique et culturel, pas comme un périmètre administratif unique ni comme une liste fermée de communes.",
     facts: [
@@ -128,6 +168,10 @@ const cityHubMap = {
   "ourville-en-caux": "cote-d-albatre",
   "saint-riquier-es-plains": "cote-d-albatre",
   yvetot: "pays-de-caux",
+  bolbec: "caux-seine-agglo",
+  lillebonne: "caux-seine-agglo",
+  "port-jerome-sur-seine": "caux-seine-agglo",
+  "rives-en-seine": "caux-seine-agglo",
 };
 
 export const territorialHubs = HUBS;

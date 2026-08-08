@@ -1,7 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { SparklesIcon } from "../ui/icons";
 import { services } from "../../data/services";
+
+const servicePaths: Record<string, string> = {
+    numerology: "/numerologie",
+    cartomancy: "/cartomancie",
+    lahochi: "/soin-lahochi",
+};
 
 export const Services = ({
     activeTab,
@@ -11,18 +18,19 @@ export const Services = ({
     setActiveTab: (tab: string) => void;
 }) => {
     const currentService = services[activeTab];
+    const currentServicePath = servicePaths[activeTab];
 
     return (
         <section id="services" className="py-20 bg-white">
             <AnimateOnScroll>
                 <div className="container mx-auto text-center px-4 sm:px-6">
-                    <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-8 sm:mb-12">
-                        Mes outils pour vous guider.
+                    <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-6">
+                        Voyance, numérologie & soins énergétiques
                     </h2>
-                    <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto mb-8">
-                        La numérologie et la cartomancie sont proposées comme une seule et
-                        même prestation, combinées pour vous offrir une consultation
-                        complète et approfondie.
+                    <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto mb-10">
+                        Tourma-Line propose trois univers complémentaires : la voyance et cartomancie,
+                        la numérologie, et les séances énergétiques Lahochi. Certaines formules associent
+                        numérologie et cartomancie pour travailler une situation sous plusieurs angles.
                     </p>
                     <div className="flex flex-row md:justify-center overflow-x-auto whitespace-nowrap gap-4 sm:gap-6 mb-8 border-b-2 border-brand-lilas pb-1 scrollbar-none">
                         {Object.values(services).map((service) => (
@@ -75,7 +83,14 @@ export const Services = ({
                                             ))}
                                         </ul>
                                     )}
-
+                                    {currentServicePath && (
+                                        <Link
+                                            to={currentServicePath}
+                                            className="inline-flex mt-7 items-center justify-center rounded-full bg-brand-dark px-6 py-3 text-sm sm:text-base font-semibold text-white transition-transform hover:scale-105 active:scale-95"
+                                        >
+                                            Découvrir {currentService.title.toLowerCase()} en détail
+                                        </Link>
+                                    )}
                                 </div>
                             </div>
                         </AnimateOnScroll>

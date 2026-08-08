@@ -21,11 +21,11 @@ export const formules: Formule[] = [
     id: 'harmonie-interieure',
     icon: BalanceIcon,
     title: 'Formule « Harmonie Intérieure »',
-    subtitle: '2 Séances sur 1 mois',
-    objective: 'Apaiser les émotions, comprendre les schémas répétitifs et rééquilibrer les énergies pour restaurer l\'harmonie globale.',
+    subtitle: '2 séances sur 1 mois',
+    objective: 'Prendre du recul sur vos émotions et vos schémas récurrents, puis vous accorder un temps de détente et de recentrage.',
     details: [
       '1 séance combinée de numérologie et de cartomancie.',
-      '1 soin Lahochi (à une autre date).'
+      '1 séance énergétique Lahochi à une autre date.'
     ],
     duration: 'environ 1 mois',
     price: '120€',
@@ -37,11 +37,11 @@ export const formules: Formule[] = [
     icon: ButterflyIcon,
     title: 'Formule « Renaissance »',
     subtitle: 'Accompagnement sur 3 mois',
-    objective: 'Guérir en profondeur, libérer les mémoires émotionnelles et retrouver une stabilité intérieure durable (traumatismes, deuils, ruptures).',
+    objective: 'Un accompagnement de réflexion personnelle et de bien-être sur plusieurs semaines pour traverser une période de changement avec davantage de recul.',
     details: [
-      '1 séance de cartomancie + numérologie (démarrage).',
-      '3 soins Lahochi (1 par mois).',
-      'Suivi énergétique et guidance entre les séances.',
+      '1 séance de cartomancie + numérologie au démarrage.',
+      '3 séances énergétiques Lahochi, à raison d’environ une par mois.',
+      'Échanges de suivi et guidance entre les séances selon la formule.',
       '1 séance de cartomancie de clôture.'
     ],
     duration: '3 mois',
@@ -53,17 +53,17 @@ export const formules: Formule[] = [
   {
     id: 'soin-lahochi-3-seances',
     icon: LahochiIcon,
-    title: 'Formule « Soin Lahochi »',
+    title: 'Formule « Soin énergétique Lahochi »',
     subtitle: 'Pack de 3 séances',
-    objective: 'Un travail énergétique profond et suivi pour ancrer le bien-être, libérer les blocages persistants et maintenir une vibration élevée.',
+    objective: 'Trois temps de bien-être et de recentrage pour les personnes qui souhaitent inscrire la pratique Lahochi dans la durée.',
     details: [
-      '3 séances de soin Lahochi complètes.',
-      'Suivi de l\'évolution énergétique entre chaque séance.',
-      'Idéal pour un travail de fond ou une période de transition.'
+      '3 séances énergétiques Lahochi.',
+      'Un temps d’échange autour de vos ressentis entre les séances.',
+      'Une formule adaptée aux périodes où vous souhaitez vous accorder des rendez-vous réguliers de détente.'
     ],
-    duration: 'À définir selon besoins',
+    duration: 'À définir selon vos préférences',
     price: '150€',
     imageUrl: '/images/formules/lahochi.jpg',
-    imageAlt: 'Illustration de la formule Soin Lahochi'
+    imageAlt: 'Illustration de la formule Soin énergétique Lahochi'
   }
 ];

@@ -10,6 +10,8 @@ export interface BlogPost {
   content: string; // Le corps de l'article en Markdown
   image: string;
   date: string;
+  updated?: string;
+  author: string;
   readTime: string;
   category: string;
   persona: string;
@@ -25,10 +27,10 @@ export const blogPosts: BlogPost[] = Object.keys(rawPosts)
   .filter((path) => !path.includes('PLAN') && !path.includes('PROGRAMME'))
   .map((path, index) => {
     const fileContent = rawPosts[path] as string;
-    
+
     // Extraction des métadonnées (YAML frontmatter) et du corps du texte Markdown
     const { attributes, body } = fm<any>(fileContent);
-    
+
     return {
       id: String(index),
       slug: attributes.slug || path.replace('../../blog_markdowns/', '').replace('.md', ''),
@@ -38,6 +40,8 @@ export const blogPosts: BlogPost[] = Object.keys(rawPosts)
       content: body,
       image: attributes.image || "/blog-chemin-devie.png",
       date: attributes.date || new Date().toISOString().split('T')[0],
+      updated: attributes.updated || undefined,
+      author: attributes.author || "Line Simon",
       readTime: attributes.readTime || "5 min",
       category: attributes.category || "Général",
       persona: attributes.persona || "",

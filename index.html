@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
   <head>
@@ -6,43 +5,39 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#2d1b4e" />
-    
-    <!-- SEO Meta Tags -->
-    <title>Tourma-Line | Numérologue & Cartomancienne Normandie — Soins Lahochi</title>
-    <meta name="description" content="Voyance et cartomancie en Normandie avec Line : réponses claires sur l'amour, le travail et l'avenir. Numérologie et soins Lahochi à Gerponville (76) ou à distance. RDV dès aujourd'hui en ligne." />
-    <meta name="keywords" content="numérologue Normandie, numérologue Seine-Maritime, cartomancienne Normandie, soin Lahochi Gerponville, numérologie Seine-Maritime, cartomancie Normandie, consultation à distance" />
+
+    <!-- SEO fallback for the prerendered home page -->
+    <title>Voyante, Numérologue & Énergéticienne en Seine-Maritime | Tourma-Line</title>
+    <meta name="description" content="Line Simon, voyante, numérologue et énergéticienne à Gerponville en Seine-Maritime. Cartomancie, numérologie et Lahochi près de Fécamp et Valmont ou à distance." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.tourma-line.fr/" />
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
-    <!-- Open Graph / Facebook Meta Tags -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Tourma-Line" />
     <meta property="og:locale" content="fr_FR" />
     <meta property="og:url" content="https://www.tourma-line.fr/" />
-    <meta property="og:title" content="TOURMA-LINE | Numérologue, Cartomancie & Soin Lahochi en Normandie" />
-    <meta property="og:description" content="Guidance personnalisée et soins énergétiques pour votre bien-être en Normandie. Séances à Gerponville au cabinet et à distance." />
+    <meta property="og:title" content="Tourma-Line | Voyante, Numérologue & Énergéticienne en Seine-Maritime" />
+    <meta property="og:description" content="Cartomancie, numérologie et soins énergétiques Lahochi à Gerponville, près de Fécamp et Valmont, ou à distance." />
     <meta property="og:image" content="https://www.tourma-line.fr/hero-tourma-line.jpg" />
     <meta property="og:image:width" content="1600" />
     <meta property="og:image:height" content="900" />
 
-    <!-- Twitter Meta Tags -->
+    <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@tourmaline" />
     <meta property="twitter:url" content="https://www.tourma-line.fr/" />
-    <meta name="twitter:title" content="TOURMA-LINE | Numérologue, Cartomancie & Soin Lahochi en Normandie" />
-    <meta name="twitter:description" content="Guidance personnalisée et soins énergétiques pour votre bien-être en Normandie. Séances à Gerponville au cabinet et à distance." />
+    <meta name="twitter:title" content="Tourma-Line | Voyante, Numérologue & Énergéticienne en Seine-Maritime" />
+    <meta name="twitter:description" content="Cartomancie, numérologie et soins énergétiques Lahochi à Gerponville, près de Fécamp et Valmont, ou à distance." />
     <meta name="twitter:image" content="https://www.tourma-line.fr/hero-tourma-line.jpg" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Viga&display=swap" rel="stylesheet">
-    
-    <!-- External Services (Optimized Preconnects) -->
+
+    <!-- External Services -->
     <link rel="preconnect" href="https://elfsightcdn.com">
-    
-    <!-- Deferred load of heavy Elfsight Reviews widget for better FCP/LCP -->
     <script>
       window.addEventListener('DOMContentLoaded', () => {
         const loadElfsight = () => {
@@ -51,7 +46,6 @@
           script.async = true;
           document.head.appendChild(script);
         };
-        // Delay script injection until browser is idle or 3 seconds have passed
         if ('requestIdleCallback' in window) {
           requestIdleCallback(() => setTimeout(loadElfsight, 1500));
         } else {
@@ -60,121 +54,78 @@
       });
     </script>
 
-    <!-- Schema.org — LocalBusiness -->
+    <!-- Entity graph: one consistent business/person/website identity -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Tourma-Line — Line",
-      "description": "Numérologue et cartomancienne en Normandie. Soins énergétiques Lahochi. Séances en cabinet à Gerponville et à distance.",
-      "url": "https://www.tourma-line.fr/",
-      "telephone": "+33649653186",
-      "email": "line.simon.ls@gmail.com",
-      "image": "https://www.tourma-line.fr/hero-tourma-line.jpg",
-      "priceRange": "€€",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "4 résidence Les Peupliers",
-        "addressLocality": "Gerponville",
-        "postalCode": "76540",
-        "addressCountry": "FR"
-      },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 49.74,
-        "longitude": 0.51
-      },
-      "areaServed": [
-        {"@type": "City", "name": "Gerponville"},
-        {"@type": "City", "name": "Fécamp"},
-        {"@type": "City", "name": "Valmont"},
-        {"@type": "City", "name": "Cany-Barville"},
-        {"@type": "City", "name": "Ourville-en-Caux"},
-        {"@type": "City", "name": "Yvetot"},
-        {"@type": "City", "name": "Rouen"},
-        {"@type": "City", "name": "Le Havre"},
-        {"@type": "City", "name": "Paris"},
-        {"@type": "City", "name": "Nice"},
-        {"@type": "City", "name": "Bordeaux"},
-        {"@type": "City", "name": "Lyon"},
-        {"@type": "City", "name": "Marseille"},
-        {"@type": "City", "name": "Bruxelles"},
-        {"@type": "City", "name": "Genève"},
-        {"@type": "AdministrativeArea", "name": "Seine-Maritime"},
-        {"@type": "AdministrativeArea", "name": "Normandie"},
-        {"@type": "Country", "name": "France"},
-        {"@type": "Country", "name": "Belgique"},
-        {"@type": "Country", "name": "Suisse"}
-      ],
-      "sameAs": [
-        "https://www.facebook.com/tourma.line.534540"
-      ],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Services de guidance et bien-être",
-        "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Consultation de numérologie"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Consultation de cartomancie"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Soin énergétique Lahochi"}}
-        ]
-      }
-    }
-    </script>
-
-    <!-- Schema.org — WebSite -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "Tourma-Line",
-      "alternateName": "Line — Numérologue et Cartomancienne",
-      "url": "https://www.tourma-line.fr/",
-      "inLanguage": "fr-FR",
-      "publisher": {
-        "@id": "https://www.tourma-line.fr/#organization"
-      }
-    }
-    </script>
-
-    <!-- Schema.org — Organization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@id": "https://www.tourma-line.fr/#organization",
-      "@type": "Organization",
-      "name": "Tourma-Line",
-      "url": "https://www.tourma-line.fr/",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.tourma-line.fr/logo-tourmaline.png"
-      },
-      "image": "https://www.tourma-line.fr/hero-tourma-line.jpg",
-      "email": "line.simon.ls@gmail.com",
-      "telephone": "+33649653186",
-      "sameAs": [
-        "https://www.facebook.com/tourma.line.534540",
-        "https://cal.com/tourma-line"
+      "@graph": [
+        {
+          "@id": "https://www.tourma-line.fr/#business",
+          "@type": "LocalBusiness",
+          "name": "Tourma-Line — Line Simon",
+          "alternateName": ["Tourma-Line", "Tourma Line"],
+          "description": "Cabinet de Line Simon à Gerponville en Seine-Maritime : voyance et cartomancie, numérologie et séances énergétiques Lahochi. Consultations sur rendez-vous et à distance.",
+          "url": "https://www.tourma-line.fr/",
+          "telephone": "+33649653186",
+          "email": "line.simon.ls@gmail.com",
+          "image": "https://www.tourma-line.fr/hero-tourma-line.jpg",
+          "logo": "https://www.tourma-line.fr/logo-tourmaline.png",
+          "priceRange": "€€",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "4 résidence Les Peupliers",
+            "addressLocality": "Gerponville",
+            "postalCode": "76540",
+            "addressRegion": "Normandie",
+            "addressCountry": "FR"
+          },
+          "areaServed": [
+            {"@type": "City", "name": "Gerponville"},
+            {"@type": "City", "name": "Fécamp"},
+            {"@type": "City", "name": "Valmont"},
+            {"@type": "City", "name": "Cany-Barville"},
+            {"@type": "AdministrativeArea", "name": "Seine-Maritime"},
+            {"@type": "AdministrativeArea", "name": "Normandie"}
+          ],
+          "sameAs": [
+            "https://www.facebook.com/tourma.line.534540"
+          ],
+          "employee": {"@id": "https://www.tourma-line.fr/#line-simon"},
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Prestations Tourma-Line",
+            "itemListElement": [
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Voyance et cartomancie", "url": "https://www.tourma-line.fr/cartomancie"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Numérologie", "url": "https://www.tourma-line.fr/numerologie"}},
+              {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Soin énergétique Lahochi", "url": "https://www.tourma-line.fr/soin-lahochi"}}
+            ]
+          }
+        },
+        {
+          "@id": "https://www.tourma-line.fr/#line-simon",
+          "@type": "Person",
+          "name": "Line Simon",
+          "jobTitle": "Voyante, numérologue et praticienne en soins énergétiques Lahochi",
+          "url": "https://www.tourma-line.fr/",
+          "telephone": "+33649653186",
+          "worksFor": {"@id": "https://www.tourma-line.fr/#business"},
+          "sameAs": [
+            "https://www.facebook.com/tourma.line.534540"
+          ]
+        },
+        {
+          "@id": "https://www.tourma-line.fr/#website",
+          "@type": "WebSite",
+          "name": "Tourma-Line",
+          "alternateName": "Tourma Line",
+          "url": "https://www.tourma-line.fr/",
+          "inLanguage": "fr-FR",
+          "publisher": {"@id": "https://www.tourma-line.fr/#business"}
+        }
       ]
     }
     </script>
-
-    <!-- Schema.org — Person (Line Simon) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Line",
-      "jobTitle": "Numérologue et cartomancienne",
-      "worksFor": {"@type": "LocalBusiness", "name": "Tourma-Line"},
-      "url": "https://www.tourma-line.fr/",
-      "telephone": "+33649653186",
-      "sameAs": [
-        "https://www.facebook.com/tourma.line.534540",
-        "https://cal.com/tourma-line"
-      ]
-    }
-    </script>
-</head>
+  </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>

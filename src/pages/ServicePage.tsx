@@ -4,6 +4,8 @@ import { AnimateOnScroll } from "../components/ui/AnimateOnScroll";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { WhatsAppIcon, MapPinIcon, ArrowLeftIcon } from "../components/ui/icons";
+import { getPremiumLocalTargetsForService } from "../data/localSeoStrategy.mjs";
+import { territorialHubs } from "../data/territorialHubs.mjs";
 
 interface ServicePageProps {
   title: string;
@@ -22,6 +24,11 @@ interface ServicePageProps {
   canonicalPath: string;
   breadcrumb: string;
   localInfo?: string;
+  relatedGuides?: {
+    title: string;
+    description: string;
+    path: string;
+  }[];
 }
 
 export const ServicePage = ({
@@ -33,10 +40,11 @@ export const ServicePage = ({
   sections,
   faq,
   ctaText,
+  canonicalPath,
   breadcrumb,
   localInfo,
+  relatedGuides = [],
 }: ServicePageProps) => {
-  // Scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -48,11 +56,13 @@ export const ServicePage = ({
     }
   };
 
+  const serviceSlug = canonicalPath.replace(/^\//, "");
+  const priorityTargets = getPremiumLocalTargetsForService(serviceSlug);
+
   return (
     <div className="min-h-screen bg-white font-sans">
       <Header onNavClick={handleNavClick} />
 
-      {/* Hero Section */}
       <section
         className="relative pt-32 pb-20 bg-brand-dark text-white overflow-hidden"
         aria-label={`Page dédiée — ${breadcrumb}`}
@@ -67,7 +77,6 @@ export const ServicePage = ({
         <div className="absolute inset-0 bg-gradient-to-b from-brand-dark/80 via-brand-dark/60 to-brand-dark" />
 
         <div className="relative z-10 container mx-auto px-6 max-w-4xl">
-          {/* Breadcrumb */}
           <nav aria-label="Fil d'Ariane" className="mb-6">
             <ol className="flex items-center gap-2 text-sm text-gray-400">
               <li>
@@ -89,9 +98,7 @@ export const ServicePage = ({
           {localInfo && (
             <div className="flex items-center gap-2 text-brand-lilas font-medium">
               <MapPinIcon className="w-5 h-5 flex-shrink-0" />
-              <p className="text-sm">
-                {localInfo}
-              </p>
+              <p className="text-sm">{localInfo}</p>
             </div>
           )}
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
@@ -117,7 +124,6 @@ export const ServicePage = ({
         </div>
       </section>
 
-      {/* Content Sections */}
       <main>
         <div className="container mx-auto px-6 max-w-4xl py-20">
           <div className="space-y-16">
@@ -137,7 +143,103 @@ export const ServicePage = ({
           </div>
         </div>
 
-        {/* FAQ Section avec Schema.org FAQPage */}
+        {priorityTargets.length > 0 && (
+          <section className="py-16 bg-brand-lilas/10 border-y border-brand-lilas/30">
+            <div className="container mx-auto px-6 max-w-5xl">
+              <div className="text-center mb-10">
+                <p className="text-brand-purple text-sm font-bold uppercase tracking-widest mb-3">
+                  Priorités locales
+                </p>
+                <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4">
+                  {title} dans les secteurs les plus pertinents
+                </h2>
+                <p className="text-gray-600 max-w-3xl mx-auto">
+                  Tourma-Line est installé à Gerponville. Ces pages locales répondent aux recherches
+                  les plus utiles autour du cabinet, sans prétendre disposer d'un établissement dans
+                  chacune de ces communes.
+                </p>
+              </div>
+
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {priorityTargets.map((target) => (
+                  <Link
+                    key={`${target.serviceSlug}-${target.citySlug}`}
+                    to={`/${target.serviceSlug}-${target.citySlug}`}
+                    className="rounded-2xl bg-white border border-brand-lilas/30 p-5 text-brand-dark hover:border-brand-purple hover:shadow-md transition-all"
+                  >
+                    <span className="block font-display text-xl mb-1">{target.cityLabel}</span>
+                    <span className="text-sm text-gray-600">{title} près de {target.cityLabel} →</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        <section className="py-16 bg-white" aria-label="Zones couvertes">
+          <div className="container mx-auto px-6 max-w-5xl">
+            <div className="text-center mb-10">
+              <p className="text-brand-purple text-sm font-bold uppercase tracking-widest mb-3">
+                Zones couvertes
+              </p>
+              <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4">
+                {title} dans le Pays de Caux et autour du cabinet
+              </h2>
+              <p className="text-gray-600 max-w-3xl mx-auto">
+                Les communes secondaires sont regroupées dans des hubs territoriaux afin de couvrir le secteur sans multiplier des pages locales quasi identiques.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              {territorialHubs.map((hub) => (
+                <Link
+                  key={hub.slug}
+                  to={`/zones/${hub.slug}`}
+                  className="rounded-2xl border border-brand-lilas/30 bg-brand-lilas/10 p-6 hover:border-brand-purple hover:shadow-md transition-all"
+                >
+                  <span className="block font-display text-xl text-brand-dark mb-2">{hub.label}</span>
+                  <span className="text-sm leading-relaxed text-gray-600">
+                    {hub.coverageExamples.slice(0, 4).join(" · ")}
+                  </span>
+                  <span className="mt-4 block text-sm font-semibold text-brand-purple">Explorer la zone →</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {relatedGuides.length > 0 && (
+          <section className="py-16 bg-brand-lilas/10 border-y border-brand-lilas/30" aria-label="Guides liés au service">
+            <div className="container mx-auto px-6 max-w-5xl">
+              <div className="max-w-3xl mb-10">
+                <p className="text-brand-purple text-sm font-bold uppercase tracking-widest mb-3">
+                  Ressources pratiques
+                </p>
+                <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4">
+                  Guides pour aller plus loin
+                </h2>
+                <p className="text-gray-600 leading-relaxed">
+                  Des réponses détaillées pour comparer les méthodes, préparer une consultation et comprendre les notions avant de réserver.
+                </p>
+              </div>
+              <div className="grid gap-5 md:grid-cols-2">
+                {relatedGuides.map((guide) => (
+                  <Link
+                    key={guide.path}
+                    to={guide.path}
+                    className="group rounded-3xl border border-brand-lilas/30 bg-white p-7 transition hover:-translate-y-1 hover:border-brand-purple hover:shadow-lg"
+                  >
+                    <span className="block font-display text-2xl text-brand-dark mb-3 group-hover:text-brand-purple">
+                      {guide.title}
+                    </span>
+                    <span className="block text-gray-600 leading-relaxed mb-5">{guide.description}</span>
+                    <span className="font-semibold text-brand-purple">Lire le guide →</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         <section
           className="py-20 bg-white"
           aria-label="Questions fréquentes"
@@ -178,14 +280,13 @@ export const ServicePage = ({
           </div>
         </section>
 
-        {/* CTA Bottom */}
         <section className="py-20 bg-brand-dark text-white text-center">
           <div className="container mx-auto px-6 max-w-2xl">
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6">
               Prêt(e) à réserver votre séance ?
             </h2>
             <p className="text-gray-300 text-lg mb-10">
-              Line vous reçoit en cabinet au 4 rue de Givrandville à Gerponville,
+              Line vous reçoit en cabinet au 4 résidence Les Peupliers à Gerponville,
               ou en consultation téléphonique partout en France.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

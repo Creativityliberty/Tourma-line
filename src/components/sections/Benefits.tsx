@@ -3,12 +3,12 @@ import { SparklesIcon } from "../ui/icons";
 
 export const Benefits = () => {
   const benefitsList = [
-    "Comprendre enfin pourquoi vous traversez ces situations répétitives — les schémas de votre vie prennent sens.",
-    "Mettre des mots sur ce que vous ressentez sans pouvoir l'exprimer vous-même, comme Patricia : 'une précision qui m'a touchée en plein cœur'.",
-    "Relâcher cette tension qui vous habite depuis des mois — un vrai soulagement physique et émotionnel.",
-    "Dormir mieux, vous sentir moins lourd(e) au quotidien, retrouver un sommeil réparateur.",
-    "Transformer votre épreuve (deuil, rupture, stress) en opportunité de changement, comme l'a vécu Patricia.",
-    "Avancer avec assurance sur votre chemin — des choix éclairés par des réponses justes et précises.",
+    "Prendre du recul sur les situations et les schémas qui reviennent dans votre parcours.",
+    "Mettre des mots sur vos questionnements et clarifier ce que vous souhaitez explorer pendant la séance.",
+    "Vous accorder un temps calme de détente et de recentrage lorsque vous choisissez une séance énergétique Lahochi.",
+    "Explorer une période de transition personnelle ou professionnelle avec un autre angle de lecture.",
+    "Structurer vos questions autour d'une relation, d'un choix, d'une rupture ou d'un changement important.",
+    "Repartir avec les éléments abordés pendant la séance pour poursuivre votre réflexion à votre rythme.",
   ];
 
   return (
@@ -16,11 +16,11 @@ export const Benefits = () => {
       <AnimateOnScroll>
         <div className="container mx-auto text-center px-6">
           <h2 className="text-4xl font-display text-brand-dark mb-4">
-            Ce que mes pratiques peuvent vous apporter
+            Ce que ces accompagnements peuvent vous apporter
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-            Chaque séance est une étape vers plus de clarté, d'harmonie et de
-            confiance en vous.
+            Des temps de réflexion, de guidance ou de bien-être selon la prestation choisie,
+            sans promesse médicale ni certitude absolue sur l'avenir.
           </p>
           <div className="grid md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto">
             {benefitsList.map((benefit, index) => (

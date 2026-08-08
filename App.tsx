@@ -21,15 +21,18 @@ import { FAQ } from "./src/components/sections/FAQ";
 import { Contact } from "./src/components/sections/Contact";
 import { BlogOverview } from "./src/components/sections/BlogOverview";
 
-// Service Pages (SEO — URLs dédiées)
+// Service Pages
 import { NumerologiePage } from "./src/pages/NumerologiePage";
 import { CartomancePage } from "./src/pages/CartomancePage";
 import { LahochiPage } from "./src/pages/LahochiPage";
+import { ConsultationDistancePage } from "./src/pages/ConsultationDistancePage";
 import { PrestationsPage } from "./src/pages/PrestationsPage";
 import { CityPage } from "./src/pages/CityPage";
+import { TerritoryHubPage } from "./src/pages/TerritoryHubPage";
 import { CityLinks } from "./src/components/sections/CityLinks";
 import { WhatsAppFloat } from "./src/components/ui/WhatsAppFloat";
-import { allCities } from "./src/data/cities";
+import { localCities } from "./src/data/cities";
+import { territorialHubs } from "./src/data/territorialHubs.mjs";
 import { BlogPostPage } from "./src/pages/BlogPostPage";
 import { BlogListPage } from "./src/pages/BlogListPage";
 import { NotFoundPage } from "./src/pages/NotFoundPage";
@@ -41,9 +44,6 @@ import { CGV } from "./src/pages/CGV";
 
 import "./src/index.css";
 
-/**
- * Handles automatic scrolling to sections based on URL path
- */
 const SectionScroller = () => {
   const { pathname, hash } = useLocation();
 
@@ -63,7 +63,7 @@ const SectionScroller = () => {
       "/rendezvous": "rendezvous"
     };
 
-    const targetId = pathMap[pathname] || (hash ? hash.substring(1) : null);
+    const targetId = hash ? hash.substring(1) : (pathMap[pathname] || null);
 
     if (targetId) {
       const element = document.getElementById(targetId);
@@ -116,8 +116,8 @@ function HomePage() {
       <Testimonials />
       <About />
       <FAQ />
+      <BlogOverview />
       <Contact />
-      {/* <BlogOverview /> */}
       <Footer />
     </div>
   );
@@ -132,9 +132,17 @@ function App() {
         <Route path="/numerologie" element={<NumerologiePage />} />
         <Route path="/cartomancie" element={<CartomancePage />} />
         <Route path="/soin-lahochi" element={<LahochiPage />} />
+        <Route path="/consultation-a-distance" element={<ConsultationDistancePage />} />
 
-        {/* Pages SEO villes */}
-        {allCities.flatMap((city) => [
+        {territorialHubs.map((hub) => (
+          <Route
+            key={hub.slug}
+            path={hub.path}
+            element={<TerritoryHubPage hub={hub} />}
+          />
+        ))}
+
+        {localCities.flatMap((city) => [
           <Route
             key={`num-${city.slug}`}
             path={`/numerologie-${city.slug}`}
@@ -152,16 +160,15 @@ function App() {
           />
         ])}
 
-        {/* Blog Pages */}
         <Route path="/blog" element={<BlogListPage />} />
         <Route path="/blog/:slug" element={<BlogPostPage />} />
 
-        {/* Legal Pages */}
         <Route path="/mentions-legales" element={<MentionsLegales />} />
         <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
         <Route path="/conditions-generales" element={<CGV />} />
 
-        {/* Sections de la page d'accueil (ancres, gérées par SectionScroller) */}
+        {/* Legacy section URLs remain available client-side for old in-app links.
+            Direct requests are permanently redirected at the Vercel edge. */}
         <Route path="/services" element={<HomePage />} />
         <Route path="/consultations" element={<HomePage />} />
         <Route path="/formules" element={<HomePage />} />
@@ -174,10 +181,7 @@ function App() {
         <Route path="/contact" element={<HomePage />} />
         <Route path="/rendezvous" element={<HomePage />} />
 
-        {/* 404 */}
         <Route path="/404" element={<NotFoundPage />} />
-
-        {/* Fallback */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
       <WhatsAppFloat />

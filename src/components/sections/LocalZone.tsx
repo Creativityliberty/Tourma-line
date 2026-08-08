@@ -12,7 +12,7 @@ export const LocalZone = () => {
   return (
     <section
       id="zone-consultation"
-      aria-label="Zone géographique de consultation — Line, Cabinet en Normandie"
+      aria-label="Cabinet Tourma-Line à Gerponville en Seine-Maritime"
       className="py-20 bg-brand-dark text-white"
     >
       <AnimateOnScroll>
@@ -21,22 +21,22 @@ export const LocalZone = () => {
             <div className="flex flex-col items-center mb-3">
               <MapPinIcon className="w-6 h-6 text-brand-lilas mb-2" />
               <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest">
-                En présentiel & distanciel
+                Cabinet à Gerponville
               </p>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6 leading-tight">
-              Numérologue et cartomancienne{" "}
-              <span className="text-brand-lilas">à votre écoute</span>
+              Voyante, numérologue & énergéticienne{" "}
+              <span className="text-brand-lilas">en Seine-Maritime</span>
             </h2>
             <p className="text-gray-300 text-lg mb-4 leading-relaxed">
-              Installée au <strong className="text-white">{contactInfo.address}</strong> à <strong className="text-white">{contactInfo.city} ({contactInfo.zipCode})</strong>, en Seine-Maritime, je vous reçois en cabinet sur rendez-vous pour un accompagnement personnalisé.
+              Line Simon vous reçoit au <strong className="text-white">{contactInfo.address}</strong>,{" "}
+              <strong className="text-white">{contactInfo.zipCode} {contactInfo.city}</strong>, sur rendez-vous.
+              Le cabinet se situe dans le secteur de Fécamp, Valmont et Cany-Barville.
             </p>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Pour les personnes éloignées, les consultations de{" "}
-              <strong className="text-white">
-                numérologie, cartomancie et soins Lahochi
-              </strong>{" "}
-              sont disponibles à distance par téléphone.
+              La <strong className="text-white">voyance et cartomancie</strong> ainsi que la{" "}
+              <strong className="text-white">numérologie</strong> peuvent aussi être proposées par téléphone ou visioconférence.
+              Les <strong className="text-white">séances énergétiques Lahochi</strong> sont disponibles au cabinet ou à distance selon les modalités précisées lors de la réservation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <a
@@ -49,7 +49,6 @@ export const LocalZone = () => {
               </a>
             </div>
 
-            {/* Contact Cards Centered */}
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">
               <div className="bg-white/10 rounded-2xl p-6 border border-white/10 backdrop-blur-sm hover:bg-white/15 transition-colors">
                 <div className="flex items-center gap-2 mb-3">
@@ -66,9 +65,9 @@ export const LocalZone = () => {
                   <PhoneIcon className="w-5 h-5 text-brand-lilas" />
                   <p className="text-brand-lilas font-bold text-sm uppercase tracking-widest">À distance</p>
                 </div>
-                <p className="text-sm text-white font-medium">Par téléphone</p>
+                <p className="text-sm text-white font-medium">Téléphone, visio ou modalité Lahochi</p>
                 <p className="text-xs text-gray-400 mt-1">
-                  France & International
+                  Selon la prestation choisie
                 </p>
               </div>
             </div>

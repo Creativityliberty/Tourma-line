@@ -17,6 +17,7 @@ const FAQItem = ({
       <button
         className="flex justify-between items-center w-full py-4 text-left focus:outline-none"
         onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
       >
         <h3 className="text-lg font-semibold text-brand-dark">{question}</h3>
         <ChevronDownIcon
@@ -40,18 +41,18 @@ export const FAQ = () => {
       question:
         "J'ai déjà consulté des professionnels de la guidance et j'ai été déçu(e). En quoi est-ce différent avec vous ?",
       answer:
-        "C'est une question que j'entends souvent. Ce qui change : la précision dans les détails concrets de votre vie. Pas de généralités qui pourraient s'appliquer à tout le monde. Mes clients disent souvent : 'comme si vous connaissiez ma vie'. Votre date de naissance révèle des éléments spécifiques que nous explorons ensemble.",
+        "Chaque praticien a son approche. Chez Tourma-Line, Line associe selon la formule la numérologie et la cartomancie, explique le déroulement de la séance et part de vos questions concrètes. L'objectif est que vous sachiez ce qui est proposé avant de réserver, sans promesse de résultat garanti.",
     },
     {
       question:
-        "Je ne sais pas quoi demander, est-ce que ça marche quand même ?",
+        "Je ne sais pas quoi demander, est-ce que je peux quand même réserver ?",
       answer:
-        "Absolument. Beaucoup viennent simplement avec le sentiment de 'ne pas voir clair'. La séance s'adapte à vous. Comme Patricia qui cherchait de la clarté sans savoir exactement quoi demander, vous repartez avec des mots sur ce que vous ressentiez et des éléments concrets sur votre situation actuelle.",
+        "Oui. Vous pouvez venir avec une question précise ou simplement avec le besoin de faire le point. La séance sert alors à structurer les sujets que vous souhaitez explorer et à prendre du recul sur votre situation.",
     },
     {
       question: "J'ai peur d'apprendre des choses qui vont m'angoisser...",
       answer:
-        "Mon approche est bienveillante — un simple accueil, un temps d'échange respectueux de votre rythme. L'objectif n'est pas de vous inquiéter mais de vous donner des clés pour avancer sereinement. Christine cherchait justement à se libérer de son angoisse, et c'est ce qu'elle a trouvé.",
+        "L'approche se veut respectueuse et sans dramatisation. La cartomancie n'est pas présentée comme une certitude absolue sur l'avenir : vous restez libre de vos choix et pouvez arrêter ou réorienter l'échange si un sujet vous met mal à l'aise.",
     },
     {
       question: "Faut-il préparer des questions ?",
@@ -61,23 +62,23 @@ export const FAQ = () => {
     {
       question: "À quelle fréquence consulter ?",
       answer:
-        "Cela dépend de votre situation. Certaines personnes consultent une fois par an, d'autres lors de périodes de changement.",
+        "Il n'existe pas de fréquence obligatoire. Certaines personnes consultent ponctuellement lors d'une période de changement, d'autres choisissent un suivi prévu dans une formule. Vous restez libre de décider si et quand vous souhaitez reprendre rendez-vous.",
     },
     {
       question: "Comment se déroule le paiement ?",
       answer:
-        "Pour les séances à distance (guidance, soin Lahochi, question), le paiement s'effectue au moment de la réservation via Cal.com avant le rendez-vous. Vous pouvez régler par PayPal, Lydia, virement bancaire ou carte. Pour les séances en présentiel, le règlement se fait sur place le jour du rendez-vous.",
+        "Pour les séances à distance, le paiement s'effectue selon les modalités indiquées au moment de la réservation. Pour les séances en présentiel, vérifiez les moyens de paiement acceptés auprès de Line avant le rendez-vous.",
     },
     {
       question: "Quelle est votre politique d'annulation ?",
       answer:
-        "Tout rendez-vous peut être modifié ou annulé jusqu'à 24h à l'avance. Passé ce délai, la séance est due.",
+        "Les conditions de modification et d'annulation applicables sont indiquées lors de la réservation et dans les conditions générales du site. Consultez-les avant de valider votre rendez-vous.",
     },
     {
       question:
         "Est-ce que cela remplace un médecin, un avocat ou un professionnel de santé ?",
       answer:
-        "Non. Les consultations sont un accompagnement en guidance et ne remplacent pas un avis médical, juridique ou psychologique.",
+        "Non. Les consultations de guidance et les séances énergétiques sont des accompagnements de réflexion ou de bien-être. Elles ne remplacent pas un avis médical, psychologique, juridique ou financier qualifié.",
     },
   ];
 
@@ -97,18 +98,15 @@ export const FAQ = () => {
               </h3>
             </div>
             <p className="text-gray-700 mb-2">
-              Les consultations se font sur rendez-vous.
+              Les consultations se font sur rendez-vous au cabinet de Gerponville ou à distance selon la prestation.
             </p>
             <p className="text-gray-700 mb-2">
               Vous pouvez venir avec des questions précises ou simplement avec
-              le besoin de faire le point : la séance s'adapte à votre situation
-              et à votre rythme.
+              le besoin de faire le point : la séance s'adapte aux sujets que vous souhaitez explorer.
             </p>
             <p className="text-sm text-gray-600 italic mt-4">
-              Mon approche ne remplace en aucun cas un avis médical, juridique
-              ou financier, mais elle peut vous aider à y voir plus clair, à
-              comprendre les dynamiques en jeu et à avancer avec plus de
-              confiance.
+              Ces accompagnements ne remplacent en aucun cas un avis médical,
+              psychologique, juridique ou financier professionnel.
             </p>
           </div>
 

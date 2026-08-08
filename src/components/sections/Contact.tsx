@@ -9,15 +9,16 @@ export const Contact = () => {
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto items-center">
             <div className="text-left order-2 md:order-1">
               <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-6">
-                Prendre rendez-vous
+                Prendre rendez-vous avec Line Simon
               </h2>
               <p className="text-lg text-gray-700 mb-4">
-                Les séances peuvent se faire à distance (téléphone/visio) ou
-                selon les possibilités en présentiel.
+                Le cabinet Tourma-Line est situé au 4 résidence Les Peupliers,
+                76540 Gerponville, en Seine-Maritime. Les prestations sont proposées
+                au cabinet ou à distance selon la formule choisie.
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                Pour réserver, il suffit de me contacter via le formulaire du
-                site ou par message privé.
+                Réservez directement en ligne ou contactez Line par WhatsApp si vous
+                souhaitez vérifier la prestation ou la modalité avant de choisir un créneau.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <a
@@ -42,11 +43,15 @@ export const Contact = () => {
 
             <div className="bg-brand-lilas p-8 rounded-3xl shadow-lg text-left order-1 md:order-2">
               <h2 className="text-3xl font-display text-brand-dark mb-6">
-                Contact
+                Contact Tourma-Line
               </h2>
+              <p className="text-gray-700 mb-2 font-medium">
+                Line Simon — Tourma-Line
+              </p>
               <p className="text-gray-700 mb-6">
-                Pour toute question ou prise de rendez-vous, vous pouvez me
-                contacter via le formulaire du site ou par message privé.
+                4 résidence Les Peupliers<br />
+                76540 Gerponville<br />
+                Seine-Maritime, Normandie
               </p>
               <p className="text-gray-700 font-semibold mb-2">
                 Pour me joindre :
@@ -54,7 +59,7 @@ export const Contact = () => {
               <div className="space-y-2 mb-6">
                 <p>
                   <a
-                    href="tel:0649653186"
+                    href="tel:+33649653186"
                     className="text-brand-dark hover:text-brand-purple font-medium text-lg"
                   >
                     06 49 65 31 86
@@ -75,7 +80,7 @@ export const Contact = () => {
                   href="https://www.facebook.com/tourma.line.534540"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Nous contacter sur Facebook"
+                  aria-label="Tourma-Line sur Facebook"
                   className="text-gray-500 hover:text-brand-purple transition-all duration-300 transform hover:scale-110 active:scale-95"
                 >
                   <FacebookIcon className="w-8 h-8" aria-hidden="true" />
@@ -84,7 +89,7 @@ export const Contact = () => {
                   href="https://wa.me/33649653186"
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label="Nous contacter sur WhatsApp"
+                  aria-label="Contacter Tourma-Line sur WhatsApp"
                   className="text-green-500 hover:text-green-600 transition-all duration-300 transform hover:scale-110 active:scale-95"
                 >
                   <WhatsAppIcon className="w-8 h-8" aria-hidden="true" />

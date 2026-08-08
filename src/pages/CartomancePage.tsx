@@ -51,6 +51,13 @@ export const CartomancePage = () => {
         breadcrumb="Voyance & Cartomancie"
         canonicalPath="/cartomancie"
         ctaText="Réserver ma séance"
+        relatedGuides={[
+          {
+            title: "Comment choisir une voyante ou cartomancienne sérieuse ?",
+            description: "10 vérifications concrètes sur l'identité, les avis, les prix, les promesses et le libre arbitre.",
+            path: "/blog/choisir-voyante-cartomancienne-serieuse",
+          },
+        ]}
         sections={[
           {
             icon: <LayersIcon className="w-8 h-8" />,

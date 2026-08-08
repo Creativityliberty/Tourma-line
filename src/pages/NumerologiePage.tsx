@@ -51,6 +51,18 @@ export const NumerologiePage = () => {
         breadcrumb="Numérologie"
         canonicalPath="/numerologie"
         ctaText="Réserver ma séance"
+        relatedGuides={[
+          {
+            title: "Comment choisir un numérologue ?",
+            description: "Méthode, avis, tarifs et questions à poser avant de réserver.",
+            path: "/blog/choisir-numerologue-consultation",
+          },
+          {
+            title: "Année personnelle : calcul et cycles 1 à 9",
+            description: "Calcul 2026, conventions et interprétation de votre cycle annuel.",
+            path: "/blog/annee-personnelle-numerologie",
+          },
+        ]}
         sections={[
           {
             icon: <HashIcon className="w-8 h-8" />,

@@ -8,7 +8,7 @@ author: "Line Simon"
 readTime: "13 min"
 category: "Voyance & Cartomancie"
 persona: "Avant de consulter"
-image: "/blog-guidance-amour.jpg"
+image: "/hero-tourma-line.jpg"
 featured: true
 ---
 

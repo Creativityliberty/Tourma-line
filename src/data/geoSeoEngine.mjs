@@ -16,8 +16,8 @@ const SERVICE_MOMENTUM = Object.freeze({
   "soin-lahochi": 13,
 });
 
-// Proximity is intentionally territorial for Sprint 6.
-// Exact km values are not invented: they are verified only when a commune is promoted to a real landing.
+// Proximity is intentionally territorial.
+// Exact km values are never invented: they are verified only when a commune is promoted to a real landing.
 export const GEO_SEO_INTERCOMMUNALITIES = Object.freeze({
   "CA Fécamp Caux Littoral Agglomération": {
     slug: "fecamp-caux-littoral",
@@ -67,8 +67,8 @@ export const GEO_SEO_INTERCOMMUNALITIES = Object.freeze({
   "CA Caux Seine Agglo": {
     slug: "caux-seine-agglo",
     label: "Caux Seine Agglo",
-    publicationStatus: "candidate",
-    publishedHubSlug: null,
+    publicationStatus: "published",
+    publishedHubSlug: "caux-seine-agglo",
     proximityBand: "mid",
     proximityScore: 12,
     anchor: "Bolbec / Lillebonne",

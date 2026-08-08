@@ -1,13 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { BASE_URL, SERVICES, getBlogPosts, getCityMeta } from "./routes.mjs";
+import { BASE_URL, SERVICES, getBlogPosts } from "./routes.mjs";
+import { getPremiumLocalTargets } from "../src/data/localSeoStrategy.mjs";
+import { territorialHubs } from "../src/data/territorialHubs.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 const publicDir = path.resolve(rootDir, "public");
-
-const { local } = getCityMeta();
 
 const SERVICES_META = {
   numerologie: {
@@ -51,10 +51,6 @@ const FAQ = [
     q: "Le soin Lahochi se pratique-t-il à distance ?",
     a: "Oui, Tourma-Line propose des séances Lahochi à distance. Le Lahochi est présenté comme une pratique énergétique de bien-être ; les ressentis sont personnels et aucun résultat thérapeutique n'est garanti. Il ne remplace pas un diagnostic ou un traitement médical.",
   },
-  {
-    q: "Puis-je avoir un enregistrement de la consultation ?",
-    a: "Oui, sur demande, un enregistrement audio de certaines consultations peut être envoyé.",
-  },
 ];
 
 function intro() {
@@ -73,7 +69,7 @@ function keyInfo() {
     "- **Praticienne :** Line Simon (Tourma-Line)",
     "- **Activités :** voyante et cartomancienne, numérologue, praticienne en soins énergétiques Lahochi",
     "- **Adresse du cabinet :** 4 résidence Les Peupliers, 76540 Gerponville, Normandie, France",
-    "- **Zone locale :** Gerponville, Fécamp, Valmont, Cany-Barville et secteur du Pays de Caux",
+    "- **Zone locale principale :** Gerponville, Fécamp, Valmont, Cany-Barville, Pays de Caux et secteurs validés du littoral cauchois",
     "- **Consultations à distance :** disponibles en français selon la prestation",
     "- **Téléphone :** 06 49 65 31 86",
     "- **Email :** line.simon.ls@gmail.com",
@@ -92,30 +88,12 @@ function servicesSection() {
     lines.push(`- **${meta.title} :** ${meta.description}`);
   }
   lines.push("");
-  lines.push("### Formules d'accompagnement", "");
-  lines.push("- **Formule « Harmonie Intérieure » :** association de guidance et d'une séance Lahochi selon la formule proposée au moment de la réservation.");
-  lines.push("- **Formule « Renaissance » :** accompagnement sur plusieurs séances combinant guidance et Lahochi ; objectifs et modalités sont présentés comme un accompagnement de bien-être et de réflexion personnelle, sans promesse thérapeutique.");
-  lines.push("- **Pack Lahochi :** plusieurs séances énergétiques de bien-être selon les modalités et tarifs en vigueur.");
-  lines.push("");
   return lines;
-}
-
-function howItWorks() {
-  return [
-    "## Comment se passent les séances",
-    "",
-    "- **Au cabinet :** 4 résidence Les Peupliers, 76540 Gerponville, sur rendez-vous.",
-    "- **Secteur local :** Gerponville, Fécamp, Valmont, Cany-Barville et communes proches selon les modalités de la prestation.",
-    "- **À distance :** par téléphone ou visioconférence pour la guidance ; séance à distance possible pour le Lahochi.",
-    "",
-    "La durée dépend de la prestation choisie. Les informations à jour sont indiquées sur le site et lors de la réservation.",
-    "",
-  ];
 }
 
 function pagesSection() {
   return [
-    "## Pages du site",
+    "## Pages principales",
     "",
     `- [Accueil](${BASE_URL}/) : présentation de Line Simon, de ses services et de son cabinet à Gerponville.`,
     `- [Prestations](${BASE_URL}/prestations) : consultations et formules proposées.`,
@@ -123,16 +101,13 @@ function pagesSection() {
     `- [Voyance & Cartomancie](${BASE_URL}/cartomancie) : guidance par les cartes au cabinet ou à distance.`,
     `- [Soin énergétique Lahochi](${BASE_URL}/soin-lahochi) : pratique énergétique de bien-être au cabinet ou à distance.`,
     `- [Consultation à distance](${BASE_URL}/consultation-a-distance) : voyance, numérologie et Lahochi à distance, Tourma-Line restant basé à Gerponville.`,
-    `- [Blog](${BASE_URL}/blog) : articles sur la numérologie, la cartomancie et les pratiques de bien-être.`,
-    `- [Mentions légales](${BASE_URL}/mentions-legales)`,
-    `- [Politique de confidentialité](${BASE_URL}/politique-de-confidentialite)`,
-    `- [Conditions générales](${BASE_URL}/conditions-generales)`,
+    `- [Blog](${BASE_URL}/blog) : guides sur la numérologie, la voyance, la cartomancie et les pratiques de bien-être.`,
     "",
   ];
 }
 
 function blogSection() {
-  const lines = ["## Contenu du blog", ""];
+  const lines = ["## Guides et articles", ""];
   for (const post of getBlogPosts()) {
     lines.push(`- [${post.title}](${BASE_URL}/blog/${post.slug})${post.date ? ` (publié le ${post.date})` : ""}`);
   }
@@ -140,40 +115,34 @@ function blogSection() {
   return lines;
 }
 
-function cityPagesSection() {
-  const lines = ["## Pages locales", ""];
-  for (const svc of SERVICES) {
-    const meta = SERVICES_META[svc.slug];
-    lines.push(`### ${meta.title}`);
-    lines.push("");
-    for (const city of local) {
-      lines.push(`- [${meta.title} — près de ${city.name}](${BASE_URL}/${svc.slug}-${city.slug})`);
-    }
-    lines.push("");
+function territorySection() {
+  const lines = ["## Zones territoriales validées", ""];
+  for (const hub of territorialHubs) {
+    lines.push(`- [${hub.label}](${BASE_URL}${hub.path}) : ${hub.metaDescription}`);
   }
+  lines.push("");
+  return lines;
+}
+
+function premiumLocalSection() {
+  const lines = ["## Pages locales prioritaires", ""];
+  const targets = getPremiumLocalTargets();
+  for (const target of targets) {
+    const meta = SERVICES_META[target.serviceSlug];
+    if (!meta) continue;
+    lines.push(`- [${meta.title} — près de ${target.cityLabel}](${BASE_URL}/${target.serviceSlug}-${target.citySlug})`);
+  }
+  lines.push("");
+  lines.push("Les autres communes de Seine-Maritime sont gérées par la base géographique et les hubs territoriaux ; elles ne disposent pas automatiquement d'une page indexable dédiée.", "");
   return lines;
 }
 
 function faqSection() {
   const lines = ["## Questions fréquentes", ""];
   for (const item of FAQ) {
-    lines.push(`**${item.q}**`);
-    lines.push("");
-    lines.push(item.a);
-    lines.push("");
+    lines.push(`**${item.q}**`, "", item.a, "");
   }
   return lines;
-}
-
-function legalSection() {
-  return [
-    "## Mentions légales",
-    "",
-    `- [Mentions légales](${BASE_URL}/mentions-legales)`,
-    `- [Politique de confidentialité](${BASE_URL}/politique-de-confidentialite)`,
-    `- [Conditions générales de vente](${BASE_URL}/conditions-generales)`,
-    "",
-  ];
 }
 
 function contactSection() {
@@ -188,13 +157,24 @@ function contactSection() {
   ];
 }
 
+function legalSection() {
+  return [
+    "## Informations légales",
+    "",
+    `- [Mentions légales](${BASE_URL}/mentions-legales)`,
+    `- [Politique de confidentialité](${BASE_URL}/politique-de-confidentialite)`,
+    `- [Conditions générales](${BASE_URL}/conditions-generales)`,
+    "",
+  ];
+}
+
 function buildLlmsTxt() {
   return [
     ...intro(),
     ...keyInfo(),
     ...servicesSection(),
-    ...howItWorks(),
     ...pagesSection(),
+    ...territorySection(),
     ...blogSection(),
     ...legalSection(),
   ]
@@ -208,10 +188,10 @@ function buildLlmsFullTxt() {
     ...intro(),
     ...keyInfo(),
     ...servicesSection(),
-    ...howItWorks(),
     ...pagesSection(),
+    ...territorySection(),
+    ...premiumLocalSection(),
     ...blogSection(),
-    ...cityPagesSection(),
     ...faqSection(),
     ...contactSection(),
     ...legalSection(),

@@ -24,6 +24,11 @@ interface ServicePageProps {
   canonicalPath: string;
   breadcrumb: string;
   localInfo?: string;
+  relatedGuides?: {
+    title: string;
+    description: string;
+    path: string;
+  }[];
 }
 
 export const ServicePage = ({
@@ -38,6 +43,7 @@ export const ServicePage = ({
   canonicalPath,
   breadcrumb,
   localInfo,
+  relatedGuides = [],
 }: ServicePageProps) => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -200,6 +206,39 @@ export const ServicePage = ({
             </div>
           </div>
         </section>
+
+        {relatedGuides.length > 0 && (
+          <section className="py-16 bg-brand-lilas/10 border-y border-brand-lilas/30" aria-label="Guides liés au service">
+            <div className="container mx-auto px-6 max-w-5xl">
+              <div className="max-w-3xl mb-10">
+                <p className="text-brand-purple text-sm font-bold uppercase tracking-widest mb-3">
+                  Ressources pratiques
+                </p>
+                <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4">
+                  Guides pour aller plus loin
+                </h2>
+                <p className="text-gray-600 leading-relaxed">
+                  Des réponses détaillées pour comparer les méthodes, préparer une consultation et comprendre les notions avant de réserver.
+                </p>
+              </div>
+              <div className="grid gap-5 md:grid-cols-2">
+                {relatedGuides.map((guide) => (
+                  <Link
+                    key={guide.path}
+                    to={guide.path}
+                    className="group rounded-3xl border border-brand-lilas/30 bg-white p-7 transition hover:-translate-y-1 hover:border-brand-purple hover:shadow-lg"
+                  >
+                    <span className="block font-display text-2xl text-brand-dark mb-3 group-hover:text-brand-purple">
+                      {guide.title}
+                    </span>
+                    <span className="block text-gray-600 leading-relaxed mb-5">{guide.description}</span>
+                    <span className="font-semibold text-brand-purple">Lire le guide →</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section
           className="py-20 bg-white"

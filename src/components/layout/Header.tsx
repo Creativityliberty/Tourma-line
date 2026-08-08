@@ -7,7 +7,7 @@ const navItems = [
     { href: "/prestations", label: "Prestations" },
     { href: "/cartomancie", label: "Voyance" },
     { href: "/numerologie", label: "Numérologie" },
-    { href: "/soin-lahochi", label: "Énergétique" },
+    { href: "/soin-lahochi", label: "Soin énergétique" },
     { href: "/consultation-a-distance", label: "À distance" },
     { href: "/blog", label: "Blog" },
 ];
@@ -47,7 +47,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                     <span>Tourma-Line</span>
                 </a>
 
-                <nav className="hidden xl:flex items-center space-x-1 bg-white bg-opacity-10 rounded-full px-4 py-3 backdrop-blur-md border border-white border-opacity-20 text-white">
+                <nav aria-label="Navigation principale" className="hidden xl:flex items-center space-x-1 bg-white bg-opacity-10 rounded-full px-4 py-3 backdrop-blur-md border border-white border-opacity-20 text-white">
                     {navItems.map((item) => (
                         <a
                             key={item.href}
@@ -96,7 +96,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
             </div>
 
             {mobileMenuOpen ? (
-                <nav className="xl:hidden bg-white bg-opacity-10 backdrop-blur-md p-4 space-y-2 mt-2 rounded-2xl border border-white border-opacity-20 text-white">
+                <nav aria-label="Navigation mobile" className="xl:hidden bg-white bg-opacity-10 backdrop-blur-md p-4 space-y-2 mt-2 rounded-2xl border border-white border-opacity-20 text-white">
                     {navItems.map((item) => (
                         <a
                             key={item.href}

@@ -231,6 +231,26 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
           </div>
         </section>
 
+        <section className="border-y border-brand-lilas/30 bg-brand-lilas/10 py-14">
+          <div className="mx-auto max-w-5xl px-6">
+            <div className="rounded-3xl border border-brand-lilas/30 bg-white p-8 sm:p-10 md:flex md:items-center md:justify-between md:gap-10">
+              <div className="max-w-2xl">
+                <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-purple">Guide Seine-Maritime</p>
+                <h2 className="mb-4 font-display text-3xl text-brand-dark">Cabinet proche ou consultation à distance ?</h2>
+                <p className="leading-relaxed text-gray-600">
+                  Notre guide départemental explique quand choisir Gerponville, une page locale réellement validée, un hub territorial ou simplement une consultation à distance.
+                </p>
+              </div>
+              <Link
+                to="/blog/consulter-seine-maritime-cabinet-distance"
+                className="mt-6 inline-flex shrink-0 items-center justify-center rounded-full bg-brand-purple px-7 py-4 font-bold text-white transition hover:bg-brand-dark md:mt-0"
+              >
+                Lire le guide →
+              </Link>
+            </div>
+          </div>
+        </section>
+
         <section className="bg-brand-dark py-20 text-white">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-10 max-w-3xl">

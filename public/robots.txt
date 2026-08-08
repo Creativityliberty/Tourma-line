@@ -1,28 +1,7 @@
-# https://www.robotstxt.org/robotstxt.html
-# Tourma-Line — www.tourma-line.fr
-# Ce fichier autorise tous les moteurs de recherche et les robots IA à explorer le site.
+# Tourma-Line — https://www.tourma-line.fr/
+# Les pages publiques sont explorables. L'indexabilité fine est pilotée par les balises robots/canonical des pages et par le sitemap curaté.
 
 User-agent: *
 Allow: /
 
-# Moteurs de recherche IA / LLM (GEO)
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: OAI-SearchBot
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-# Sitemaps
 Sitemap: https://www.tourma-line.fr/sitemap.xml

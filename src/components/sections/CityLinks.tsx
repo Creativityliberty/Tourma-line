@@ -83,10 +83,11 @@ export const CityLinks = () => {
                 Zones couvertes
               </p>
               <h3 className="font-display text-2xl text-brand-dark sm:text-3xl">
-                Les hubs territoriaux Tourma-Line
+                Explorer les secteurs autour de Gerponville
               </h3>
               <p className="mx-auto mt-3 max-w-3xl text-gray-600">
-                Les communes secondaires sont regroupées dans des pages de territoire utiles plutôt que dupliquées en dizaines de pages quasi identiques.
+                Retrouvez les principaux secteurs desservis autour du cabinet et les villes depuis lesquelles
+                vous pouvez venir à Gerponville ou choisir une consultation à distance selon la prestation.
               </p>
             </div>
             <div className="grid gap-4 md:grid-cols-3">
@@ -118,8 +119,8 @@ export const CityLinks = () => {
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
               Voyance et cartomancie, numérologie et Lahochi peuvent être proposés à distance
-              selon la prestation. Tourma-Line reste basé à Gerponville : il n'existe pas de
-              cabinet Tourma-Line dans chaque ville affichée sur internet.
+              selon la prestation. Le cabinet Tourma-Line se trouve uniquement à Gerponville ;
+              si vous êtes plus loin, choisissez la modalité à distance qui vous convient.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

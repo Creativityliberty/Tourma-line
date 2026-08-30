@@ -200,7 +200,7 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
                 <MapPinIcon className="mb-5 h-8 w-8 text-brand-lilas" />
                 <h2 className="mb-3 font-display text-2xl font-bold">Cabinet à Gerponville</h2>
                 <p className="mb-5 leading-relaxed text-gray-300">
-                  4 résidence Les Peupliers, 76540 Gerponville. Tourma-Line ne revendique aucun second cabinet dans les communes de cette zone.
+                  4 résidence Les Peupliers, 76540 Gerponville. C'est l'unique adresse physique de Tourma-Line.
                 </p>
                 <Link to="/consultation-a-distance" className="font-semibold text-brand-lilas hover:underline">
                   Vous êtes plus loin ? Voir les consultations à distance →
@@ -237,9 +237,9 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
             <div className="rounded-3xl border border-brand-lilas/30 bg-white p-8 sm:p-10 md:flex md:items-center md:justify-between md:gap-10">
               <div className="max-w-2xl">
                 <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-purple">Guide Seine-Maritime</p>
-                <h2 className="mb-4 font-display text-3xl text-brand-dark">Cabinet proche ou consultation à distance ?</h2>
+                <h2 className="mb-4 font-display text-3xl text-brand-dark">Choisir entre le cabinet et la consultation à distance</h2>
                 <p className="leading-relaxed text-gray-600">
-                  Notre guide départemental explique quand choisir Gerponville, une page locale réellement validée, un hub territorial ou simplement une consultation à distance.
+                  Selon votre lieu de résidence et la prestation choisie, notre guide vous aide à décider s'il est plus simple de venir à Gerponville ou de réserver une séance à distance.
                 </p>
               </div>
               <Link
@@ -255,10 +255,10 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
         <section className="bg-brand-dark py-20 text-white">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-10 max-w-3xl">
-              <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-lilas">Couverture locale</p>
-              <h2 className="mb-4 font-display text-3xl font-bold sm:text-4xl">Communes et pages locales utiles</h2>
+              <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-lilas">Près de chez vous</p>
+              <h2 className="mb-4 font-display text-3xl font-bold sm:text-4xl">Villes et secteurs autour de {hub.shortLabel}</h2>
               <p className="leading-relaxed text-gray-300">
-                Nous renforçons une page ville uniquement lorsqu'elle possède un signal suffisant. Les autres communes restent couvertes par ce hub territorial plutôt que par des pages quasi identiques.
+                Vous habitez dans ce secteur ? Retrouvez les pages dédiées lorsqu'elles sont disponibles, ou consultez directement les trois prestations principales de Tourma-Line.
               </p>
             </div>
 
@@ -282,7 +282,7 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
                       </div>
                     ) : (
                       <p className="text-sm leading-relaxed text-gray-300">
-                        Cette commune est couverte par le hub territorial ; les trois prestations restent accessibles depuis les pages services principales.
+                        Vous habitez {city.label} ? Les trois prestations restent accessibles depuis le cabinet de Gerponville ou à distance selon la formule.
                       </p>
                     )}
                   </article>
@@ -293,7 +293,7 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
             <div className="mt-10 rounded-3xl border border-white/15 bg-white/5 p-7">
               <h3 className="mb-4 font-display text-2xl font-bold">Communes couvertes dans ce secteur</h3>
               <p className="leading-relaxed text-gray-300">{hub.coverageExamples.join(" · ")}</p>
-              <p className="mt-4 text-sm text-gray-400">Liste indicative, non exhaustive : la couverture détaillée sera pilotée par la matrice géographique et Search Console.</p>
+              <p className="mt-4 text-sm text-gray-400">Liste indicative, non exhaustive. Si votre commune n'apparaît pas, contactez Line pour vérifier la modalité la plus simple.</p>
             </div>
           </div>
         </section>
@@ -302,7 +302,7 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
           <div className="mx-auto max-w-4xl px-6 text-center">
             <h2 className="mb-4 font-display text-3xl text-brand-dark">Source territoriale</h2>
             <p className="mb-6 text-gray-600">
-              Les informations de périmètre utilisées pour cette page s'appuient sur la source territoriale indiquée ci-dessous ; elles ne servent pas à inventer une implantation commerciale.
+              Les informations de périmètre et de communes s'appuient sur la source territoriale indiquée ci-dessous. Le cabinet Tourma-Line reste situé à Gerponville.
             </p>
             <a
               href={hub.officialSourceUrl}

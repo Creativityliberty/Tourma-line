@@ -1,10 +1,8 @@
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
-import { TestimonialsTicker } from "./TestimonialsTicker";
 
 export const Testimonials = () => {
   return (
     <section id="avis" className="bg-white">
-      <TestimonialsTicker />
       <AnimateOnScroll>
         <div className="container mx-auto px-6 py-20">
           <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4 text-center">

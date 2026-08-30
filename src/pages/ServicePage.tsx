@@ -6,6 +6,7 @@ import { Footer } from "../components/layout/Footer";
 import { WhatsAppIcon, MapPinIcon, ArrowLeftIcon } from "../components/ui/icons";
 import { getPremiumLocalTargetsForService } from "../data/localSeoStrategy.mjs";
 import { territorialHubs } from "../data/territorialHubs.mjs";
+import { ConversionLink } from "../components/ui/ConversionLink";
 
 interface ServicePageProps {
   title: string;
@@ -102,7 +103,7 @@ export const ServicePage = ({
             </div>
           )}
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <a
+            <ConversionLink kind="booking" placement="hero"
               href="https://cal.com/tourma-line"
               target="_blank"
               rel="noopener noreferrer"
@@ -110,8 +111,8 @@ export const ServicePage = ({
               className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block shadow-lg animate-pulse"
             >
               {ctaText}
-            </a>
-            <a
+            </ConversionLink>
+            <ConversionLink kind="whatsapp" placement="hero"
               href="https://wa.me/33649653186"
               target="_blank"
               rel="noopener noreferrer"
@@ -119,7 +120,7 @@ export const ServicePage = ({
             >
               <WhatsAppIcon className="w-5 h-5" />
               WhatsApp
-            </a>
+            </ConversionLink>
           </div>
         </div>
       </section>
@@ -290,14 +291,14 @@ export const ServicePage = ({
               ou en consultation téléphonique partout en France.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <ConversionLink kind="booking" placement="bottom-cta"
                 href="https://cal.com/tourma-line"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-4 px-10 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95"
               >
                 {ctaText}
-              </a>
+              </ConversionLink>
               <Link
                 to="/"
                 className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 border border-white/20 flex items-center justify-center gap-2"

@@ -2,6 +2,7 @@ import React from "react";
 import { formules } from "../../data/formules";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { SparklesIcon, WhatsAppIcon } from "../ui/icons";
+import { ConversionLink } from "../ui/ConversionLink";
 
 export const Formules = () => {
   return (
@@ -88,15 +89,15 @@ export const Formules = () => {
                           )}
                         </div>
                         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-                          <a
+                          <ConversionLink kind="booking" placement={`formula-${formule.id}`}
                             href="https://cal.com/tourma-line"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-brand-purple hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center shadow-md"
                           >
                             Réserver
-                          </a>
-                          <a
+                          </ConversionLink>
+                          <ConversionLink kind="whatsapp" placement={`formula-${formule.id}`}
                             href="https://wa.me/33649653186"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -104,7 +105,7 @@ export const Formules = () => {
                           >
                             <WhatsAppIcon className="w-5 h-5" />
                             WhatsApp
-                          </a>
+                          </ConversionLink>
                         </div>
                       </div>
                     </div>

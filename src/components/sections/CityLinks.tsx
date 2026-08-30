@@ -5,6 +5,7 @@ import { localCities } from "../../data/cities";
 import { getPremiumLocalTargetsForCity } from "../../data/localSeoStrategy.mjs";
 import { territorialHubs } from "../../data/territorialHubs.mjs";
 import { WhatsAppIcon, GlobeIcon, MapPinIcon } from "../ui/icons";
+import { ConversionLink } from "../ui/ConversionLink";
 
 const serviceLabels: Record<string, string> = {
   cartomancie: "Voyance & cartomancie",
@@ -127,7 +128,7 @@ export const CityLinks = () => {
               >
                 Voir les consultations à distance
               </Link>
-              <a
+              <ConversionLink kind="whatsapp" placement="city-links"
                 href="https://wa.me/33649653186"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -135,7 +136,7 @@ export const CityLinks = () => {
               >
                 <WhatsAppIcon className="w-5 h-5" />
                 WhatsApp
-              </a>
+              </ConversionLink>
             </div>
           </div>
         </div>

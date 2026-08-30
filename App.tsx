@@ -16,6 +16,7 @@ import { Formules } from "./src/components/sections/Formules";
 import { Process } from "./src/components/sections/Process";
 import { LocalZone } from "./src/components/sections/LocalZone";
 import { Testimonials } from "./src/components/sections/Testimonials";
+import { TestimonialsTicker } from "./src/components/sections/TestimonialsTicker";
 import { About } from "./src/components/sections/About";
 import { FAQ } from "./src/components/sections/FAQ";
 import { Contact } from "./src/components/sections/Contact";
@@ -103,6 +104,7 @@ function HomePage() {
       <SectionScroller />
       <Header onNavClick={handleNavClick} />
       <Hero onNavClick={handleNavClick} />
+      <TestimonialsTicker />
       <Welcome />
       <div id="services">
         <Services activeTab={activeTab} setActiveTab={setActiveTab} />

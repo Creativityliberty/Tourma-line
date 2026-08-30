@@ -320,7 +320,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
           </div>
           {territoryHub && (
             <p className="mb-10 text-sm text-gray-300">
-              Cette commune est reliée au hub territorial{" "}
+              Pour votre secteur, retrouvez aussi les informations de{" "}
               <Link to={`/zones/${territoryHub.slug}`} className="font-semibold text-brand-lilas hover:underline">
                 {territoryHub.label}
               </Link>.
@@ -406,19 +406,19 @@ export const CityPage = ({ city, service }: CityPageProps) => {
           <section className="border-b border-brand-lilas/30 bg-brand-lilas/10 py-12">
             <div className="container mx-auto max-w-4xl px-6 text-center">
               <p className="mb-2 text-sm font-bold uppercase tracking-widest text-brand-purple">
-                Couverture territoriale
+                Informations de secteur
               </p>
               <h2 className="mb-4 font-display text-3xl text-brand-dark">
-                {city.name} est couvert via {territoryHub.label}
+                Retrouvez les informations pratiques pour votre secteur
               </h2>
               <p className="mx-auto mb-6 max-w-3xl leading-relaxed text-gray-600">
-                Pour éviter des pages locales dupliquées, Tourma-Line concentre les informations de secteur dans un hub territorial unique. La prestation reste disponible depuis le cabinet de Gerponville ou à distance selon la formule.
+                Vous habitez {city.name} ? Le cabinet Tourma-Line vous accueille à Gerponville sur rendez-vous. Vous pouvez aussi consulter à distance selon la prestation. La zone {territoryHub.label} rassemble les repères utiles pour venir ou choisir la modalité qui vous convient.
               </p>
               <Link
                 to={`/zones/${territoryHub.slug}`}
                 className="inline-flex rounded-full bg-brand-dark px-6 py-3 font-bold text-white"
               >
-                Voir {territoryHub.label}
+                Découvrir {territoryHub.label}
               </Link>
             </div>
           </section>
@@ -492,7 +492,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                   </h2>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  {locationIntro} Le site indique toujours le lieu réel d'exercice afin d'éviter toute confusion sur l'implantation du cabinet.
+                  {locationIntro} Le cabinet est toujours situé au 4 résidence Les Peupliers à Gerponville.
                 </p>
                 {territoryHub && (
                   <p className="mt-5">
@@ -529,7 +529,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
             <div className="grid md:grid-cols-2 gap-10">
               <div>
                 <h2 className="text-2xl sm:text-3xl font-display font-bold mb-5">
-                  Autres accompagnements prioritaires pour {city.name}
+                  Autres accompagnements près de {city.name}
                 </h2>
                 <div className="space-y-3">
                   {otherServices.length > 0 ? (

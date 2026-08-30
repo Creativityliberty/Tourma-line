@@ -11,7 +11,7 @@ export const premiumLocalContent = {
       "Vous cherchez une voyante ou une cartomancienne près de Valmont ? Le cabinet Tourma-Line se trouve à Gerponville, dans le même secteur de Fécamp Caux Littoral. Line Simon vous reçoit sur rendez-vous et propose aussi des consultations à distance.",
     localHeading: "Voyance & cartomancie près de Valmont",
     localContext:
-      "Valmont et Gerponville appartiennent au même bassin de vie autour de Fécamp. La page indique volontairement l'adresse réelle du cabinet à Gerponville : Tourma-Line ne prétend pas disposer d'un second cabinet à Valmont.",
+      "Depuis Valmont, le cabinet de Gerponville se situe dans le même secteur de Fécamp Caux Littoral. Line vous y reçoit sur rendez-vous ; si vous préférez ne pas vous déplacer, la cartomancie peut aussi être proposée à distance.",
     serviceAngle:
       "La consultation de cartomancie peut porter sur une relation, le travail, une décision, une dynamique familiale ou une période de changement. Le tirage sert de support à une guidance structurée, sans promesse de prédiction certaine.",
     directionsLabel: "Itinéraire Valmont → Gerponville",
@@ -36,7 +36,7 @@ export const premiumLocalContent = {
       "Vous recherchez une numérologue près de Valmont ? Line Simon vous reçoit au cabinet Tourma-Line à Gerponville pour une lecture de chemin de vie, d'année personnelle et de cycles, avec une option à distance.",
     localHeading: "Numérologie près de Valmont, dans le secteur de Gerponville",
     localContext:
-      "Le cabinet est réellement situé à Gerponville, dans le secteur proche de Valmont et de Fécamp. Cette page sert les personnes de Valmont sans créer de faux établissement local.",
+      "Le cabinet Tourma-Line se trouve à Gerponville, dans le secteur proche de Valmont et de Fécamp. Vous pouvez venir sur rendez-vous ou choisir une consultation de numérologie à distance selon la formule.",
     serviceAngle:
       "La consultation s'appuie sur votre date de naissance pour explorer votre chemin de vie, votre année personnelle et les cycles que vous traversez. Elle fournit un support de réflexion autour d'une transition, d'un choix ou d'une période de questionnement.",
     directionsLabel: "Itinéraire Valmont → Gerponville",
@@ -61,7 +61,7 @@ export const premiumLocalContent = {
       "Vous cherchez une énergéticienne près de Valmont ? Line Simon propose des séances Lahochi au cabinet de Gerponville, dans le même secteur local, ainsi qu'à distance selon vos préférences.",
     localHeading: "Soin énergétique Lahochi près de Valmont",
     localContext:
-      "Tourma-Line reçoit à Gerponville, et non dans un cabinet fictif à Valmont. La proximité permet aux personnes du secteur de choisir entre une séance sur place et une modalité à distance.",
+      "Depuis Valmont, vous pouvez rejoindre le cabinet Tourma-Line à Gerponville sur rendez-vous ou choisir une séance Lahochi à distance. Le cabinet physique est uniquement situé à Gerponville.",
     serviceAngle:
       "Le Lahochi est proposé comme une pratique énergétique de bien-être, de détente et de recentrage. Les ressentis restent personnels ; la séance ne remplace pas un diagnostic, un traitement ou un suivi par un professionnel de santé.",
     directionsLabel: "Itinéraire Valmont → Gerponville",
@@ -86,7 +86,7 @@ export const premiumLocalContent = {
       "Vous recherchez une voyante ou une cartomancienne près de Cany-Barville ? Line Simon exerce au cabinet Tourma-Line à Gerponville et reçoit les personnes du secteur de la Côte d'Albâtre sur rendez-vous, avec une alternative à distance.",
     localHeading: "Voyance & cartomancie pour Cany-Barville et la Côte d'Albâtre",
     localContext:
-      "Cany-Barville constitue un pôle local important de la Côte d'Albâtre. Tourma-Line reste néanmoins implanté à Gerponville : le site distingue clairement la zone desservie de l'adresse réelle du cabinet.",
+      "Si vous venez de Cany-Barville ou de la Côte d'Albâtre, Line Simon vous reçoit à son cabinet de Gerponville sur rendez-vous. Une consultation à distance est également possible lorsque cette modalité vous convient mieux.",
     serviceAngle:
       "Amour, travail, famille ou décision : la séance part de votre question et utilise les cartes comme support de lecture et de dialogue. L'objectif est d'apporter des pistes de réflexion, pas d'annoncer un avenir présenté comme certain.",
     directionsLabel: "Itinéraire Cany-Barville → Gerponville",
@@ -111,7 +111,7 @@ export const premiumLocalContent = {
       "Vous cherchez une énergéticienne près de Cany-Barville ? Line Simon propose des séances énergétiques Lahochi au cabinet Tourma-Line à Gerponville et à distance, dans un cadre centré sur le bien-être et le recentrage.",
     localHeading: "Soin énergétique Lahochi près de Cany-Barville",
     localContext:
-      "Cette page couvre Cany-Barville et son secteur sans prétendre qu'un cabinet Tourma-Line y est installé. L'adresse de référence reste 4 résidence Les Peupliers à Gerponville.",
+      "Depuis Cany-Barville, vous pouvez venir au cabinet Tourma-Line à Gerponville sur rendez-vous ou choisir une séance à distance. L'adresse de référence reste 4 résidence Les Peupliers à Gerponville.",
     serviceAngle:
       "La séance Lahochi est présentée comme un temps de détente, de recentrage et d'écoute de soi. Elle ne constitue pas une prise en charge médicale et ne se substitue pas aux soins nécessaires.",
     directionsLabel: "Itinéraire Cany-Barville → Gerponville",
@@ -133,10 +133,10 @@ export const premiumLocalContent = {
     metaDescription:
       "Voyante pour Yvetot et le Pays de Caux : cartomancie avec Line Simon au cabinet Tourma-Line à Gerponville ou à distance. RDV en ligne.",
     locationIntro:
-      "Vous cherchez une voyante autour d'Yvetot ? Line Simon exerce à Gerponville et propose des consultations de cartomancie au cabinet ou à distance. Cette page cible Yvetot comme pôle du Pays de Caux sans faire croire à une implantation Tourma-Line dans la ville.",
+      "Vous cherchez une voyante autour d'Yvetot ? Line Simon exerce à Gerponville et propose des consultations de cartomancie au cabinet ou à distance. Vous pouvez choisir de venir sur place ou de consulter par téléphone ou visioconférence selon la formule.",
     localHeading: "Voyance & cartomancie pour Yvetot et le Pays de Caux",
     localContext:
-      "Yvetot est un bassin de recherche plus important que les petites communes proches du cabinet. Tourma-Line le travaille comme marché territorial, tout en conservant une information transparente : le cabinet physique reste à Gerponville.",
+      "Depuis Yvetot et le Pays de Caux, Tourma-Line vous accueille au cabinet de Gerponville sur rendez-vous. Si le déplacement ne vous convient pas, la cartomancie peut également être proposée à distance.",
     serviceAngle:
       "La consultation peut aborder une relation, une décision, le travail ou une période de changement. Le tirage de cartes sert à structurer l'échange et la guidance, sans garantir un événement futur.",
     directionsLabel: "Itinéraire Yvetot → Gerponville",
@@ -144,7 +144,7 @@ export const premiumLocalContent = {
     faq: [
       {
         q: "Tourma-Line possède-t-il un cabinet à Yvetot ?",
-        a: "Non. Le cabinet Tourma-Line est situé au 4 résidence Les Peupliers, 76540 Gerponville. Cette page est destinée aux personnes recherchant une voyante dans le secteur d'Yvetot et du Pays de Caux.",
+        a: "Non. Le cabinet Tourma-Line est situé au 4 résidence Les Peupliers, 76540 Gerponville. Les personnes d'Yvetot peuvent venir sur rendez-vous ou choisir une consultation à distance.",
       },
       {
         q: "Peut-on consulter Line depuis Yvetot sans aller à Gerponville ?",
@@ -158,10 +158,10 @@ export const premiumLocalContent = {
     metaDescription:
       "Voyante près de Saint-Riquier-ès-Plains : cartomancie avec Line Simon au cabinet de Gerponville ou à distance. Réservation en ligne ou WhatsApp.",
     locationIntro:
-      "Vous recherchez une voyante près de Saint-Riquier-ès-Plains ? Line Simon reçoit à Gerponville et propose également la cartomancie à distance. La page répond à l'intention locale sans prétendre à un cabinet Tourma-Line dans la commune.",
+      "Vous recherchez une voyante près de Saint-Riquier-ès-Plains ? Line Simon reçoit à Gerponville et propose également la cartomancie à distance. Vous choisissez la modalité qui correspond le mieux à votre situation.",
     localHeading: "Voyance & cartomancie près de Saint-Riquier-ès-Plains",
     localContext:
-      "Saint-Riquier-ès-Plains appartient au secteur de la Côte d'Albâtre. Son volume de population est limité : Tourma-Line ne premiumise ici que la requête voyance/cartomancie, celle qui dispose du meilleur signal de priorité dans les données GSC.",
+      "Saint-Riquier-ès-Plains se situe dans le secteur de la Côte d'Albâtre. Line Simon vous reçoit au cabinet de Gerponville sur rendez-vous et peut également vous accompagner à distance pour une séance de cartomancie.",
     serviceAngle:
       "La séance utilise les cartes comme support de dialogue pour explorer une question personnelle, relationnelle ou professionnelle. Elle est conçue comme une guidance et non comme une promesse de prédiction certaine.",
     directionsLabel: "Itinéraire Saint-Riquier-ès-Plains → Gerponville",
@@ -172,8 +172,8 @@ export const premiumLocalContent = {
         a: "Line Simon reçoit au cabinet Tourma-Line à Gerponville, 4 résidence Les Peupliers, sur rendez-vous. Une consultation à distance reste possible.",
       },
       {
-        q: "Pourquoi n'y a-t-il pas trois pages premium pour Saint-Riquier-ès-Plains ?",
-        a: "Tourma-Line privilégie les pages qui répondent à une intention de recherche démontrée. Les autres services restent accessibles via leurs pages principales et les futurs hubs territoriaux, afin d'éviter des pages locales artificiellement dupliquées.",
+        q: "Quels sujets peut-on aborder pendant une séance de cartomancie ?",
+        a: "Vous pouvez venir avec une question sur une relation, le travail, la famille, une décision ou une période de changement. La séance est adaptée à la situation que vous souhaitez explorer.",
       },
     ],
   },

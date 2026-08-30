@@ -1,5 +1,6 @@
 import React from "react";
 import { WhatsAppIcon } from "../ui/icons";
+import { ConversionLink } from "../ui/ConversionLink";
 
 type NavClickHandler = (e: React.MouseEvent<HTMLAnchorElement>) => void;
 
@@ -54,15 +55,15 @@ export const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
           transition personnelle ou besoin de recentrage : découvrez l'accompagnement qui vous correspond.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-8 sm:mt-0">
-          <a
+          <ConversionLink kind="booking" placement="hero"
             href="https://cal.com/tourma-line"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 animate-pulse inline-block shadow-lg"
           >
             Découvrir mes accompagnements
-          </a>
-          <a
+          </ConversionLink>
+          <ConversionLink kind="whatsapp" placement="hero"
             href="https://wa.me/33649653186"
             target="_blank"
             rel="noopener noreferrer"
@@ -70,7 +71,7 @@ export const Hero = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
           >
             <WhatsAppIcon className="w-5 h-5" />
             Contact direct WhatsApp
-          </a>
+          </ConversionLink>
         </div>
       </div>
 

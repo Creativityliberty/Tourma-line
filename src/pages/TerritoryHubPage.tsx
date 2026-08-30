@@ -13,6 +13,7 @@ import {
   WhatsAppIcon,
 } from "../components/ui/icons";
 import { getPremiumLocalTargetsForCity } from "../data/localSeoStrategy.mjs";
+import { ConversionLink } from "../components/ui/ConversionLink";
 
 interface TerritoryCity {
   slug: string;
@@ -162,7 +163,7 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
               {hub.intro}
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <a
+              <ConversionLink kind="booking" placement="hero"
                 href="https://cal.com/tourma-line"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -170,8 +171,8 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
               >
                 <CalendarIcon className="h-5 w-5" />
                 Réserver une séance
-              </a>
-              <a
+              </ConversionLink>
+              <ConversionLink kind="whatsapp" placement="hero"
                 href="https://wa.me/33649653186"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -179,7 +180,7 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 WhatsApp
-              </a>
+              </ConversionLink>
             </div>
           </div>
         </section>

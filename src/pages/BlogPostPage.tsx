@@ -9,6 +9,7 @@ import { AnimateOnScroll } from "../components/ui/AnimateOnScroll";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
+import { ConversionLink } from "../components/ui/ConversionLink";
 
 export const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -154,6 +155,26 @@ export const BlogPostPage = () => {
               <Markdown
                 remarkPlugins={[remarkGfm]}
                 rehypePlugins={[rehypeRaw]}
+                components={{
+                  a: ({ node: _node, href, ...props }) => {
+                    if (href?.startsWith("https://cal.com/tourma-line")) {
+                      return (
+                        <ConversionLink kind="booking" placement="article-body" href={href} {...props} />
+                      );
+                    }
+                    if (href?.startsWith("https://wa.me/33649653186")) {
+                      return (
+                        <ConversionLink kind="whatsapp" placement="article-body" href={href} {...props} />
+                      );
+                    }
+                    if (href?.startsWith("tel:+33649653186") || href?.startsWith("tel:0649653186")) {
+                      return (
+                        <ConversionLink kind="phone" placement="article-body" href={href} {...props} />
+                      );
+                    }
+                    return <a href={href} {...props} />;
+                  },
+                }}
               >
                 {post.content}
               </Markdown>
@@ -179,7 +200,7 @@ export const BlogPostPage = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <a
+                  <ConversionLink kind="booking" placement="article-cta"
                     href="https://cal.com/tourma-line"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -187,9 +208,9 @@ export const BlogPostPage = () => {
                   >
                     <CalendarIcon className="w-5 h-5" />
                     <span>Réserver ma consultation</span>
-                  </a>
+                  </ConversionLink>
 
-                  <a
+                  <ConversionLink kind="whatsapp" placement="article-cta"
                     href="https://wa.me/33649653186"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -197,7 +218,7 @@ export const BlogPostPage = () => {
                   >
                     <WhatsAppIcon className="w-5 h-5" />
                     <span>Contact WhatsApp</span>
-                  </a>
+                  </ConversionLink>
                 </div>
               </div>
             </AnimateOnScroll>

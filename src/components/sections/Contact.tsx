@@ -1,5 +1,6 @@
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { FacebookIcon, WhatsAppIcon } from "../ui/icons";
+import { ConversionLink } from "../ui/ConversionLink";
 
 export const Contact = () => {
   return (
@@ -21,15 +22,15 @@ export const Contact = () => {
                 souhaitez vérifier la prestation ou la modalité avant de choisir un créneau.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <a
+                <ConversionLink kind="booking" placement="contact-booking"
                   href="https://cal.com/tourma-line"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block animate-pulse"
                 >
                   Réserver ma séance
-                </a>
-                <a
+                </ConversionLink>
+                <ConversionLink kind="whatsapp" placement="contact-booking"
                   href="https://wa.me/33649653186"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -37,7 +38,7 @@ export const Contact = () => {
                 >
                   <WhatsAppIcon className="w-5 h-5" />
                   Contact direct WhatsApp
-                </a>
+                </ConversionLink>
               </div>
             </div>
 
@@ -58,12 +59,12 @@ export const Contact = () => {
               </p>
               <div className="space-y-2 mb-6">
                 <p>
-                  <a
+                  <ConversionLink kind="phone" placement="contact-phone"
                     href="tel:+33649653186"
                     className="text-brand-dark hover:text-brand-purple font-medium text-lg"
                   >
                     06 49 65 31 86
-                  </a>
+                  </ConversionLink>
                 </p>
                 <p>
                   <a
@@ -85,7 +86,7 @@ export const Contact = () => {
                 >
                   <FacebookIcon className="w-8 h-8" aria-hidden="true" />
                 </a>
-                <a
+                <ConversionLink kind="whatsapp" placement="contact-icon"
                   href="https://wa.me/33649653186"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -93,7 +94,7 @@ export const Contact = () => {
                   className="text-green-500 hover:text-green-600 transition-all duration-300 transform hover:scale-110 active:scale-95"
                 >
                   <WhatsAppIcon className="w-8 h-8" aria-hidden="true" />
-                </a>
+                </ConversionLink>
               </div>
             </div>
           </div>

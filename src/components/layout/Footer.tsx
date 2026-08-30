@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FacebookIcon, SparklesIcon } from "../ui/icons";
+import { ConversionLink } from "../ui/ConversionLink";
 
 export const Footer = () => {
     return (
@@ -30,12 +31,12 @@ export const Footer = () => {
                         <h4 className="text-lg font-semibold mb-3">Contact</h4>
                         <p className="text-sm text-gray-300">
                             Tél :{" "}
-                            <a
+                            <ConversionLink kind="phone" placement="footer-phone"
                                 href="tel:+33649653186"
                                 className="hover:text-brand-purple underline"
                             >
                                 06 49 65 31 86
-                            </a>
+                            </ConversionLink>
                         </p>
                         <p className="text-sm text-gray-300">
                             Email :{" "}

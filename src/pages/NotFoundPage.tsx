@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { WhatsAppIcon, ArrowLeftIcon } from "../components/ui/icons";
+import { ConversionLink } from "../components/ui/ConversionLink";
 
 export const NotFoundPage = () => {
   useEffect(() => {
@@ -45,7 +46,7 @@ export const NotFoundPage = () => {
               <ArrowLeftIcon className="w-5 h-5" />
               Retour à l'accueil
             </Link>
-            <a
+            <ConversionLink kind="whatsapp" placement="not-found"
               href="https://wa.me/33649653186"
               target="_blank"
               rel="noopener noreferrer"
@@ -53,7 +54,7 @@ export const NotFoundPage = () => {
             >
               <WhatsAppIcon className="w-5 h-5" />
               Contacter Line
-            </a>
+            </ConversionLink>
           </div>
         </div>
       </main>

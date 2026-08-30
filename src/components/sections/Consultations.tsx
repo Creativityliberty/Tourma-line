@@ -1,6 +1,7 @@
 import { consultations } from "../../data/consultations";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { SparklesIcon, WhatsAppIcon, MapPinIcon, ClockIcon } from "../ui/icons";
+import { ConversionLink } from "../ui/ConversionLink";
 
 export const Consultations = () => {
   return (
@@ -105,15 +106,15 @@ export const Consultations = () => {
                           </p>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-                          <a
+                          <ConversionLink kind="booking" placement={`consultation-${consultation.id}`}
                             href="https://cal.com/tourma-line"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-brand-purple hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center"
                           >
                             Réserver
-                          </a>
-                          <a
+                          </ConversionLink>
+                          <ConversionLink kind="whatsapp" placement={`consultation-${consultation.id}`}
                             href="https://wa.me/33649653186"
                             target="_blank"
                             rel="noopener noreferrer"
@@ -121,7 +122,7 @@ export const Consultations = () => {
                           >
                             <WhatsAppIcon className="w-5 h-5" />
                             WhatsApp
-                          </a>
+                          </ConversionLink>
                         </div>
                       </div>
                     </div>

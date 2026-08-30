@@ -22,6 +22,7 @@ import type { City } from "../data/cities";
 import { getLocalSeoDecision } from "../data/localSeoStrategy.mjs";
 import { getPremiumLocalContent } from "../data/premiumLocalContent.mjs";
 import { getTerritoryHubForCity } from "../data/territorialHubs.mjs";
+import { ConversionLink } from "../components/ui/ConversionLink";
 
 interface CityPageProps {
   city: City;
@@ -327,15 +328,15 @@ export const CityPage = ({ city, service }: CityPageProps) => {
           )}
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <a
+            <ConversionLink kind="booking" placement="hero"
               href="https://cal.com/tourma-line"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 text-center shadow-lg"
             >
               {svc.cta}
-            </a>
-            <a
+            </ConversionLink>
+            <ConversionLink kind="whatsapp" placement="hero"
               href={`https://wa.me/33649653186?text=${whatsappMessage}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -343,7 +344,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
             >
               <WhatsAppIcon className="w-5 h-5" />
               Poser une question
-            </a>
+            </ConversionLink>
           </div>
         </div>
       </section>
@@ -593,7 +594,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
               Contactez Line pour vérifier la prestation, la modalité et les informations pratiques adaptées à votre situation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
+              <ConversionLink kind="whatsapp" placement="bottom-cta"
                 href={`https://wa.me/33649653186?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -601,7 +602,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
               >
                 <WhatsAppIcon className="w-5 h-5" />
                 WhatsApp
-              </a>
+              </ConversionLink>
               <Link
                 to="/prestations"
                 className="bg-brand-dark text-white font-bold py-4 px-8 rounded-full text-lg flex items-center justify-center gap-2"

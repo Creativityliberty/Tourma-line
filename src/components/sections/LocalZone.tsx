@@ -1,6 +1,7 @@
 import React from "react";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { MapPinIcon, PhoneIcon } from "../ui/icons";
+import { ConversionLink } from "../ui/ConversionLink";
 
 const contactInfo = {
   address: "4 résidence Les Peupliers",
@@ -39,14 +40,14 @@ export const LocalZone = () => {
               Les <strong className="text-white">séances énergétiques Lahochi</strong> sont disponibles au cabinet ou à distance selon les modalités précisées lors de la réservation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <a
+              <ConversionLink kind="booking" placement="local-zone"
                 href="https://cal.com/tourma-line"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 shadow-lg shadow-brand-lilas/20"
               >
                 Prendre rendez-vous en ligne
-              </a>
+              </ConversionLink>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">

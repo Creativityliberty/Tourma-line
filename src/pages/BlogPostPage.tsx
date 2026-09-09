@@ -46,10 +46,10 @@ export const BlogPostPage = () => {
     "image": `https://www.tourma-line.fr${post.image}`,
     "author": {
       "@type": "Person",
-      "@id": "https://www.tourma-line.fr/#line-simon",
+      "@id": "https://www.tourma-line.fr/#line",
       "name": post.author,
       "url": "https://www.tourma-line.fr/#a-propos",
-      "jobTitle": "Voyante, numérologue et praticienne en soins énergétiques Lahochi"
+      "jobTitle": "Numérologue, cartomancienne et praticienne Lahochi"
     },
     "publisher": {
       "@id": "https://www.tourma-line.fr/#business"
@@ -101,7 +101,6 @@ export const BlogPostPage = () => {
       <main className="pt-32 pb-24">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            {/* Breadcrumb */}
             <nav className="mb-12 flex items-center gap-2 text-sm text-gray-400 font-bold uppercase tracking-widest" aria-label="Fil d'Ariane">
               <Link to="/" className="hover:text-brand-purple transition-colors">Accueil</Link>
               <span className="opacity-30">/</span>
@@ -110,7 +109,6 @@ export const BlogPostPage = () => {
               <span className="text-brand-purple">{post.category}</span>
             </nav>
 
-            {/* Header Content */}
             <header className="mb-16">
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold text-brand-dark leading-tight mb-8">
                 {post.title}
@@ -139,7 +137,6 @@ export const BlogPostPage = () => {
               </div>
             </header>
 
-            {/* Featured Image */}
             <div className="relative h-[30vh] sm:h-[40vh] md:h-[60vh] rounded-[2rem] overflow-hidden mb-16 shadow-2xl shadow-brand-purple/10">
               <img
                 src={post.image}
@@ -148,7 +145,6 @@ export const BlogPostPage = () => {
               />
             </div>
 
-            {/* Content Body */}
             <article
               className="prose prose-lg sm:prose-xl prose-brand max-w-none mb-24 text-gray-700 font-light leading-relaxed first-letter:text-7xl first-letter:font-display first-letter:font-bold first-letter:text-brand-purple first-letter:mr-3 first-letter:float-left prose-headings:font-display prose-headings:text-brand-dark prose-headings:font-bold prose-strong:text-brand-dark prose-a:text-brand-purple hover:prose-a:text-brand-dark"
             >
@@ -180,7 +176,6 @@ export const BlogPostPage = () => {
               </Markdown>
             </article>
 
-            {/* Final CTA Action */}
             <AnimateOnScroll>
               <div className="bg-brand-dark rounded-[3rem] p-10 sm:p-16 text-white text-center relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-64 h-64 bg-brand-purple/20 blur-[100px] -mr-32 -mt-32"></div>
@@ -223,7 +218,6 @@ export const BlogPostPage = () => {
               </div>
             </AnimateOnScroll>
 
-            {/* Back to Blog Button */}
             <div className="mt-16 text-center">
               <Link
                 to="/blog"

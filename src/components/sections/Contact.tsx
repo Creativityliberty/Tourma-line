@@ -10,16 +10,13 @@ export const Contact = () => {
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto items-center">
             <div className="text-left order-2 md:order-1">
               <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-6">
-                Prendre rendez-vous avec Line Simon
+                Prendre rendez-vous
               </h2>
               <p className="text-lg text-gray-700 mb-4">
-                Le cabinet Tourma-Line est situé au 4 résidence Les Peupliers,
-                76540 Gerponville, en Seine-Maritime. Les prestations sont proposées
-                au cabinet ou à distance selon la formule choisie.
+                Vous souhaitez faire le point sur votre situation ou vous accorder un moment pour vous ?
               </p>
               <p className="text-lg text-gray-700 mb-8">
-                Réservez directement en ligne ou contactez Line par WhatsApp si vous
-                souhaitez vérifier la prestation ou la modalité avant de choisir un créneau.
+                Je vous reçois au cabinet à Gerponville ou à distance selon la prestation choisie. Vous pouvez réserver directement en ligne ou me contacter sur WhatsApp si vous souhaitez être orienté(e) avant de choisir un créneau.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
                 <ConversionLink kind="booking" placement="contact-booking"
@@ -28,7 +25,7 @@ export const Contact = () => {
                   rel="noopener noreferrer"
                   className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block animate-pulse"
                 >
-                  Réserver ma séance
+                  Prendre rendez-vous
                 </ConversionLink>
                 <ConversionLink kind="whatsapp" placement="contact-booking"
                   href="https://wa.me/33649653186"
@@ -37,9 +34,15 @@ export const Contact = () => {
                   className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block flex items-center justify-center gap-2"
                 >
                   <WhatsAppIcon className="w-5 h-5" />
-                  Contact direct WhatsApp
+                  WhatsApp
                 </ConversionLink>
               </div>
+              <ConversionLink kind="phone" placement="contact-phone"
+                href="tel:+33649653186"
+                className="text-brand-dark hover:text-brand-purple font-semibold text-lg underline underline-offset-4"
+              >
+                Appeler Line · 06 49 65 31 86
+              </ConversionLink>
             </div>
 
             <div className="bg-brand-lilas p-8 rounded-3xl shadow-lg text-left order-1 md:order-2">
@@ -47,7 +50,7 @@ export const Contact = () => {
                 Contact Tourma-Line
               </h2>
               <p className="text-gray-700 mb-2 font-medium">
-                Line Simon — Tourma-Line
+                Line — Tourma-Line
               </p>
               <p className="text-gray-700 mb-6">
                 4 résidence Les Peupliers<br />
@@ -59,7 +62,7 @@ export const Contact = () => {
               </p>
               <div className="space-y-2 mb-6">
                 <p>
-                  <ConversionLink kind="phone" placement="contact-phone"
+                  <ConversionLink kind="phone" placement="contact-card-phone"
                     href="tel:+33649653186"
                     className="text-brand-dark hover:text-brand-purple font-medium text-lg"
                   >

@@ -12,7 +12,6 @@ export const PrestationsPage = () => {
   const [activeTab, setActiveTab] = useState("numerology");
   const navigate = useNavigate();
 
-  // Scroll to top on mount
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, []);
@@ -33,10 +32,10 @@ export const PrestationsPage = () => {
   return (
     <div className="min-h-screen bg-white font-sans">
       <Helmet>
-        <title>Prestations & Tarifs | Voyance, Numérologie, Lahochi — Tourma-Line</title>
-        <meta 
-          name="description" 
-          content="Toutes les prestations de Line : voyance & cartomancie, numérologie et soins Lahochi. Tarifs dès 30€. Séances en Normandie (Gerponville 76) ou à distance. Réservez votre créneau en ligne." 
+        <title>Prestations & Tarifs | Numérologie, Cartomancie, Lahochi — Tourma-Line</title>
+        <meta
+          name="description"
+          content="Découvrez mes prestations de numérologie, cartomancie et Lahochi, ainsi que les accompagnements pour animaux et l'harmonisation d'objets. Cabinet à Gerponville ou à distance selon la prestation."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.tourma-line.fr/prestations" />
@@ -44,11 +43,10 @@ export const PrestationsPage = () => {
 
       <Header onNavClick={handleNavClick} />
 
-      {/* Hero Section */}
       <section className="relative pt-32 pb-20 bg-brand-dark text-white overflow-hidden">
         <img
           src="/hero-tourma-line.jpg"
-          alt="Prestations de numérologie, cartomancie et soin Lahochi — forêt mystique en Normandie"
+          alt="Prestations Tourma-Line — numérologie, cartomancie et Lahochi"
           className="absolute inset-0 w-full h-full object-cover opacity-25"
           loading="eager"
           fetchPriority="high"
@@ -57,30 +55,26 @@ export const PrestationsPage = () => {
 
         <div className="relative z-10 container mx-auto px-6 max-w-4xl text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold leading-tight mb-6">
-            Nos Prestations & Accompagnements
+            Mes prestations & accompagnements
           </h1>
           <p className="text-lg sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
-            Découvrez comment la numérologie, la cartomancie et les soins énergétiques Lahochi peuvent vous apporter des réponses claires et un rééquilibrage profond.
+            Retrouvez ici la numérologie, la cartomancie, le Lahochi et les nouvelles prestations pour votre compagnon ou certains objets personnels. Chaque séance est proposée dans un cadre bienveillant, confidentiel et respectueux de votre rythme.
           </p>
         </div>
       </section>
 
-      {/* Services List and Tab Switcher */}
       <div className="bg-brand-green/20 py-12">
         <Services activeTab={activeTab} setActiveTab={setActiveTab} />
       </div>
 
-      {/* Consultations List (Glassmorphism card details) */}
       <div className="bg-white">
         <Consultations />
       </div>
 
-      {/* Accompaniments / Formules List */}
       <div className="bg-brand-green/20">
         <Formules />
       </div>
 
-      {/* Client Reviews / Testimonials */}
       <Testimonials />
 
       <Footer />

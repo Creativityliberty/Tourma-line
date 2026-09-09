@@ -12,6 +12,7 @@ const llmsGenerator = fs.readFileSync(path.join(rootDir, "scripts/generate-llms.
 const robots = fs.readFileSync(path.join(rootDir, "public/robots.txt"), "utf8");
 const header = fs.readFileSync(path.join(rootDir, "src/components/layout/Header.tsx"), "utf8");
 const footer = fs.readFileSync(path.join(rootDir, "src/components/layout/Footer.tsx"), "utf8");
+const forbiddenPublicIdentity = /\bvoyance\b|\bvoyante\b|\bmédium\b|(?<![-\w])medium(?![-:\w])|Line Simon/i;
 
 assert(sitemapGenerator.includes("getRoutes"), "Sitemap generator must use getRoutes() as the source of indexable URLs");
 assert(!sitemapGenerator.includes("getCityMeta"), "Sitemap generator must not enumerate all known cities");
@@ -57,6 +58,6 @@ assert(header.includes("Prendre rendez-vous"), "Header must expose the primary b
 for (const href of ["/prestations", "/avis", "/rendezvous", "/cartomancie", "/numerologie", "/soin-lahochi", "/consultation-a-distance", "/blog"]) {
   assert(footer.includes(`to=\"${href}\"`) || footer.includes(`to="${href}"`), `Footer must reinforce core page ${href}`);
 }
-assert(!/\bvoyance\b|\bvoyante\b|\bmédium\b|\bmedium\b|Line Simon/i.test(footer), "Footer must use truthful public service names and identity");
+assert(!forbiddenPublicIdentity.test(footer), "Footer must use truthful public service names and identity");
 
 console.log("Crawl surface / sitemap / robots / navigation verification passed.");

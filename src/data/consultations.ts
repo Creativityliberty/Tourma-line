@@ -71,15 +71,15 @@ export const consultations: Consultation[] = [
     title: "Soin énergétique LAHOCHI",
     subtitle: "À distance ou en cabinet",
     description:
-      "Un soin énergétique par apposition des mains, proposé comme un temps de détente, de recentrage et de bien-être.",
+      "Je vous propose une séance Lahochi par apposition des mains dans un cadre calme et respectueux. La séance est pensée comme un moment de détente, de recentrage et de bien-être.",
     details: [
-      "Un temps calme consacré au recentrage",
-      "Une séance pensée pour favoriser la détente",
-      "Des ressentis personnels et variables selon les personnes",
-      "Une pratique de bien-être complémentaire, sans promesse thérapeutique",
+      "Un temps consacré à vous",
+      "Un cadre calme et bienveillant",
+      "Une pratique adaptée à votre rythme",
+      "Une séance possible au cabinet ou à distance",
     ],
     footerNote:
-      "Le Lahochi ne remplace pas un diagnostic, un traitement ou un suivi par un professionnel de santé.",
+      "Le Lahochi est une pratique de bien-être complémentaire et ne remplace pas un diagnostic, un traitement ou un suivi médical.",
     duration: "45 min à 1h",
     price: "60 €",
     imageUrl: "/images/services/lahochi.jpg",

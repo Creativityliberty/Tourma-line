@@ -12,7 +12,7 @@ export const Hero = ({ onNavClick: _onNavClick }: { onNavClick: NavClickHandler 
     >
       <img
         src="/hero-mobile-tourmaline.jpg"
-        alt="Forêt mystique avec énergie spirituelle lumineuse — voyance, numérologie et soins énergétiques Lahochi"
+        alt="Univers Tourma-Line — numérologie, cartomancie et Lahochi"
         className="absolute inset-0 w-full h-full object-cover sm:hidden"
         loading="eager"
         fetchPriority="high"
@@ -20,7 +20,7 @@ export const Hero = ({ onNavClick: _onNavClick }: { onNavClick: NavClickHandler 
 
       <img
         src="/hero-tourma-line.jpg"
-        alt="Forêt mystique avec énergie spirituelle lumineuse — voyance, numérologie et soins énergétiques Lahochi"
+        alt="Univers Tourma-Line — numérologie, cartomancie et Lahochi"
         className="absolute inset-0 w-full h-full object-cover hidden sm:block"
         loading="eager"
         fetchPriority="high"
@@ -33,7 +33,7 @@ export const Hero = ({ onNavClick: _onNavClick }: { onNavClick: NavClickHandler 
 
       <div className="relative z-10 px-4 py-24 sm:py-20 animate-fadeInUp max-w-5xl">
         <p className="text-sm sm:text-base uppercase tracking-[0.18em] text-white/80 mb-4 drop-shadow-md">
-          Line — Cartomancienne, numérologue & praticienne en soins énergétiques
+          Line — Numérologue, cartomancienne & praticienne Lahochi
         </p>
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-5 drop-shadow-lg">
           Vous traversez une période de questionnement ?
@@ -43,6 +43,9 @@ export const Hero = ({ onNavClick: _onNavClick }: { onNavClick: NavClickHandler 
         </p>
         <p className="text-sm sm:text-base md:text-lg mb-4 max-w-3xl mx-auto text-white/90 drop-shadow-md">
           La numérologie et la cartomancie vous aident à y voir clair — avec la justesse et la bienveillance que mes clients soulignent.
+        </p>
+        <p className="text-sm sm:text-base md:text-lg mb-4 max-w-3xl mx-auto text-white/90 drop-shadow-md">
+          Je vous accompagne pour mieux comprendre ce que vous traversez, mettre des mots sur certaines situations et retrouver davantage de clarté dans vos choix.
         </p>
         <p className="text-xs sm:text-sm md:text-base mb-8 max-w-2xl mx-auto text-white/75 drop-shadow-md">
           Consultations au cabinet à Gerponville ou à distance, selon la prestation.
@@ -68,7 +71,7 @@ export const Hero = ({ onNavClick: _onNavClick }: { onNavClick: NavClickHandler 
             className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-flex items-center justify-center gap-2 shadow-lg min-w-[220px]"
           >
             <WhatsAppIcon className="w-5 h-5" />
-            Contact direct WhatsApp
+            WhatsApp
           </ConversionLink>
         </div>
 

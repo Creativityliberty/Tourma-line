@@ -84,6 +84,7 @@ test('existing service offers keep the original approved commercial copy', async
 
 test('new Lahochi offers are present with their approved positioning, prices and image paths', async () => {
   const consultations = await read('src/data/consultations.ts');
+  const consultationCards = await read('src/components/sections/Consultations.tsx');
 
   assert.match(consultations, /Lahochi Compagnon/);
   assert.match(consultations, /45 € à distance/);
@@ -94,6 +95,8 @@ test('new Lahochi offers are present with their approved positioning, prices and
   assert.match(consultations, /Harmonisation d’objets|Harmonisation d'objets/);
   assert.match(consultations, /À partir de 25 €/);
   assert.match(consultations, /à partir d’une photographie|à partir d'une photographie/);
+  assert.match(consultations, /contactOnly: true/);
+  assert.match(consultationCards, /consultation\.contactOnly/);
   assert.match(consultations, /\/images\/services\/lahochi-compagnon\.jpg/);
   assert.match(consultations, /\/images\/services\/pack-compagnon-serenite\.jpg/);
   assert.match(consultations, /\/images\/services\/harmonisation-objets\.jpg/);

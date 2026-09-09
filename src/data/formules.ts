@@ -37,11 +37,11 @@ export const formules: Formule[] = [
     icon: ButterflyIcon,
     title: 'Formule « Renaissance »',
     subtitle: 'Accompagnement sur 3 mois',
-    objective: 'Un accompagnement de réflexion personnelle et de bien-être sur plusieurs semaines pour traverser une période de changement avec davantage de recul.',
+    objective: 'Vous accompagner dans une période émotionnelle importante, un deuil, une rupture ou une transition, avec plusieurs temps de guidance et de recentrage.',
     details: [
       '1 séance de cartomancie + numérologie au démarrage.',
-      '3 séances énergétiques Lahochi, à raison d’environ une par mois.',
-      'Échanges de suivi et guidance entre les séances selon la formule.',
+      '3 séances Lahochi.',
+      'Suivi et guidance entre les séances.',
       '1 séance de cartomancie de clôture.'
     ],
     duration: '3 mois',
@@ -55,13 +55,13 @@ export const formules: Formule[] = [
     icon: LahochiIcon,
     title: 'Formule « Soin Lahochi »',
     subtitle: 'Pack de 3 séances',
-    objective: 'Trois temps de bien-être et de recentrage pour les personnes qui souhaitent inscrire la pratique Lahochi dans la durée.',
+    objective: 'Trois séances Lahochi pour inscrire ces moments de calme, de bien-être et de recentrage dans la durée.',
     details: [
-      '3 séances énergétiques Lahochi.',
-      'Un temps d’échange autour de vos ressentis entre les séances.',
-      'Une formule adaptée aux périodes où vous souhaitez vous accorder des rendez-vous réguliers de détente.'
+      '3 séances de soin Lahochi.',
+      'Suivi entre les séances.',
+      'Une formule adaptée aux périodes de changement ou lorsque vous ressentez le besoin de prendre davantage de temps pour vous.'
     ],
-    duration: 'À définir selon vos préférences',
+    duration: 'À définir selon vos besoins',
     price: '150€',
     imageUrl: '/images/formules/lahochi.jpg',
     imageAlt: 'Illustration de la formule Soin Lahochi'

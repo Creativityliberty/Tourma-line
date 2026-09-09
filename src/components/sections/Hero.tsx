@@ -32,21 +32,20 @@ export const Hero = ({ onNavClick: _onNavClick }: { onNavClick: NavClickHandler 
       <div className="absolute inset-0 bg-black/10 sm:bg-black/15 z-0"></div>
 
       <div className="relative z-10 px-4 py-24 sm:py-20 animate-fadeInUp max-w-5xl">
-        <p className="text-sm sm:text-base uppercase tracking-[0.22em] text-white/80 mb-4 drop-shadow-md">
-          Line Simon · Cabinet à Gerponville · près de Fécamp
+        <p className="text-sm sm:text-base uppercase tracking-[0.18em] text-white/80 mb-4 drop-shadow-md">
+          Line — Cartomancienne, numérologue & praticienne en soins énergétiques
         </p>
         <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-tight mb-5 drop-shadow-lg">
-          Voyante & cartomancienne près de Fécamp en Seine-Maritime
+          Vous traversez une période de questionnement ?
         </h1>
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-4 max-w-3xl mx-auto font-medium drop-shadow-md">
-          Une relation vous questionne ? Un choix professionnel vous bloque ? Vous traversez une période où les mêmes questions reviennent sans réponse ?
+          Relation compliquée, choix professionnel à faire, ou épreuve qui vous pèse ?
         </p>
-        <p className="text-sm sm:text-base md:text-lg mb-3 max-w-3xl mx-auto text-white/90 drop-shadow-md">
-          Je vous accompagne par la cartomancie et la numérologie pour mettre des mots sur ce que vous vivez,
-          comprendre ce qui se répète et retrouver un cap. Séances au cabinet à Gerponville, près de Fécamp et Valmont, ou à distance.
+        <p className="text-sm sm:text-base md:text-lg mb-4 max-w-3xl mx-auto text-white/90 drop-shadow-md">
+          La numérologie et la cartomancie vous aident à y voir clair — avec la justesse et la bienveillance que mes clients soulignent.
         </p>
         <p className="text-xs sm:text-sm md:text-base mb-8 max-w-2xl mx-auto text-white/75 drop-shadow-md">
-          Le Lahochi est également proposé comme un temps de détente et de recentrage.
+          Consultations au cabinet à Gerponville ou à distance, selon la prestation.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -69,7 +68,7 @@ export const Hero = ({ onNavClick: _onNavClick }: { onNavClick: NavClickHandler 
             className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-flex items-center justify-center gap-2 shadow-lg min-w-[220px]"
           >
             <WhatsAppIcon className="w-5 h-5" />
-            Poser une question
+            Contact direct WhatsApp
           </ConversionLink>
         </div>
 

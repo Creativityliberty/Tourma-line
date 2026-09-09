@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, access } from 'node:fs/promises';
 
 const read = (path) => readFile(path, 'utf8');
 
@@ -44,7 +44,7 @@ test('the original story and emotional proof return immediately after social pro
 
   assert.match(welcome, /Mon parcours a commencé par une quête de sens/);
   assert.match(welcome, /les schémas qui se répétaient, les questions sans réponses/);
-  assert.match(welcome, /la numérologie et la cartomancie m'ont offert des clés/);
+  assert.match(welcome, /la numérologie et la cartomancie m(?:'|&apos;)ont offert des clés/);
   assert.match(welcome, /Une résonance étonnante/);
   assert.match(welcome, /Donner forme à ce que vous ressentez/);
   assert.match(welcome, /Un moment de soulagement/);
@@ -100,6 +100,14 @@ test('new Lahochi offers are present with their approved positioning, prices and
   assert.match(consultations, /\/images\/services\/lahochi-compagnon\.jpg/);
   assert.match(consultations, /\/images\/services\/pack-compagnon-serenite\.jpg/);
   assert.match(consultations, /\/images\/services\/harmonisation-objets\.jpg/);
+});
+
+test('new Lahochi offer images are committed as public assets', async () => {
+  await Promise.all([
+    access('public/images/services/lahochi-compagnon.jpg'),
+    access('public/images/services/pack-compagnon-serenite.jpg'),
+    access('public/images/services/harmonisation-objets.jpg'),
+  ]);
 });
 
 test('home search metadata keeps the current local SEO targeting', async () => {

@@ -39,6 +39,17 @@ test('main navigation stays intentionally simple without deleting SEO routes', a
   assert.match(app, /path="\/blog"/);
 });
 
+test('the original story and emotional proof return immediately after social proof', async () => {
+  const welcome = await read('src/components/sections/Welcome.tsx');
+
+  assert.match(welcome, /Mon parcours a commencé par une quête de sens/);
+  assert.match(welcome, /les schémas qui se répétaient, les questions sans réponses/);
+  assert.match(welcome, /la numérologie et la cartomancie m'ont offert des clés/);
+  assert.match(welcome, /Une résonance étonnante/);
+  assert.match(welcome, /Donner forme à ce que vous ressentez/);
+  assert.match(welcome, /Un moment de soulagement/);
+});
+
 test('lightweight social proof still appears immediately after the hero', async () => {
   const app = await read('App.tsx');
   const testimonials = await read('src/components/sections/Testimonials.tsx');

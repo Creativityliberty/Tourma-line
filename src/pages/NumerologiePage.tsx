@@ -10,7 +10,7 @@ export const NumerologiePage = () => {
         <title>Numérologue en Seine-Maritime | Chemin de vie — Tourma-Line</title>
         <meta
           name="description"
-          content="Numérologue en Seine-Maritime : chemin de vie, année personnelle et cycles. Consultation à Gerponville près de Fécamp et Valmont, ou à distance. RDV en ligne."
+          content="Numérologie avec Line à Gerponville : chemin de vie, année personnelle et cycles. Consultation près de Fécamp et Valmont, ou à distance."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.tourma-line.fr/numerologie" />
@@ -20,7 +20,7 @@ export const NumerologiePage = () => {
           "name": "Consultation de numérologie",
           "provider": {
             "@type": "Person",
-            "name": "Line Simon",
+            "name": "Line",
             "jobTitle": "Numérologue",
             "url": "https://www.tourma-line.fr/"
           },
@@ -30,7 +30,7 @@ export const NumerologiePage = () => {
             { "@type": "AdministrativeArea", "name": "Normandie" },
             { "@type": "Country", "name": "France" }
           ],
-          "description": "Consultation de numérologie à partir de la date de naissance : chemin de vie, année personnelle, cycles et pistes de réflexion personnalisées.",
+          "description": "Consultation de numérologie à partir de la date de naissance : chemin de vie, année personnelle, cycles et lecture personnalisée.",
           "url": "https://www.tourma-line.fr/numerologie",
           "offers": {
             "@type": "Offer",
@@ -43,10 +43,10 @@ export const NumerologiePage = () => {
       <ServicePage
         title="Numérologie"
         headline="Numérologue en Seine-Maritime — Chemin de vie & année personnelle"
-        metaDescription="Numérologue à Gerponville, près de Fécamp et Valmont, et à distance."
+        metaDescription="Numérologie à Gerponville, près de Fécamp et Valmont, et à distance."
         heroImage="/hero-tourma-line.jpg"
-        heroImageAlt="Line Simon, numérologue en Seine-Maritime — consultation à Gerponville"
-        intro="La numérologie propose une lecture symbolique de votre date de naissance pour explorer votre chemin de vie, vos cycles et les périodes de transition. Chez Tourma-Line, Line peut compléter cette lecture par la cartomancie lorsque vous souhaitez approfondir une question précise."
+        heroImageAlt="Consultation de numérologie avec Line chez Tourma-Line"
+        intro="Je m'appuie sur votre date de naissance pour explorer votre chemin de vie, votre année personnelle, vos cycles et certains schémas de votre parcours. Cette lecture permet de mieux comprendre la période que vous traversez aujourd'hui."
         localInfo="Cabinet : 4 résidence Les Peupliers, 76540 Gerponville — près de Fécamp et Valmont — consultations à distance disponibles"
         breadcrumb="Numérologie"
         canonicalPath="/numerologie"
@@ -66,27 +66,27 @@ export const NumerologiePage = () => {
         sections={[
           {
             icon: <HashIcon className="w-8 h-8" />,
-            heading: "Qu'est-ce que la numérologie ?",
+            heading: "Comprendre votre chemin de vie",
             content:
-              "La numérologie est une pratique d'interprétation symbolique des nombres associés notamment à la date de naissance. Line s'en sert comme support de réflexion pour explorer votre chemin de vie, vos cycles personnels, vos forces et les thèmes qui reviennent dans votre parcours.",
+              "À partir de votre date de naissance, j'explore votre chemin de vie, vos cycles et les thèmes qui reviennent dans votre parcours. Cette lecture met en lumière certains éléments de votre personnalité et de votre façon d'avancer.",
           },
           {
             icon: <CompassIcon className="w-8 h-8" />,
-            heading: "Chemin de vie, année personnelle et cycles",
+            heading: "Année personnelle et période actuelle",
             content:
-              "À partir de votre date de naissance, Line étudie notamment votre chemin de vie et votre année personnelle. L'objectif est de mettre en perspective la période que vous traversez et de faire émerger des pistes de réflexion concrètes sur vos choix, vos priorités et vos transitions.",
+              "J'étudie votre année personnelle afin de mettre en perspective la période que vous traversez, les changements en cours et les questions qui se présentent à vous aujourd'hui.",
           },
           {
             icon: <BriefcaseIcon className="w-8 h-8" />,
             heading: "Pour quelles situations consulter ?",
             content:
-              "Une consultation peut être utile lorsque vous souhaitez prendre du recul sur une transition professionnelle, une relation, un changement de cap ou une période de questionnement personnel. La séance vise à vous apporter un cadre de lecture et des éléments de réflexion, sans décider à votre place.",
+              "Relation, transition professionnelle, changement de cap ou période de questionnement personnel : la numérologie peut apporter des repères et une lecture différente de ce que vous vivez.",
           },
           {
             icon: <MapPinIcon className="w-8 h-8" />,
             heading: "Numérologue à Gerponville, près de Fécamp et Valmont",
             content:
-              "Line Simon vous reçoit sur rendez-vous au 4 résidence Les Peupliers, 76540 Gerponville, en Seine-Maritime. Le cabinet est situé dans le secteur de Fécamp, Valmont et Cany-Barville. Les consultations sont également proposées à distance par téléphone ou visioconférence.",
+              "Je vous reçois sur rendez-vous au 4 résidence Les Peupliers, 76540 Gerponville, en Seine-Maritime. Les consultations peuvent également être proposées à distance selon la formule choisie.",
           },
         ]}
         faq={[
@@ -98,12 +98,12 @@ export const NumerologiePage = () => {
           {
             question: "Peut-on consulter une numérologue pour une transition professionnelle ?",
             answer:
-              "Oui, si vous cherchez un support de réflexion pour prendre du recul sur une période de changement. La numérologie ne remplace pas un conseil professionnel, mais elle peut fournir un angle de lecture complémentaire sur vos cycles et vos priorités.",
+              "Oui. La séance peut vous aider à mettre en perspective la période que vous traversez et les cycles qui se présentent à vous.",
           },
           {
             question: "La consultation de numérologie est-elle disponible à distance ?",
             answer:
-              "Oui. Les consultations peuvent se faire par téléphone ou visioconférence, en France comme à l'étranger francophone. Les modalités sont précisées lors de la réservation.",
+              "Oui. Certaines consultations peuvent se faire par téléphone ou visioconférence. Les modalités sont précisées lors de la réservation.",
           },
           {
             question: "Combien de temps dure une consultation avec Line ?",

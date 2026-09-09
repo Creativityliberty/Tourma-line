@@ -61,13 +61,98 @@ const serviceDetails = {
   },
 };
 
+const fecampPremiumContent = {
+  cartomancie: {
+    pageTitle: "Cartomancienne près de Fécamp | Tourma-Line",
+    headline: "Cartomancienne près de Fécamp",
+    metaDescription:
+      "Cartomancie et guidance près de Fécamp avec Line au cabinet de Gerponville, à environ 15 km, ou à distance selon la prestation.",
+    locationIntro:
+      "Vous recherchez une cartomancienne près de Fécamp ? Je vous reçois à Gerponville, dans le territoire de Fécamp Caux Littoral, à environ 15 km de Fécamp, ou à distance selon la prestation.",
+    localHeading: "Cartomancie près de Fécamp et dans Fécamp Caux Littoral",
+    localContext:
+      "Gerponville et Fécamp font partie de Fécamp Caux Littoral Agglomération. Le cabinet Tourma-Line se situe à environ 15 km de Fécamp, soit environ 20 minutes en voiture selon l'itinéraire et la circulation.",
+    serviceAngle:
+      "La séance peut partir d'une question sur une relation, le travail, la famille, une décision ou une période de changement. J'utilise les cartes comme support de guidance autour de votre situation.",
+    directionsLabel: "Itinéraire Fécamp → Gerponville",
+    directionsUrl:
+      "https://www.google.com/maps/dir/?api=1&origin=F%C3%A9camp%2C%20France&destination=4%20r%C3%A9sidence%20Les%20Peupliers%2C%2076540%20Gerponville%2C%20France",
+    faq: [
+      {
+        q: "Où consulter une cartomancienne près de Fécamp ?",
+        a: "Je vous reçois au cabinet Tourma-Line, 4 résidence Les Peupliers, 76540 Gerponville, à environ 15 km de Fécamp.",
+      },
+      {
+        q: "La cartomancie est-elle possible à distance depuis Fécamp ?",
+        a: "Oui. Certaines consultations de cartomancie peuvent être proposées à distance selon la formule choisie.",
+      },
+    ],
+  },
+  numerologie: {
+    pageTitle: "Numérologue près de Fécamp | Chemin de vie — Tourma-Line",
+    headline: "Numérologue près de Fécamp — chemin de vie & année personnelle",
+    metaDescription:
+      "Numérologie près de Fécamp avec Line : chemin de vie, année personnelle et cycles au cabinet de Gerponville, à environ 15 km, ou à distance.",
+    locationIntro:
+      "Vous recherchez une numérologue près de Fécamp ? Je vous reçois à Gerponville, dans le territoire de Fécamp Caux Littoral, pour explorer votre chemin de vie, votre année personnelle et vos cycles.",
+    localHeading: "Numérologie près de Fécamp, au cœur de Fécamp Caux Littoral",
+    localContext:
+      "Gerponville et Fécamp font partie de Fécamp Caux Littoral Agglomération. Le cabinet Tourma-Line se situe à environ 15 km de Fécamp, soit environ 20 minutes en voiture selon l'itinéraire et la circulation.",
+    serviceAngle:
+      "La consultation s'appuie sur votre date de naissance pour explorer votre chemin de vie, votre année personnelle et les cycles que vous traversez.",
+    directionsLabel: "Itinéraire Fécamp → Gerponville",
+    directionsUrl:
+      "https://www.google.com/maps/dir/?api=1&origin=F%C3%A9camp%2C%20France&destination=4%20r%C3%A9sidence%20Les%20Peupliers%2C%2076540%20Gerponville%2C%20France",
+    faq: [
+      {
+        q: "Où trouver une numérologue près de Fécamp ?",
+        a: "Je vous reçois au cabinet Tourma-Line à Gerponville, à environ 15 km de Fécamp et environ 20 minutes en voiture selon l'itinéraire et la circulation.",
+      },
+      {
+        q: "La numérologie peut-elle se faire à distance depuis Fécamp ?",
+        a: "Oui. Certaines consultations peuvent être proposées à distance selon la formule réservée.",
+      },
+    ],
+  },
+  lahochi: {
+    pageTitle: "Lahochi près de Fécamp | Tourma-Line",
+    headline: "Lahochi près de Fécamp — détente & recentrage",
+    metaDescription:
+      "Séance Lahochi de bien-être avec Line près de Fécamp, au cabinet de Gerponville à environ 15 km, ou à distance selon la prestation.",
+    locationIntro:
+      "Vous recherchez une praticienne Lahochi près de Fécamp ? Je propose des séances au cabinet de Gerponville, dans Fécamp Caux Littoral, ainsi qu'à distance selon la prestation choisie.",
+    localHeading: "Lahochi près de Fécamp",
+    localContext:
+      "Gerponville et Fécamp font partie de Fécamp Caux Littoral Agglomération. Le cabinet Tourma-Line se situe à environ 15 km de Fécamp, soit environ 20 minutes en voiture selon l'itinéraire et la circulation.",
+    serviceAngle:
+      "Le Lahochi est proposé comme une pratique de bien-être, de détente et de recentrage. Il ne remplace pas un diagnostic, un traitement ou un suivi par un professionnel de santé.",
+    directionsLabel: "Itinéraire Fécamp → Gerponville",
+    directionsUrl:
+      "https://www.google.com/maps/dir/?api=1&origin=F%C3%A9camp%2C%20France&destination=4%20r%C3%A9sidence%20Les%20Peupliers%2C%2076540%20Gerponville%2C%20France",
+    faq: [
+      {
+        q: "Où réserver une séance Lahochi près de Fécamp ?",
+        a: "Je vous reçois sur rendez-vous à Gerponville, à environ 15 km de Fécamp et environ 20 minutes en voiture selon l'itinéraire et la circulation.",
+      },
+      {
+        q: "Le Lahochi peut-il être réservé à distance depuis Fécamp ?",
+        a: "Oui. Certaines séances Lahochi sont proposées à distance comme pratique de bien-être selon la prestation choisie.",
+      },
+    ],
+  },
+};
+
 export const CityPage = ({ city, service }: CityPageProps) => {
   const svc = serviceDetails[service];
   const seoDecision = getLocalSeoDecision(city.slug, svc.slug);
   const isFecamp = city.slug === "fecamp";
   const isIndexableLocalPage = isFecamp || seoDecision?.tier === "A";
   const robotsDirective = isIndexableLocalPage ? "index, follow" : "noindex, follow";
-  const premiumContent = seoDecision?.tier === "A" ? getPremiumLocalContent(city.slug, svc.slug) : null;
+  const premiumContent = isFecamp
+    ? fecampPremiumContent[service]
+    : seoDecision?.tier === "A"
+      ? getPremiumLocalContent(city.slug, svc.slug)
+      : null;
   const territoryHub = getTerritoryHubForCity(city.slug);
 
   useEffect(() => {

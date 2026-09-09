@@ -12,7 +12,7 @@ export const BASE_URL = "https://www.tourma-line.fr";
 
 // Date de dernière modification des pages principales et des templates villes.
 // À mettre à jour uniquement lors d'une modification substantielle de ces contenus.
-export const SITE_LAST_MOD = "2026-08-08";
+export const SITE_LAST_MOD = "2026-09-09";
 
 export const SERVICES = [
   { slug: "numerologie", label: "Numérologie" },
@@ -25,6 +25,8 @@ export const TERRITORY_ROUTES = territorialHubs.map((hub) => hub.path);
 export const STATIC_ROUTES = [
   "/",
   "/prestations",
+  "/avis",
+  "/rendezvous",
   "/numerologie",
   "/cartomancie",
   "/soin-lahochi",

@@ -20,7 +20,6 @@ import { TestimonialsTicker } from "./src/components/sections/TestimonialsTicker
 import { About } from "./src/components/sections/About";
 import { FAQ } from "./src/components/sections/FAQ";
 import { Contact } from "./src/components/sections/Contact";
-import { BlogOverview } from "./src/components/sections/BlogOverview";
 
 // Service Pages
 import { NumerologiePage } from "./src/pages/NumerologiePage";
@@ -28,9 +27,10 @@ import { CartomancePage } from "./src/pages/CartomancePage";
 import { LahochiPage } from "./src/pages/LahochiPage";
 import { ConsultationDistancePage } from "./src/pages/ConsultationDistancePage";
 import { PrestationsPage } from "./src/pages/PrestationsPage";
+import { AvisPage } from "./src/pages/AvisPage";
+import { RendezVousPage } from "./src/pages/RendezVousPage";
 import { CityPage } from "./src/pages/CityPage";
 import { TerritoryHubPage } from "./src/pages/TerritoryHubPage";
-import { CityLinks } from "./src/components/sections/CityLinks";
 import { WhatsAppFloat } from "./src/components/ui/WhatsAppFloat";
 import { localCities } from "./src/data/cities";
 import { territorialHubs } from "./src/data/territorialHubs.mjs";
@@ -55,13 +55,9 @@ const SectionScroller = () => {
       "/consultations": "consultations",
       "/formules": "formules",
       "/bienfaits": "bienfaits",
-      "/avis": "avis",
-      "/temoignages": "avis",
       "/a-propos": "a-propos",
       "/about": "a-propos",
       "/faq": "faq",
-      "/contact": "rendezvous",
-      "/rendezvous": "rendezvous"
     };
 
     const targetId = hash ? hash.substring(1) : (pathMap[pathname] || null);
@@ -113,12 +109,10 @@ function HomePage() {
       <Formules />
       <Benefits />
       <Process />
-      <CityLinks />
       <LocalZone />
       <Testimonials />
       <About />
       <FAQ />
-      <BlogOverview />
       <Contact />
       <Footer />
     </div>
@@ -131,6 +125,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/prestations" element={<PrestationsPage />} />
+        <Route path="/avis" element={<AvisPage />} />
+        <Route path="/rendezvous" element={<RendezVousPage />} />
         <Route path="/numerologie" element={<NumerologiePage />} />
         <Route path="/cartomancie" element={<CartomancePage />} />
         <Route path="/soin-lahochi" element={<LahochiPage />} />
@@ -169,19 +165,16 @@ function App() {
         <Route path="/politique-de-confidentialite" element={<PolitiqueConfidentialite />} />
         <Route path="/conditions-generales" element={<CGV />} />
 
-        {/* Legacy section URLs remain available client-side for old in-app links.
-            Direct requests are permanently redirected at the Vercel edge. */}
+        {/* Legacy section URLs remain available client-side for old in-app links. */}
         <Route path="/services" element={<HomePage />} />
         <Route path="/consultations" element={<HomePage />} />
         <Route path="/formules" element={<HomePage />} />
         <Route path="/bienfaits" element={<HomePage />} />
-        <Route path="/avis" element={<HomePage />} />
-        <Route path="/temoignages" element={<HomePage />} />
+        <Route path="/temoignages" element={<AvisPage />} />
         <Route path="/a-propos" element={<HomePage />} />
         <Route path="/about" element={<HomePage />} />
         <Route path="/faq" element={<HomePage />} />
-        <Route path="/contact" element={<HomePage />} />
-        <Route path="/rendezvous" element={<HomePage />} />
+        <Route path="/contact" element={<RendezVousPage />} />
 
         <Route path="/404" element={<NotFoundPage />} />
         <Route path="*" element={<NotFoundPage />} />

@@ -36,6 +36,7 @@ export const Consultations = () => {
                         src={consultation.imageUrl}
                         alt={consultation.title}
                         className="absolute inset-0 w-full h-full object-cover"
+                        loading="lazy"
                       />
                     </div>
                     <div className="p-8 md:p-10 md:w-3/5 flex flex-col justify-between">
@@ -101,27 +102,33 @@ export const Consultations = () => {
 
                       <div className="flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-brand-lilas pt-6">
                         <div className="text-center sm:text-left">
-                          <p className="text-3xl font-bold text-brand-purple">
+                          <p className="text-2xl sm:text-3xl font-bold text-brand-purple">
                             {consultation.price}
                           </p>
                         </div>
                         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
-                          <ConversionLink kind="booking" placement={`consultation-${consultation.id}`}
-                            href="https://cal.com/tourma-line"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-brand-purple hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center"
-                          >
-                            Réserver
-                          </ConversionLink>
-                          <ConversionLink kind="whatsapp" placement={`consultation-${consultation.id}`}
+                          {!consultation.contactOnly ? (
+                            <ConversionLink
+                              kind="booking"
+                              placement={`consultation-${consultation.id}`}
+                              href="https://cal.com/tourma-line"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="bg-brand-purple hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center"
+                            >
+                              Réserver
+                            </ConversionLink>
+                          ) : null}
+                          <ConversionLink
+                            kind="whatsapp"
+                            placement={`consultation-${consultation.id}`}
                             href="https://wa.me/33649653186"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-2"
                           >
                             <WhatsAppIcon className="w-5 h-5" />
-                            WhatsApp
+                            {consultation.whatsappLabel ?? "WhatsApp"}
                           </ConversionLink>
                         </div>
                       </div>

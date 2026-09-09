@@ -11,6 +11,8 @@ export interface Consultation {
   imageUrl: string;
   location: string;
   type: string;
+  contactOnly?: boolean;
+  whatsappLabel?: string;
 }
 
 export const consultations: Consultation[] = [
@@ -19,14 +21,14 @@ export const consultations: Consultation[] = [
     title: "Consultation Guidance Complète",
     subtitle: "Première consultation",
     description:
-      "Une séance approfondie pour faire le point sur votre situation actuelle et explorer vos questions. Cette consultation combine l'analyse de votre chemin de vie, l'étude de votre année personnelle en cours et une guidance par les cartes. Elle convient à un premier rendez-vous pour poser votre base numérologique, mettre votre période actuelle en perspective et travailler sur vos sujets affectifs, professionnels, familiaux ou vos transitions.",
+      "Une séance approfondie pour faire le point sur votre situation actuelle et obtenir des réponses claires à vos questions. Cette consultation combine l'analyse de votre chemin de vie, l'étude de votre année personnelle en cours, et une guidance cartomancie personnalisée. Elle correspond au premier rendez-vous idéal pour étudier votre base numérologique, comprendre votre période actuelle et bénéficier d'un accompagnement structuré sur vos questions : affectives, professionnelles, familiales ou en période de transition.",
     details: [
       "L'étude de votre chemin de vie",
-      "L'analyse de votre année personnelle et de votre période actuelle",
-      "Une guidance personnalisée autour de vos questions : affectif, professionnel, décisions, famille, transitions...",
+      "L'analyse de votre année personnelle (énergie de votre période actuelle)",
+      "Une guidance personnalisée sur vos questions : affectif, professionnel, décisions, famille, transitions...",
     ],
     footerNote:
-      "Une approche qui relie structure et intuition pour vous aider à prendre du recul sur ce que vous traversez.",
+      "Une approche qui relie structure et intuition pour vous aider à mieux comprendre ce que vous traversez et à avancer plus sereinement.",
     duration: "1h30 à 1h45",
     price: "70 €",
     imageUrl: "/images/services/numerology.jpg",
@@ -37,13 +39,13 @@ export const consultations: Consultation[] = [
     id: "suivi-annee",
     title: "Consultation Suivi & Année Personnelle",
     description:
-      "Une consultation centrée sur votre période actuelle, idéale après une première consultation complète.",
+      "Une consultation complète centrée sur votre période actuelle, idéale après une première consultation complète.",
     details: [
       "Analyse détaillée de votre année personnelle",
       "Guidance pour faire le point sur votre évolution, vos questionnements actuels et vos prochains choix",
     ],
     footerNote:
-      "Cette séance permet de remettre votre situation en perspective sans refaire l'étude complète du chemin de vie.",
+      "Cette séance permet d'ajuster votre direction et de mieux comprendre les événements en cours, sans refaire l'étude complète du chemin de vie.",
     duration: "1h à 1h15",
     price: "60 €",
     imageUrl: "/images/services/suivi_annee.jpg",
@@ -55,7 +57,7 @@ export const consultations: Consultation[] = [
     title: "Guidance par Question",
     subtitle: "À distance",
     description:
-      "Vous avez une question précise sur un sujet précis ? Ce format permet d'explorer votre situation à partir de votre question et de votre date de naissance.\n\nExemples de domaines :\n• Professionnel : évolution de carrière, changement de poste, création d'entreprise...\n• Sentimental : évolution d'une relation, rencontre, séparation...\n• Financier : gestion, projet, héritage...\n• Déménagement : départ, expatriation, changement de région...\n• Familial : mariage, enfant, relations familiales...\n\nEn m'envoyant votre question + date de naissance, deux options possibles :\n• Rendez-vous direct : nous faisons la séance ensemble en temps réel\n• Analyse différée : je réalise votre analyse puis vous envoie le compte rendu par message ou par e-mail\n\nFormat au choix : réponse écrite détaillée ou réponse audio explicative",
+      "Vous avez une question précise sur un sujet précis ? Ce format vous permet d'obtenir une réponse personnalisée.\n\nExemples de domaines :\n• Professionnel : évolution de carrière, changement de poste, création d'entreprise...\n• Sentimental : évolution d'une relation, rencontre, séparation...\n• Financier : gestion, investissement, héritage...\n• Déménagement : départ, expatriation, changement de région...\n• Familial : mariage, enfant, relations familiales...\n\nEn m'envoyant votre question + date de naissance, deux options possibles :\n• Rendez-vous direct : nous faisons la séance ensemble en temps réel\n• Analyse différée : je réalise votre analyse à la date qui me convient et vous envoie le compte rendu par message ou par e-mail\n\nFormat au choix : réponse écrite détaillée ou réponse audio explicative",
     details: [],
     duration: "Envoi sous quelques jours",
     price: "30 €",
@@ -69,7 +71,7 @@ export const consultations: Consultation[] = [
     title: "Soin énergétique LAHOCHI",
     subtitle: "À distance ou en cabinet",
     description:
-      "Une séance énergétique Lahochi proposée comme un temps de détente, de recentrage et de bien-être, selon un protocole d'imposition des mains.",
+      "Un soin énergétique par apposition des mains, proposé comme un temps de détente, de recentrage et de bien-être.",
     details: [
       "Un temps calme consacré au recentrage",
       "Une séance pensée pour favoriser la détente",
@@ -77,11 +79,73 @@ export const consultations: Consultation[] = [
       "Une pratique de bien-être complémentaire, sans promesse thérapeutique",
     ],
     footerNote:
-      "Le Lahochi ne remplace pas un diagnostic, un traitement ni un suivi par un professionnel de santé.",
+      "Le Lahochi ne remplace pas un diagnostic, un traitement ou un suivi par un professionnel de santé.",
     duration: "45 min à 1h",
     price: "60 €",
     imageUrl: "/images/services/lahochi.jpg",
     location: "À distance / Cabinet",
     type: "Soin Énergétique",
+  },
+  {
+    id: "lahochi-compagnon",
+    title: "Lahochi Compagnon",
+    subtitle: "Pour votre animal",
+    description:
+      "Une séance Lahochi pensée pour votre animal, dans le respect de son rythme, de son comportement et de ce qu'il est prêt à recevoir. Elle peut être proposée lorsqu'il traverse un changement, une nouvelle étape de vie ou simplement lorsque vous souhaitez lui offrir un moment de calme et de bien-être.",
+    details: [
+      "Accompagnement lors d'un déménagement, d'une adoption ou d'un changement dans le foyer",
+      "Un temps de calme adapté au rythme de l'animal",
+      "À distance à partir d'une photo récente et de quelques informations",
+      "À domicile dans un rayon maximum de 20 km autour de Gerponville",
+      "Aucun contact imposé : l'animal reste libre de bouger ou de s'éloigner",
+    ],
+    footerNote:
+      "Le Lahochi animalier est une pratique de bien-être complémentaire. Il ne remplace pas un vétérinaire, ne permet pas d'établir un diagnostic et ne doit jamais conduire à interrompre ou modifier un traitement vétérinaire.",
+    duration: "Selon le rythme de l'animal",
+    price: "45 € à distance · 55 € à domicile",
+    imageUrl: "/images/services/lahochi-compagnon.jpg",
+    location: "À distance / Domicile local",
+    type: "Soin Énergétique",
+  },
+  {
+    id: "pack-compagnon-serenite",
+    title: "Pack Compagnon Sérénité",
+    subtitle: "3 séances à distance",
+    description:
+      "Un accompagnement sur plusieurs séances pour les animaux qui traversent une période de changement et pour lesquels vous souhaitez installer plusieurs temps de calme et de recentrage dans la durée.",
+    details: [
+      "3 séances Lahochi à distance",
+      "Adaptation de chaque séance à l'évolution de votre animal",
+      "Retour après chaque séance",
+    ],
+    footerNote:
+      "Une formule pensée pour accompagner votre compagnon sur plusieurs étapes, toujours dans le respect de son rythme.",
+    duration: "3 séances",
+    price: "115 €",
+    imageUrl: "/images/services/pack-compagnon-serenite.jpg",
+    location: "À distance",
+    type: "Soin Énergétique",
+  },
+  {
+    id: "harmonisation-objets",
+    title: "Harmonisation d'objets",
+    subtitle: "À distance sur photo",
+    description:
+      "Certains objets nous accompagnent depuis longtemps, ont une valeur particulière ou occupent une place importante dans notre quotidien. Je vous propose un travail Lahochi autour d'un objet personnel, ou de plusieurs petits objets, à partir d'une photographie et de l'intention que vous souhaitez leur associer.",
+    details: [
+      "Travail principalement à distance à partir d'une photographie",
+      "Pour un objet ou plusieurs petits objets selon leur taille",
+      "Définition de votre intention avant la séance",
+      "Tarif confirmé avant la prestation à partir des photos transmises",
+    ],
+    footerNote:
+      "Cette démarche est énergétique et symbolique. Elle ne modifie pas les propriétés physiques, chimiques ou médicales de l'objet concerné.",
+    duration: "Sur photo",
+    price: "À partir de 25 €",
+    imageUrl: "/images/services/harmonisation-objets.jpg",
+    location: "À distance",
+    type: "Soin Énergétique",
+    contactOnly: true,
+    whatsappLabel: "Me contacter",
   },
 ];

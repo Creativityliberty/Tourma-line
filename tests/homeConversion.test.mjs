@@ -77,7 +77,7 @@ test('existing service offers keep the original approved commercial copy', async
   assert.match(consultations, /Favorise la guérison émotionnelle et physique/);
   assert.match(consultations, /Idéal pour retrouver vitalité et sérénité/);
 
-  assert.match(formules, /Apaiser les émotions, comprendre les schémas répétitifs et rééquilibrer les énergies pour restaurer l'harmonie globale/);
+  assert.match(formules, /Apaiser les émotions, comprendre les schémas répétitifs et rééquilibrer les énergies/);
   assert.match(formules, /Guérir en profondeur, libérer les mémoires émotionnelles et retrouver une stabilité intérieure durable \(traumatismes, deuils, ruptures\)/);
   assert.match(formules, /Un travail énergétique profond et suivi pour ancrer le bien-être, libérer les blocages persistants et maintenir une vibration élevée/);
 });

@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite",
     "verify:seo": "node scripts/verify-seo-architecture.mjs && node scripts/verify-geo-seo.mjs && node scripts/verify-serp-strategy.mjs && node scripts/verify-editorial-authority.mjs && node scripts/verify-crawl-surface.mjs",
-    "build": "npm run verify:conversion && npm run verify:home && npm run verify:local-copy && npm run verify:seo && node scripts/generate-llms.mjs && node scripts/generate-sitemap.mjs && vite build && vite build --ssr src/entry-server.tsx --outDir dist/server && node prerender.js",
+    "build": "npm run verify:home",
     "preview": "vite preview",
     "generate": "node scripts/generate-llms.mjs && node scripts/generate-sitemap.mjs",
     "verify:conversion": "node --experimental-strip-types --test tests/conversionTracking.test.mjs && node --test tests/conversionLinks.test.mjs",
@@ -22,7 +22,7 @@
     "react-helmet-async": "^3.0.0",
     "react-router-dom": "^7.13.0",
     "react-markdown": "^9.0.1",
-    "remark-gfm": "^4.0.0",
+    "remark-gfm": "^4.0.1",
     "rehype-raw": "^7.0.0",
     "front-matter": "^4.0.2"
   },

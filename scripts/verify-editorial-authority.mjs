@@ -122,7 +122,7 @@ assert(servicePage.includes("Guides pour aller plus loin"), "ServicePage must ex
 assert(numerologiePage.includes("choisir-numerologue-consultation"), "NumerologiePage must link to the choosing-a-numerologist guide");
 assert(numerologiePage.includes("annee-personnelle-numerologie"), "NumerologiePage must link to the personal-year guide");
 assert(!cartomancePage.includes("choisir-voyante-cartomancienne-serieuse"), "CartomancePage must not promote the misleading legacy article");
-assert(territoryHubPage.includes("consulter-seine-maritime-cabinet-distance"), "TerritoryHubPage must link to the Seine-Maritime decision guide");
+assert(territoryHubPage.includes("/consultation-a-distance"), "TerritoryHubPage must keep a direct path to the truthful distance-consultation journey");
 assert(blogPostPage.includes("post.author") && blogPostPage.includes("#line") && blogPostPage.includes("Numérologue, cartomancienne et praticienne Lahochi"), "BlogPostPage must expose the current public author identity");
 assert(blogPosts.includes('author: "Line"'), "Public blog cards and article pages must display Line without the old surname");
 

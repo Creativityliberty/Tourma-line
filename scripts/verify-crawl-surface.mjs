@@ -44,20 +44,19 @@ assert(robots.includes("Allow: /"), "robots.txt must allow public crawling");
 assert(robots.includes("Sitemap: https://www.tourma-line.fr/sitemap.xml"), "robots.txt must declare the canonical sitemap URL");
 assert(!/^Disallow:\s*\/$/m.test(robots), "robots.txt must not block the whole site");
 
-// Sitelinks are automated by Google; our controllable inputs are a logical, crawlable core navigation.
-const sitelinkCandidates = [
+// The visible header is intentionally concise for humans; SEO/service discovery is reinforced in the footer.
+for (const [href, label] of [
+  ["/", "Accueil"],
   ["/prestations", "Prestations"],
-  ["/cartomancie", "Voyance"],
-  ["/numerologie", "Numérologie"],
-  ["/soin-lahochi", "Énergétique"],
-  ["/consultation-a-distance", "À distance"],
-  ["/blog", "Blog"],
-];
-for (const [href, label] of sitelinkCandidates) {
-  assert(header.includes(`href: \"${href}\"`) || header.includes(`href: "${href}"`), `Header must expose sitelink candidate ${label}`);
+  ["/avis", "Avis clients"],
+]) {
+  assert(header.includes(`href: \"${href}\"`) || header.includes(`href: "${href}"`), `Header must expose primary visitor link ${label}`);
 }
+assert(header.includes("Prendre rendez-vous"), "Header must expose the primary booking CTA");
+
+// Core service/editorial pages remain crawlable and internally reinforced without overloading the main navigation.
 for (const href of ["/prestations", "/cartomancie", "/numerologie", "/soin-lahochi", "/consultation-a-distance", "/blog"]) {
   assert(footer.includes(`to=\"${href}\"`) || footer.includes(`to="${href}"`), `Footer must reinforce core page ${href}`);
 }
 
-console.log("Crawl surface / sitemap / robots / sitelink-readiness verification passed.");
+console.log("Crawl surface / sitemap / robots / navigation verification passed.");

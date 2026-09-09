@@ -9,9 +9,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
 
 export const BASE_URL = "https://www.tourma-line.fr";
-
-// Date de dernière modification des pages principales et des templates villes.
-// À mettre à jour uniquement lors d'une modification substantielle de ces contenus.
 export const SITE_LAST_MOD = "2026-09-09";
 
 export const SERVICES = [
@@ -19,6 +16,11 @@ export const SERVICES = [
   { slug: "cartomancie", label: "Cartomancie" },
   { slug: "soin-lahochi", label: "Lahochi" },
 ];
+
+export const HIDDEN_BLOG_SLUGS = new Set([
+  "choisir-voyante-cartomancienne-serieuse",
+  "guidance-cartomancie-telephone-efficacite",
+]);
 
 export const TERRITORY_ROUTES = territorialHubs.map((hub) => hub.path);
 
@@ -47,7 +49,10 @@ function getBlogSlugs() {
     if (file.includes("PLAN") || file.includes("PROGRAMME")) continue;
     const content = fs.readFileSync(path.join(dir, file), "utf-8");
     const match = content.match(/^slug:\s*["']?([^"'#\n]+)/m);
-    if (match) slugs.push(match[1].trim());
+    if (!match) continue;
+    const slug = match[1].trim();
+    if (HIDDEN_BLOG_SLUGS.has(slug)) continue;
+    slugs.push(slug);
   }
 
   return slugs;
@@ -66,14 +71,14 @@ function getBlogPostsMeta() {
       return match ? match[1].trim() : "";
     };
     const slug = field("slug");
-    if (!slug) continue;
+    if (!slug || HIDDEN_BLOG_SLUGS.has(slug)) continue;
 
     posts.push({
       slug,
       title: field("title") || slug,
       description: field("description") || "",
       date: field("date") || "",
-      author: field("author") || "Line",
+      author: "Line",
     });
   }
 

@@ -19,6 +19,11 @@ export interface BlogPost {
 
 const rawPosts = import.meta.glob('../../blog_markdowns/*.md', { query: '?raw', import: 'default', eager: true });
 
+const hiddenBlogSlugs = new Set([
+  "choisir-voyante-cartomancienne-serieuse",
+  "guidance-cartomancie-telephone-efficacite",
+]);
+
 export const blogPosts: BlogPost[] = Object.keys(rawPosts)
   .filter((path) => !path.includes('PLAN') && !path.includes('PROGRAMME'))
   .map((path, index) => {
@@ -35,11 +40,12 @@ export const blogPosts: BlogPost[] = Object.keys(rawPosts)
       image: attributes.image || "/blog-chemin-devie.png",
       date: attributes.date || new Date().toISOString().split('T')[0],
       updated: attributes.updated || undefined,
-      author: attributes.author || "Line",
+      author: "Line",
       readTime: attributes.readTime || "5 min",
       category: attributes.category || "Général",
       persona: attributes.persona || "",
       featured: attributes.featured || false,
     };
   })
+  .filter((post) => !hiddenBlogSlugs.has(post.slug))
   .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());

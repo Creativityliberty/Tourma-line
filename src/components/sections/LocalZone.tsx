@@ -26,18 +26,16 @@ export const LocalZone = () => {
               </p>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6 leading-tight">
-              Voyante, numérologue & énergéticienne{" "}
-              <span className="text-brand-lilas">en Seine-Maritime</span>
+              Au cabinet à Gerponville ou à distance
             </h2>
             <p className="text-gray-300 text-lg mb-4 leading-relaxed">
-              Line Simon vous reçoit au <strong className="text-white">{contactInfo.address}</strong>,{" "}
-              <strong className="text-white">{contactInfo.zipCode} {contactInfo.city}</strong>, sur rendez-vous.
-              Le cabinet se situe dans le secteur de Fécamp, Valmont et Cany-Barville.
+              Je vous reçois sur rendez-vous au <strong className="text-white">{contactInfo.address}</strong>,{" "}
+              <strong className="text-white">{contactInfo.zipCode} {contactInfo.city}</strong>, en Seine-Maritime.
             </p>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              La <strong className="text-white">voyance et cartomancie</strong> ainsi que la{" "}
-              <strong className="text-white">numérologie</strong> peuvent aussi être proposées par téléphone ou visioconférence.
-              Les <strong className="text-white">séances énergétiques Lahochi</strong> sont disponibles au cabinet ou à distance selon les modalités précisées lors de la réservation.
+              Certaines consultations de <strong className="text-white">numérologie</strong> et de{" "}
+              <strong className="text-white">cartomancie</strong> sont également disponibles à distance. Les{" "}
+              <strong className="text-white">séances Lahochi</strong> peuvent être proposées au cabinet ou à distance selon la prestation choisie.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <ConversionLink kind="booking" placement="local-zone"
@@ -46,7 +44,7 @@ export const LocalZone = () => {
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 shadow-lg shadow-brand-lilas/20"
               >
-                Prendre rendez-vous en ligne
+                Prendre rendez-vous
               </ConversionLink>
             </div>
 
@@ -66,9 +64,9 @@ export const LocalZone = () => {
                   <PhoneIcon className="w-5 h-5 text-brand-lilas" />
                   <p className="text-brand-lilas font-bold text-sm uppercase tracking-widest">À distance</p>
                 </div>
-                <p className="text-sm text-white font-medium">Téléphone, visio ou modalité Lahochi</p>
+                <p className="text-sm text-white font-medium">Selon la prestation choisie</p>
                 <p className="text-xs text-gray-400 mt-1">
-                  Selon la prestation choisie
+                  Téléphone, visio ou modalité Lahochi
                 </p>
               </div>
             </div>

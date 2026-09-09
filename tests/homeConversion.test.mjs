@@ -44,7 +44,7 @@ test('the original story and emotional proof return immediately after social pro
 
   assert.match(welcome, /Mon parcours a commencé par une quête de sens/);
   assert.match(welcome, /les schémas qui se répétaient, les questions sans réponses/);
-  assert.match(welcome, /la numérologie et la cartomancie m(?:'|&apos;)ont offert des clés/);
+  assert.match(welcome, /La numérologie et la cartomancie m(?:'|&apos;)ont offert des clés/);
   assert.match(welcome, /Une résonance étonnante/);
   assert.match(welcome, /Donner forme à ce que vous ressentez/);
   assert.match(welcome, /Un moment de soulagement/);

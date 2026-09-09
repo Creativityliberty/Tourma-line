@@ -22,10 +22,10 @@ export const formules: Formule[] = [
     icon: BalanceIcon,
     title: 'Formule « Harmonie Intérieure »',
     subtitle: '2 séances sur 1 mois',
-    objective: 'Prendre du recul sur vos émotions et vos schémas récurrents, puis vous accorder un temps de détente et de recentrage.',
+    objective: 'Apaiser les émotions, comprendre les schémas répétitifs et rééquilibrer les énergies pour restaurer l\'harmonie globale.',
     details: [
       '1 séance combinée de numérologie et de cartomancie.',
-      '1 séance énergétique Lahochi à une autre date.'
+      '1 soin Lahochi (à une autre date).'
     ],
     duration: 'environ 1 mois',
     price: '120€',
@@ -53,7 +53,7 @@ export const formules: Formule[] = [
   {
     id: 'soin-lahochi-3-seances',
     icon: LahochiIcon,
-    title: 'Formule « Soin énergétique Lahochi »',
+    title: 'Formule « Soin Lahochi »',
     subtitle: 'Pack de 3 séances',
     objective: 'Trois temps de bien-être et de recentrage pour les personnes qui souhaitent inscrire la pratique Lahochi dans la durée.',
     details: [
@@ -64,6 +64,6 @@ export const formules: Formule[] = [
     duration: 'À définir selon vos préférences',
     price: '150€',
     imageUrl: '/images/formules/lahochi.jpg',
-    imageAlt: 'Illustration de la formule Soin énergétique Lahochi'
+    imageAlt: 'Illustration de la formule Soin Lahochi'
   }
 ];

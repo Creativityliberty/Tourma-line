@@ -7,27 +7,23 @@ export const Welcome = () => {
       <AnimateOnScroll>
         <div className="container mx-auto text-center px-6">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-display text-brand-dark mb-4">
-            Vous avez besoin d'y voir plus clair ?
+            Mon parcours a commencé par une quête de sens.
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-            Quand une situation prend toute la place — relation, choix professionnel, famille, projet ou période de transition —
-            il devient parfois difficile de faire le tri. Je vous propose un espace où poser vos questions, mettre des mots sur ce que vous vivez
-            et regarder la situation avec davantage de recul.
+            Comme beaucoup, j&apos;ai cherché à comprendre les événements de ma vie, les schémas qui se répétaient, les questions sans réponses. La numérologie et la cartomancie m&apos;ont offert des clés — non pas magiques, mais précises et profondes.
           </p>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-            Selon ce que vous traversez, je m'appuie sur la cartomancie, votre date de naissance en numérologie ou une séance Lahochi de bien-être.
-            L'objectif n'est pas de décider à votre place, mais de vous aider à repérer ce qui se répète, ce qui évolue et ce qui mérite votre attention aujourd'hui.
+            Aujourd&apos;hui, je mets cette pratique au service de votre <strong>clarté</strong> : avec votre date de naissance, je décrypte votre chemin de vie, votre année en cours, et vous guide sur vos questions concrètes — relation, travail, transition, choix à faire.
           </p>
           <div className="grid md:grid-cols-3 gap-10">
             <AnimateOnScroll animationClass="animate-fadeInLeft" delay={0}>
               <div className="bg-brand-lilas p-8 rounded-2xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:glow">
                 <HeartHandIcon className="w-12 h-12 mx-auto mb-4 text-brand-purple animate-float" />
                 <h3 className="text-xl sm:text-2xl font-display text-brand-dark mb-2">
-                  Comprendre ce qui se répète
+                  Une résonance étonnante
                 </h3>
                 <p className="text-gray-700">
-                  En numérologie, votre date de naissance devient un point de départ pour explorer chemin de vie,
-                  année personnelle et cycles. La lecture aide à repérer les thèmes qui reviennent et les périodes qui évoluent.
+                  Dès les premières minutes, avec seulement votre date de naissance, beaucoup sont surpris de se reconnaître dans ce qui est décrit. Votre enfance, vos schémas répétitifs, votre situation actuelle — des éléments qui vous sont propres et que vous n&apos;avez pas besoin d&apos;expliquer. Jm l&apos;a vécu : « comme si elle connaissait mes projets, ma situation financière, ma relation avec mes fils ». Cette justesse permet de partir d&apos;une base claire pour avancer.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -38,11 +34,10 @@ export const Welcome = () => {
                   style={{ animationDelay: "0.5s" }}
                 />
                 <h3 className="text-xl sm:text-2xl font-display text-brand-dark mb-2">
-                  Éclairer une situation
+                  Donner forme à ce que vous ressentez
                 </h3>
                 <p className="text-gray-700">
-                  Une relation, une décision, une tension familiale ou un projet vous occupe ? La cartomancie sert de support pour regarder
-                  la situation autrement, poser les bonnes questions et faire émerger ce qui compte pour vous.
+                  Parfois, on traverse des choses sans arriver à les nommer. Patricia vivait ça : « Elle a su mettre des mots sur ce que je ressentais, avec une précision qui m&apos;a touchée en plein cœur ». Des réponses concrètes sur votre situation — relation, travail, famille — pour enfin avancer.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -53,11 +48,10 @@ export const Welcome = () => {
                   style={{ animationDelay: "1s" }}
                 />
                 <h3 className="text-xl sm:text-2xl font-display text-brand-dark mb-2">
-                  Vous accorder un temps de recentrage
+                  Un moment de soulagement
                 </h3>
                 <p className="text-gray-700">
-                  Le Lahochi est proposé comme un moment de détente et de recentrage, au cabinet ou à distance selon la séance.
-                  Il s'agit d'une pratique de bien-être qui ne se substitue pas à un suivi médical.
+                  Un accueil simple, un temps d&apos;échange respectueux de votre rythme. Le Lahochi est proposé comme un moment de détente et de recentrage, au cabinet ou à distance selon la séance. Les ressentis restent personnels et variables ; cette pratique de bien-être ne se substitue pas à un suivi médical.
                 </p>
               </div>
             </AnimateOnScroll>

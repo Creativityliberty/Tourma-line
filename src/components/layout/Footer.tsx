@@ -18,7 +18,7 @@ export const Footer = () => {
                             <SparklesIcon className="w-4 h-4 flex-shrink-0" />
                         </div>
                         <p className="text-sm text-gray-400 mb-4 italic">
-                            Line Simon — Voyante, numérologue & praticienne Lahochi
+                            Line — Cartomancienne, numérologue & praticienne Lahochi
                         </p>
                         <div className="text-sm text-gray-300 space-y-1">
                             <p>Cabinet : 4 résidence Les Peupliers</p>
@@ -65,6 +65,8 @@ export const Footer = () => {
                             <h4 className="text-lg font-semibold mb-3">Liens utiles</h4>
                             <ul className="text-sm text-gray-300 space-y-2 mb-5">
                                 <li><Link to="/prestations" className="hover:text-brand-purple underline">Prestations</Link></li>
+                                <li><Link to="/avis" className="hover:text-brand-purple underline">Avis clients</Link></li>
+                                <li><Link to="/rendezvous" className="hover:text-brand-purple underline">Prendre rendez-vous</Link></li>
                                 <li><Link to="/cartomancie" className="hover:text-brand-purple underline">Voyance & cartomancie</Link></li>
                                 <li><Link to="/numerologie" className="hover:text-brand-purple underline">Numérologie</Link></li>
                                 <li><Link to="/soin-lahochi" className="hover:text-brand-purple underline">Soin énergétique Lahochi</Link></li>

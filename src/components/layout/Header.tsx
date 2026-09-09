@@ -5,11 +5,7 @@ type NavClickHandler = (e: React.MouseEvent<HTMLAnchorElement>) => void;
 const navItems = [
     { href: "/", label: "Accueil" },
     { href: "/prestations", label: "Prestations" },
-    { href: "/cartomancie", label: "Voyance" },
-    { href: "/numerologie", label: "Numérologie" },
-    { href: "/soin-lahochi", label: "Soin énergétique" },
-    { href: "/consultation-a-distance", label: "À distance" },
-    { href: "/blog", label: "Blog" },
+    { href: "/avis", label: "Avis clients" },
 ];
 
 export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
@@ -64,7 +60,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                         onClick={onNavClick}
                         className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 transform active:scale-95 text-sm ml-2"
                     >
-                        RDV
+                        Prendre rendez-vous
                     </a>
                 </nav>
 
@@ -118,7 +114,7 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                         }}
                         className="block bg-brand-purple hover:bg-opacity-80 text-white font-bold py-2 px-4 rounded-full text-center transition-all duration-300 mt-2"
                     >
-                        Prendre RDV
+                        Prendre rendez-vous
                     </a>
                 </nav>
             ) : null}

@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, access } from 'node:fs/promises';
 
 const read = (path) => readFile(path, 'utf8');
+const forbiddenPublicIdentity = /\bvoyance\b|\bvoyante\b|\bmédium\b|(?<![-\w])medium(?![-:\w])|Line Simon/i;
 
 test('home hero uses the approved first-person positioning and conversion CTAs', async () => {
   const hero = await read('src/components/sections/Hero.tsx');
@@ -16,7 +17,7 @@ test('home hero uses the approved first-person positioning and conversion CTAs',
   assert.match(hero, /kind="booking"\s+placement="hero"/);
   assert.match(hero, />\s*Prendre rendez-vous\s*</);
   assert.match(hero, /kind="phone"\s+placement="hero-phone"/);
-  assert.doesNotMatch(hero, /voyante|médium|Line Simon/i);
+  assert.doesNotMatch(hero, forbiddenPublicIdentity);
 });
 
 test('main navigation remains exactly the simple approved menu', async () => {
@@ -113,7 +114,7 @@ test('public identity and SEO surfaces do not claim voyance, mediumship, or the 
   ];
   const source = (await Promise.all(files.map(read))).join('\n');
 
-  assert.doesNotMatch(source, /\bvoyance\b|\bvoyante\b|\bmédium\b|\bmedium\b|Line Simon/i);
+  assert.doesNotMatch(source, forbiddenPublicIdentity);
 });
 
 test('home metadata targets truthful services instead of false job titles', async () => {

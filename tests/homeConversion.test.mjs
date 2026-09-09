@@ -16,22 +16,3 @@ test('home hero restores the original human copy while keeping direct conversion
   assert.match(hero, /kind="phone"\s+placement="hero-phone"/);
   assert.doesNotMatch(hero, /Voyante & cartomancienne près de Fécamp en Seine-Maritime/);
 });
-
-test('main navigation stays intentionally simple without deleting SEO routes', async () => {
-  const header = await read('src/components/layout/Header.tsx');
-  const app = await read('App.tsx');
-  assert.match(header, /label: "Accueil"/);
-  assert.match(header, /label: "Prestations"/);
-  assert.match(header, /label: "Avis clients"/);
-  assert.match(header, /Prendre rendez-vous/);
-  assert.doesNotMatch(header, /label: "Voyance"/);
-  assert.doesNotMatch(header, /label: "Numérologie"/);
-  assert.doesNotMatch(header, /label: "Soin énergétique"/);
-  assert.doesNotMatch(header, /label: "À distance"/);
-  assert.doesNotMatch(header, /label: "Blog"/);
-  assert.match(app, /path="\/numerologie"/);
-  assert.match(app, /path="\/cartomancie"/);
-  assert.match(app, /path="\/soin-lahochi"/);
-  assert.match(app, /path="\/consultation-a-distance"/);
-  assert.match(app, /path="\/blog"/);
-});

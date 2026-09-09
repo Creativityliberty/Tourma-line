@@ -7,21 +7,21 @@ export const CartomancePage = () => {
   return (
     <>
       <Helmet>
-        <title>Voyante en Seine-Maritime | Cartomancie près de Fécamp — Tourma-Line</title>
+        <title>Cartomancienne en Seine-Maritime | Gerponville — Tourma-Line</title>
         <meta
           name="description"
-          content="Voyante et cartomancienne en Seine-Maritime : consultation à Gerponville près de Fécamp, Valmont et Cany-Barville, ou par téléphone. RDV en ligne."
+          content="Cartomancie et guidance avec Line à Gerponville, près de Fécamp et Valmont, ou à distance. Tirage de cartes autour de vos questions personnelles et professionnelles."
         />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.tourma-line.fr/cartomancie" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "Service",
-          "name": "Voyance et cartomancie",
+          "name": "Cartomancie",
           "provider": {
             "@type": "Person",
-            "name": "Line Simon",
-            "jobTitle": "Voyante et cartomancienne",
+            "name": "Line",
+            "jobTitle": "Cartomancienne",
             "url": "https://www.tourma-line.fr/"
           },
           "areaServed": [
@@ -30,7 +30,7 @@ export const CartomancePage = () => {
             { "@type": "AdministrativeArea", "name": "Normandie" },
             { "@type": "Country", "name": "France" }
           ],
-          "description": "Consultation de voyance et cartomancie avec Line Simon : lecture de cartes et guidance autour des questions personnelles, relationnelles et professionnelles.",
+          "description": "Consultation de cartomancie avec Line : lecture de cartes et guidance autour des questions personnelles, relationnelles et professionnelles.",
           "url": "https://www.tourma-line.fr/cartomancie",
           "offers": {
             "@type": "Offer",
@@ -41,54 +41,47 @@ export const CartomancePage = () => {
         })}</script>
       </Helmet>
       <ServicePage
-        title="Voyance & cartomancie"
-        headline="Voyante & cartomancienne en Seine-Maritime — Guidance par les cartes"
-        metaDescription="Voyante et cartomancienne à Gerponville, près de Fécamp et Valmont, et à distance."
+        title="Cartomancie"
+        headline="Cartomancienne en Seine-Maritime — Guidance par les cartes"
+        metaDescription="Cartomancie à Gerponville, près de Fécamp et Valmont, et à distance."
         heroImage="/hero-tourma-line.jpg"
-        heroImageAlt="Line Simon, voyante et cartomancienne en Seine-Maritime"
-        intro="Line Simon propose des consultations de voyance et de cartomancie pour explorer vos questions personnelles, relationnelles ou professionnelles. Selon la formule choisie, la séance peut être complétée par la numérologie afin de mettre votre situation en perspective."
-        localInfo="Cabinet : 4 résidence Les Peupliers, 76540 Gerponville — près de Fécamp, Valmont et Cany-Barville — consultations par téléphone possibles"
-        breadcrumb="Voyance & Cartomancie"
+        heroImageAlt="Cartomancie avec Line chez Tourma-Line en Seine-Maritime"
+        intro="J'utilise les cartes comme support de guidance pour approfondir une situation précise. Relation, travail, famille, projet ou décision : le tirage me permet d'explorer votre question avec vous et de vous apporter un éclairage adapté à votre situation."
+        localInfo="Cabinet : 4 résidence Les Peupliers, 76540 Gerponville — près de Fécamp, Valmont et Cany-Barville — consultations à distance possibles"
+        breadcrumb="Cartomancie"
         canonicalPath="/cartomancie"
         ctaText="Réserver ma séance"
-        relatedGuides={[
-          {
-            title: "Comment choisir une voyante ou cartomancienne sérieuse ?",
-            description: "10 vérifications concrètes sur l'identité, les avis, les prix, les promesses et le libre arbitre.",
-            path: "/blog/choisir-voyante-cartomancienne-serieuse",
-          },
-        ]}
         sections={[
           {
             icon: <LayersIcon className="w-8 h-8" />,
-            heading: "Voyance et cartomancie : quelle approche chez Tourma-Line ?",
+            heading: "La cartomancie chez Tourma-Line",
             content:
-              "La cartomancie utilise les cartes comme support de lecture et de dialogue. Line interprète les symboles du tirage en lien avec votre question et votre contexte afin de vous proposer des pistes de réflexion claires, sans présenter le tirage comme une certitude absolue sur l'avenir.",
+              "J'utilise les cartes comme support de lecture et de dialogue. J'interprète les symboles du tirage en lien avec votre question et votre contexte afin de vous apporter un éclairage adapté à votre situation.",
           },
           {
             icon: <ChatBubbleIcon className="w-8 h-8" />,
-            heading: "Amour, travail, famille : quelles questions poser ?",
+            heading: "Relation, travail, famille : quelles questions poser ?",
             content:
-              "Vous pouvez venir avec une question précise concernant une relation, un choix professionnel, une dynamique familiale ou une période de changement. La séance permet de poser les éléments à plat, d'explorer plusieurs angles et de repartir avec une lecture structurée de la situation.",
+              "Vous pouvez venir avec une question précise concernant une relation, un choix professionnel, une dynamique familiale ou une période de changement. La séance permet de poser les éléments à plat et d'explorer ce qui vous préoccupe.",
           },
           {
             icon: <SparklesIcon className="w-8 h-8" />,
             heading: "Une consultation centrée sur votre situation",
             content:
-              "Chaque séance part de votre question et de ce que vous traversez. Line adapte le tirage et l'échange à votre contexte, avec une approche directe et bienveillante. Les témoignages clients disponibles sur le site permettent de découvrir des retours d'expérience réels.",
+              "Chaque séance part de votre question et de ce que vous traversez. J'adapte le tirage et l'échange à votre contexte, avec une approche directe, intuitive et bienveillante.",
           },
           {
             icon: <MapPinIcon className="w-8 h-8" />,
-            heading: "Voyante près de Fécamp, Valmont et Cany-Barville",
+            heading: "Cartomancienne près de Fécamp, Valmont et Cany-Barville",
             content:
-              "Line Simon vous reçoit sur rendez-vous au 4 résidence Les Peupliers, 76540 Gerponville, en Seine-Maritime. Le cabinet se situe dans le secteur de Fécamp, Valmont et Cany-Barville. Les consultations de cartomancie sont également proposées par téléphone ou visioconférence.",
+              "Je vous reçois sur rendez-vous au 4 résidence Les Peupliers, 76540 Gerponville, en Seine-Maritime. Les consultations de cartomancie peuvent également être proposées à distance.",
           },
         ]}
         faq={[
           {
             question: "Faut-il croire aux cartes pour consulter une cartomancienne ?",
             answer:
-              "Non. Vous pouvez aborder la cartomancie comme un support symbolique de réflexion. L'essentiel est de venir avec une question sincère et l'envie d'explorer votre situation sous un autre angle.",
+              "Non. Vous pouvez venir avec votre question et votre propre sensibilité. L'essentiel est d'avoir envie d'explorer votre situation sous un autre angle.",
           },
           {
             question: "Peut-on poser plusieurs questions pendant une séance ?",
@@ -96,14 +89,14 @@ export const CartomancePage = () => {
               "Oui, selon la formule et le temps disponible. Pour garder un échange utile, il est généralement préférable de prioriser les sujets qui comptent le plus pour vous.",
           },
           {
-            question: "La consultation de voyance est-elle possible par téléphone ?",
+            question: "La consultation de cartomancie est-elle possible à distance ?",
             answer:
-              "Oui. Line propose des consultations par téléphone ou visioconférence. Vous choisissez la modalité lors de la réservation et la séance se déroule autour de vos questions comme au cabinet.",
+              "Oui. Certaines consultations peuvent se faire par téléphone ou visioconférence. Les modalités sont précisées lors de la réservation.",
           },
           {
             question: "Quelle différence entre cartomancie et guidance ?",
             answer:
-              "La cartomancie désigne l'utilisation des cartes comme support de lecture. Le terme guidance décrit plus largement l'accompagnement et l'échange autour de ce tirage. Chez Tourma-Line, certaines formules associent également numérologie et cartomancie.",
+              "La cartomancie désigne l'utilisation des cartes comme support de lecture. Le terme guidance décrit plus largement l'accompagnement et l'échange autour du tirage. Certaines formules associent également numérologie et cartomancie.",
           },
         ]}
       />

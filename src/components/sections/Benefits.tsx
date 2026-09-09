@@ -3,12 +3,13 @@ import { SparklesIcon } from "../ui/icons";
 
 export const Benefits = () => {
   const benefitsList = [
-    "Prendre du recul sur les situations et les schémas qui reviennent dans votre parcours.",
-    "Mettre des mots sur vos questionnements et clarifier ce que vous souhaitez explorer pendant la séance.",
-    "Vous accorder un temps calme de détente et de recentrage lorsque vous choisissez une séance énergétique Lahochi.",
-    "Explorer une période de transition personnelle ou professionnelle avec un autre angle de lecture.",
-    "Structurer vos questions autour d'une relation, d'un choix, d'une rupture ou d'un changement important.",
-    "Repartir avec les éléments abordés pendant la séance pour poursuivre votre réflexion à votre rythme.",
+    "Comprendre certains schémas qui se répètent dans votre parcours.",
+    "Mettre des mots sur ce que vous ressentez.",
+    "Prendre du recul sur une relation ou une situation.",
+    "Mieux comprendre votre période actuelle.",
+    "Explorer une décision ou un changement avec un autre regard.",
+    "Vous accorder un moment calme avec le Lahochi.",
+    "Repartir avec des éléments qui vous aideront à poursuivre votre réflexion.",
   ];
 
   return (
@@ -16,11 +17,10 @@ export const Benefits = () => {
       <AnimateOnScroll>
         <div className="container mx-auto text-center px-6">
           <h2 className="text-4xl font-display text-brand-dark mb-4">
-            Ce que ces accompagnements peuvent vous apporter
+            Ce que mes pratiques peuvent vous apporter
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-            Des temps de réflexion, de guidance ou de bien-être selon la prestation choisie,
-            sans promesse médicale ni certitude absolue sur l'avenir.
+            Chaque séance est une étape vers plus de clarté, d&apos;harmonie et de confiance en vous.
           </p>
           <div className="grid md:grid-cols-2 gap-8 text-left max-w-4xl mx-auto">
             {benefitsList.map((benefit, index) => (

@@ -13,7 +13,7 @@ export const Welcome = () => {
             Comme beaucoup, j&apos;ai cherché à comprendre les événements de ma vie, les schémas qui se répétaient, les questions sans réponses. La numérologie et la cartomancie m&apos;ont offert des clés — non pas magiques, mais précises et profondes.
           </p>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto mb-12">
-            Aujourd&apos;hui, je mets cette pratique au service de votre <strong>clarté</strong> : avec votre date de naissance, je décrypte votre chemin de vie, votre année en cours, et je vous guide sur vos questions concrètes — relation, travail, transition, choix à faire.
+            Aujourd&apos;hui, je mets cette pratique au service de votre <strong>clarté</strong> : avec votre date de naissance, je décrypte votre chemin de vie, votre année en cours, et vous guide sur vos questions concrètes — relation, travail, transition, choix à faire.
           </p>
 
           <div className="grid md:grid-cols-3 gap-10">
@@ -24,7 +24,7 @@ export const Welcome = () => {
                   Une résonance étonnante
                 </h3>
                 <p className="text-gray-700">
-                  Dès les premières minutes, avec seulement votre date de naissance, beaucoup sont surpris de se reconnaître dans ce qui est décrit. Votre enfance, vos schémas répétitifs, votre situation actuelle — des éléments qui vous sont propres et que vous n&apos;avez pas besoin d&apos;expliquer longuement. Jm l&apos;a vécu : « Comme si elle connaissait mes projets, ma situation financière, ma relation avec mes fils. » Cette justesse permet de partir d&apos;une base claire pour avancer.
+                  Dès les premières minutes, avec seulement votre date de naissance, beaucoup sont surpris de se reconnaître dans ce qui est décrit. Votre enfance, vos schémas répétitifs, votre situation actuelle — des éléments qui vous sont propres et que vous n&apos;avez pas besoin d&apos;expliquer. Jm l&apos;a vécu : &ldquo;comme si elle connaissait mes projets, ma situation financière, ma relation avec mes fils&rdquo;. Cette justesse permet de partir d&apos;une base claire pour avancer.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -39,7 +39,7 @@ export const Welcome = () => {
                   Donner forme à ce que vous ressentez
                 </h3>
                 <p className="text-gray-700">
-                  Parfois, on traverse des choses sans arriver à les nommer. Patricia l&apos;a exprimé ainsi : « Elle a su mettre des mots sur ce que je ressentais, avec une précision qui m&apos;a touchée en plein cœur. » Je vous accompagne pour regarder votre situation autrement, qu&apos;elle concerne votre relation, votre travail, votre famille ou une période de changement.
+                  Parfois, on traverse des choses sans arriver à les nommer. Patricia vivait ça : &ldquo;Elle a su mettre des mots sur ce que je ressentais, avec une précision qui m&apos;a touchée en plein cœur&rdquo;. Des réponses concrètes sur votre situation — relation, travail, famille — pour enfin avancer.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -51,10 +51,10 @@ export const Welcome = () => {
                   style={{ animationDelay: "1s" }}
                 />
                 <h3 className="text-xl sm:text-2xl font-display text-brand-dark mb-2">
-                  Un moment pour vous recentrer
+                  Un moment de soulagement
                 </h3>
                 <p className="text-gray-700">
-                  Je propose également des séances Lahochi comme des moments de calme, de détente et de recentrage. Chaque séance se déroule dans un cadre respectueux de votre rythme et de vos ressentis. Le Lahochi reste une pratique de bien-être complémentaire et ne remplace pas un diagnostic, un traitement ou un suivi par un professionnel de santé.
+                  Un accueil simple, un temps d&apos;échange respectueux de votre rythme. Christine cherchait à se libérer de son angoisse : &ldquo;m&apos;a soulagé de mon angoisse&rdquo;. Moins de tension, un sommeil plus réparateur, un vrai relâchement — ce que beaucoup ressentent après le soin LAHOCHI.
                 </p>
               </div>
             </AnimateOnScroll>

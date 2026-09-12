@@ -8,11 +8,10 @@ const forbiddenPublicIdentity = /\bvoyance\b|\bvoyante\b|\bmédium\b|(?<![-\w])m
 test('home hero uses the approved first-person positioning and conversion CTAs', async () => {
   const hero = await read('src/components/sections/Hero.tsx');
 
-  assert.match(hero, /Line — Numérologue, cartomancienne & praticienne Lahochi/);
+  assert.match(hero, /Line — Cartomancienne, numérologue & praticienne en soins énergétiques/);
   assert.match(hero, /Vous traversez une période de questionnement \?/);
   assert.match(hero, /Relation compliquée, choix professionnel à faire, ou épreuve qui vous pèse \?/);
   assert.match(hero, /La numérologie et la cartomancie vous aident à y voir clair/);
-  assert.match(hero, /Je vous accompagne pour mieux comprendre ce que vous traversez/);
   assert.match(hero, /Consultations au cabinet à Gerponville ou à distance, selon la prestation/);
   assert.match(hero, /kind="booking"\s+placement="hero"/);
   assert.match(hero, />\s*Prendre rendez-vous\s*</);

@@ -7,24 +7,22 @@ import { ConversionLink } from "../ui/ConversionLink";
 const coreConsultations = consultations.slice(0, 4);
 const newLahochiOffers = consultations.slice(4);
 
-const ConsultationCard = ({ consultation, index, highlightImage = false }: { consultation: Consultation; index: number; highlightImage?: boolean }) => (
+const ConsultationCard = ({ consultation, index }: { consultation: Consultation; index: number }) => (
   <AnimateOnScroll animationClass="animate-fadeInUp" delay={index * 120}>
     <div className="shiny-card-container rounded-[2rem]">
       <div className="shiny-card-border"></div>
       <div className="shiny-card-content bg-white/60 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row transition-all duration-300 hover:shadow-2xl hover:bg-white/85 border border-white/35">
-        <div className={`${highlightImage ? "md:w-[52%] aspect-square md:aspect-auto md:min-h-[520px] bg-brand-lilas/20" : "md:w-2/5 h-64 md:h-auto"} relative overflow-hidden`}>
+        <div className="md:w-2/5 h-64 md:h-auto relative overflow-hidden">
           <img
             src={consultation.imageUrl}
             alt={consultation.title}
             className="absolute inset-0 w-full h-full object-cover object-center"
             loading="lazy"
           />
-          {!highlightImage && (
-            <div className="absolute inset-0 z-10 pointer-events-none bg-brand-purple/10"></div>
-          )}
+          <div className="absolute inset-0 z-10 pointer-events-none bg-brand-purple/10"></div>
         </div>
 
-        <div className={`p-6 sm:p-8 md:p-8 lg:p-10 ${highlightImage ? "md:w-[48%]" : "md:w-3/5"} flex flex-col justify-between`}>
+        <div className="p-6 sm:p-8 md:p-8 lg:p-10 md:w-3/5 flex flex-col justify-between">
           <div>
             <div className="flex flex-wrap gap-2 mb-4">
               <span className="bg-brand-lilas/30 text-brand-purple px-3 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 uppercase tracking-wider">
@@ -153,7 +151,7 @@ export const Consultations = () => {
 
         <div className="flex flex-col gap-12 max-w-5xl mx-auto">
           {newLahochiOffers.map((consultation, index) => (
-            <ConsultationCard key={consultation.id} consultation={consultation} index={index} highlightImage />
+            <ConsultationCard key={consultation.id} consultation={consultation} index={index} />
           ))}
         </div>
       </div>

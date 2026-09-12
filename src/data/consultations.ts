@@ -144,7 +144,5 @@ export const consultations: Consultation[] = [
     imageUrl: "/images/services/harmonisation-objets.jpg",
     location: "À distance",
     type: "Soin Énergétique",
-    contactOnly: true,
-    whatsappLabel: "Me contacter",
   },
 ];

@@ -1,3 +1,4 @@
+import React from "react";
 import { consultations, type Consultation } from "../../data/consultations";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { SparklesIcon, WhatsAppIcon, MapPinIcon, ClockIcon } from "../ui/icons";
@@ -64,13 +65,26 @@ const ConsultationCard = ({ consultation, index, highlightImage = false }: { con
             )}
           </div>
 
-          <div className="flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-brand-lilas pt-6">
+          <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-5 border-t border-brand-lilas pt-6">
             <div className="text-center sm:text-left">
-              <p className="text-2xl sm:text-3xl font-bold text-brand-purple">
-                {consultation.price}
-              </p>
+              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-brand-purple leading-tight">
+                {consultation.price.includes("·") ? (
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 justify-center sm:justify-start">
+                    {consultation.price.split("·").map((part, pIdx, arr) => (
+                      <React.Fragment key={pIdx}>
+                        <span className="whitespace-nowrap">{part.trim()}</span>
+                        {pIdx < arr.length - 1 && (
+                          <span className="text-brand-purple/60 text-lg sm:text-xl font-normal">·</span>
+                        )}
+                      </React.Fragment>
+                    ))}
+                  </div>
+                ) : (
+                  <span>{consultation.price}</span>
+                )}
+              </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+            <div className="flex flex-row items-center justify-center sm:justify-start xl:justify-end gap-3 w-full sm:w-auto shrink-0">
               {!consultation.contactOnly ? (
                 <ConversionLink
                   kind="booking"
@@ -78,7 +92,7 @@ const ConsultationCard = ({ consultation, index, highlightImage = false }: { con
                   href="https://cal.com/tourma-line"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-brand-purple hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center"
+                  className="bg-brand-purple hover:bg-opacity-90 text-white font-bold py-2.5 px-6 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center text-sm sm:text-base whitespace-nowrap"
                 >
                   Réserver
                 </ConversionLink>
@@ -89,9 +103,9 @@ const ConsultationCard = ({ consultation, index, highlightImage = false }: { con
                 href="https://wa.me/33649653186"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-2"
+                className="bg-green-500 hover:bg-green-600 text-white font-bold py-2.5 px-5 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-2 text-sm sm:text-base whitespace-nowrap"
               >
-                <WhatsAppIcon className="w-5 h-5" />
+                <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5" />
                 {consultation.whatsappLabel ?? "WhatsApp"}
               </ConversionLink>
             </div>

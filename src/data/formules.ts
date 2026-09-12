@@ -21,7 +21,7 @@ export const formules: Formule[] = [
     id: 'harmonie-interieure',
     icon: BalanceIcon,
     title: 'Formule « Harmonie Intérieure »',
-    subtitle: '2 séances sur 1 mois',
+    subtitle: '2 Séances sur 1 mois',
     objective: 'Apaiser les émotions, comprendre les schémas répétitifs et rééquilibrer les énergies pour restaurer l\'harmonie globale.',
     details: [
       '1 séance combinée de numérologie et de cartomancie.',
@@ -37,11 +37,11 @@ export const formules: Formule[] = [
     icon: ButterflyIcon,
     title: 'Formule « Renaissance »',
     subtitle: 'Accompagnement sur 3 mois',
-    objective: 'Vous accompagner dans une période émotionnelle importante, un deuil, une rupture ou une transition, avec plusieurs temps de guidance et de recentrage.',
+    objective: 'Guérir en profondeur, libérer les mémoires émotionnelles et retrouver une stabilité intérieure durable (traumatismes, deuils, ruptures).',
     details: [
-      '1 séance de cartomancie + numérologie au démarrage.',
-      '3 séances Lahochi.',
-      'Suivi et guidance entre les séances.',
+      '1 séance de cartomancie + numérologie (démarrage).',
+      '3 soins Lahochi (1 par mois).',
+      'Suivi énergétique et guidance entre les séances.',
       '1 séance de cartomancie de clôture.'
     ],
     duration: '3 mois',
@@ -55,13 +55,13 @@ export const formules: Formule[] = [
     icon: LahochiIcon,
     title: 'Formule « Soin Lahochi »',
     subtitle: 'Pack de 3 séances',
-    objective: 'Trois séances Lahochi pour inscrire ces moments de calme, de bien-être et de recentrage dans la durée.',
+    objective: 'Un travail énergétique profond et suivi pour ancrer le bien-être, libérer les blocages persistants et maintenir une vibration élevée.',
     details: [
-      '3 séances de soin Lahochi.',
-      'Suivi entre les séances.',
-      'Une formule adaptée aux périodes de changement ou lorsque vous ressentez le besoin de prendre davantage de temps pour vous.'
+      '3 séances de soin Lahochi complètes.',
+      'Suivi de l\'évolution énergétique entre chaque séance.',
+      'Idéal pour un travail de fond ou une période de transition.'
     ],
-    duration: 'À définir selon vos besoins',
+    duration: 'À définir selon besoins',
     price: '150€',
     imageUrl: '/images/formules/lahochi.jpg',
     imageAlt: 'Illustration de la formule Soin Lahochi'

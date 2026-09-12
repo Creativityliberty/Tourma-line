@@ -22,20 +22,17 @@ export const LocalZone = () => {
             <div className="flex flex-col items-center mb-3">
               <MapPinIcon className="w-6 h-6 text-brand-lilas mb-2" />
               <p className="text-brand-lilas text-sm font-semibold uppercase tracking-widest">
-                Cabinet à Gerponville
+                En présentiel & distanciel
               </p>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display font-bold mb-6 leading-tight">
-              Au cabinet à Gerponville ou à distance
+              Numérologue et cartomancienne à votre écoute
             </h2>
             <p className="text-gray-300 text-lg mb-4 leading-relaxed">
-              Je vous reçois sur rendez-vous au <strong className="text-white">{contactInfo.address}</strong>,{" "}
-              <strong className="text-white">{contactInfo.zipCode} {contactInfo.city}</strong>, en Seine-Maritime.
+              Installée au <strong className="text-white">{contactInfo.address}</strong> à <strong className="text-white">{contactInfo.city} ({contactInfo.zipCode})</strong>, en Seine-Maritime, je vous reçois en cabinet sur rendez-vous pour un accompagnement personnalisé.
             </p>
             <p className="text-gray-300 text-lg mb-8 leading-relaxed">
-              Certaines consultations de <strong className="text-white">numérologie</strong> et de{" "}
-              <strong className="text-white">cartomancie</strong> sont également disponibles à distance. Les{" "}
-              <strong className="text-white">séances Lahochi</strong> peuvent être proposées au cabinet ou à distance selon la prestation choisie.
+              Pour les personnes éloignées, les consultations de numérologie, cartomancie et soins Lahochi sont disponibles à distance par téléphone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <ConversionLink kind="booking" placement="local-zone"
@@ -44,7 +41,7 @@ export const LocalZone = () => {
                 rel="noopener noreferrer"
                 className="inline-block bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 shadow-lg shadow-brand-lilas/20"
               >
-                Prendre rendez-vous
+                Prendre rendez-vous en ligne
               </ConversionLink>
             </div>
 
@@ -64,9 +61,9 @@ export const LocalZone = () => {
                   <PhoneIcon className="w-5 h-5 text-brand-lilas" />
                   <p className="text-brand-lilas font-bold text-sm uppercase tracking-widest">À distance</p>
                 </div>
-                <p className="text-sm text-white font-medium">Selon la prestation choisie</p>
-                <p className="text-xs text-gray-400 mt-1">
-                  Téléphone, visio ou modalité Lahochi
+                <p className="text-sm text-white font-medium">Par téléphone</p>
+                <p className="text-xs text-gray-300 mt-1">
+                  France & International
                 </p>
               </div>
             </div>

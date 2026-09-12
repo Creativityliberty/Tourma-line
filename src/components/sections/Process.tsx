@@ -6,7 +6,7 @@ export const Process = () => {
         {
             number: "01",
             title: "Contactez-moi",
-            description: "Par téléphone, WhatsApp ou réservation en ligne. Je suis à votre écoute pour vous orienter."
+            description: "Par le formulaire, téléphone ou WhatsApp. Je suis à votre écoute pour vous orienter."
         },
         {
             number: "02",
@@ -16,12 +16,12 @@ export const Process = () => {
         {
             number: "03",
             title: "Consultation personnalisée",
-            description: "Je m'appuie sur la numérologie, la cartomancie ou le Lahochi selon la prestation choisie."
+            description: "Je me connecte à vos énergies pour vous transmettre guidance et éclairages authentiques."
         },
         {
             number: "04",
-            title: "Clarté et nouveau regard",
-            description: "Vous repartez avec les éléments abordés pendant la séance, une meilleure compréhension de votre situation et un regard différent sur ce que vous traversez."
+            title: "Clarté et apaisement",
+            description: "Vous repartez avec des réponses concrètes, une meilleure compréhension et un regard nouveau."
         }
     ];
 

@@ -74,26 +74,26 @@ export const Formules = () => {
                         </ul>
                       </div>
 
-                      <div className="mt-6 flex flex-col sm:flex-row items-center justify-between gap-6 border-t border-brand-lilas pt-6">
+                      <div className="mt-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-t border-brand-lilas pt-5">
                         <div className="text-center sm:text-left">
-                          <p className="text-gray-500 text-sm mb-1">
+                          <p className="text-gray-500 text-xs sm:text-sm mb-0.5">
                             {formule.duration}
                           </p>
-                          <p className="text-3xl font-bold text-brand-purple">
+                          <p className="text-xl sm:text-2xl font-bold text-brand-purple">
                             {formule.price}
                           </p>
                           {formule.priceNote && (
-                            <p className="text-xs text-gray-500 italic mt-1">
+                            <p className="text-xs text-gray-500 italic mt-0.5">
                               {formule.priceNote}
                             </p>
                           )}
                         </div>
-                        <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
+                        <div className="flex flex-row items-center justify-center sm:justify-start lg:justify-end gap-2.5 w-full sm:w-auto shrink-0">
                           <ConversionLink kind="booking" placement={`formula-${formule.id}`}
                             href="https://cal.com/tourma-line"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-brand-purple hover:bg-opacity-90 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center shadow-md"
+                            className="bg-brand-purple hover:bg-opacity-90 text-white font-semibold py-2.5 px-5 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center text-xs sm:text-sm whitespace-nowrap shadow-sm"
                           >
                             Réserver
                           </ConversionLink>
@@ -101,9 +101,9 @@ export const Formules = () => {
                             href="https://wa.me/33649653186"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-2 shadow-md"
+                            className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-4 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-1.5 text-xs sm:text-sm whitespace-nowrap shadow-sm"
                           >
-                            <WhatsAppIcon className="w-5 h-5" />
+                            <WhatsAppIcon className="w-4 h-4" />
                             WhatsApp
                           </ConversionLink>
                         </div>

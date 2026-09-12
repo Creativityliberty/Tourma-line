@@ -24,7 +24,7 @@ const ConsultationCard = ({ consultation, index, highlightImage = false }: { con
           )}
         </div>
 
-        <div className={`p-8 md:p-10 ${highlightImage ? "md:w-[48%]" : "md:w-3/5"} flex flex-col justify-between`}>
+        <div className={`p-6 sm:p-8 md:p-8 lg:p-10 ${highlightImage ? "md:w-[48%]" : "md:w-3/5"} flex flex-col justify-between`}>
           <div>
             <div className="flex flex-wrap gap-2 mb-4">
               <span className="bg-brand-lilas/30 text-brand-purple px-3 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 uppercase tracking-wider">
@@ -65,16 +65,16 @@ const ConsultationCard = ({ consultation, index, highlightImage = false }: { con
             )}
           </div>
 
-          <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-5 border-t border-brand-lilas pt-6">
+          <div className="mt-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-t border-brand-lilas pt-5">
             <div className="text-center sm:text-left">
-              <div className="text-xl sm:text-2xl lg:text-3xl font-bold text-brand-purple leading-tight">
+              <div className="text-base sm:text-lg lg:text-xl font-bold text-brand-purple leading-tight">
                 {consultation.price.includes("·") ? (
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-1 justify-center sm:justify-start">
                     {consultation.price.split("·").map((part, pIdx, arr) => (
                       <React.Fragment key={pIdx}>
                         <span className="whitespace-nowrap">{part.trim()}</span>
                         {pIdx < arr.length - 1 && (
-                          <span className="text-brand-purple/60 text-lg sm:text-xl font-normal">·</span>
+                          <span className="text-brand-purple/60 text-sm sm:text-base font-normal">·</span>
                         )}
                       </React.Fragment>
                     ))}
@@ -84,7 +84,7 @@ const ConsultationCard = ({ consultation, index, highlightImage = false }: { con
                 )}
               </div>
             </div>
-            <div className="flex flex-row items-center justify-center sm:justify-start xl:justify-end gap-3 w-full sm:w-auto shrink-0">
+            <div className="flex flex-row items-center justify-center sm:justify-start lg:justify-end gap-2.5 w-full sm:w-auto shrink-0">
               {!consultation.contactOnly ? (
                 <ConversionLink
                   kind="booking"
@@ -92,7 +92,7 @@ const ConsultationCard = ({ consultation, index, highlightImage = false }: { con
                   href="https://cal.com/tourma-line"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-brand-purple hover:bg-opacity-90 text-white font-bold py-2.5 px-6 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center text-sm sm:text-base whitespace-nowrap"
+                  className="bg-brand-purple hover:bg-opacity-90 text-white font-semibold py-2.5 px-5 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center text-xs sm:text-sm whitespace-nowrap shadow-sm"
                 >
                   Réserver
                 </ConversionLink>
@@ -103,9 +103,9 @@ const ConsultationCard = ({ consultation, index, highlightImage = false }: { con
                 href="https://wa.me/33649653186"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-500 hover:bg-green-600 text-white font-bold py-2.5 px-5 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-2 text-sm sm:text-base whitespace-nowrap"
+                className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-4 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-1.5 text-xs sm:text-sm whitespace-nowrap shadow-sm"
               >
-                <WhatsAppIcon className="w-4 h-4 sm:w-5 sm:h-5" />
+                <WhatsAppIcon className="w-4 h-4" />
                 {consultation.whatsappLabel ?? "WhatsApp"}
               </ConversionLink>
             </div>

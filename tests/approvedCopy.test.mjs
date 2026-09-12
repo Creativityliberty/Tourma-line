@@ -30,7 +30,7 @@ test('the three protected accompaniment formulas remain word-for-word', async ()
   const formules = await read('src/data/formules.ts');
 
   assert.match(formules, /2 Séances sur 1 mois/);
-  assert.match(formules, /Apaiser les émotions, comprendre les schémas répétitifs et rééquilibrer les énergies pour restaurer l\\'harmonie globale\./);
+  assert.match(formules, /Apaiser les émotions, comprendre les schémas répétitifs et rééquilibrer les énergies pour restaurer l\\?'harmonie globale\./);
   assert.match(formules, /1 séance combinée de numérologie et de cartomancie\./);
   assert.match(formules, /1 soin Lahochi \(à une autre date\)\./);
 
@@ -42,7 +42,7 @@ test('the three protected accompaniment formulas remain word-for-word', async ()
 
   assert.match(formules, /Un travail énergétique profond et suivi pour ancrer le bien-être, libérer les blocages persistants et maintenir une vibration élevée\./);
   assert.match(formules, /3 séances de soin Lahochi complètes\./);
-  assert.match(formules, /Suivi de l'évolution énergétique entre chaque séance\./);
+  assert.match(formules, /Suivi de l\\?'évolution énergétique entre chaque séance\./);
   assert.match(formules, /Idéal pour un travail de fond ou une période de transition\./);
   assert.match(formules, /À définir selon besoins/);
 });

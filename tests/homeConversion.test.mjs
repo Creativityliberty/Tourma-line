@@ -60,9 +60,9 @@ test('story, tools and benefits restore the approved human-first language', asyn
   assert.match(welcome, /Donner forme à ce que vous ressentez/);
   assert.match(services, /Mes outils pour vous guider/);
   assert.match(services, /La numérologie et la cartomancie peuvent être associées/);
-  assert.match(serviceData, /Comprendre votre chemin de vie et la période que vous traversez/);
-  assert.match(serviceData, /Éclairer les questions qui vous préoccupent/);
-  assert.match(serviceData, /Un temps de détente et de recentrage/);
+  assert.match(serviceData, /Découvrez les secrets de votre chemin de vie/);
+  assert.match(serviceData, /Des réponses claires grâce aux cartes/);
+  assert.match(serviceData, /Une puissante vague de guérison/);
   assert.match(benefits, /Ce que mes pratiques peuvent vous apporter/);
   assert.match(benefits, /Comprendre certains schémas qui se répètent/);
 });

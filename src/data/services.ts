@@ -23,9 +23,9 @@ export const services: Record<string, Service> = {
     id: "numerology",
     title: "Numérologie",
     icon: NumerologyIcon,
-    contentTitle: "Comprendre votre chemin de vie et la période que vous traversez",
+    contentTitle: "Découvrez les secrets de votre chemin de vie",
     content:
-      "Je m'appuie sur votre date de naissance pour explorer votre chemin de vie, votre année personnelle, vos cycles et certains schémas de votre parcours.\n\nCette lecture permet de mettre en lumière des éléments de votre personnalité, des périodes importantes et les dynamiques présentes dans votre vie aujourd'hui.",
+      "La numérologie est une science ancienne qui étudie l'impact des nombres sur notre existence. À travers l'analyse de votre date de naissance, elle révèle des aspects essentiels de votre personnalité, de vos talents cachés, ainsi que les défis auxquels vous êtes confronté dans votre vie.\n\nChaque consultation vous permet de mieux comprendre vos choix, vos relations et les événements marquants de votre vie, afin de prendre des décisions éclairées et d'aligner votre vie avec votre véritable mission.",
     calendlyButtonText: "Réserver une consultation de numérologie",
     calendlyUrl: "https://cal.com/tourma-line",
     imageUrl: "/images/services/numerology.jpg",
@@ -35,9 +35,9 @@ export const services: Record<string, Service> = {
     id: "cartomancy",
     title: "Cartomancie",
     icon: CartomancyIcon,
-    contentTitle: "Éclairer les questions qui vous préoccupent",
+    contentTitle: "Des réponses claires grâce aux cartes",
     content:
-      "J'utilise les cartes comme support de guidance pour approfondir une situation précise.\n\nRelation, travail, famille, projet ou décision : le tirage me permet d'explorer votre question avec vous et de vous apporter un éclairage adapté à votre situation.",
+      "La cartomancie est l'art de lire et d'interpréter les cartes pour obtenir des réponses aux questions que vous vous posez.\n\nQue ce soit pour éclairer vos choix professionnels, amoureux ou personnels, la cartomancie offre des conseils pratiques et des prévisions sur votre avenir. J'utilise des jeux de cartes traditionnels ou des oracles pour explorer les énergies présentes et vous guider vers des solutions adaptées à votre situation.",
     calendlyButtonText: "Réserver une séance de cartomancie",
     calendlyUrl: "https://cal.com/tourma-line",
     imageUrl: "/images/services/cartomancy.jpg",
@@ -47,27 +47,37 @@ export const services: Record<string, Service> = {
     id: "lahochi",
     title: "Lahochi",
     icon: LahochiIcon,
-    contentTitle: "Un temps de détente et de recentrage",
+    contentTitle: "Une puissante vague de guérison",
     content:
-      "Je pratique le Lahochi par apposition des mains, au cabinet ou à distance selon la prestation.\n\nJe propose ces séances comme un temps pour ralentir, vous recentrer et vous accorder un moment consacré à votre bien-être.",
+      "Le LAHOCHI est une méthode de soins énergétiques souvent comparée au Reiki, bien qu'elle soit considérée comme plus puissante et plus rapide. Son nom, 'LahoChi', fait référence à l'énergie divine universelle canalisée à travers les mains du praticien pour être transmise à la personne recevant le soin.\n\nLe Lahochi utilise des fréquences vibratoires élevées pour rééquilibrer les énergies du corps et favoriser la guérison physique, émotionnelle et spirituelle.",
     features: [
       {
-        title: "Un temps consacré à vous",
+        title: "Transmission d'énergie par les mains",
         description:
-          "La séance se déroule dans un cadre calme, respectueux et adapté à votre rythme.",
+          "Je canalise l'énergie à travers mes mains en les plaçant sur ou près du corps du receveur.",
       },
       {
-        title: "Au cabinet ou à distance",
+        title: "Soin holistique",
         description:
-          "La modalité dépend de la prestation choisie et de ce qui vous convient le mieux.",
+          "Le LAHOCHI agit sur les différents niveaux de l'être humain : physique, émotionnel, mental et spirituel.",
       },
       {
-        title: "Pratique de bien-être complémentaire",
+        title: "Équilibrage des chakras",
         description:
-          "Le Lahochi ne remplace pas un diagnostic, un traitement ou un suivi par un professionnel de santé.",
+          "Le Lahochi aide à équilibrer les chakras du corps, favorisant ainsi un flux énergétique harmonieux.",
+      },
+      {
+        title: "Vibration élevée",
+        description:
+          "Le LAHOCHI est réputé pour être un soin à hautes fréquences vibratoires ce qui permet des résultats rapides et profonds.",
+      },
+      {
+        title: "Soin à distance",
+        description:
+          "Cette méthode peut aussi être pratiquée à distance, ce qui la rend accessible à toute personne, peu importe sa localisation.",
       },
     ],
-    calendlyButtonText: "Réserver une séance Lahochi",
+    calendlyButtonText: "Réserver un soin LAHOCHI",
     calendlyUrl: "https://cal.com/tourma-line",
     imageUrl: "/images/services/lahochi.jpg",
     imageAlt: "Séance Lahochi avec Line chez Tourma-Line",

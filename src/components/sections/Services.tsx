@@ -1,14 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { SparklesIcon } from "../ui/icons";
+import { ConversionLink } from "../ui/ConversionLink";
 import { services } from "../../data/services";
-
-const servicePaths: Record<string, string> = {
-    numerology: "/numerologie",
-    cartomancy: "/cartomancie",
-    lahochi: "/soin-lahochi",
-};
 
 export const Services = ({
     activeTab,
@@ -18,7 +12,6 @@ export const Services = ({
     setActiveTab: (tab: string) => void;
 }) => {
     const currentService = services[activeTab];
-    const currentServicePath = servicePaths[activeTab];
 
     return (
         <section id="services" className="py-20 bg-white">
@@ -82,13 +75,17 @@ export const Services = ({
                                             ))}
                                         </ul>
                                     )}
-                                    {currentServicePath && (
-                                        <Link
-                                            to={currentServicePath}
-                                            className="inline-flex mt-7 items-center justify-center rounded-full bg-brand-dark px-6 py-3 text-sm sm:text-base font-semibold text-white transition-transform hover:scale-105 active:scale-95"
+                                    {currentService.calendlyUrl && (
+                                        <ConversionLink
+                                            kind="booking"
+                                            placement={`services-${currentService.id}`}
+                                            href={currentService.calendlyUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="inline-flex mt-7 items-center justify-center rounded-full bg-brand-purple hover:bg-opacity-90 px-6 py-3 text-sm sm:text-base font-semibold text-white transition-transform hover:scale-105 active:scale-95 text-center"
                                         >
-                                            Découvrir {currentService.title.toLowerCase()} en détail
-                                        </Link>
+                                            {currentService.calendlyButtonText || `Réserver ${currentService.title.toLowerCase()}`}
+                                        </ConversionLink>
                                     )}
                                 </div>
                             </div>

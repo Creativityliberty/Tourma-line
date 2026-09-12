@@ -3,13 +3,12 @@ import { SparklesIcon } from "../ui/icons";
 
 export const Benefits = () => {
   const benefitsList = [
-    "Comprendre certains schémas qui se répètent dans votre parcours.",
-    "Mettre des mots sur ce que vous ressentez.",
-    "Prendre du recul sur une relation ou une situation.",
-    "Mieux comprendre votre période actuelle.",
-    "Explorer une décision ou un changement avec un autre regard.",
-    "Vous accorder un moment calme avec le Lahochi.",
-    "Repartir avec des éléments qui vous aideront à poursuivre votre réflexion.",
+    "Comprendre enfin pourquoi vous traversez ces situations répétitives — les schémas de votre vie prennent sens.",
+    "Mettre des mots sur ce que vous ressentez sans pouvoir l'exprimer vous-même, comme Patricia : 'une précision qui m'a touchée en plein cœur'.",
+    "Relâcher cette tension qui vous habite depuis des mois — un vrai soulagement physique et émotionnel.",
+    "Dormir mieux, vous sentir moins lourd(e) au quotidien, retrouver un sommeil réparateur.",
+    "Transformer votre épreuve (deuil, rupture, stress) en opportunité de changement, comme l'a vécu Patricia.",
+    "Avancer avec assurance sur votre chemin — des choix éclairés par des réponses justes et précises.",
   ];
 
   return (

@@ -64,7 +64,7 @@ test('story, tools and benefits restore the approved human-first language', asyn
   assert.match(serviceData, /Des réponses claires grâce aux cartes/);
   assert.match(serviceData, /Une puissante vague de guérison/);
   assert.match(benefits, /Ce que mes pratiques peuvent vous apporter/);
-  assert.match(benefits, /Comprendre certains schémas qui se répètent/);
+  assert.match(benefits, /Comprendre enfin pourquoi vous traversez ces situations répétitives/);
 });
 
 test('existing and new offers preserve the approved commercial positioning', async () => {

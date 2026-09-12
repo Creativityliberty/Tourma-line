@@ -23,63 +23,53 @@ export const services: Record<string, Service> = {
     id: "numerology",
     title: "Numérologie",
     icon: NumerologyIcon,
-    contentTitle: "Numérologie — Chemin de vie, année personnelle & cycles",
+    contentTitle: "Comprendre votre chemin de vie et la période que vous traversez",
     content:
-      "La numérologie est une pratique d'interprétation symbolique des nombres associés notamment à votre date de naissance. Line l'utilise comme support de réflexion pour explorer votre chemin de vie, votre année personnelle, vos cycles et les thèmes qui reviennent dans votre parcours. La consultation aide à prendre du recul sur une situation et à mettre des mots sur les périodes de transition.",
+      "Je m'appuie sur votre date de naissance pour explorer votre chemin de vie, votre année personnelle, vos cycles et certains schémas de votre parcours.\n\nCette lecture permet de mettre en lumière des éléments de votre personnalité, des périodes importantes et les dynamiques présentes dans votre vie aujourd'hui.",
     calendlyButtonText: "Réserver une consultation de numérologie",
     calendlyUrl: "https://cal.com/tourma-line",
     imageUrl: "/images/services/numerology.jpg",
-    imageAlt: "Line Simon, numérologue en Seine-Maritime — consultation de numérologie",
+    imageAlt: "Consultation de numérologie avec Line chez Tourma-Line",
   },
   cartomancy: {
     id: "cartomancy",
-    title: "Voyance & Cartomancie",
+    title: "Cartomancie",
     icon: CartomancyIcon,
-    contentTitle: "Voyance & cartomancie — Une guidance par les cartes",
+    contentTitle: "Éclairer les questions qui vous préoccupent",
     content:
-      "La cartomancie utilise les cartes comme support de lecture et de dialogue. Amour, travail, famille ou décision personnelle : Line adapte le tirage à votre question pour vous proposer des pistes de réflexion claires et structurées. La séance n'est pas présentée comme une certitude absolue sur l'avenir, mais comme un accompagnement pour mieux lire votre situation.",
-    calendlyButtonText: "Réserver une séance de voyance et cartomancie",
+      "J'utilise les cartes comme support de guidance pour approfondir une situation précise.\n\nRelation, travail, famille, projet ou décision : le tirage me permet d'explorer votre question avec vous et de vous apporter un éclairage adapté à votre situation.",
+    calendlyButtonText: "Réserver une séance de cartomancie",
     calendlyUrl: "https://cal.com/tourma-line",
     imageUrl: "/images/services/cartomancy.jpg",
-    imageAlt: "Line Simon, voyante et cartomancienne en Seine-Maritime — tirage de cartes",
+    imageAlt: "Séance de cartomancie avec Line chez Tourma-Line",
   },
   lahochi: {
     id: "lahochi",
-    title: "Soin énergétique LAHOCHI",
+    title: "Lahochi",
     icon: LahochiIcon,
-    contentTitle: "Soin énergétique LAHOCHI — Détente, recentrage & bien-être",
+    contentTitle: "Un temps de détente et de recentrage",
     content:
-      "Le LAHOCHI est une pratique énergétique de bien-être reposant sur un protocole d'imposition des mains, en contact ou à proximité du corps. Chez Tourma-Line, la séance est proposée comme un temps de détente, de recentrage et d'écoute de soi. Les ressentis sont personnels et variables ; cette pratique ne remplace pas un diagnostic, un traitement ni un suivi par un professionnel de santé.",
+      "Je pratique le Lahochi par apposition des mains, au cabinet ou à distance selon la prestation.\n\nJe propose ces séances comme un temps pour ralentir, vous recentrer et vous accorder un moment consacré à votre bien-être.",
     features: [
       {
-        title: "Protocole énergétique par les mains",
+        title: "Un temps consacré à vous",
         description:
-          "Line suit le protocole Lahochi en plaçant les mains sur ou à proximité du corps, dans un cadre calme et respectueux.",
+          "La séance se déroule dans un cadre calme, respectueux et adapté à votre rythme.",
       },
       {
-        title: "Temps de détente et de recentrage",
+        title: "Au cabinet ou à distance",
         description:
-          "La séance est pensée comme un moment pour ralentir, se poser et porter attention à ses ressentis.",
+          "La modalité dépend de la prestation choisie et de ce qui vous convient le mieux.",
       },
       {
-        title: "Expérience personnelle",
+        title: "Pratique de bien-être complémentaire",
         description:
-          "Les sensations et ressentis diffèrent d'une personne à l'autre ; aucun résultat thérapeutique n'est garanti.",
-      },
-      {
-        title: "Pratique complémentaire de bien-être",
-        description:
-          "Le Lahochi ne remplace pas les soins médicaux, psychologiques ou paramédicaux lorsqu'ils sont nécessaires.",
-      },
-      {
-        title: "Séance à distance possible",
-        description:
-          "Tourma-Line propose aussi des séances Lahochi à distance pour les personnes qui ne peuvent pas se déplacer au cabinet de Gerponville.",
+          "Le Lahochi ne remplace pas un diagnostic, un traitement ou un suivi par un professionnel de santé.",
       },
     ],
-    calendlyButtonText: "Réserver un soin énergétique LAHOCHI",
+    calendlyButtonText: "Réserver une séance Lahochi",
     calendlyUrl: "https://cal.com/tourma-line",
     imageUrl: "/images/services/lahochi.jpg",
-    imageAlt: "Soin énergétique Lahochi avec Line Simon, énergéticienne en Seine-Maritime",
+    imageAlt: "Séance Lahochi avec Line chez Tourma-Line",
   },
 };

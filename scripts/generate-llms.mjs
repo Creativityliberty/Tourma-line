@@ -13,19 +13,19 @@ const SERVICES_META = {
   numerologie: {
     title: "Numérologie",
     description:
-      "Consultation de numérologie à partir de la date de naissance : chemin de vie, année personnelle, cycles et pistes de réflexion personnalisées. 70€, 1h30 à 1h45.",
+      "Consultation de numérologie à partir de la date de naissance : chemin de vie, année personnelle et cycles. Cabinet à Gerponville ou à distance selon la prestation.",
     url: `${BASE_URL}/numerologie`,
   },
   cartomancie: {
-    title: "Voyance & Cartomancie",
+    title: "Cartomancie",
     description:
-      "Guidance par les cartes autour de questions personnelles, relationnelles et professionnelles. Consultation au cabinet ou à distance. 70€, 1h30 à 1h45.",
+      "Guidance par les cartes autour de questions personnelles, relationnelles et professionnelles. Cabinet à Gerponville ou à distance selon la prestation.",
     url: `${BASE_URL}/cartomancie`,
   },
   "soin-lahochi": {
-    title: "Soin énergétique Lahochi",
+    title: "Lahochi",
     description:
-      "Pratique énergétique de bien-être proposée comme un temps de détente et de recentrage, en cabinet à Gerponville ou à distance. 60€, 45 min à 1h. Ne remplace pas un suivi médical.",
+      "Pratique de bien-être proposée comme un temps de détente et de recentrage, au cabinet à Gerponville ou à distance selon la prestation. Ne remplace pas un suivi médical.",
     url: `${BASE_URL}/soin-lahochi`,
   },
 };
@@ -33,11 +33,11 @@ const SERVICES_META = {
 const FAQ = [
   {
     q: "Comment se déroule une consultation de numérologie ?",
-    a: "La date de naissance sert de base à l'étude. Line explore notamment le chemin de vie, l'année personnelle et les cycles, puis échange avec vous sur les sujets que vous souhaitez mettre en perspective. La séance peut se faire au cabinet à Gerponville ou à distance.",
+    a: "La date de naissance sert de base à l'étude. Line explore notamment le chemin de vie, l'année personnelle et les cycles, puis échange avec vous sur les sujets que vous souhaitez approfondir. La séance peut se faire au cabinet à Gerponville ou à distance selon la prestation.",
   },
   {
     q: "Les consultations sont-elles disponibles à distance ?",
-    a: "Oui. La numérologie et la cartomancie sont proposées par téléphone ou visioconférence pour les personnes qui ne peuvent pas se déplacer au cabinet de Gerponville. Le Lahochi à distance est proposé comme pratique énergétique de bien-être.",
+    a: "Oui. Certaines consultations de numérologie et de cartomancie sont proposées à distance. Le Lahochi à distance est proposé comme pratique de bien-être selon la prestation choisie.",
   },
   {
     q: "Comment se fait la réservation et le paiement ?",
@@ -48,8 +48,8 @@ const FAQ = [
     a: "Consultation Guidance Complète : 70€. Consultation Suivi & Année Personnelle : 60€. Guidance par Question : 30€. Soin énergétique Lahochi : 60€. Les tarifs à jour sont à vérifier sur la page Prestations ou au moment de la réservation.",
   },
   {
-    q: "Le soin Lahochi se pratique-t-il à distance ?",
-    a: "Oui, Tourma-Line propose des séances Lahochi à distance. Le Lahochi est présenté comme une pratique énergétique de bien-être ; les ressentis sont personnels et aucun résultat thérapeutique n'est garanti. Il ne remplace pas un diagnostic ou un traitement médical.",
+    q: "Le Lahochi se pratique-t-il à distance ?",
+    a: "Oui, certaines séances Lahochi sont proposées à distance. Le Lahochi est présenté comme une pratique de bien-être complémentaire et ne remplace pas un diagnostic ou un traitement médical.",
   },
 ];
 
@@ -57,7 +57,7 @@ function intro() {
   return [
     "# Tourma-Line",
     "",
-    "> Tourma-Line est le cabinet de Line Simon à Gerponville (76540, Seine-Maritime, Normandie, France). Elle propose des consultations de voyance et cartomancie, de numérologie et des séances énergétiques Lahochi, en cabinet ou à distance.",
+    "> Tourma-Line est le cabinet de Line à Gerponville (76540, Seine-Maritime, Normandie, France). Je propose des consultations de cartomancie et de numérologie ainsi que des séances Lahochi, au cabinet ou à distance selon la prestation.",
     "",
   ];
 }
@@ -66,10 +66,10 @@ function keyInfo() {
   return [
     "## Informations clés",
     "",
-    "- **Praticienne :** Line Simon (Tourma-Line)",
-    "- **Activités :** voyante et cartomancienne, numérologue, praticienne en soins énergétiques Lahochi",
+    "- **Praticienne :** Line (Tourma-Line)",
+    "- **Activités :** cartomancienne, numérologue, praticienne Lahochi",
     "- **Adresse du cabinet :** 4 résidence Les Peupliers, 76540 Gerponville, Normandie, France",
-    "- **Zone locale principale :** Gerponville, Fécamp, Valmont, Cany-Barville, Pays de Caux et secteurs validés du littoral cauchois",
+    "- **Zone locale principale :** Gerponville, Fécamp, Valmont, Cany-Barville, Pays de Caux et secteurs voisins",
     "- **Consultations à distance :** disponibles en français selon la prestation",
     "- **Téléphone :** 06 49 65 31 86",
     "- **Email :** line.simon.ls@gmail.com",
@@ -95,13 +95,13 @@ function pagesSection() {
   return [
     "## Pages principales",
     "",
-    `- [Accueil](${BASE_URL}/) : présentation de Line Simon, de ses services et de son cabinet à Gerponville.`,
+    `- [Accueil](${BASE_URL}/) : présentation de Line, de ses pratiques et du cabinet Tourma-Line à Gerponville.`,
     `- [Prestations](${BASE_URL}/prestations) : consultations et formules proposées.`,
     `- [Numérologie](${BASE_URL}/numerologie) : chemin de vie, année personnelle et cycles.`,
-    `- [Voyance & Cartomancie](${BASE_URL}/cartomancie) : guidance par les cartes au cabinet ou à distance.`,
-    `- [Soin énergétique Lahochi](${BASE_URL}/soin-lahochi) : pratique énergétique de bien-être au cabinet ou à distance.`,
-    `- [Consultation à distance](${BASE_URL}/consultation-a-distance) : voyance, numérologie et Lahochi à distance, Tourma-Line restant basé à Gerponville.`,
-    `- [Blog](${BASE_URL}/blog) : guides sur la numérologie, la voyance, la cartomancie et les pratiques de bien-être.`,
+    `- [Cartomancie](${BASE_URL}/cartomancie) : guidance par les cartes au cabinet ou à distance selon la prestation.`,
+    `- [Lahochi](${BASE_URL}/soin-lahochi) : pratique de bien-être au cabinet ou à distance selon la prestation.`,
+    `- [Consultation à distance](${BASE_URL}/consultation-a-distance) : modalités à distance pour les prestations concernées.`,
+    `- [Blog](${BASE_URL}/blog) : guides autour de la numérologie, de la cartomancie et du bien-être.`,
     "",
   ];
 }
@@ -116,7 +116,7 @@ function blogSection() {
 }
 
 function territorySection() {
-  const lines = ["## Zones territoriales validées", ""];
+  const lines = ["## Secteurs autour du cabinet", ""];
   for (const hub of territorialHubs) {
     lines.push(`- [${hub.label}](${BASE_URL}${hub.path}) : ${hub.metaDescription}`);
   }
@@ -125,7 +125,7 @@ function territorySection() {
 }
 
 function premiumLocalSection() {
-  const lines = ["## Pages locales prioritaires", ""];
+  const lines = ["## Pages locales", ""];
   const targets = getPremiumLocalTargets();
   for (const target of targets) {
     const meta = SERVICES_META[target.serviceSlug];
@@ -133,7 +133,6 @@ function premiumLocalSection() {
     lines.push(`- [${meta.title} — près de ${target.cityLabel}](${BASE_URL}/${target.serviceSlug}-${target.citySlug})`);
   }
   lines.push("");
-  lines.push("Les autres communes de Seine-Maritime sont gérées par la base géographique et les hubs territoriaux ; elles ne disposent pas automatiquement d'une page indexable dédiée.", "");
   return lines;
 }
 

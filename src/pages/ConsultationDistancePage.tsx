@@ -13,10 +13,10 @@ export const ConsultationDistancePage = () => {
   return (
     <>
       <Helmet>
-        <title>Consultation à distance | Voyance, Numérologie & Lahochi — Tourma-Line</title>
+        <title>Consultation à distance | Cartomancie, Numérologie & Lahochi — Tourma-Line</title>
         <meta
           name="description"
-          content="Consultation à distance avec Line Simon : voyance et cartomancie, numérologie et séance énergétique Lahochi. Par téléphone ou visioconférence selon la prestation."
+          content="Consultations à distance avec Line : cartomancie, numérologie et Lahochi selon la prestation. Téléphone, visioconférence ou modalité dédiée."
         />
         <meta name="robots" content="index, follow" />
         <link
@@ -36,7 +36,7 @@ export const ConsultationDistancePage = () => {
               "name": "France",
             },
             "description":
-              "Consultations à distance en voyance et cartomancie, numérologie et pratique énergétique Lahochi avec Line Simon, selon les modalités de chaque prestation.",
+              "Consultations à distance en cartomancie et numérologie ainsi que séances Lahochi selon les modalités de chaque prestation.",
             "url": "https://www.tourma-line.fr/consultation-a-distance",
             "offers": {
               "@type": "Offer",
@@ -50,12 +50,12 @@ export const ConsultationDistancePage = () => {
 
       <ServicePage
         title="Consultation à distance"
-        headline="Consultation à distance : voyance, numérologie & Lahochi"
-        metaDescription="Voyance, numérologie et Lahochi à distance avec Line Simon."
+        headline="Consultation à distance : cartomancie, numérologie & Lahochi"
+        metaDescription="Cartomancie, numérologie et Lahochi à distance avec Line."
         heroImage="/hero-tourma-line.jpg"
-        heroImageAlt="Line Simon — consultations Tourma-Line à distance"
-        intro="Vous habitez loin de Gerponville ou vous préférez rester chez vous ? Tourma-Line propose plusieurs prestations à distance, avec des modalités adaptées à la voyance et cartomancie, à la numérologie et au Lahochi."
-        localInfo="Tourma-Line reste basé au 4 résidence Les Peupliers, 76540 Gerponville — les consultations à distance ne correspondent pas à des cabinets implantés dans d'autres villes."
+        heroImageAlt="Consultations Tourma-Line à distance"
+        intro="Vous habitez loin de Gerponville ou vous préférez rester chez vous ? Je propose plusieurs prestations à distance, avec des modalités adaptées à la cartomancie, à la numérologie et au Lahochi."
+        localInfo="Le cabinet Tourma-Line reste situé au 4 résidence Les Peupliers, 76540 Gerponville. Les consultations à distance ne correspondent pas à des cabinets implantés dans d'autres villes."
         breadcrumb="Consultation à distance"
         canonicalPath="/consultation-a-distance"
         ctaText="Réserver ma consultation à distance"
@@ -64,38 +64,38 @@ export const ConsultationDistancePage = () => {
             icon: <GlobeIcon className="w-8 h-8" />,
             heading: "Une consultation depuis chez vous",
             content:
-              "La réservation se fait en ligne, puis vous recevez les informations utiles pour votre rendez-vous. Selon la prestation choisie, l'échange se déroule par téléphone ou visioconférence. Vous n'avez pas besoin de vous déplacer jusqu'au cabinet de Gerponville.",
+              "La réservation se fait en ligne, puis vous recevez les informations utiles pour votre rendez-vous. Selon la prestation choisie, l'échange se déroule par téléphone, visioconférence ou selon la modalité prévue. Vous n'avez pas besoin de vous déplacer jusqu'au cabinet de Gerponville.",
           },
           {
             icon: <ChatBubbleIcon className="w-8 h-8" />,
-            heading: "Voyance & cartomancie à distance",
+            heading: "Cartomancie à distance",
             content:
-              "La consultation de voyance et de cartomancie peut se dérouler à distance autour de vos questions personnelles, relationnelles ou professionnelles. Le tirage de cartes sert de support à l'échange et à la guidance, sans présenter les interprétations comme des certitudes absolues sur l'avenir.",
+              "La consultation de cartomancie peut se dérouler à distance autour de vos questions personnelles, relationnelles ou professionnelles. J'utilise les cartes comme support de guidance et d'échange autour de votre situation.",
           },
           {
             icon: <HashIcon className="w-8 h-8" />,
             heading: "Numérologie à distance",
             content:
-              "À partir de votre date de naissance, Line explore notamment le chemin de vie, l'année personnelle et les cycles. La séance à distance permet de parcourir cette lecture ensemble et de mettre en perspective les sujets que vous souhaitez approfondir.",
+              "À partir de votre date de naissance, j'explore notamment le chemin de vie, l'année personnelle et les cycles. La séance à distance permet de parcourir cette lecture ensemble et d'approfondir les sujets qui vous préoccupent.",
           },
           {
             icon: <WavesIcon className="w-8 h-8" />,
-            heading: "Séance énergétique Lahochi à distance",
+            heading: "Lahochi à distance",
             content:
-              "Tourma-Line propose également le Lahochi à distance dans le cadre d'une pratique de bien-être. Vous vous installez dans un endroit calme à l'heure convenue pendant que Line suit son protocole depuis Gerponville. Aucun résultat thérapeutique n'est garanti et cette pratique ne remplace pas un suivi médical.",
+              "Je propose également certaines séances Lahochi à distance comme temps de bien-être, de détente et de recentrage. Cette pratique ne remplace pas un diagnostic, un traitement ou un suivi médical.",
           },
           {
             icon: <MapPinIcon className="w-8 h-8" />,
             heading: "Un seul cabinet réel : Gerponville",
             content:
-              "Le cabinet Tourma-Line est situé à Gerponville, en Seine-Maritime. La possibilité de consulter à distance permet d'accompagner des personnes ailleurs en France sans laisser entendre que Tourma-Line possède un établissement physique à Paris, Marseille, Genève, Bruxelles ou dans une autre ville.",
+              "Le cabinet Tourma-Line est situé à Gerponville, en Seine-Maritime. Les prestations à distance permettent de consulter sans laisser entendre que Tourma-Line possède un établissement physique dans une autre ville.",
           },
         ]}
         faq={[
           {
             question: "Quelles prestations Tourma-Line sont disponibles à distance ?",
             answer:
-              "La voyance et cartomancie ainsi que la numérologie peuvent être proposées par téléphone ou visioconférence. Des séances Lahochi à distance sont également proposées comme pratique énergétique de bien-être. Les modalités exactes sont précisées lors de la réservation.",
+              "Certaines consultations de cartomancie et de numérologie sont proposées à distance. Des séances Lahochi à distance sont également disponibles selon la prestation choisie. Les modalités exactes sont précisées lors de la réservation.",
           },
           {
             question: "Faut-il habiter en Seine-Maritime pour réserver ?",
@@ -105,12 +105,12 @@ export const ConsultationDistancePage = () => {
           {
             question: "Comment réserver une consultation à distance ?",
             answer:
-              "Vous pouvez réserver via Cal.com ou contacter Line par WhatsApp. Choisissez la prestation souhaitée, puis les modalités pratiques du rendez-vous vous sont communiquées.",
+              "Vous pouvez réserver via Cal.com ou me contacter par WhatsApp. Choisissez la prestation souhaitée, puis les modalités pratiques du rendez-vous vous sont communiquées.",
           },
           {
             question: "Tourma-Line possède-t-il des cabinets dans d'autres villes ?",
             answer:
-              "Non. Le cabinet réel de Tourma-Line est situé au 4 résidence Les Peupliers, 76540 Gerponville. Les consultations proposées ailleurs sont des consultations à distance.",
+              "Non. Le cabinet réel de Tourma-Line est situé au 4 résidence Les Peupliers, 76540 Gerponville. Les prestations proposées ailleurs sont des prestations à distance.",
           },
         ]}
       />

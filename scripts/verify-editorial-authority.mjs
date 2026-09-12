@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { getRoutes } from "./routes.mjs";
+import { getRoutes, HIDDEN_BLOG_SLUGS } from "./routes.mjs";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.resolve(__dirname, "..");
@@ -16,10 +16,6 @@ const required = {
   "annee-personnelle-numerologie": {
     links: ["/numerologie", "/blog/calcul-chemin-de-vie-numerologie"],
     phrases: ["année civile", "anniversaire", "2026"],
-  },
-  "choisir-voyante-cartomancienne-serieuse": {
-    links: ["/cartomancie"],
-    phrases: ["libre arbitre", "résultat garanti", "prix"],
   },
   "consulter-seine-maritime-cabinet-distance": {
     links: [
@@ -76,12 +72,11 @@ for (const file of files) {
 
 for (const [slug, contract] of Object.entries(required)) {
   const matches = postsBySlug.get(slug) ?? [];
-  assert.equal(matches.length, 1, `Sprint 7B article must exist exactly once: ${slug}`);
+  assert.equal(matches.length, 1, `Editorial article must exist exactly once: ${slug}`);
 
   const { content, file } = matches[0];
   const lower = content.toLocaleLowerCase("fr-FR");
 
-  assert.equal(field(content, "author"), "Line Simon", `${file} must declare author: Line Simon`);
   for (const metaField of ["date", "readTime", "category", "description"]) {
     assert(field(content, metaField), `${file} must declare ${metaField}`);
   }
@@ -97,11 +92,8 @@ for (const [slug, contract] of Object.entries(required)) {
     assert(!content.includes(route), `${file} must not link to HOLD local landing ${route}`);
   }
 
-  for (const riskyPhrase of ["guérison garantie", "prédiction certaine", "guérit"]) {
+  for (const riskyPhrase of ["guérison garantie", "prédiction certaine", "guérit", "résultat garanti"]) {
     assert(!lower.includes(riskyPhrase), `${file} contains prohibited guaranteed/medical wording: ${riskyPhrase}`);
-  }
-  if (slug !== "choisir-voyante-cartomancienne-serieuse") {
-    assert(!lower.includes("résultat garanti"), `${file} must not use guaranteed-result wording`);
   }
 }
 
@@ -115,18 +107,23 @@ const routes = getRoutes();
 for (const slug of Object.keys(required)) {
   assert(routes.includes(`/blog/${slug}`), `Generated routes must include /blog/${slug}`);
 }
+for (const slug of HIDDEN_BLOG_SLUGS) {
+  assert(!routes.includes(`/blog/${slug}`), `Misleading legacy article must not remain public: ${slug}`);
+}
 
 const servicePage = fs.readFileSync(path.join(rootDir, "src/pages/ServicePage.tsx"), "utf8");
 const numerologiePage = fs.readFileSync(path.join(rootDir, "src/pages/NumerologiePage.tsx"), "utf8");
 const cartomancePage = fs.readFileSync(path.join(rootDir, "src/pages/CartomancePage.tsx"), "utf8");
 const territoryHubPage = fs.readFileSync(path.join(rootDir, "src/pages/TerritoryHubPage.tsx"), "utf8");
 const blogPostPage = fs.readFileSync(path.join(rootDir, "src/pages/BlogPostPage.tsx"), "utf8");
+const blogPosts = fs.readFileSync(path.join(rootDir, "src/data/blogPosts.ts"), "utf8");
 
 assert(servicePage.includes("Guides pour aller plus loin"), "ServicePage must expose the reciprocal editorial guide section");
 assert(numerologiePage.includes("choisir-numerologue-consultation"), "NumerologiePage must link to the choosing-a-numerologist guide");
 assert(numerologiePage.includes("annee-personnelle-numerologie"), "NumerologiePage must link to the personal-year guide");
-assert(cartomancePage.includes("choisir-voyante-cartomancienne-serieuse"), "CartomancePage must link to the voyance trust guide");
-assert(territoryHubPage.includes("consulter-seine-maritime-cabinet-distance"), "TerritoryHubPage must link to the Seine-Maritime decision guide");
-assert(blogPostPage.includes("post.author") && blogPostPage.includes("#line-simon"), "BlogPostPage must identify Line Simon from article metadata and entity schema");
+assert(!cartomancePage.includes("choisir-voyante-cartomancienne-serieuse"), "CartomancePage must not promote the misleading legacy article");
+assert(territoryHubPage.includes("/consultation-a-distance"), "TerritoryHubPage must keep a direct path to the truthful distance-consultation journey");
+assert(blogPostPage.includes("post.author") && blogPostPage.includes("#line") && blogPostPage.includes("Numérologue, cartomancienne et praticienne Lahochi"), "BlogPostPage must expose the current public author identity");
+assert(blogPosts.includes('author: "Line"'), "Public blog cards and article pages must display Line without the old surname");
 
 console.log("Editorial authority verification passed.");

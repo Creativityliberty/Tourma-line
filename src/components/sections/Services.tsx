@@ -25,12 +25,10 @@ export const Services = ({
             <AnimateOnScroll>
                 <div className="container mx-auto text-center px-4 sm:px-6">
                     <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-6">
-                        Voyance, numérologie & soins énergétiques
+                        Mes outils pour vous guider
                     </h2>
                     <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto mb-10">
-                        Tourma-Line propose trois univers complémentaires : la voyance et cartomancie,
-                        la numérologie, et les séances énergétiques Lahochi. Certaines formules associent
-                        numérologie et cartomancie pour travailler une situation sous plusieurs angles.
+                        La numérologie et la cartomancie peuvent être associées au cours d&apos;une même consultation afin de vous offrir une lecture plus complète de votre situation. Le Lahochi constitue un accompagnement différent, tourné vers le bien-être et le recentrage.
                     </p>
                     <div className="flex flex-row md:justify-center overflow-x-auto whitespace-nowrap gap-4 sm:gap-6 mb-8 border-b-2 border-brand-lilas pb-1 scrollbar-none">
                         {Object.values(services).map((service) => (
@@ -53,11 +51,12 @@ export const Services = ({
                         <AnimateOnScroll key={activeTab}>
                             <div className="flex flex-col md:flex-row">
                                 {currentService.imageUrl && (
-                                    <div className="md:w-1/3 relative h-64 md:h-auto">
+                                    <div className="md:w-1/3 relative h-64 md:min-h-[360px]">
                                         <img
                                             src={currentService.imageUrl}
                                             alt={currentService.imageAlt || currentService.title}
                                             className="absolute inset-0 w-full h-full object-cover"
+                                            loading="lazy"
                                         />
                                     </div>
                                 )}
@@ -65,7 +64,7 @@ export const Services = ({
                                     <h3 className="text-xl sm:text-2xl md:text-3xl font-display text-brand-dark mb-4">
                                         {currentService.contentTitle}
                                     </h3>
-                                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed">
+                                    <p className="text-sm sm:text-base text-gray-700 leading-relaxed whitespace-pre-line">
                                         {currentService.content}
                                     </p>
                                     {currentService.features && (

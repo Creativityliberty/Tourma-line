@@ -71,15 +71,14 @@ export const consultations: Consultation[] = [
     title: "Soin énergétique LAHOCHI",
     subtitle: "À distance ou en cabinet",
     description:
-      "Un soin énergétique par apposition des mains, proposé comme un temps de détente, de recentrage et de bien-être.",
+      "Un soin énergétique puissant par apposition des mains, permettant de stimuler les mécanismes d'auto-guérison du corps et d'apaiser le mental.",
     details: [
-      "Un temps calme consacré au recentrage",
-      "Une séance pensée pour favoriser la détente",
-      "Des ressentis personnels et variables selon les personnes",
-      "Une pratique de bien-être complémentaire, sans promesse thérapeutique",
+      "Rééquilibre les énergies du corps",
+      "Apaise le stress et l'anxiété",
+      "Favorise la guérison émotionnelle et physique",
+      "Procure une profonde relaxation",
     ],
-    footerNote:
-      "Le Lahochi ne remplace pas un diagnostic, un traitement ou un suivi par un professionnel de santé.",
+    footerNote: "Idéal pour retrouver vitalité et sérénité.",
     duration: "45 min à 1h",
     price: "60 €",
     imageUrl: "/images/services/lahochi.jpg",
@@ -96,7 +95,7 @@ export const consultations: Consultation[] = [
       "Accompagnement lors d'un déménagement, d'une adoption ou d'un changement dans le foyer",
       "Un temps de calme adapté au rythme de l'animal",
       "À distance à partir d'une photo récente et de quelques informations",
-      "À domicile dans un rayon maximum de 20 km autour de Gerponville",
+      "Possibilité de séance à domicile autour de Gerponville",
       "Aucun contact imposé : l'animal reste libre de bouger ou de s'éloigner",
     ],
     footerNote:

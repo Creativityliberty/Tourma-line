@@ -46,28 +46,28 @@ interface TerritoryHubPageProps {
 const services = [
   {
     slug: "cartomancie",
-    title: "Voyance & cartomancie",
-    description: "Voyante, cartomancie, tirage de cartes et guidance, au cabinet de Gerponville ou à distance.",
+    title: "Cartomancie",
+    description: "Tirage de cartes et guidance autour de vos questions, au cabinet de Gerponville ou à distance selon la prestation.",
     icon: <LayersIcon className="h-7 w-7" />,
   },
   {
     slug: "numerologie",
     title: "Numérologie",
-    description: "Chemin de vie, année personnelle, cycles et lecture numérologique avec Line Simon.",
+    description: "Chemin de vie, année personnelle, cycles et lecture numérologique avec Line.",
     icon: <HashIcon className="h-7 w-7" />,
   },
   {
     slug: "soin-lahochi",
-    title: "Soin énergétique Lahochi",
-    description: "Séance énergétique de bien-être, de détente et de recentrage, sans promesse thérapeutique.",
+    title: "Lahochi",
+    description: "Séance de bien-être, de détente et de recentrage, au cabinet ou à distance selon la prestation.",
     icon: <WavesIcon className="h-7 w-7" />,
   },
 ];
 
 const serviceLabelBySlug: Record<string, string> = {
-  cartomancie: "Voyance & cartomancie",
+  cartomancie: "Cartomancie",
   numerologie: "Numérologie",
-  "soin-lahochi": "Soin énergétique Lahochi",
+  "soin-lahochi": "Lahochi",
 };
 
 export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
@@ -189,7 +189,7 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
           <AnimateOnScroll>
             <div className="mx-auto grid max-w-6xl gap-8 px-6 lg:grid-cols-[1.35fr_0.65fr]">
               <article className="rounded-3xl border border-brand-lilas/30 bg-white p-8 sm:p-10">
-                <h2 className="mb-5 font-display text-3xl text-brand-dark">Comprendre la zone</h2>
+                <h2 className="mb-5 font-display text-3xl text-brand-dark">Le secteur autour de Gerponville</h2>
                 <p className="mb-5 text-lg leading-relaxed text-gray-700">{hub.localContext}</p>
                 <p className="rounded-2xl bg-brand-lilas/20 p-5 leading-relaxed text-gray-700">
                   {hub.boundaryNote}
@@ -213,8 +213,8 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
         <section className="py-20">
           <div className="mx-auto max-w-6xl px-6">
             <div className="mb-10 text-center">
-              <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-purple">3 accompagnements</p>
-              <h2 className="font-display text-3xl text-brand-dark sm:text-4xl">Que recherchez-vous dans {hub.shortLabel} ?</h2>
+              <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-purple">Mes pratiques</p>
+              <h2 className="font-display text-3xl text-brand-dark sm:text-4xl">Que souhaitez-vous découvrir dans {hub.shortLabel} ?</h2>
             </div>
             <div className="grid gap-6 md:grid-cols-3">
               {services.map((service) => (
@@ -236,17 +236,17 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
           <div className="mx-auto max-w-5xl px-6">
             <div className="rounded-3xl border border-brand-lilas/30 bg-white p-8 sm:p-10 md:flex md:items-center md:justify-between md:gap-10">
               <div className="max-w-2xl">
-                <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-purple">Guide Seine-Maritime</p>
+                <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-purple">Depuis la Seine-Maritime</p>
                 <h2 className="mb-4 font-display text-3xl text-brand-dark">Choisir entre le cabinet et la consultation à distance</h2>
                 <p className="leading-relaxed text-gray-600">
-                  Selon votre lieu de résidence et la prestation choisie, notre guide vous aide à décider s'il est plus simple de venir à Gerponville ou de réserver une séance à distance.
+                  Selon votre lieu de résidence et la prestation choisie, vous pouvez venir à Gerponville ou réserver une séance à distance lorsque cette modalité est disponible.
                 </p>
               </div>
               <Link
-                to="/blog/consulter-seine-maritime-cabinet-distance"
+                to="/consultation-a-distance"
                 className="mt-6 inline-flex shrink-0 items-center justify-center rounded-full bg-brand-purple px-7 py-4 font-bold text-white transition hover:bg-brand-dark md:mt-0"
               >
-                Lire le guide →
+                Voir les modalités →
               </Link>
             </div>
           </div>
@@ -258,7 +258,7 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
               <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-brand-lilas">Près de chez vous</p>
               <h2 className="mb-4 font-display text-3xl font-bold sm:text-4xl">Villes et secteurs autour de {hub.shortLabel}</h2>
               <p className="leading-relaxed text-gray-300">
-                Vous habitez dans ce secteur ? Retrouvez les pages dédiées lorsqu'elles sont disponibles, ou consultez directement les trois prestations principales de Tourma-Line.
+                Vous habitez dans ce secteur ? Retrouvez les informations locales utiles ou consultez directement les trois pratiques proposées par Tourma-Line.
               </p>
             </div>
 
@@ -282,7 +282,7 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
                       </div>
                     ) : (
                       <p className="text-sm leading-relaxed text-gray-300">
-                        Vous habitez {city.label} ? Les trois prestations restent accessibles depuis le cabinet de Gerponville ou à distance selon la formule.
+                        Vous habitez {city.label} ? Les prestations restent accessibles depuis le cabinet de Gerponville ou à distance selon la formule.
                       </p>
                     )}
                   </article>
@@ -291,18 +291,18 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
             </div>
 
             <div className="mt-10 rounded-3xl border border-white/15 bg-white/5 p-7">
-              <h3 className="mb-4 font-display text-2xl font-bold">Communes couvertes dans ce secteur</h3>
+              <h3 className="mb-4 font-display text-2xl font-bold">Communes du secteur</h3>
               <p className="leading-relaxed text-gray-300">{hub.coverageExamples.join(" · ")}</p>
-              <p className="mt-4 text-sm text-gray-400">Liste indicative, non exhaustive. Si votre commune n'apparaît pas, contactez Line pour vérifier la modalité la plus simple.</p>
+              <p className="mt-4 text-sm text-gray-400">Liste indicative, non exhaustive. Si votre commune n'apparaît pas, contactez-moi pour vérifier la modalité la plus simple.</p>
             </div>
           </div>
         </section>
 
         <section className="py-16">
           <div className="mx-auto max-w-4xl px-6 text-center">
-            <h2 className="mb-4 font-display text-3xl text-brand-dark">Source territoriale</h2>
+            <h2 className="mb-4 font-display text-3xl text-brand-dark">Informations territoriales</h2>
             <p className="mb-6 text-gray-600">
-              Les informations de périmètre et de communes s'appuient sur la source territoriale indiquée ci-dessous. Le cabinet Tourma-Line reste situé à Gerponville.
+              Le cabinet Tourma-Line reste situé à Gerponville. La source ci-dessous est proposée uniquement pour situer le secteur géographique.
             </p>
             <a
               href={hub.officialSourceUrl}

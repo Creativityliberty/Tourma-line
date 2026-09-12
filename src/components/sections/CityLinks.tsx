@@ -8,9 +8,9 @@ import { WhatsAppIcon, GlobeIcon, MapPinIcon } from "../ui/icons";
 import { ConversionLink } from "../ui/ConversionLink";
 
 const serviceLabels: Record<string, string> = {
-  cartomancie: "Voyance & cartomancie",
+  cartomancie: "Cartomancie",
   numerologie: "Numérologie",
-  "soin-lahochi": "Soin énergétique Lahochi",
+  "soin-lahochi": "Lahochi",
 };
 
 const nearbySlugs = new Set([
@@ -43,12 +43,12 @@ export const CityLinks = () => {
               </p>
             </div>
             <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4">
-              Voyance, numérologie & soins énergétiques dans votre secteur
+              Cartomancie, numérologie & Lahochi dans votre secteur
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Le cabinet Tourma-Line est à Gerponville. Retrouvez les accompagnements les plus
-              recherchés autour de Fécamp, Valmont, Cany-Barville, Yvetot et la Côte d'Albâtre,
-              avec une adresse de cabinet clairement indiquée et la possibilité de consulter à distance.
+              Mon cabinet est à Gerponville. Retrouvez les informations utiles autour de Fécamp,
+              Valmont, Cany-Barville, Yvetot et la Côte d&apos;Albâtre, avec la possibilité de
+              consulter à distance selon la prestation.
             </p>
           </div>
 
@@ -86,7 +86,7 @@ export const CityLinks = () => {
                 Explorer les secteurs autour de Gerponville
               </h3>
               <p className="mx-auto mt-3 max-w-3xl text-gray-600">
-                Retrouvez les principaux secteurs desservis autour du cabinet et les villes depuis lesquelles
+                Retrouvez les principaux secteurs autour du cabinet et les villes depuis lesquelles
                 vous pouvez venir à Gerponville ou choisir une consultation à distance selon la prestation.
               </p>
             </div>
@@ -118,9 +118,7 @@ export const CityLinks = () => {
               Vous habitez plus loin ?
             </h3>
             <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-              Voyance et cartomancie, numérologie et Lahochi peuvent être proposés à distance
-              selon la prestation. Le cabinet Tourma-Line se trouve uniquement à Gerponville ;
-              si vous êtes plus loin, choisissez la modalité à distance qui vous convient.
+              La cartomancie, la numérologie et le Lahochi peuvent être proposés à distance selon la prestation. Le cabinet Tourma-Line se trouve uniquement à Gerponville.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

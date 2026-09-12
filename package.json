@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "generate": "node scripts/generate-llms.mjs && node scripts/generate-sitemap.mjs",
     "verify:conversion": "node --experimental-strip-types --test tests/conversionTracking.test.mjs && node --test tests/conversionLinks.test.mjs",
-    "verify:home": "node --test tests/homeConversion.test.mjs",
+    "verify:home": "node --test tests/homeConversion.test.mjs tests/lahochiImagePresentation.test.mjs tests/approvedCopy.test.mjs",
     "verify:local-copy": "node --test tests/publicLocalCopy.test.mjs"
   },
   "dependencies": {

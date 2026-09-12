@@ -4,15 +4,15 @@ const HUBS = [
     path: "/zones/fecamp-caux-littoral",
     label: "Fécamp Caux Littoral",
     shortLabel: "Fécamp Caux Littoral",
-    pageTitle: "Voyance, numérologie & soins énergétiques — Fécamp Caux Littoral | Tourma-Line",
-    headline: "Voyance, numérologie & soins énergétiques dans Fécamp Caux Littoral",
+    pageTitle: "Cartomancie, numérologie & Lahochi — Fécamp Caux Littoral | Tourma-Line",
+    headline: "Cartomancie, numérologie & Lahochi dans Fécamp Caux Littoral",
     metaDescription:
-      "Tourma-Line accompagne Fécamp, Valmont et les communes de Fécamp Caux Littoral depuis son cabinet réel à Gerponville : voyance, numérologie et soin énergétique Lahochi.",
+      "Tourma-Line accompagne Fécamp, Valmont et les communes de Fécamp Caux Littoral depuis son cabinet réel à Gerponville : cartomancie, numérologie et Lahochi.",
     eyebrow: "Agglomération autour du cabinet",
     intro:
       "Le cabinet Tourma-Line est situé à Gerponville, au sein même de l'Agglomération Fécamp Caux Littoral. Retrouvez ici les informations utiles pour venir depuis Fécamp, Valmont et les communes voisines, ou choisir une consultation à distance selon la prestation.",
     localContext:
-      "Fécamp est la ville-centre de l'agglomération. Gerponville et Valmont font partie du même territoire intercommunal : depuis ce secteur, Line Simon vous reçoit à son unique cabinet de Gerponville, sur rendez-vous.",
+      "Fécamp est la ville-centre de l'agglomération. Gerponville et Valmont font partie du même territoire intercommunal : depuis ce secteur, Line vous reçoit à son unique cabinet de Gerponville, sur rendez-vous.",
     boundaryNote:
       "Fécamp Caux Littoral est ici utilisé selon son périmètre intercommunal officiel.",
     facts: [
@@ -44,13 +44,13 @@ const HUBS = [
     path: "/zones/cote-d-albatre",
     label: "Côte d'Albâtre",
     shortLabel: "Côte d'Albâtre",
-    pageTitle: "Voyance, numérologie & énergéticienne — Côte d'Albâtre | Tourma-Line",
-    headline: "Voyance, numérologie & soins énergétiques sur la Côte d'Albâtre",
+    pageTitle: "Cartomancie, numérologie & Lahochi — Côte d'Albâtre | Tourma-Line",
+    headline: "Cartomancie, numérologie & Lahochi sur la Côte d'Albâtre",
     metaDescription:
-      "Tourma-Line dessert Cany-Barville, Ourville-en-Caux, Saint-Riquier-ès-Plains et le secteur de la Côte d'Albâtre depuis le cabinet de Gerponville ou à distance.",
+      "Tourma-Line accompagne Cany-Barville, Ourville-en-Caux, Saint-Riquier-ès-Plains et le secteur de la Côte d'Albâtre depuis le cabinet de Gerponville ou à distance.",
     eyebrow: "Secteur Cany-Barville / Côte d'Albâtre",
     intro:
-      "Vous habitez Cany-Barville, Ourville-en-Caux, Saint-Riquier-ès-Plains ou un autre secteur de la Côte d'Albâtre ? Line Simon vous reçoit à Gerponville sur rendez-vous et propose également des consultations à distance selon la prestation.",
+      "Vous habitez Cany-Barville, Ourville-en-Caux, Saint-Riquier-ès-Plains ou un autre secteur de la Côte d'Albâtre ? Je vous reçois à Gerponville sur rendez-vous et propose également des consultations à distance selon la prestation.",
     localContext:
       "La Communauté de Communes de la Côte d'Albâtre réunit un territoire littoral et rural dont Cany-Barville, Saint-Valery-en-Caux et Fontaine-le-Dun constituent des pôles structurants. Ourville-en-Caux et Saint-Riquier-ès-Plains font partie de cette intercommunalité.",
     boundaryNote:
@@ -83,10 +83,10 @@ const HUBS = [
     path: "/zones/caux-seine-agglo",
     label: "Caux Seine Agglo",
     shortLabel: "Caux Seine",
-    pageTitle: "Voyance, numérologie & soins énergétiques — Caux Seine Agglo | Tourma-Line",
-    headline: "Voyance, numérologie & soins énergétiques dans Caux Seine Agglo",
+    pageTitle: "Cartomancie, numérologie & Lahochi — Caux Seine Agglo | Tourma-Line",
+    headline: "Cartomancie, numérologie & Lahochi dans Caux Seine Agglo",
     metaDescription:
-      "Tourma-Line accompagne les habitants de Bolbec, Lillebonne, Port-Jérôme-sur-Seine et Caux Seine : voyance, numérologie et Lahochi depuis Gerponville ou à distance.",
+      "Tourma-Line accompagne les habitants de Bolbec, Lillebonne, Port-Jérôme-sur-Seine et Caux Seine : cartomancie, numérologie et Lahochi depuis Gerponville ou à distance.",
     eyebrow: "Bolbec / Lillebonne / vallée de Seine",
     intro:
       "Vous habitez Bolbec, Lillebonne, Port-Jérôme-sur-Seine ou une commune voisine de Caux Seine Agglo ? Tourma-Line vous accueille à Gerponville sur rendez-vous et propose la consultation à distance lorsque le déplacement n'est pas pratique.",
@@ -123,10 +123,10 @@ const HUBS = [
     path: "/zones/pays-de-caux",
     label: "Pays de Caux",
     shortLabel: "Pays de Caux",
-    pageTitle: "Voyance, numérologie & soins énergétiques — Pays de Caux | Tourma-Line",
-    headline: "Voyance, numérologie & soins énergétiques dans le Pays de Caux",
+    pageTitle: "Cartomancie, numérologie & Lahochi — Pays de Caux | Tourma-Line",
+    headline: "Cartomancie, numérologie & Lahochi dans le Pays de Caux",
     metaDescription:
-      "Tourma-Line accompagne le Pays de Caux depuis Gerponville : voyance et cartomancie, numérologie et soin énergétique Lahochi au cabinet ou à distance.",
+      "Tourma-Line accompagne le Pays de Caux depuis Gerponville : cartomancie, numérologie et Lahochi au cabinet ou à distance selon la prestation.",
     eyebrow: "Repère géographique cauchois",
     intro:
       "Le Pays de Caux est un repère géographique naturel pour situer Gerponville et les secteurs de Fécamp, Valmont, Cany-Barville, Ourville-en-Caux et Yvetot. Retrouvez les possibilités de consultation au cabinet ou à distance selon votre situation.",

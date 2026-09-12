@@ -13,12 +13,12 @@ export const Footer = () => {
                         </h3>
                         <div className="flex items-center gap-2 mb-2 text-brand-lilas">
                             <p>
-                                "Pour vous guider vers plus de clarté et vous offrir un temps de recentrage."
+                                "Pour vous guider vers la clarté, la confiance et l'harmonie."
                             </p>
                             <SparklesIcon className="w-4 h-4 flex-shrink-0" />
                         </div>
                         <p className="text-sm text-gray-400 mb-4 italic">
-                            Line — Cartomancienne, numérologue & praticienne Lahochi
+                            Line — Numérologue, cartomancienne & praticienne Lahochi
                         </p>
                         <div className="text-sm text-gray-300 space-y-1">
                             <p>Cabinet : 4 résidence Les Peupliers</p>
@@ -64,12 +64,13 @@ export const Footer = () => {
                         <nav aria-label="Liens principaux Tourma-Line">
                             <h4 className="text-lg font-semibold mb-3">Liens utiles</h4>
                             <ul className="text-sm text-gray-300 space-y-2 mb-5">
+                                <li><Link to="/" className="hover:text-brand-purple underline">Accueil</Link></li>
                                 <li><Link to="/prestations" className="hover:text-brand-purple underline">Prestations</Link></li>
                                 <li><Link to="/avis" className="hover:text-brand-purple underline">Avis clients</Link></li>
                                 <li><Link to="/rendezvous" className="hover:text-brand-purple underline">Prendre rendez-vous</Link></li>
-                                <li><Link to="/cartomancie" className="hover:text-brand-purple underline">Voyance & cartomancie</Link></li>
+                                <li><Link to="/cartomancie" className="hover:text-brand-purple underline">Cartomancie</Link></li>
                                 <li><Link to="/numerologie" className="hover:text-brand-purple underline">Numérologie</Link></li>
-                                <li><Link to="/soin-lahochi" className="hover:text-brand-purple underline">Soin énergétique Lahochi</Link></li>
+                                <li><Link to="/soin-lahochi" className="hover:text-brand-purple underline">Lahochi</Link></li>
                                 <li><Link to="/consultation-a-distance" className="hover:text-brand-purple underline">Consultation à distance</Link></li>
                                 <li><Link to="/blog" className="hover:text-brand-purple underline">Guides & blog</Link></li>
                             </ul>

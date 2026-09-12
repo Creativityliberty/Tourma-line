@@ -20,6 +20,8 @@ const appSource = fs.readFileSync(path.join(rootDir, "App.tsx"), "utf8");
 const vercelConfig = JSON.parse(fs.readFileSync(path.join(rootDir, "vercel.json"), "utf8"));
 
 assert(STATIC_ROUTES.includes("/consultation-a-distance"), "STATIC_ROUTES must include /consultation-a-distance");
+assert(STATIC_ROUTES.includes("/avis"), "STATIC_ROUTES must include /avis");
+assert(STATIC_ROUTES.includes("/rendezvous"), "STATIC_ROUTES must include /rendezvous");
 
 const cityRoutes = getCityRoutes();
 const expectedLocalRouteCount = localCities.length * SERVICES.length;
@@ -32,6 +34,8 @@ for (const city of [...nationalCities, ...internationalCities]) {
 }
 
 assert(appSource.includes('path="/consultation-a-distance"'), "App.tsx must expose /consultation-a-distance");
+assert(appSource.includes('path="/avis"'), "App.tsx must expose /avis");
+assert(appSource.includes('path="/rendezvous"'), "App.tsx must expose /rendezvous");
 assert(appSource.includes("localCities.flatMap"), "App.tsx city routes must be generated from localCities only");
 assert(Array.isArray(vercelConfig.redirects), "vercel.json must define standard redirects");
 
@@ -51,13 +55,11 @@ const legacyHomeRoutes = {
   "/consultations": "/prestations",
   "/formules": "/prestations",
   "/bienfaits": "/",
-  "/avis": "/",
-  "/temoignages": "/",
+  "/temoignages": "/avis",
   "/a-propos": "/",
   "/about": "/",
   "/faq": "/",
-  "/contact": "/",
-  "/rendezvous": "/",
+  "/contact": "/rendezvous",
 };
 for (const [source, destination] of Object.entries(legacyHomeRoutes)) {
   const redirect = redirectMap.get(source);
@@ -65,14 +67,17 @@ for (const [source, destination] of Object.entries(legacyHomeRoutes)) {
   assert.equal(redirect.destination, destination, `Wrong destination for ${source}`);
   assert.equal(redirect.permanent, true, `${source} must be permanent`);
 }
+assert(!redirectMap.has("/avis"), "/avis must remain a dedicated page, not redirect to home");
+assert(!redirectMap.has("/rendezvous"), "/rendezvous must remain a dedicated page, not redirect to home");
 
 const consultationPagePath = path.join(rootDir, "src/pages/ConsultationDistancePage.tsx");
 assert(fs.existsSync(consultationPagePath), "ConsultationDistancePage.tsx must exist");
 const consultationPage = fs.readFileSync(consultationPagePath, "utf8");
 assert(
-  consultationPage.includes("Consultation à distance") && consultationPage.includes("Voyance") && consultationPage.includes("Numérologie") && consultationPage.includes("Lahochi"),
-  "Distance page must clearly cover the three core service families"
+  consultationPage.includes("Consultation à distance") && consultationPage.includes("Cartomancie") && consultationPage.includes("Numérologie") && consultationPage.includes("Lahochi"),
+  "Distance page must clearly cover the three truthful service families"
 );
+assert(!/\bvoyance\b|\bvoyante\b|\bmédium\b|\bmedium\b|Line Simon/i.test(consultationPage), "Distance page must not claim a service or surname Line does not use");
 
 const cityPagePath = path.join(rootDir, "src/pages/CityPage.tsx");
 const cityPage = fs.readFileSync(cityPagePath, "utf8");
@@ -82,10 +87,11 @@ assert(
   "Fécamp page must include useful local access context"
 );
 assert(
-  cityPage.includes("Voyante & cartomancienne près de Fécamp") && cityPage.includes("Numérologue près de Fécamp") && cityPage.includes("Énergéticienne près de Fécamp"),
-  "Fécamp premium content must cover the three commercial service intents"
+  cityPage.includes("Cartomancienne près de Fécamp") && cityPage.includes("Numérologue près de Fécamp") && cityPage.includes("Lahochi près de Fécamp"),
+  "Fécamp premium content must cover the three truthful service intents"
 );
 assert(cityPage.includes("Itinéraire Fécamp → Gerponville"), "Fécamp premium page must expose a useful directions CTA");
+assert(!/\bvoyance\b|\bvoyante\b|\bmédium\b|\bmedium\b|Line Simon/i.test(cityPage), "CityPage must not present false services or the old surname");
 
 const localSeoStrategyPath = path.join(rootDir, "src/data/localSeoStrategy.mjs");
 assert(fs.existsSync(localSeoStrategyPath), "Sprint 4 must define src/data/localSeoStrategy.mjs before premiumising more local pages");
@@ -147,7 +153,6 @@ assert(
 );
 assert(!cityPage.includes("Priorité SEO locale : Tier"), "Internal SEO scores must never be rendered in visitor-facing CityPage copy");
 
-// Territory hubs absorb B/C coverage without creating doorway pages.
 const expectedHubRoutes = [
   "/zones/pays-de-caux",
   "/zones/cote-d-albatre",
@@ -186,6 +191,7 @@ const territoryPage = fs.readFileSync(territoryPagePath, "utf8");
 assert(territoryPage.includes("CollectionPage") && territoryPage.includes("BreadcrumbList"), "TerritoryHubPage must expose useful structured data");
 assert(territoryPage.includes("Cabinet à Gerponville"), "Territory hubs must stay transparent about the real cabinet location");
 assert(territoryPage.includes("officialSourceUrl"), "Administrative territory hubs must expose their official source");
+assert(!/\bvoyance\b|\bvoyante\b|\bmédium\b|\bmedium\b|Line Simon/i.test(territoryPage), "Territory hubs must use truthful service names and the current public identity");
 
 assert(appSource.includes("TerritoryHubPage") && appSource.includes("territorialHubs.map"), "App.tsx must route all published territory hubs from the data registry");
 

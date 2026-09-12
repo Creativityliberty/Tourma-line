@@ -11,17 +11,19 @@ const ConsultationCard = ({ consultation, index, highlightImage = false }: { con
     <div className="shiny-card-container rounded-[2rem]">
       <div className="shiny-card-border"></div>
       <div className="shiny-card-content bg-white/60 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row transition-all duration-300 hover:shadow-2xl hover:bg-white/85 border border-white/35">
-        <div className="md:w-2/5 relative h-72 md:min-h-[440px] bg-brand-lilas/20 overflow-hidden">
+        <div className={`${highlightImage ? "md:w-[52%] aspect-square md:aspect-auto md:min-h-[520px]" : "md:w-2/5 h-72 md:min-h-[440px]"} relative bg-brand-lilas/20 overflow-hidden`}>
           <img
             src={consultation.imageUrl}
             alt={consultation.title}
-            className={`absolute inset-0 w-full h-full object-cover object-center ${highlightImage ? "contrast-125 saturate-125 brightness-95 scale-[1.02]" : ""}`}
+            className="absolute inset-0 w-full h-full object-cover object-center"
             loading="lazy"
           />
-          <div className={`absolute inset-0 z-10 pointer-events-none ${highlightImage ? "bg-brand-purple/5" : "bg-brand-purple/10"}`}></div>
+          {!highlightImage && (
+            <div className="absolute inset-0 z-10 pointer-events-none bg-brand-purple/10"></div>
+          )}
         </div>
 
-        <div className="p-8 md:p-10 md:w-3/5 flex flex-col justify-between">
+        <div className={`p-8 md:p-10 ${highlightImage ? "md:w-[48%]" : "md:w-3/5"} flex flex-col justify-between`}>
           <div>
             <div className="flex flex-wrap gap-2 mb-4">
               <span className="bg-brand-lilas/30 text-brand-purple px-3 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 uppercase tracking-wider">

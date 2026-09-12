@@ -11,7 +11,7 @@ const ConsultationCard = ({ consultation, index, highlightImage = false }: { con
     <div className="shiny-card-container rounded-[2rem]">
       <div className="shiny-card-border"></div>
       <div className="shiny-card-content bg-white/60 backdrop-blur-md rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row transition-all duration-300 hover:shadow-2xl hover:bg-white/85 border border-white/35">
-        <div className={`${highlightImage ? "md:w-[52%] aspect-square md:aspect-auto md:min-h-[520px]" : "md:w-2/5 h-72 md:min-h-[440px]"} relative bg-brand-lilas/20 overflow-hidden`}>
+        <div className={`${highlightImage ? "md:w-[52%] aspect-square md:aspect-auto md:min-h-[520px] bg-brand-lilas/20" : "md:w-2/5 h-64 md:h-auto"} relative overflow-hidden`}>
           <img
             src={consultation.imageUrl}
             alt={consultation.title}

@@ -119,7 +119,7 @@ test('public identity and SEO surfaces do not claim voyance, mediumship, or the 
 test('home metadata targets truthful services instead of false job titles', async () => {
   const html = await read('index.html');
 
-  assert.match(html, /<title>Numérologue & Cartomancienne à Gerponville \| Tourma-Line<\/title>/);
+  assert.match(html, /<title>Tourma-Line - Numérologie Cartomancie et Soins énergétiques LAHOCHI en Normandie<\/title>/);
   assert.match(html, /numérologie, cartomancie et Lahochi/);
   assert.doesNotMatch(html, /Voyante|Voyance|Line Simon/i);
 });

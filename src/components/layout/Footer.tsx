@@ -103,14 +103,14 @@ export const Footer = () => {
                         © {new Date().getFullYear()} Tourma-Line. Tous droits réservés.
                     </p>
                     <p>
-                        Réalisé avec passion par{" "}
+                        Réalisé par{" "}
                         <a
                             href="https://www.numtemaagency.com/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-brand-purple hover:underline font-medium"
                         >
-                            Numtema Agency — Lionel Numtema
+                            Nümtema Agency
                         </a>
                     </p>
                 </div>

@@ -195,5 +195,6 @@ export const consultations: Consultation[] = [
     imageUrl: "/images/services/harmonisation-objets.webp",
     location: "À distance",
     type: "Soin Énergétique",
+    calLink: "tourma-line/soin-energetique-lahochi-harmonisation-d-objets-a-distance",
   },
 ];

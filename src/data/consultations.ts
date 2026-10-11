@@ -47,7 +47,7 @@ export const consultations: Consultation[] = [
       },
       {
         label: "À distance",
-        calLink: "tourma-line/120min",
+        calLink: "tourma-line/consultation-guidance-complete-1ere-seance-a-distance",
       },
     ],
   },

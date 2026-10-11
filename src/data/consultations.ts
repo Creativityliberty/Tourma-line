@@ -174,6 +174,7 @@ export const consultations: Consultation[] = [
     imageUrl: "/images/services/pack-compagnon-serenite.webp",
     location: "À distance",
     type: "Soin Énergétique",
+    calLink: "tourma-line/pack-compagnon-serenite-3-seances-lahochi-a-distance",
   },
   {
     id: "harmonisation-objets",

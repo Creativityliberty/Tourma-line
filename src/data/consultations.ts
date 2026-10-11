@@ -92,6 +92,7 @@ export const consultations: Consultation[] = [
     imageUrl: "/images/services/cartomancy.webp",
     location: "À distance",
     type: "Guidance",
+    calLink: "tourma-line/guidance-par-question-a-distance",
   },
   {
     id: "soin-lahochi",

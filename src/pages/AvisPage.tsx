@@ -5,6 +5,7 @@ import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { Testimonials } from "../components/sections/Testimonials";
 import { ConversionLink } from "../components/ui/ConversionLink";
+import { CalPopupButton } from "../components/booking/CalPopupButton";
 import { WhatsAppIcon } from "../components/ui/icons";
 
 export const AvisPage = () => {
@@ -63,16 +64,12 @@ export const AvisPage = () => {
           <h2 className="text-3xl font-display text-brand-dark mb-4">Vous souhaitez faire le point à votre tour ?</h2>
           <p className="text-gray-700 mb-7">Choisissez votre prestation ou contactez directement Line avant de réserver.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-3">
-            <ConversionLink
-              kind="booking"
+            <CalPopupButton
               placement="reviews-page"
-              href="https://cal.com/tourma-line"
-              target="_blank"
-              rel="noopener noreferrer"
               className="bg-brand-purple text-white font-bold py-3 px-8 rounded-full text-center"
             >
               Prendre rendez-vous
-            </ConversionLink>
+            </CalPopupButton>
             <ConversionLink
               kind="whatsapp"
               placement="reviews-page"

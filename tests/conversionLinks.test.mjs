@@ -31,8 +31,8 @@ test('all user-facing conversion anchors go through ConversionLink', async () =>
   assert.deepEqual([...new Set(offenders)], []);
 });
 
-test('blog markdown conversion links are rendered through ConversionLink', async () => {
+test('blog markdown booking links are rendered through the Cal popup button', async () => {
   const source = await readFile('src/pages/BlogPostPage.tsx', 'utf8');
   assert.match(source, /components=\{\{/);
-  assert.match(source, /ConversionLink\s+kind="booking"\s+placement="article-body"/);
+  assert.match(source, /CalPopupButton\s+placement="article-body"/);
 });

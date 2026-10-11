@@ -13,7 +13,7 @@ test('home hero uses the approved first-person positioning and conversion CTAs',
   assert.match(hero, /Relation compliquée, choix professionnel à faire, ou épreuve qui vous pèse \?/);
   assert.match(hero, /La numérologie et la cartomancie vous aident à y voir clair/);
   assert.match(hero, /Consultations au cabinet à Gerponville ou à distance, selon la prestation/);
-  assert.match(hero, /kind="booking"\s+placement="hero"/);
+  assert.match(hero, /<CalPopupButton\s+placement="hero"/);
   assert.match(hero, />\s*Prendre rendez-vous\s*</);
   assert.match(hero, /kind="phone"\s+placement="hero-phone"/);
   assert.doesNotMatch(hero, forbiddenPublicIdentity);

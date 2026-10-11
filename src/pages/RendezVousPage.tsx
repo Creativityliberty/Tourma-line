@@ -5,7 +5,7 @@ import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { ConversionLink } from "../components/ui/ConversionLink";
 import { CalEmbed } from "../components/booking/CalEmbed";
-import { CAL_BASE_URL } from "../lib/conversionTracking";
+import { CalPopupButton } from "../components/booking/CalPopupButton";
 import { PhoneIcon, WhatsAppIcon } from "../components/ui/icons";
 
 export const RendezVousPage = () => {
@@ -57,16 +57,12 @@ export const RendezVousPage = () => {
           </div>
 
           <div className="mt-8 text-center">
-            <ConversionLink
-              kind="booking"
+            <CalPopupButton
               placement="booking-page"
-              href={CAL_BASE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
               className="bg-brand-purple hover:bg-brand-purple-dark text-white font-bold py-3 px-8 rounded-full"
             >
               Réservez ici
-            </ConversionLink>
+            </CalPopupButton>
           </div>
         </div>
       </main>
@@ -96,16 +92,12 @@ export const RendezVousPage = () => {
             <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-3xl p-7 flex flex-col">
               <h3 className="text-2xl font-display mb-3">Réserver en ligne</h3>
               <p className="text-white/75 mb-6 flex-1">Accédez aux créneaux disponibles et choisissez la prestation souhaitée.</p>
-              <ConversionLink
-                kind="booking"
+              <CalPopupButton
                 placement="booking-page"
-                href="https://cal.com/tourma-line"
-                target="_blank"
-                rel="noopener noreferrer"
                 className="bg-brand-purple text-white font-bold py-3 px-5 rounded-full"
               >
                 Voir les créneaux
-              </ConversionLink>
+              </CalPopupButton>
             </div>
 
             <div className="bg-white/10 backdrop-blur-md border border-white/15 rounded-3xl p-7 flex flex-col">

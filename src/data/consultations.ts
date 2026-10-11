@@ -13,6 +13,7 @@ export interface Consultation {
   type: string;
   contactOnly?: boolean;
   whatsappLabel?: string;
+  calLink?: string;
 }
 
 export const consultations: Consultation[] = [
@@ -34,6 +35,7 @@ export const consultations: Consultation[] = [
     imageUrl: "/images/services/numerology.webp",
     location: "À distance / Cabinet",
     type: "Guidance",
+    calLink: "tourma-line/120min",
   },
   {
     id: "suivi-annee",
@@ -51,6 +53,7 @@ export const consultations: Consultation[] = [
     imageUrl: "/images/services/suivi_annee.webp",
     location: "À distance / Cabinet",
     type: "Guidance",
+    calLink: "tourma-line/consultation-suivi-annee-personnelle-en-presentiel",
   },
   {
     id: "guidance-question",

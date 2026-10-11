@@ -10,6 +10,7 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import rehypeRaw from "rehype-raw";
 import { ConversionLink } from "../components/ui/ConversionLink";
+import { CalPopupButton } from "../components/booking/CalPopupButton";
 
 export const BlogPostPage = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -155,7 +156,11 @@ export const BlogPostPage = () => {
                   a: ({ node: _node, href, ...props }) => {
                     if (href?.startsWith("https://cal.com/tourma-line")) {
                       return (
-                        <ConversionLink kind="booking" placement="article-body" href={href} {...props} />
+                        <CalPopupButton
+                          placement="article-body"
+                          calLink={href.replace("https://cal.com/", "").split(/[?#]/)[0]}
+                          {...props}
+                        />
                       );
                     }
                     if (href?.startsWith("https://wa.me/33649653186")) {
@@ -195,15 +200,13 @@ export const BlogPostPage = () => {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <ConversionLink kind="booking" placement="article-cta"
-                    href="https://cal.com/tourma-line"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                  <CalPopupButton
+                    placement="article-cta"
                     className="group bg-brand-lilas text-brand-dark px-10 py-5 rounded-full font-bold text-lg transition-all hover:scale-105 active:scale-95 shadow-xl flex items-center justify-center gap-3 hover:bg-white"
                   >
                     <CalendarIcon className="w-5 h-5" />
                     <span>Réserver ma consultation</span>
-                  </ConversionLink>
+                  </CalPopupButton>
 
                   <ConversionLink kind="whatsapp" placement="article-cta"
                     href="https://wa.me/33649653186"

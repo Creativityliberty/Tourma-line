@@ -2,6 +2,7 @@ import React from "react";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { MapPinIcon, PhoneIcon } from "../ui/icons";
 import { ConversionLink } from "../ui/ConversionLink";
+import { CalPopupButton } from "../booking/CalPopupButton";
 
 const contactInfo = {
   address: "4 résidence Les Peupliers",
@@ -35,14 +36,12 @@ export const LocalZone = () => {
               Pour les personnes éloignées, les consultations de numérologie, cartomancie et soins Lahochi sont disponibles à distance par téléphone.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <ConversionLink kind="booking" placement="local-zone"
-                href="https://cal.com/tourma-line"
-                target="_blank"
-                rel="noopener noreferrer"
+              <CalPopupButton
+                placement="local-zone"
                 className="inline-block bg-brand-lilas hover:bg-opacity-80 text-brand-dark font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 active:scale-95 shadow-lg shadow-brand-lilas/20"
               >
                 Prendre rendez-vous en ligne
-              </ConversionLink>
+              </CalPopupButton>
             </div>
 
             <div className="grid sm:grid-cols-2 gap-4 max-w-2xl mx-auto text-left">

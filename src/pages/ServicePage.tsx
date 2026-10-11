@@ -7,6 +7,7 @@ import { WhatsAppIcon, MapPinIcon, ArrowLeftIcon } from "../components/ui/icons"
 import { getPremiumLocalTargetsForService } from "../data/localSeoStrategy.mjs";
 import { territorialHubs } from "../data/territorialHubs.mjs";
 import { ConversionLink } from "../components/ui/ConversionLink";
+import { CalPopupButton } from "../components/booking/CalPopupButton";
 
 interface ServicePageProps {
   title: string;
@@ -103,15 +104,13 @@ export const ServicePage = ({
             </div>
           )}
           <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <ConversionLink kind="booking" placement="hero"
-              href="https://cal.com/tourma-line"
-              target="_blank"
-              rel="noopener noreferrer"
+            <CalPopupButton
+              placement="hero"
               id={`cta-hero-${breadcrumb.toLowerCase().replace(/\s/g, "-")}`}
               className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block shadow-lg animate-pulse"
             >
               {ctaText}
-            </ConversionLink>
+            </CalPopupButton>
             <ConversionLink kind="whatsapp" placement="hero"
               href="https://wa.me/33649653186"
               target="_blank"
@@ -291,14 +290,12 @@ export const ServicePage = ({
               ou en consultation téléphonique partout en France.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ConversionLink kind="booking" placement="bottom-cta"
-                href="https://cal.com/tourma-line"
-                target="_blank"
-                rel="noopener noreferrer"
+              <CalPopupButton
+                placement="bottom-cta"
                 className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-4 px-10 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95"
               >
                 {ctaText}
-              </ConversionLink>
+              </CalPopupButton>
               <Link
                 to="/"
                 className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-full text-lg transition-all duration-300 border border-white/20 flex items-center justify-center gap-2"

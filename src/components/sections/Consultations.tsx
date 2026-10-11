@@ -3,6 +3,7 @@ import { consultations, type Consultation } from "../../data/consultations";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { SparklesIcon, WhatsAppIcon, MapPinIcon, ClockIcon } from "../ui/icons";
 import { ConversionLink } from "../ui/ConversionLink";
+import { CalPopupButton } from "../booking/CalPopupButton";
 
 const coreConsultations = consultations.slice(0, 4);
 const newLahochiOffers = consultations.slice(4);
@@ -84,16 +85,13 @@ const ConsultationCard = ({ consultation, index }: { consultation: Consultation;
             </div>
             <div className="flex flex-row items-center justify-center sm:justify-start lg:justify-end gap-2.5 w-full sm:w-auto shrink-0">
               {!consultation.contactOnly ? (
-                <ConversionLink
-                  kind="booking"
+                <CalPopupButton
                   placement={`consultation-${consultation.id}`}
-                  href="https://cal.com/tourma-line"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  calLink={consultation.calLink}
                   className="bg-brand-purple hover:bg-opacity-90 text-white font-semibold py-2.5 px-5 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center text-xs sm:text-sm whitespace-nowrap shadow-sm"
                 >
                   Réserver
-                </ConversionLink>
+                </CalPopupButton>
               ) : null}
               <ConversionLink
                 kind="whatsapp"

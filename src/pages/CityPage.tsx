@@ -21,6 +21,7 @@ import { getLocalSeoDecision } from "../data/localSeoStrategy.mjs";
 import { getPremiumLocalContent } from "../data/premiumLocalContent.mjs";
 import { getTerritoryHubForCity } from "../data/territorialHubs.mjs";
 import { ConversionLink } from "../components/ui/ConversionLink";
+import { CalPopupButton } from "../components/booking/CalPopupButton";
 
 interface CityPageProps {
   city: City;
@@ -250,15 +251,13 @@ export const CityPage = ({ city, service }: CityPageProps) => {
               {locationIntro}
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <ConversionLink kind="booking" placement="local-hero"
-                href="https://cal.com/tourma-line"
-                target="_blank"
-                rel="noopener noreferrer"
+              <CalPopupButton
+                placement="local-hero"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-lilas px-7 py-4 font-bold text-brand-dark"
               >
                 <CalendarIcon className="h-5 w-5" />
                 {svc.cta}
-              </ConversionLink>
+              </CalPopupButton>
               <ConversionLink kind="whatsapp" placement="local-hero"
                 href="https://wa.me/33649653186"
                 target="_blank"
@@ -379,14 +378,12 @@ export const CityPage = ({ city, service }: CityPageProps) => {
               Je vous reçois à Gerponville ou à distance selon la prestation choisie.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <ConversionLink kind="booking" placement="local-bottom"
-                href="https://cal.com/tourma-line"
-                target="_blank"
-                rel="noopener noreferrer"
+              <CalPopupButton
+                placement="local-bottom"
                 className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-4 px-10 rounded-full text-lg"
               >
                 Prendre rendez-vous
-              </ConversionLink>
+              </CalPopupButton>
               <Link
                 to="/"
                 className="bg-white/10 hover:bg-white/20 text-white font-bold py-4 px-10 rounded-full text-lg border border-white/20 flex items-center justify-center gap-2"

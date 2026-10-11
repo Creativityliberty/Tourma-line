@@ -3,6 +3,7 @@ import { formules } from "../../data/formules";
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { SparklesIcon, WhatsAppIcon } from "../ui/icons";
 import { ConversionLink } from "../ui/ConversionLink";
+import { CalPopupButton } from "../booking/CalPopupButton";
 
 export const Formules = () => {
   return (
@@ -89,14 +90,12 @@ export const Formules = () => {
                           )}
                         </div>
                         <div className="flex flex-row items-center justify-center sm:justify-start lg:justify-end gap-2.5 w-full sm:w-auto shrink-0">
-                          <ConversionLink kind="booking" placement={`formula-${formule.id}`}
-                            href="https://cal.com/tourma-line"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                          <CalPopupButton
+                            placement={`formula-${formule.id}`}
                             className="bg-brand-purple hover:bg-opacity-90 text-white font-semibold py-2.5 px-5 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center text-xs sm:text-sm whitespace-nowrap shadow-sm"
                           >
                             Réserver
-                          </ConversionLink>
+                          </CalPopupButton>
                           <ConversionLink kind="whatsapp" placement={`formula-${formule.id}`}
                             href="https://wa.me/33649653186"
                             target="_blank"

@@ -14,6 +14,7 @@ export interface Service {
   features?: Array<{ title: string; description: string }>;
   calendlyButtonText?: string;
   calendlyUrl?: string;
+  calendlyCalLink?: string;
   imageUrl?: string;
   imageAlt?: string;
 }

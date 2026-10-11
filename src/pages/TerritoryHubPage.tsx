@@ -14,6 +14,7 @@ import {
 } from "../components/ui/icons";
 import { getPremiumLocalTargetsForCity } from "../data/localSeoStrategy.mjs";
 import { ConversionLink } from "../components/ui/ConversionLink";
+import { CalPopupButton } from "../components/booking/CalPopupButton";
 
 interface TerritoryCity {
   slug: string;
@@ -163,15 +164,13 @@ export const TerritoryHubPage = ({ hub }: TerritoryHubPageProps) => {
               {hub.intro}
             </p>
             <div className="flex flex-col gap-4 sm:flex-row">
-              <ConversionLink kind="booking" placement="hero"
-                href="https://cal.com/tourma-line"
-                target="_blank"
-                rel="noopener noreferrer"
+              <CalPopupButton
+                placement="hero"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-brand-lilas px-7 py-4 font-bold text-brand-dark"
               >
                 <CalendarIcon className="h-5 w-5" />
                 Réserver une séance
-              </ConversionLink>
+              </CalPopupButton>
               <ConversionLink kind="whatsapp" placement="hero"
                 href="https://wa.me/33649653186"
                 target="_blank"

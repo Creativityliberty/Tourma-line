@@ -1,6 +1,7 @@
 import React from "react";
 import { PhoneIcon, WhatsAppIcon } from "../ui/icons";
 import { ConversionLink } from "../ui/ConversionLink";
+import { CalPopupButton } from "../booking/CalPopupButton";
 
 type NavClickHandler = (e: React.MouseEvent<HTMLAnchorElement>) => void;
 
@@ -60,16 +61,12 @@ export const Hero = ({ onNavClick: _onNavClick }: { onNavClick: NavClickHandler 
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <ConversionLink
-            kind="booking"
+          <CalPopupButton
             placement="hero"
-            href="https://cal.com/tourma-line"
-            target="_blank"
-            rel="noopener noreferrer"
             className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 animate-pulse inline-block shadow-lg min-w-[220px]"
           >
             Prendre rendez-vous
-          </ConversionLink>
+          </CalPopupButton>
           <ConversionLink
             kind="whatsapp"
             placement="hero"

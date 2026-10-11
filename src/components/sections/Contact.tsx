@@ -1,6 +1,7 @@
 import { AnimateOnScroll } from "../ui/AnimateOnScroll";
 import { FacebookIcon, WhatsAppIcon } from "../ui/icons";
 import { ConversionLink } from "../ui/ConversionLink";
+import { CalPopupButton } from "../booking/CalPopupButton";
 
 export const Contact = () => {
   return (
@@ -19,14 +20,12 @@ export const Contact = () => {
                 Je vous reçois au cabinet à Gerponville ou à distance selon la prestation choisie. Vous pouvez réserver directement en ligne ou me contacter sur WhatsApp si vous souhaitez être orienté(e) avant de choisir un créneau.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <ConversionLink kind="booking" placement="contact-booking"
-                  href="https://cal.com/tourma-line"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <CalPopupButton
+                  placement="contact-booking"
                   className="bg-brand-purple hover:bg-opacity-80 text-white font-bold py-3 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 inline-block animate-pulse"
                 >
                   Prendre rendez-vous
-                </ConversionLink>
+                </CalPopupButton>
                 <ConversionLink kind="whatsapp" placement="contact-booking"
                   href="https://wa.me/33649653186"
                   target="_blank"

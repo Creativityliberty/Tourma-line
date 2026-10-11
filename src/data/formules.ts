@@ -92,6 +92,16 @@ export const formules: Formule[] = [
     price: '150€',
     imageUrl: '/images/formules/lahochi.webp',
     imageAlt: 'Illustration de la formule Soin Lahochi',
-    calLink: 'tourma-line/formule-soin-lahochi-pack-de-3-seances'
+    calLink: 'tourma-line/formule-soin-lahochi-pack-de-3-seances',
+    bookingChoices: [
+      {
+        label: 'En présentiel',
+        calLink: 'tourma-line/formule-soin-lahochi-pack-de-3-seances'
+      },
+      {
+        label: 'À distance',
+        calLink: 'tourma-line/formule-soin-lahochi-pack-de-3-seances-distanciel'
+      }
+    ]
   }
 ];

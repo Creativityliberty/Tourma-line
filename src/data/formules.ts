@@ -15,6 +15,10 @@ export interface Formule {
   imageAlt?: string;
   idealFor?: string;
   calLink?: string;
+  bookingChoices?: Array<{
+    label: string;
+    calLink: string;
+  }>;
 }
 
 export const formules: Formule[] = [
@@ -32,7 +36,17 @@ export const formules: Formule[] = [
     price: '120€',
     imageUrl: '/images/formules/harmonie-interieure.webp',
     imageAlt: 'Illustration de la formule Harmonie Intérieure',
-    calLink: 'tourma-line/formule-harmonie-interieure-numerologie-cartomancie-et-lahochi'
+    calLink: 'tourma-line/formule-harmonie-interieure-numerologie-cartomancie-et-lahochi',
+    bookingChoices: [
+      {
+        label: 'En présentiel',
+        calLink: 'tourma-line/formule-harmonie-interieure-numerologie-cartomancie-et-lahochi'
+      },
+      {
+        label: 'À distance',
+        calLink: 'tourma-line/formule-harmonie-interieure-2-seances-sur-1-mois-distanciel'
+      }
+    ]
   },
   {
     id: 'renaissance',

@@ -14,6 +14,10 @@ export interface Consultation {
   contactOnly?: boolean;
   whatsappLabel?: string;
   calLink?: string;
+  bookingChoices?: Array<{
+    label: string;
+    calLink: string;
+  }>;
 }
 
 export const consultations: Consultation[] = [
@@ -54,6 +58,16 @@ export const consultations: Consultation[] = [
     location: "À distance / Cabinet",
     type: "Guidance",
     calLink: "tourma-line/consultation-suivi-annee-personnelle-en-presentiel",
+    bookingChoices: [
+      {
+        label: "En présentiel",
+        calLink: "tourma-line/consultation-suivi-annee-personnelle-en-presentiel",
+      },
+      {
+        label: "À distance",
+        calLink: "tourma-line/consultation-suivi-annee-personnelle-a-distance",
+      },
+    ],
   },
   {
     id: "guidance-question",

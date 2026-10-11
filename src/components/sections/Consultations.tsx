@@ -88,6 +88,7 @@ const ConsultationCard = ({ consultation, index }: { consultation: Consultation;
                 <CalPopupButton
                   placement={`consultation-${consultation.id}`}
                   calLink={consultation.calLink}
+                  choices={consultation.bookingChoices}
                   className="bg-brand-purple hover:bg-opacity-90 text-white font-semibold py-2.5 px-5 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center text-xs sm:text-sm whitespace-nowrap shadow-sm"
                 >
                   Réserver

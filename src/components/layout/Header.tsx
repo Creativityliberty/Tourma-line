@@ -34,10 +34,13 @@ export const Header = ({ onNavClick }: { onNavClick: NavClickHandler }) => {
                 >
                     <div className="w-10 h-10 rounded-full overflow-hidden border border-white/20 bg-white flex items-center justify-center flex-shrink-0 transition-transform duration-500 group-hover/logo:rotate-[360deg]">
                         <img
-                            src="/logo-tourmaline.png"
+                            src="/logo-tourmaline.webp"
                             alt="Tourma-Line"
                             className="w-full h-full object-cover"
+                            width={40}
+                            height={40}
                             loading="eager"
+                            decoding="async"
                         />
                     </div>
                     <span>Tourma-Line</span>

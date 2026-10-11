@@ -10,21 +10,32 @@ export const Hero = ({ onNavClick: _onNavClick }: { onNavClick: NavClickHandler 
       id="accueil"
       className="relative min-h-[100svh] flex items-center justify-center text-center text-white overflow-hidden"
     >
-      <img
-        src="/hero-mobile-tourmaline.jpg"
-        alt="Univers Tourma-Line — numérologie, cartomancie et Lahochi"
-        className="absolute inset-0 w-full h-full object-cover sm:hidden"
-        loading="eager"
-        fetchPriority="high"
-      />
-
-      <img
-        src="/hero-tourma-line.jpg"
-        alt="Univers Tourma-Line — numérologie, cartomancie et Lahochi"
-        className="absolute inset-0 w-full h-full object-cover hidden sm:block"
-        loading="eager"
-        fetchPriority="high"
-      />
+      <picture>
+        <source
+          media="(max-width: 639px)"
+          srcSet="/hero-mobile-tourmaline.webp"
+          type="image/webp"
+        />
+        <source
+          media="(max-width: 639px)"
+          srcSet="/hero-mobile-tourmaline.jpg"
+        />
+        <source
+          media="(min-width: 640px)"
+          srcSet="/hero-tourma-line.webp"
+          type="image/webp"
+        />
+        <img
+          src="/hero-tourma-line.jpg"
+          alt="Univers Tourma-Line — numérologie, cartomancie et Lahochi"
+          className="absolute inset-0 w-full h-full object-cover"
+          width={1672}
+          height={941}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
+        />
+      </picture>
 
       <div className="absolute top-1/4 left-1/4 w-72 h-72 rounded-full bg-brand-purple/25 blur-[120px] pointer-events-none animate-pulse-slow z-0"></div>
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 rounded-full bg-emerald-500/15 blur-[140px] pointer-events-none animate-pulse-slow-delay z-0"></div>

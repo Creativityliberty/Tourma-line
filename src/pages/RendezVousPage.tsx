@@ -41,14 +41,14 @@ export const RendezVousPage = () => {
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="text-center mb-10">
             <p className="text-sm uppercase tracking-[0.18em] text-brand-purple-dark font-bold mb-3">
-              Prendre rendez-vous
+              Agenda en ligne
             </p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-5">
-              Réservez votre séance en ligne
+              Réservez votre séance sans quitter le site
             </h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Choisissez directement votre créneau dans le calendrier ci-dessous. La confirmation
-              et les détails vous seront envoyés par email, puis Line finalisera votre rendez-vous si besoin.
+              Choisissez directement votre créneau dans le calendrier. La confirmation et les détails
+              vous seront envoyés par email, puis je finaliserai votre rendez-vous si besoin.
             </p>
           </div>
 
@@ -56,20 +56,18 @@ export const RendezVousPage = () => {
             <CalEmbed />
           </div>
 
-          <p className="mt-6 text-center text-sm text-gray-500">
-            Le calendrier ne s'affiche pas ?{" "}
+          <div className="mt-8 text-center">
             <ConversionLink
               kind="booking"
               placement="booking-page"
               href={CAL_BASE_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-semibold text-brand-purple-dark underline underline-offset-4"
+              className="bg-brand-purple hover:bg-brand-purple-dark text-white font-bold py-3 px-8 rounded-full"
             >
-              Ouvrir la page de réservation
+              Réservez ici
             </ConversionLink>
-            .
-          </p>
+          </div>
         </div>
       </main>
 

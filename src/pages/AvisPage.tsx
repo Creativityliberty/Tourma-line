@@ -47,7 +47,7 @@ export const AvisPage = () => {
         <div className="relative z-10 container mx-auto px-6 max-w-4xl text-center">
           <p className="text-sm uppercase tracking-[0.18em] text-white/70 mb-3">Avis clients</p>
           <h1 className="text-4xl sm:text-5xl font-display font-bold mb-5">
-            Leur expérience avec Line
+            Leur expérience avec Tourma-Line
           </h1>
           <p className="text-lg text-gray-200 max-w-2xl mx-auto">
             Des retours sur la justesse des guidances, la qualité de l’écoute et le cadre bienveillant des séances.

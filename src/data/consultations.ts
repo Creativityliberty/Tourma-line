@@ -112,6 +112,17 @@ export const consultations: Consultation[] = [
     imageUrl: "/images/services/lahochi.webp",
     location: "À distance / Cabinet",
     type: "Soin Énergétique",
+    calLink: "tourma-line/soin-energetique-lahochi-en-presentiel",
+    bookingChoices: [
+      {
+        label: "En présentiel",
+        calLink: "tourma-line/soin-energetique-lahochi-en-presentiel",
+      },
+      {
+        label: "À distance",
+        calLink: "tourma-line/soin-energetique-lahochi-a-distance",
+      },
+    ],
   },
   {
     id: "lahochi-compagnon",

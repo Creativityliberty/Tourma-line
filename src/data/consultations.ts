@@ -40,6 +40,16 @@ export const consultations: Consultation[] = [
     location: "À distance / Cabinet",
     type: "Guidance",
     calLink: "tourma-line/120min",
+    bookingChoices: [
+      {
+        label: "En présentiel",
+        calLink: "tourma-line/120min",
+      },
+      {
+        label: "À distance",
+        calLink: "tourma-line/120min",
+      },
+    ],
   },
   {
     id: "suivi-annee",

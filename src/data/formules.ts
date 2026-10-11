@@ -65,7 +65,17 @@ export const formules: Formule[] = [
     priceNote: 'Payable en 2 fois',
     imageUrl: '/images/formules/renaissance.webp',
     imageAlt: 'Illustration de la formule Renaissance',
-    calLink: 'tourma-line/formule-renaissance-accompagnement-energetique-sur-3-mois'
+    calLink: 'tourma-line/formule-renaissance-accompagnement-energetique-sur-3-mois',
+    bookingChoices: [
+      {
+        label: 'En présentiel',
+        calLink: 'tourma-line/formule-renaissance-accompagnement-energetique-sur-3-mois'
+      },
+      {
+        label: 'À distance',
+        calLink: 'tourma-line/formule-renaissance-accompagnement-sur-3-mois-distanciel'
+      }
+    ]
   },
   {
     id: 'soin-lahochi-3-seances',

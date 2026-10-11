@@ -45,22 +45,66 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Viga&display=swap" rel="stylesheet">
 
-    <!-- External Services -->
+    <!-- External Services : Elfsight (avis Google) chargé à la demande, jamais au chargement initial -->
     <link rel="preconnect" href="https://elfsightcdn.com">
+    <link rel="dns-prefetch" href="https://universe-static.elfsightcdn.com">
     <script>
-      window.addEventListener('DOMContentLoaded', () => {
-        const loadElfsight = () => {
-          const script = document.createElement('script');
-          script.src = 'https://elfsightcdn.com/platform.js';
-          script.async = true;
-          document.head.appendChild(script);
-        };
-        if ('requestIdleCallback' in window) {
-          requestIdleCallback(() => setTimeout(loadElfsight, 1500));
-        } else {
-          setTimeout(loadElfsight, 3000);
+      (function () {
+        var loaded = false;
+        function loadElfsight() {
+          if (loaded) return;
+          loaded = true;
+          var s = document.createElement('script');
+          s.src = 'https://elfsightcdn.com/platform.js';
+          s.async = true;
+          document.head.appendChild(s);
         }
-      });
+
+        // 1) Dès que la section des avis approche du viewport (aucun scroll requis côté PSI)
+        var observed = false;
+        function watchReviews() {
+          if (observed) return true;
+          var el = document.querySelector('#avis, [class*="elfsight-app"]');
+          if (!el) return false;
+          observed = true;
+          if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+              for (var i = 0; i < entries.length; i++) {
+                if (entries[i].isIntersecting) {
+                  io.disconnect();
+                  loadElfsight();
+                  break;
+                }
+              }
+            }, { rootMargin: '400px 0px' });
+            io.observe(el);
+          } else {
+            loadElfsight();
+          }
+          return true;
+        }
+
+        function init() {
+          watchReviews();
+          if (!observed && 'MutationObserver' in window) {
+            var mo = new MutationObserver(function () {
+              if (watchReviews()) mo.disconnect();
+            });
+            mo.observe(document.documentElement, { childList: true, subtree: true });
+            setTimeout(function () { mo.disconnect(); }, 15000);
+          }
+          // 2) Filet de sécurité : première interaction utilisateur
+          ['pointerdown', 'touchstart', 'keydown', 'wheel'].forEach(function (ev) {
+            window.addEventListener(ev, loadElfsight, { once: true, passive: true });
+          });
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init, { once: true });
+        } else {
+          init();
+        }
+      })();
     </script>
 
     <!-- Clarity tracking code for https://tourma-line.fr/ -->

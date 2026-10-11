@@ -41,13 +41,13 @@ export const Formules = () => {
                       <div>
                         <div className="flex items-center gap-3 mb-4">
                           {React.createElement(formule.icon, {
-                            className: "w-8 h-8 text-brand-purple",
+                            className: "w-8 h-8 text-brand-purple-dark",
                           })}
                           <h3 className="text-lg sm:text-xl md:text-2xl font-display text-brand-dark">
                             {formule.title}
                           </h3>
                         </div>
-                        <p className="text-brand-purple font-semibold mb-6">
+                        <p className="text-brand-purple-dark font-semibold mb-6">
                           {formule.subtitle}
                         </p>
 
@@ -67,7 +67,7 @@ export const Formules = () => {
                               key={i}
                               className="flex items-start text-sm text-gray-600"
                             >
-                              <SparklesIcon className="w-5 h-5 text-brand-purple flex-shrink-0 mr-3 mt-0.5" />
+                              <SparklesIcon className="w-5 h-5 text-brand-purple-dark flex-shrink-0 mr-3 mt-0.5" />
                               <span>{item}</span>
                             </li>
                           ))}
@@ -79,7 +79,7 @@ export const Formules = () => {
                           <p className="text-gray-500 text-xs sm:text-sm mb-0.5">
                             {formule.duration}
                           </p>
-                          <p className="text-xl sm:text-2xl font-bold text-brand-purple">
+                          <p className="text-xl sm:text-2xl font-bold text-brand-purple-dark">
                             {formule.price}
                           </p>
                           {formule.priceNote && (
@@ -101,7 +101,7 @@ export const Formules = () => {
                             href="https://wa.me/33649653186"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-4 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-1.5 text-xs sm:text-sm whitespace-nowrap shadow-sm"
+                            className="bg-green-700 hover:bg-green-800 text-white font-semibold py-2.5 px-4 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-1.5 text-xs sm:text-sm whitespace-nowrap shadow-sm"
                           >
                             <WhatsAppIcon className="w-4 h-4" />
                             WhatsApp

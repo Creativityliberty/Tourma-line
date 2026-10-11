@@ -25,15 +25,15 @@ const ConsultationCard = ({ consultation, index }: { consultation: Consultation;
         <div className="p-6 sm:p-8 md:p-8 lg:p-10 md:w-3/5 flex flex-col justify-between">
           <div>
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="bg-brand-lilas/30 text-brand-purple px-3 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 uppercase tracking-wider">
+              <span className="bg-brand-lilas/30 text-brand-purple-dark px-3 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 uppercase tracking-wider">
                 <ClockIcon className="w-3.5 h-3.5" />
                 {consultation.duration}
               </span>
-              <span className="bg-brand-lilas/30 text-brand-purple px-3 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 uppercase tracking-wider">
+              <span className="bg-brand-lilas/30 text-brand-purple-dark px-3 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 uppercase tracking-wider">
                 <MapPinIcon className="w-3.5 h-3.5" />
                 {consultation.location}
               </span>
-              <span className="bg-brand-lilas/30 text-brand-purple px-3 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 uppercase tracking-wider">
+              <span className="bg-brand-lilas/30 text-brand-purple-dark px-3 py-1 rounded-full text-[10px] font-semibold flex items-center gap-1.5 uppercase tracking-wider">
                 <SparklesIcon className="w-3.5 h-3.5" />
                 {consultation.type}
               </span>
@@ -50,7 +50,7 @@ const ConsultationCard = ({ consultation, index }: { consultation: Consultation;
             <ul className="space-y-2 mb-8">
               {consultation.details.map((detail, i) => (
                 <li key={i} className="flex items-start text-sm text-gray-600">
-                  <SparklesIcon className="w-5 h-5 text-brand-purple flex-shrink-0 mr-2 mt-0.5" />
+                  <SparklesIcon className="w-5 h-5 text-brand-purple-dark flex-shrink-0 mr-2 mt-0.5" />
                   <span>{detail}</span>
                 </li>
               ))}
@@ -65,14 +65,14 @@ const ConsultationCard = ({ consultation, index }: { consultation: Consultation;
 
           <div className="mt-6 flex flex-col lg:flex-row lg:items-center justify-between gap-4 border-t border-brand-lilas pt-5">
             <div className="text-center sm:text-left">
-              <div className="text-base sm:text-lg lg:text-xl font-bold text-brand-purple leading-tight">
+              <div className="text-base sm:text-lg lg:text-xl font-bold text-brand-purple-dark leading-tight">
                 {consultation.price.includes("·") ? (
                   <div className="flex flex-wrap items-center gap-x-2 gap-y-1 justify-center sm:justify-start">
                     {consultation.price.split("·").map((part, pIdx, arr) => (
                       <React.Fragment key={pIdx}>
                         <span className="whitespace-nowrap">{part.trim()}</span>
                         {pIdx < arr.length - 1 && (
-                          <span className="text-brand-purple/60 text-sm sm:text-base font-normal">·</span>
+                          <span className="text-brand-purple-dark/60 text-sm sm:text-base font-normal">·</span>
                         )}
                       </React.Fragment>
                     ))}
@@ -101,7 +101,7 @@ const ConsultationCard = ({ consultation, index }: { consultation: Consultation;
                 href="https://wa.me/33649653186"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-4 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-1.5 text-xs sm:text-sm whitespace-nowrap shadow-sm"
+                className="bg-green-700 hover:bg-green-800 text-white font-semibold py-2.5 px-4 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center flex items-center justify-center gap-1.5 text-xs sm:text-sm whitespace-nowrap shadow-sm"
               >
                 <WhatsAppIcon className="w-4 h-4" />
                 {consultation.whatsappLabel ?? "WhatsApp"}
@@ -137,7 +137,7 @@ export const Consultations = () => {
 
         <AnimateOnScroll>
           <div className="max-w-4xl mx-auto text-center mt-24 mb-12">
-            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-purple mb-3">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-brand-purple-dark mb-3">
               Nouvelles prestations
             </p>
             <h2 className="text-3xl sm:text-4xl font-display text-brand-dark mb-4">

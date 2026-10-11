@@ -18,6 +18,7 @@ export default {
       colors: {
         'brand-lilas': '#E6E0F8',
         'brand-purple': '#A491D3',
+        'brand-purple-dark': '#6E4FA3',
         'brand-dark': '#4A4063',
         'brand-green': '#D1E7DD',
         'brand-gold': '#F0E68C',

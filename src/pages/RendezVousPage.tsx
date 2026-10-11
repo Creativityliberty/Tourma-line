@@ -78,7 +78,7 @@ export const RendezVousPage = () => {
                 href="https://wa.me/33649653186"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-500 text-white font-bold py-3 px-5 rounded-full inline-flex items-center justify-center gap-2"
+                className="bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-5 rounded-full inline-flex items-center justify-center gap-2"
               >
                 <WhatsAppIcon className="w-5 h-5" />
                 Écrire à Line

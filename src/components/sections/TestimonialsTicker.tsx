@@ -15,7 +15,7 @@ export const TestimonialsTicker = () => {
     >
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-7">
-          <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-brand-purple font-semibold mb-2">
+          <p className="text-xs sm:text-sm uppercase tracking-[0.18em] text-brand-purple-dark font-semibold mb-2">
             Extraits d'avis clients
           </p>
           <p className="text-sm sm:text-base text-gray-600">
@@ -41,7 +41,7 @@ export const TestimonialsTicker = () => {
           <p className="font-semibold text-brand-dark">★★★★★ 5,0/5 Google · 26 avis</p>
           <Link
             to="/avis"
-            className="text-brand-purple font-semibold underline underline-offset-4 hover:opacity-80"
+            className="text-brand-purple-dark font-semibold underline underline-offset-4 hover:opacity-80"
           >
             Voir tous les avis
           </Link>

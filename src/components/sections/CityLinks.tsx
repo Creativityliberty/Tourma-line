@@ -67,7 +67,7 @@ export const CityLinks = () => {
                     <Link
                       key={target.serviceSlug}
                       to={`/${target.serviceSlug}-${city.slug}`}
-                      className="block text-sm font-medium text-brand-dark hover:text-brand-purple transition-colors"
+                      className="block text-sm font-medium text-brand-dark hover:text-brand-purple-dark transition-colors"
                     >
                       {serviceLabels[target.serviceSlug] ?? target.serviceSlug} près de {city.name} →
                     </Link>
@@ -79,7 +79,7 @@ export const CityLinks = () => {
 
           <div className="mb-14 rounded-3xl border border-brand-lilas/30 bg-brand-lilas/10 p-7 sm:p-9">
             <div className="mb-7 text-center">
-              <p className="mb-2 text-sm font-bold uppercase tracking-[0.2em] text-brand-purple">
+              <p className="mb-2 text-sm font-bold uppercase tracking-[0.2em] text-brand-purple-dark">
                 Zones couvertes
               </p>
               <h3 className="font-display text-2xl text-brand-dark sm:text-3xl">
@@ -97,14 +97,14 @@ export const CityLinks = () => {
                   to={`/zones/${hub.slug}`}
                   className="rounded-2xl border border-white bg-white p-5 transition hover:-translate-y-1 hover:shadow-md"
                 >
-                  <p className="mb-2 text-xs font-bold uppercase tracking-widest text-brand-purple">
+                  <p className="mb-2 text-xs font-bold uppercase tracking-widest text-brand-purple-dark">
                     {hub.eyebrow}
                   </p>
                   <h4 className="mb-2 font-display text-xl text-brand-dark">{hub.label}</h4>
                   <p className="text-sm leading-relaxed text-gray-600">
                     {hub.coverageExamples.slice(0, 4).join(" · ")}
                   </p>
-                  <span className="mt-4 inline-block text-sm font-semibold text-brand-purple">
+                  <span className="mt-4 inline-block text-sm font-semibold text-brand-purple-dark">
                     Explorer la zone →
                   </span>
                 </Link>
@@ -131,7 +131,7 @@ export const CityLinks = () => {
                 href="https://wa.me/33649653186"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3 shadow-lg"
+                className="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full text-lg transition-transform transform hover:scale-105 active:scale-95 flex items-center justify-center gap-3 shadow-lg"
               >
                 <WhatsAppIcon className="w-5 h-5" />
                 WhatsApp

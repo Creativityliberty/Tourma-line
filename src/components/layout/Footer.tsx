@@ -17,7 +17,7 @@ export const Footer = () => {
                             </p>
                             <SparklesIcon className="w-4 h-4 flex-shrink-0" />
                         </div>
-                        <p className="text-sm text-gray-400 mb-4 italic">
+                        <p className="text-sm text-gray-300 mb-4 italic">
                             Line — Numérologue, cartomancienne & praticienne Lahochi
                         </p>
                         <div className="text-sm text-gray-300 space-y-1">
@@ -98,7 +98,7 @@ export const Footer = () => {
                     </div>
                 </div>
 
-                <div className="border-t border-gray-600 mt-8 pt-6 text-center text-xs sm:text-sm text-gray-400 space-y-2">
+                <div className="border-t border-gray-600 mt-8 pt-6 text-center text-xs sm:text-sm text-gray-300 space-y-2">
                     <p>
                         © {new Date().getFullYear()} Tourma-Line. Tous droits réservés.
                     </p>
@@ -108,7 +108,7 @@ export const Footer = () => {
                             href="https://www.numtemaagency.com/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-brand-purple hover:underline font-medium"
+                            className="text-brand-lilas hover:underline font-medium"
                         >
                             Nümtema Agency
                         </a>

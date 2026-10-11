@@ -29,7 +29,7 @@ export const Services = ({
                                 key={service.id}
                                 onClick={() => setActiveTab(service.id)}
                                 className={`flex flex-row items-center justify-center space-x-2 px-4 py-3 font-display text-sm sm:text-lg md:text-xl transition-colors duration-300 whitespace-nowrap ${activeTab === service.id
-                                    ? "border-b-4 border-brand-purple text-brand-purple"
+                                    ? "border-b-4 border-brand-purple text-brand-purple-dark"
                                     : "text-gray-500 hover:text-brand-dark"
                                     }`}
                             >
@@ -64,7 +64,7 @@ export const Services = ({
                                         <ul className="mt-6 space-y-4">
                                             {currentService.features.map((feature, index) => (
                                                 <li key={index} className="flex items-start space-x-3">
-                                                    <SparklesIcon className="w-5 h-5 text-brand-purple flex-shrink-0 mt-1" />
+                                                    <SparklesIcon className="w-5 h-5 text-brand-purple-dark flex-shrink-0 mt-1" />
                                                     <p className="text-sm sm:text-base text-gray-700">
                                                         <strong className="font-semibold text-brand-dark">
                                                             {feature.title}:

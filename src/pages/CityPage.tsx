@@ -263,7 +263,7 @@ export const CityPage = ({ city, service }: CityPageProps) => {
                 href="https://wa.me/33649653186"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-green-500 px-7 py-4 font-bold text-white"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-green-700 hover:bg-green-800 px-7 py-4 font-bold text-white"
               >
                 <WhatsAppIcon className="h-5 w-5" />
                 WhatsApp

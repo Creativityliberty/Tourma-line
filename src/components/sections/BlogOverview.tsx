@@ -11,7 +11,7 @@ export const BlogOverview = () => {
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl md:text-5xl font-display font-bold text-brand-dark mb-6">
-              De la confusion <span className="text-brand-purple">à la clarté</span>
+              De la confusion <span className="text-brand-purple-dark">à la clarté</span>
             </h2>
             <p className="text-gray-600 text-lg">
               Explorez mes articles pour mieux comprendre vos cycles, vos schémas et trouver les réponses qui sommeillent en vous.
@@ -30,7 +30,7 @@ export const BlogOverview = () => {
                     alt={post.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale-[30%] group-hover:grayscale-0"
                   />
-                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold text-brand-purple tracking-widest uppercase">
+                  <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-md px-4 py-1 rounded-full text-xs font-bold text-brand-purple-dark tracking-widest uppercase">
                     {post.category}
                   </div>
                 </div>
@@ -44,7 +44,7 @@ export const BlogOverview = () => {
                     <span>{post.persona}</span>
                   </div>
                   
-                  <h3 className="text-2xl font-display font-bold text-brand-dark mb-4 group-hover:text-brand-purple transition-colors leading-tight">
+                  <h3 className="text-2xl font-display font-bold text-brand-dark mb-4 group-hover:text-brand-purple-dark transition-colors leading-tight">
                     {post.title}
                   </h3>
                   
@@ -54,7 +54,7 @@ export const BlogOverview = () => {
                   
                   <Link 
                     to={`/blog/${post.slug}`}
-                    className="inline-flex items-center gap-2 text-brand-purple font-bold hover:gap-4 transition-all duration-300 group/link"
+                    className="inline-flex items-center gap-2 text-brand-purple-dark font-bold hover:gap-4 transition-all duration-300 group/link"
                   >
                     <span>Continuer la lecture</span>
                     <span className="transform rotate-180"><ArrowLeftIcon className="w-4 h-4" /></span>

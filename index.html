@@ -1,13 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr" class="scroll-smooth">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-18M80J3523"></script>
+    <!-- Analytics (Google tag + Clarity) : files d'attente définies tout de suite, bibliothèques distantes chargées après le rendu -->
     <script>
+      // Google tag (gtag.js) — stub + configuration mis en file d'attente
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
+      window.gtag = function () { dataLayer.push(arguments); };
       gtag('js', new Date());
       gtag('config', 'G-18M80J3523');
+
+      // Microsoft Clarity — stub mis en file d'attente
+      window.clarity = window.clarity || function () {
+        (window.clarity.q = window.clarity.q || []).push(arguments);
+      };
+
+      // Les scripts distants ne sont chargés qu'après le rendu : interaction utilisateur ou 4 s après le load
+      (function () {
+        var loaded = false;
+        function loadAnalytics() {
+          if (loaded) return;
+          loaded = true;
+          var g = document.createElement('script');
+          g.async = true;
+          g.src = 'https://www.googletagmanager.com/gtag/js?id=G-18M80J3523';
+          document.head.appendChild(g);
+          var c = document.createElement('script');
+          c.async = true;
+          c.src = 'https://www.clarity.ms/tag/yw1fqwyc08?ref=bwt';
+          document.head.appendChild(c);
+        }
+        ['pointerdown', 'touchstart', 'keydown', 'wheel', 'scroll'].forEach(function (ev) {
+          window.addEventListener(ev, loadAnalytics, { once: true, passive: true });
+        });
+        function schedule() { setTimeout(loadAnalytics, 4000); }
+        if (document.readyState === 'complete') { schedule(); }
+        else { window.addEventListener('load', schedule, { once: true }); }
+      })();
     </script>
 
     <meta charset="UTF-8" />
@@ -42,12 +70,12 @@
 
     <!-- Fonts (auto-hébergées) -->
     <link rel="preload" href="/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/poppins-500.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/poppins-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/fonts/viga-400.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- External Services : Elfsight (avis Google) chargé à la demande, jamais au chargement initial -->
-    <link rel="preconnect" href="https://elfsightcdn.com">
     <link rel="dns-prefetch" href="https://universe-static.elfsightcdn.com">
     <script>
       (function () {
@@ -106,15 +134,6 @@
           init();
         }
       })();
-    </script>
-
-    <!-- Clarity tracking code for https://tourma-line.fr/ -->
-    <script>
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "yw1fqwyc08");
     </script>
 
     <!-- Entity graph: one consistent business/person/website identity -->

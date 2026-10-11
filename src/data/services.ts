@@ -28,7 +28,7 @@ export const services: Record<string, Service> = {
       "La numérologie est une science ancienne qui étudie l'impact des nombres sur notre existence. À travers l'analyse de votre date de naissance, elle révèle des aspects essentiels de votre personnalité, de vos talents cachés, ainsi que les défis auxquels vous êtes confronté dans votre vie.\n\nChaque consultation vous permet de mieux comprendre vos choix, vos relations et les événements marquants de votre vie, afin de prendre des décisions éclairées et d'aligner votre vie avec votre véritable mission.",
     calendlyButtonText: "Réserver une consultation de numérologie",
     calendlyUrl: "https://cal.com/tourma-line",
-    imageUrl: "/images/services/numerology.jpg",
+    imageUrl: "/images/services/numerology.webp",
     imageAlt: "Consultation de numérologie avec Line chez Tourma-Line",
   },
   cartomancy: {
@@ -40,7 +40,7 @@ export const services: Record<string, Service> = {
       "La cartomancie est l'art de lire et d'interpréter les cartes pour obtenir des réponses aux questions que vous vous posez.\n\nQue ce soit pour éclairer vos choix professionnels, amoureux ou personnels, la cartomancie offre des conseils pratiques et des prévisions sur votre avenir. J'utilise des jeux de cartes traditionnels ou des oracles pour explorer les énergies présentes et vous guider vers des solutions adaptées à votre situation.",
     calendlyButtonText: "Réserver une séance de cartomancie",
     calendlyUrl: "https://cal.com/tourma-line",
-    imageUrl: "/images/services/cartomancy.jpg",
+    imageUrl: "/images/services/cartomancy.webp",
     imageAlt: "Séance de cartomancie avec Line chez Tourma-Line",
   },
   lahochi: {
@@ -79,7 +79,7 @@ export const services: Record<string, Service> = {
     ],
     calendlyButtonText: "Réserver un soin LAHOCHI",
     calendlyUrl: "https://cal.com/tourma-line",
-    imageUrl: "/images/services/lahochi.jpg",
+    imageUrl: "/images/services/lahochi.webp",
     imageAlt: "Séance Lahochi avec Line chez Tourma-Line",
   },
 };

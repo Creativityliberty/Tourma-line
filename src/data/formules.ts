@@ -29,7 +29,7 @@ export const formules: Formule[] = [
     ],
     duration: 'environ 1 mois',
     price: '120€',
-    imageUrl: '/images/formules/harmonie-interieure.jpg',
+    imageUrl: '/images/formules/harmonie-interieure.webp',
     imageAlt: 'Illustration de la formule Harmonie Intérieure'
   },
   {
@@ -47,7 +47,7 @@ export const formules: Formule[] = [
     duration: '3 mois',
     price: '280€',
     priceNote: 'Payable en 2 fois',
-    imageUrl: '/images/formules/renaissance.jpg',
+    imageUrl: '/images/formules/renaissance.webp',
     imageAlt: 'Illustration de la formule Renaissance'
   },
   {
@@ -63,7 +63,7 @@ export const formules: Formule[] = [
     ],
     duration: 'À définir selon besoins',
     price: '150€',
-    imageUrl: '/images/formules/lahochi.jpg',
+    imageUrl: '/images/formules/lahochi.webp',
     imageAlt: 'Illustration de la formule Soin Lahochi'
   }
 ];

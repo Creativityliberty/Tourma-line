@@ -29,33 +29,49 @@ export const PromoBanner = () => {
 
   return (
     <section aria-label="Offre spéciale Consultation Guidance Complète" className="bg-white">
-      <div className="container mx-auto px-6 -mt-8 relative z-20">
-        <div className="mx-auto max-w-5xl rounded-[2rem] border border-brand-lilas/40 bg-gradient-to-r from-brand-purple-dark via-brand-purple to-brand-dark p-[1px] shadow-2xl shadow-brand-purple/20">
-          <div className="rounded-[calc(2rem-1px)] bg-white px-6 py-6 sm:px-8 sm:py-7 lg:flex lg:items-center lg:justify-between lg:gap-8">
-            <div className="text-center lg:text-left">
-              <p className="mb-2 inline-flex rounded-full bg-brand-lilas/40 px-4 py-1 text-xs font-bold uppercase tracking-[0.18em] text-brand-purple-dark">
-                Offre limitée
-              </p>
-              <h2 className="font-display text-2xl font-bold text-brand-dark sm:text-3xl">
-                Première Consultation Guidance Complète à {PROMO.promoPrice}
-              </h2>
-              <p className="mt-3 text-gray-700">
-                Exceptionnellement {PROMO.period}, la première consultation passe de{" "}
-                <span className="font-semibold text-gray-500 line-through">{PROMO.normalPrice}</span>{" "}
-                à <span className="font-bold text-brand-purple-dark">{PROMO.promoPrice}</span>.
-              </p>
+      <div className="container mx-auto px-6 -mt-10 relative z-20">
+        <div className="mx-auto max-w-5xl overflow-hidden rounded-[2rem] border border-brand-lilas/60 bg-[#FBF7FF] shadow-2xl shadow-brand-purple/10">
+          <div className="grid gap-0 lg:grid-cols-[1fr_auto]">
+            <div className="px-6 py-7 sm:px-9 sm:py-8">
+              <div className="mb-5 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
+                <span className="rounded-full bg-brand-purple-dark px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em] text-white">
+                  Offre limitée
+                </span>
+                <span className="rounded-full border border-brand-purple/25 bg-white px-4 py-1.5 text-sm font-semibold text-brand-purple-dark">
+                  15 octobre → 31 octobre 2026
+                </span>
+              </div>
+
+              <div className="text-center lg:text-left">
+                <h2 className="font-display text-2xl font-bold leading-tight text-brand-dark sm:text-3xl lg:text-4xl">
+                  Première Consultation Guidance Complète
+                </h2>
+                <p className="mt-3 text-base leading-relaxed text-gray-700 sm:text-lg">
+                  Une offre ponctuelle pour faire le point en profondeur : numérologie, année personnelle
+                  et guidance personnalisée.
+                </p>
+              </div>
             </div>
 
-            <div className="mt-6 flex flex-col items-center gap-2 lg:mt-0 lg:items-end">
+            <div className="bg-white px-6 py-7 text-center sm:px-9 lg:min-w-[310px] lg:border-l lg:border-brand-lilas/50">
+              <p className="text-sm font-semibold text-gray-500">Prix exceptionnel</p>
+              <div className="mt-2 flex items-end justify-center gap-3">
+                <span className="text-2xl font-semibold text-gray-400 line-through">{PROMO.normalPrice}</span>
+                <span className="font-display text-5xl font-bold leading-none text-brand-purple-dark">{PROMO.promoPrice}</span>
+              </div>
+              <p className="mt-3 text-sm font-medium text-gray-600">{PROMO.period}</p>
+
+              <div className="mt-6 flex flex-col items-center gap-2">
               <CalPopupButton
                 placement="promo-guidance-complete"
                 calLink={PROMO.calLink}
                 choices={PROMO.choices}
-                className="rounded-full bg-brand-purple px-7 py-3 text-center font-bold text-white shadow-lg transition hover:bg-brand-purple-dark hover:scale-105 active:scale-95"
+                className="w-full rounded-full bg-brand-purple-dark px-7 py-3 text-center font-bold text-white shadow-lg transition hover:bg-brand-purple hover:scale-105 active:scale-95"
               >
-                Réserver l'offre à {PROMO.promoPrice}
+                Réserver l'offre
               </CalPopupButton>
               <p className="text-xs text-gray-500">Valable uniquement sur la première consultation.</p>
+              </div>
             </div>
           </div>
         </div>

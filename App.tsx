@@ -8,6 +8,7 @@ import { Footer } from "./src/components/layout/Footer";
 
 // Section Components
 import { Hero } from "./src/components/sections/Hero";
+import { PromoBanner } from "./src/components/sections/PromoBanner";
 import { Welcome } from "./src/components/sections/Welcome";
 import { Services } from "./src/components/sections/Services";
 import { Benefits } from "./src/components/sections/Benefits";
@@ -100,6 +101,7 @@ function HomePage() {
       <SectionScroller />
       <Header onNavClick={handleNavClick} />
       <Hero onNavClick={handleNavClick} />
+      <PromoBanner />
       <TestimonialsTicker />
       <Welcome />
       <div id="services">

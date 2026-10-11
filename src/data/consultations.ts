@@ -144,6 +144,17 @@ export const consultations: Consultation[] = [
     imageUrl: "/images/services/lahochi-compagnon.webp",
     location: "À distance / Domicile local",
     type: "Soin Énergétique",
+    calLink: "tourma-line/soin-energetique-lahochi-compagnon-a-distance",
+    bookingChoices: [
+      {
+        label: "À distance",
+        calLink: "tourma-line/soin-energetique-lahochi-compagnon-a-distance",
+      },
+      {
+        label: "À domicile",
+        calLink: "tourma-line/soin-energetique-lahochi-compagnon-a-domicile",
+      },
+    ],
   },
   {
     id: "pack-compagnon-serenite",

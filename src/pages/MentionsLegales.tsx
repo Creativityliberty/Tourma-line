@@ -33,6 +33,7 @@ export const MentionsLegales = () => {
     <>
       <Helmet>
         <title>Mentions Légales — TOURMA-LINE</title>
+        <meta name="description" content="Mentions légales du site Tourma-Line (Line, SIRET 93116533600013) : éditeur, hébergement, conditions d'utilisation et contact à Gerponville en Normandie." />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <LegalLayout title="Mentions Légales">

@@ -33,6 +33,7 @@ export const PolitiqueConfidentialite = () => {
     <>
       <Helmet>
         <title>Politique de Confidentialité — TOURMA-LINE</title>
+        <meta name="description" content="Politique de confidentialité de Tourma-Line : quelles données personnelles sont collectées sur tourma-line.fr, leur finalité (rendez-vous, analyses), leur conservation et vos droits." />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <LegalLayout title="Politique de Confidentialité">

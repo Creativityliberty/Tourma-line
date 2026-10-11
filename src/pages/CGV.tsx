@@ -33,6 +33,7 @@ export const CGV = () => {
     <>
       <Helmet>
         <title>Conditions Générales de Vente — TOURMA-LINE</title>
+        <meta name="description" content="Conditions générales de vente des prestations Tourma-Line : numérologie, cartomancie et soins Lahochi sur rendez-vous à Gerponville ou à distance — modalités, tarifs et annulations." />
         <meta name="robots" content="noindex, follow" />
       </Helmet>
       <LegalLayout title="Conditions Générales de Vente">

@@ -88,9 +88,9 @@ test('existing and new offers preserve the approved commercial positioning', asy
 
 test('new Lahochi offer images and dedicated visitor pages remain committed', async () => {
   await Promise.all([
-    access('public/images/services/lahochi-compagnon.jpg'),
-    access('public/images/services/pack-compagnon-serenite.jpg'),
-    access('public/images/services/harmonisation-objets.jpg'),
+    access('public/images/services/lahochi-compagnon.webp'),
+    access('public/images/services/pack-compagnon-serenite.webp'),
+    access('public/images/services/harmonisation-objets.webp'),
     access('src/pages/AvisPage.tsx'),
     access('src/pages/RendezVousPage.tsx'),
   ]);

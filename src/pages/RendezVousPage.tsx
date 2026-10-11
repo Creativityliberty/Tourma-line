@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Header } from "../components/layout/Header";
 import { Footer } from "../components/layout/Footer";
 import { ConversionLink } from "../components/ui/ConversionLink";
+import { CalEmbed } from "../components/booking/CalEmbed";
+import { CAL_BASE_URL } from "../lib/conversionTracking";
 import { PhoneIcon, WhatsAppIcon } from "../components/ui/icons";
 
 export const RendezVousPage = () => {
@@ -105,6 +107,38 @@ export const RendezVousPage = () => {
           </p>
         </div>
       </main>
+
+      <section id="calendrier" className="bg-brand-purple/5 py-16 sm:py-24">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-10">
+            <p className="text-sm uppercase tracking-[0.18em] text-brand-purple-dark font-bold mb-3">Agenda en ligne</p>
+            <h2 className="text-3xl sm:text-4xl font-display font-bold text-brand-dark mb-4">
+              Réservez votre séance sans quitter le site
+            </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Choisissez directement votre créneau dans le calendrier. La confirmation et les détails
+              vous seront envoyés par email, puis Line finalisera votre rendez-vous si besoin.
+            </p>
+          </div>
+
+          <CalEmbed />
+
+          <p className="mt-8 text-center text-sm text-gray-500">
+            Le calendrier ne s'affiche pas ?{" "}
+            <ConversionLink
+              kind="booking"
+              placement="booking-page"
+              href={CAL_BASE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-brand-purple-dark underline underline-offset-4"
+            >
+              Ouvrir la page de réservation
+            </ConversionLink>
+            .
+          </p>
+        </div>
+      </section>
 
       <Footer />
     </div>

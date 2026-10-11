@@ -92,6 +92,7 @@ export const Formules = () => {
                         <div className="flex flex-row items-center justify-center sm:justify-start lg:justify-end gap-2.5 w-full sm:w-auto shrink-0">
                           <CalPopupButton
                             placement={`formula-${formule.id}`}
+                            calLink={formule.calLink}
                             className="bg-brand-purple hover:bg-opacity-90 text-white font-semibold py-2.5 px-5 rounded-full transition-transform transform hover:scale-105 active:scale-95 text-center text-xs sm:text-sm whitespace-nowrap shadow-sm"
                           >
                             Réserver

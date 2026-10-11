@@ -14,6 +14,7 @@ export interface Formule {
   imageUrl?: string;
   imageAlt?: string;
   idealFor?: string;
+  calLink?: string;
 }
 
 export const formules: Formule[] = [
@@ -30,7 +31,8 @@ export const formules: Formule[] = [
     duration: 'environ 1 mois',
     price: '120€',
     imageUrl: '/images/formules/harmonie-interieure.webp',
-    imageAlt: 'Illustration de la formule Harmonie Intérieure'
+    imageAlt: 'Illustration de la formule Harmonie Intérieure',
+    calLink: 'tourma-line/formule-harmonie-interieure-numerologie-cartomancie-et-lahochi'
   },
   {
     id: 'renaissance',
@@ -48,7 +50,8 @@ export const formules: Formule[] = [
     price: '280€',
     priceNote: 'Payable en 2 fois',
     imageUrl: '/images/formules/renaissance.webp',
-    imageAlt: 'Illustration de la formule Renaissance'
+    imageAlt: 'Illustration de la formule Renaissance',
+    calLink: 'tourma-line/formule-renaissance-accompagnement-energetique-sur-3-mois'
   },
   {
     id: 'soin-lahochi-3-seances',
@@ -64,6 +67,7 @@ export const formules: Formule[] = [
     duration: 'À définir selon besoins',
     price: '150€',
     imageUrl: '/images/formules/lahochi.webp',
-    imageAlt: 'Illustration de la formule Soin Lahochi'
+    imageAlt: 'Illustration de la formule Soin Lahochi',
+    calLink: 'tourma-line/formule-soin-lahochi-pack-de-3-seances'
   }
 ];
